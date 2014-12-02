@@ -1,0 +1,96 @@
+$colorGrisBase: rgb(170,170,170);
+$colorNaranjaSuave: rgb(255,176,98);
+
+@media all and (max-width:800px){
+
+
+
+    body{
+
+        #capaSuperior{
+
+            width:90%;
+            #header{
+                #cabeceraContenidos{
+                    #cabeceraLogo{
+                        img{
+                            width:97px;
+                        }
+                    }
+                }
+
+            }
+
+            #menuH{
+
+                #plataformas{
+                    .menuH_plataforma{
+                        font-size:0.7em;
+                    }
+                    #icono_menu_desplegable{
+                        display:inline-block;
+                    }
+                }
+            }
+            .menuV_desplegable{
+                float: left;
+                width: auto;
+                margin-top:1%;
+                background-color: rgba($colorGrisBase,0.85);
+
+
+                .menuV_desplegable_seccion{
+                    margin: 0px 2px 2px 0px;
+                    padding: 0px 4px;
+
+
+                    font-family: Calibri;
+                    font-size:0.9em;
+                    color:white;
+
+                }
+
+                .menuV_desplegable_seccion{
+                    background-color: rgba($colorGrisBase,.75);
+                }
+                .menuV_desplegable_seccion:hover{
+                    cursor:pointer;      
+                    background-color:$colorNaranjaSuave;
+                    transition-duration: 0.5s;
+
+                }
+
+            }
+            #opciones_menu_desplegable{
+                position:absolute;
+
+            }
+            #opciones_menu_desplegable2{
+                position:absolute;
+                left:37%;
+                width:23%;
+
+            }
+
+            #seccionCentral{
+                #contenidos{
+                    width:100%;
+                    #articulos{
+                        .articulos_noticia{
+                            width:95%;
+                            float:left;
+                        }
+                    }    
+                }
+                #menuV{
+                    display:none;
+                }
+            }
+
+
+        }
+
+    }
+
+}
+

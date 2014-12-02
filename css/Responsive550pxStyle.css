@@ -1,0 +1,41 @@
+@media all and (max-width: 550px) {
+  body #capaSuperior {
+    width: 100%; }
+    body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
+      width: 25%; }
+    body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+      width: 50%; }
+      body #capaSuperior #header #cabeceraContenidos #cabeceraLogin .boton {
+        display: inline-block;
+        margin-top: 9%;
+        height: 34%; }
+    body #capaSuperior #menuH #plataformas {
+      width: 90%; }
+      body #capaSuperior #menuH #plataformas .menuH_plataforma {
+        display: none; }
+      body #capaSuperior #menuH #plataformas #menuH_desplegable {
+        display: inline-block;
+        width: 75%;
+        background-color: transparent;
+        padding: 0px 4px;
+        font-size: 1em; }
+      body #capaSuperior #menuH #plataformas span {
+        padding: 0px 4px; }
+      body #capaSuperior #menuH #plataformas span:hover {
+        cursor: pointer;
+        background-color: #ffb062;
+        transition-duration: 0.5s; }
+    body #capaSuperior .menuV_desplegable .menuV_desplegable_seccion {
+      font-size: 1.5em; }
+    body #capaSuperior #buscar {
+      display: none; }
+    body #capaSuperior #pie #pieContenidos #infoContacto {
+      display: none; }
+    body #capaSuperior #pie #pieContenidos #infoContactoReducido {
+      display: block;
+      height: 30%;
+      clear: both;
+      font-size: 0.8em;
+      text-align: center; } }
+
+/*# sourceMappingURL=Responsive550pxStyle.css.map */

@@ -1,0 +1,187 @@
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-image: url("../img/fondos/imgFondo.jpg");
+  background-size: 100%;
+  font-family: Calibri; }
+  body #capaSuperior {
+    width: 70%;
+    height: 100%;
+    margin: 0 auto; }
+    body #capaSuperior #header {
+      height: 14%; }
+      body #capaSuperior #header #limitSup {
+        height: 40%; }
+      body #capaSuperior #header #cabeceraContenidos {
+        height: 60%;
+        background-color: rgba(255, 128, 0, 0.8);
+        border-radius: 10px 10px 0px 0px; }
+        body #capaSuperior #header #cabeceraContenidos #cabeceraLogo {
+          width: 25%;
+          height: 100%;
+          float: left; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogo img {
+            width: 70%;
+            margin-top: -15%; }
+        body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
+          width: 50%;
+          height: 100%;
+          float: left; }
+        body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+          width: 25%;
+          text-align: left;
+          height: 100%;
+          float: left; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin .boton {
+            box-shadow: 2px 2px 4px 1px black;
+            width: 40%;
+            margin: 4% auto;
+            text-align: center;
+            font-size: 0.7em;
+            font-style: italic;
+            background-color: rgba(255, 255, 255, 0.7); }
+    body #capaSuperior #menuH {
+      height: 3.5%;
+      background-color: rgba(170, 170, 170, 0.6);
+      margin-top: 5px; }
+      body #capaSuperior #menuH #plataformas {
+        width: 70%;
+        height: 100%;
+        float: left; }
+        body #capaSuperior #menuH #plataformas .menuH_plataforma {
+          width: 15%;
+          height: 100%;
+          float: left;
+          text-align: center;
+          padding-top: 2px;
+          color: white;
+          font-weight: bold;
+          font-family: Farcry;
+          font-size: 0.8em; }
+          body #capaSuperior #menuH #plataformas .menuH_plataforma img {
+            height: 100%; }
+        body #capaSuperior #menuH #plataformas #menuH_desplegable {
+          display: none; }
+        body #capaSuperior #menuH #plataformas .menuH_plataforma:hover {
+          cursor: pointer;
+          background-color: #ffb062;
+          transition-duration: 0.5s; }
+        body #capaSuperior #menuH #plataformas #icono_menu_desplegable {
+          display: none;
+          background-color: transparent; }
+      body #capaSuperior #menuH #buscar {
+        width: 20%;
+        height: 100%;
+        float: left; }
+        body #capaSuperior #menuH #buscar img {
+          height: 100%; }
+        body #capaSuperior #menuH #buscar #buscador {
+          width: 100%; }
+      body #capaSuperior #menuH #carrito {
+        text-align: right;
+        width: 10%;
+        height: 100%;
+        float: left; }
+        body #capaSuperior #menuH #carrito img {
+          height: 100%;
+          padding-right: 8%; }
+    body #capaSuperior #opciones_menu_desplegable {
+      display: none; }
+    body #capaSuperior #opciones_menu_desplegable2 {
+      display: none; }
+    body #capaSuperior #seccionCentral {
+      height: 68%;
+      margin-top: 5px; }
+      body #capaSuperior #seccionCentral .menuV {
+        height: 100%;
+        float: left;
+        width: 13%; }
+        body #capaSuperior #seccionCentral .menuV .menuV_seccion, body #capaSuperior #seccionCentral .menuV .menuV_grupo {
+          margin: 0px 2px 2px 0px;
+          padding-left: 4px;
+          font-family: Calibri;
+          font-size: 0.8em;
+          color: white; }
+        body #capaSuperior #seccionCentral .menuV .menuV_grupo {
+          background-color: rgba(128, 128, 128, 0.9); }
+        body #capaSuperior #seccionCentral .menuV .menuV_seccion {
+          background-color: rgba(170, 170, 170, 0.75); }
+        body #capaSuperior #seccionCentral .menuV .menuV_seccion:hover {
+          cursor: pointer;
+          background-color: #ffb062;
+          transition-duration: 0.5s; }
+      body #capaSuperior #seccionCentral #contenidos {
+        height: 100%;
+        float: left;
+        width: 87%;
+        overflow-y: scroll; }
+        body #capaSuperior #seccionCentral #contenidos #articulos {
+          float: left;
+          background-color: rgba(255, 255, 255, 0.8);
+          margin-right: 0.5%; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia {
+            width: 45%;
+            margin: 10px 10px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia img {
+              width: 90%; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulo_noticia_left {
+            float: left;
+            clear: left; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulo_noticia_right {
+            float: right;
+            clear: right; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulos_titulo {
+            color: #ff8000;
+            font-family: TimesNewYorker; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo {
+            font-size: 0.75em; }
+        body #capaSuperior #seccionCentral #contenidos #panelInfo {
+          float: left;
+          width: 15%;
+          background-color: darksalmon; }
+    body #capaSuperior #pie {
+      height: 12%;
+      margin-top: 5px; }
+      body #capaSuperior #pie #pieContenidos {
+        height: 80%;
+        background-color: rgba(170, 170, 170, 0.6);
+        border-radius: 0px 0px 10px 10px; }
+        body #capaSuperior #pie #pieContenidos #enlaces {
+          width: 80%;
+          height: 70%;
+          float: left; }
+        body #capaSuperior #pie #pieContenidos #otros {
+          width: 20%;
+          height: 70%;
+          float: left; }
+          body #capaSuperior #pie #pieContenidos #otros #redesSociales {
+            height: 50%;
+            text-align: center; }
+            body #capaSuperior #pie #pieContenidos #otros #redesSociales img {
+              height: 90%;
+              margin-top: 2%; }
+          body #capaSuperior #pie #pieContenidos #otros #otraInfo {
+            height: 50%;
+            text-align: center; }
+            body #capaSuperior #pie #pieContenidos #otros #otraInfo img {
+              height: 90%;
+              margin-top: 2%; }
+        body #capaSuperior #pie #pieContenidos #infoContacto {
+          height: 30%;
+          clear: both;
+          font-size: 0.73em;
+          text-align: center; }
+        body #capaSuperior #pie #pieContenidos #infoContactoReducido {
+          display: none; }
+      body #capaSuperior #pie #limitInf {
+        height: 20%; }
+
+/*# sourceMappingURL=style.css.map */

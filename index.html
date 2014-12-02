@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Taronja Games</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="css/Responsive800pxStyle.css" rel="stylesheet" type="text/css"/>
+        <link href="css/Responsive550pxStyle.css" rel="stylesheet" type="text/css"/>
+        
+        <script src="js/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="js/jquery/jquery-1.10.2.js" type="text/javascript"></script>
+        <script src="js/peticionAjax.js" type="text/javascript"></script>
+    </head>
+    
+
+    <body>
+
+        <!-- CONTENIDO PRINCIPAL -->
+
+        <section id="capaSuperior">
+            
+            <!-- CABECERA -->
+            
+            <header id="header">
+                <section id="limitSup"></section><!-- Banda transparente superior -->
+
+                <section id="cabeceraContenidos">
+                    <section id="cabeceraLogo">
+
+                        <img id="logoImg" alt="logotipo" src="img/logo/logoTienda_blanco.png"/>   
+
+                    </section>
+                    <section id="cabeceraCentro"></section>                    
+                    <section id="cabeceraLogin">
+                        <div id="botonLogin" class="boton"><span>Logeate</span></div>
+                        <div id="botonRegistro" class="boton">Registro</div>
+                    </section>
+                </section>
+            </header>
+
+            <!-- MENU HORIZONTAL -->
+            
+            <nav id="menuH"><!-- Menú de navegación horizontal -->
+                <section id="plataformas"><!-- Modelos de consola y PC -->
+                    <div id="icono_menu_desplegable" class="menuH_plataforma" onclick="document.getElementById('opciones_menu_desplegable').style='display:block;'">
+                        <img src="img/iconos/list.png" alt="Boton movil"/>
+
+                    </div>
+                    <div class="menuH_plataforma">PS4</div>
+                    <div class="menuH_plataforma">XONE</div>
+                    <div class="menuH_plataforma">PC</div>
+                    <div class="menuH_plataforma">WII U</div>
+                    <div class="menuH_plataforma">3DS</div>
+                    <div class="menuH_plataforma" id="menuH_desplegable" onclick="document.getElementById('opciones_menu_desplegable2').style='display:block;'"><span>PLATAFORMAS</span></div>
+                </section>
+                <section id="buscar">
+                    <!--<img src="img/iconos/buscar.png" alt="buscar">-->
+                    <input id="buscador" name="buscador" type="text" value="buscar...">
+                </section>
+                <section id="carrito">
+                    <img src="img/iconos/carrito_icon.png" alt="carrito">
+                </section>
+            </nav>
+
+            <!-- MENUS DESPLEGABLES -->
+
+            <nav id="opciones_menu_desplegable" class="menuV_desplegable">
+                <div class="menuV_desplegable_seccion">Inicio</div>
+                <div class="menuV_desplegable_seccion">Noticias</div>
+                <div class="menuV_desplegable_seccion">Ranking</div>
+                <div class="menuV_desplegable_seccion">Consolas</div>
+                <div class="menuV_desplegable_seccion">Videojuegos</div>
+                <div class="menuV_desplegable_seccion">Ofertas</div>
+                <div class="menuV_desplegable_seccion">Hoy Hablamos de...</div>
+            </nav>
+            <nav id="opciones_menu_desplegable2" class="menuV_desplegable">
+                    <div class="menuV_desplegable_seccion">PS4</div>
+                    <div class="menuV_desplegable_seccion">XONE</div>
+                    <div class="menuV_desplegable_seccion">PC</div>
+                    <div class="menuV_desplegable_seccion">WII U</div>
+                    <div class="menuV_desplegable_seccion">3DS</div>
+            </nav>
+                    
+            <!-- SECCION CENTRAL -->
+
+            <section id="seccionCentral">
+                <aside id="menuV" class="menuV">
+                    <nav id="menuV_menu">
+                        <div class="menuV_grupo">Menú</div>
+                        <div class="menuV_seccion">Inicio</div>
+                        <div class="menuV_seccion">Noticias</div>
+                        <div class="menuV_seccion">Ranking</div>
+                        <div class="menuV_seccion">Consolas</div>
+                        <div class="menuV_seccion">Videojuegos</div>
+                        <div class="menuV_seccion">Ofertas</div>
+                        <div class="menuV_seccion">Hoy Hablamos de...</div>
+                    </nav>
+                </aside><!-- Menú lateral izquierdo -->
+                <section id="contenidos">
+                    <section id="articulos">                      
+
+                        <!-- INFORMACION DINAMICA CON DOM -->
+                        
+                    </section>
+                    <aside id="panelInfo"></aside><!-- Sección de información complementaria -->
+                </section>
+            </section>
+            
+            <!-- PIE DE PAGINA -->
+            
+            <footer id="pie">
+                <section id="pieContenidos"><!-- Caja de información del pie -->
+                    <section id="enlaces"></section><!-- Información de contacto, condiciones legales, etc -->
+                    <section id="otros">
+                        <section id="redesSociales">
+                            <img src="img/iconos/iconoFacebook.png" alt="Facebook"/>
+                            <img src="img/iconos/iconoTwitter.png" alt="Twitter"/>
+
+                        </section>
+                        <section id="otraInfo">
+                            <a href="mailto:taronjagames@hotmail.com">
+                                <img src="img/iconos/email.png" alt="email"/>
+                            </a>
+
+                        </section>
+                    </section>
+                    <section id="infoContacto"><!-- Banda inferior del pie -->
+
+                        © Copyright 2014 Todos los derechos reservados Taronja Games 
+                        - Tel. 123456789
+                    </section>
+                    <section id="infoContactoReducido"><!-- Banda inferior del pie reducida -->
+
+                        © Copyright 2014 Taronja Games - Tel. 123456789 
+                 
+                    </section>
+                </section>
+
+                <section id="limitInf"></section><!-- Banda transparente inferior -->
+            </footer>
+        </section>
+
+        <script src="js/cargarDatosIniciales.js" type="text/javascript"></script>
+    </body>
+
+</html>

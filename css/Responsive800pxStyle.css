@@ -1,0 +1,41 @@
+@media all and (max-width: 800px) {
+  body #capaSuperior {
+    width: 90%; }
+    body #capaSuperior #header #cabeceraContenidos #cabeceraLogo img {
+      width: 97px; }
+    body #capaSuperior #menuH #plataformas .menuH_plataforma {
+      font-size: 0.7em; }
+    body #capaSuperior #menuH #plataformas #icono_menu_desplegable {
+      display: inline-block; }
+    body #capaSuperior .menuV_desplegable {
+      float: left;
+      width: auto;
+      margin-top: 1%;
+      background-color: rgba(170, 170, 170, 0.85); }
+      body #capaSuperior .menuV_desplegable .menuV_desplegable_seccion {
+        margin: 0px 2px 2px 0px;
+        padding: 0px 4px;
+        font-family: Calibri;
+        font-size: 0.9em;
+        color: white; }
+      body #capaSuperior .menuV_desplegable .menuV_desplegable_seccion {
+        background-color: rgba(170, 170, 170, 0.75); }
+      body #capaSuperior .menuV_desplegable .menuV_desplegable_seccion:hover {
+        cursor: pointer;
+        background-color: #ffb062;
+        transition-duration: 0.5s; }
+    body #capaSuperior #opciones_menu_desplegable {
+      position: absolute; }
+    body #capaSuperior #opciones_menu_desplegable2 {
+      position: absolute;
+      left: 37%;
+      width: 23%; }
+    body #capaSuperior #seccionCentral #contenidos {
+      width: 100%; }
+      body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia {
+        width: 95%;
+        float: left; }
+    body #capaSuperior #seccionCentral #menuV {
+      display: none; } }
+
+/*# sourceMappingURL=Responsive800pxStyle.css.map */

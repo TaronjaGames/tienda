@@ -1,0 +1,298 @@
+
+$colorGrisBase: rgb(170,170,170);
+$colorGrisSeccion: grey;
+$colorNaranjaBase: rgb(255,128,0);
+$colorNaranjaSuave: rgb(255,176,98);
+
+//CAMBIOS GENERALES
+
+//Fuentes
+
+@font-face {
+    font-family: Farcry;
+    src: url('../fonts/Farcry.ttf');
+}
+@font-face {
+    font-family: TimesNewYorker;
+    src: url('../fonts/TimesNewYorker.ttf');
+}
+
+//ARBOL
+
+body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    background-image: url('../img/fondos/imgFondo.jpg');
+    background-size:100%;
+
+    font-family: Calibri;
+
+    #capaSuperior{
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+
+        #header{
+            height: 14%;
+            #limitSup{
+                height: 40%;
+            }
+            #cabeceraContenidos{
+                height: 60%;
+                background-color: rgba($colorNaranjaBase,.80);
+                border-radius:10px 10px 0px 0px;
+                #cabeceraLogo{
+                    width: 25%;
+                    height: 100%;
+                    float: left;
+
+                    img{
+                        width:70%;
+                        margin-top: -15%;
+                    }
+
+
+                }
+                #cabeceraCentro{
+                    width:50%;
+                    height:100%;
+                    float:left;
+                }
+                #cabeceraLogin{
+                    width: 25%;
+                    text-align: left;
+                    height: 100%;
+                    float: left;
+                    .boton{
+                        box-shadow: 2px 2px 4px 1px black;
+                        width: 40%;
+                        margin: 4% auto;
+                        text-align: center;
+                        font-size: 0.7em;
+                        font-style: italic;
+                        background-color: rgba(white,.70);
+                    }
+
+                }
+            }
+        }
+        #menuH{
+            height: 3.5%;
+            background-color: rgba($colorGrisBase,.60);
+            margin-top:5px;
+
+            #plataformas{
+                width: 70%;
+                height: 100%;
+                float: left;
+                .menuH_plataforma{
+                    width:15%;
+                    height: 100%;
+                    float:left;
+                    text-align: center;
+                    padding-top:2px;
+
+                    color:white;
+                    font-weight: bold;
+                    font-family: Farcry;
+                    font-size:0.8em;
+
+                    img{
+                        height: 100%;
+                    }
+                    
+
+                }
+                #menuH_desplegable{
+                        display:none;
+                        
+                        
+                    }
+                .menuH_plataforma:hover{
+                    cursor:pointer;
+                    background-color:$colorNaranjaSuave;
+                    transition-duration: 0.5s;
+                }
+                #icono_menu_desplegable{
+                    display:none;
+                     background-color:transparent;
+                }
+
+            }
+            #buscar{
+                width: 20%;
+                height: 100%;
+                float: left;
+
+                img{
+                    height: 100%;
+                }
+                #buscador{
+                    width:100%
+                }
+            }
+            #carrito{
+                text-align: right;             
+                width: 10%;
+                height: 100%;
+                float: left;
+
+
+                img{
+                    height: 100%;
+                    padding-right: 8%;
+                }
+            }
+
+        }
+        
+        #opciones_menu_desplegable{
+            display:none;
+            
+        }
+        #opciones_menu_desplegable2{
+            display:none;
+            
+        }
+        #seccionCentral{
+            height: 68%;
+            margin-top:5px;
+
+            .menuV{
+                height: 100%;
+                float: left;
+                width: 13%;
+
+
+                .menuV_seccion, .menuV_grupo{
+                    margin: 0px 2px 2px 0px;
+                    padding-left: 4px;
+
+                    font-family: Calibri;
+                    font-size:0.8em;
+                    color:white;
+
+                }
+                .menuV_grupo{
+                    background-color: rgba($colorGrisSeccion,.90);
+                }
+                .menuV_seccion{
+                    background-color: rgba($colorGrisBase,.75);
+                }
+                .menuV_seccion:hover{
+                    cursor:pointer;
+                    background-color:$colorNaranjaSuave;
+                    transition-duration: 0.5s;
+
+                }
+
+            }
+            #contenidos{
+                height: 100%;
+                float: left;
+                width: 87%;
+                overflow-y:scroll;
+
+                #articulos{
+
+                    float: left;
+                    background-color: rgba(white,.80);
+                    margin-right: 0.5%;           
+
+                    .articulos_noticia{
+                        width:45%;
+                        margin:10px 10px;
+                        img{
+                            width:90%;
+                        }
+
+                    }
+                    .articulo_noticia_left{
+                        float:left;
+                        clear:left;
+                    }
+                    .articulo_noticia_right{
+                        float:right;
+                        clear:right;
+                    }
+
+
+
+                    .articulos_titulo{
+                        color:$colorNaranjaBase;
+                        font-family: TimesNewYorker;
+
+                    }
+
+                    .articulos_cuerpo{
+                        font-size: 0.75em;
+
+                    }
+
+                }
+                #panelInfo{
+                    float: left;
+                    width: 15%;
+                    background-color: darksalmon;
+                }
+            }
+        }
+        #pie{
+            height: 12%;
+            margin-top:5px;
+
+            #pieContenidos{
+                height: 80%;
+                background-color: rgba($colorGrisBase,.60);
+                border-radius:0px 0px 10px 10px;
+
+                #enlaces{
+                    width: 80%;
+                    height: 70%;
+                    float: left;
+                }
+                #otros{
+                    width: 20%;
+                    height: 70%;
+                    float: left;
+                    #redesSociales{
+                        height: 50%;
+                        text-align:center;
+                        img{
+                            height: 90%;
+                            margin-top: 2%;
+                        }
+                    }
+                    #otraInfo{
+                        height: 50%;
+                        text-align:center;
+                        img{
+                            height: 90%;
+                            margin-top: 2%;
+                        }
+                    }
+                }
+                #infoContacto{
+                    height: 30%;
+                    clear: both;
+                    font-size:0.73em;
+                    text-align: center;
+                }
+                #infoContactoReducido{
+                    display:none;
+                }
+            }
+            #limitInf{
+                height: 20%;
+
+            }
+        }
+    }
+
+
+
+}
+

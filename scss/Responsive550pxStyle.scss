@@ -1,0 +1,75 @@
+$colorNaranjaSuave: rgb(255,176,98);
+
+@media all and (max-width:550px){
+
+    body{
+        #capaSuperior{
+            width:100%;
+            #header{
+                #cabeceraContenidos{
+                    #cabeceraCentro{
+                        width:25%;
+                    }
+                    #cabeceraLogin{
+                        width:50%;
+                        .boton{
+                            display:inline-block;
+                            margin-top: 9%;
+                            height: 34%;
+                        }  
+                    }
+                }
+            }
+            #menuH{
+                #plataformas{
+                    width:90%;
+
+                    .menuH_plataforma{
+                        display:none;
+
+
+                    }
+                    #menuH_desplegable{
+                        display:inline-block;
+                        width:75%;
+                        background-color:transparent;
+                        padding: 0px 4px;
+                        font-size:1em;
+
+                    }
+                    span{
+                        padding: 0px 4px;
+                    }
+                    span:hover{
+                        cursor:pointer;
+                        background-color:$colorNaranjaSuave;
+                        transition-duration: 0.5s;
+                    }
+                }
+            }
+            .menuV_desplegable{
+
+                .menuV_desplegable_seccion{
+                    font-size:1.5em;
+                }
+            }
+            #buscar{
+                display:none;
+            }
+            #pie{
+                #pieContenidos{
+                    #infoContacto{
+                        display:none;
+                    }
+                    #infoContactoReducido{
+                        display:block;
+                        height: 30%;
+                        clear: both;
+                        font-size:0.8em;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
