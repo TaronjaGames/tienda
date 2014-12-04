@@ -57,20 +57,7 @@ function mostrarNoticias() {
         });
     });
 
-}/*
-function mostrarPlataformas() {
-
-    $promesa = getAjax("plataforma");
-
-    $promesa.success(function(data) {
-
-        $.each(data, function(index) {
-
-
-
-        });
-    });
-}*/
+}
 function mostrarSeccion() {
 
     $promesa = getAjax("seccion");
@@ -82,12 +69,30 @@ function mostrarSeccion() {
             datos += "<div class='menuV_seccion'>" + data[index].nombreSeccion + "</div>";
             datosDesplegable += "<div class='menuV_desplegable_seccion'>" + data[index].nombreSeccion + "</div>";
         });
-        $("#menuV_menu").html(datos);
+        $("#menuV_menu").append(datos);
         $("#opciones_menu_desplegable").html(datosDesplegable);
     });
 }
+
+function mostrarPlataforma() {
+
+    $promesa = getAjax("plataforma");
+
+    $promesa.success(function(data) {
+        var datos = "";
+        var datosDesplegable = "";
+        $.each(data, function(index) {
+            datos += "<div class='menuH_plataforma'>" + data[index].nombrePlataforma + "</div>";
+            datosDesplegable += "<div class='menuV_desplegable_seccion'>" + data[index].nombrePlataforma + "</div>";
+        });
+        $("#plataformas").append(datos);
+        $("#opciones_menu_desplegable2").html(datosDesplegable);
+    });
+}
+
 mostrarNoticias();
 mostrarSeccion();
+mostrarPlataforma();
 
 
 
