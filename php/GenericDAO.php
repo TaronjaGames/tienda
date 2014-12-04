@@ -19,7 +19,7 @@ function select($tabla) {
 
     $conexion = getConnection();
 
-    $consulta = "select * from " .$tabla." order by idNoticia desc";
+    $consulta = "select * from " .$tabla ." order by 1";
     $resultado = mysql_query($consulta, $conexion);
 
     //CREACION DE ARRAY
