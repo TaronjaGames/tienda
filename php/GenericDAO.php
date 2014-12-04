@@ -1,17 +1,6 @@
 <?php
 
-function getConnection() {
-
-    $conexion = mysql_connect("localhost", "root", "root") or die('No se pudo conectar: ' . mysql_error());
-    mysql_select_db("tienda", $conexion) or die('No se pudo seleccionar la base de datos');
-    mysql_query('set character set utf8');
-
-    return $conexion;
-}
-
-function closeConnection($conexion) {
-    mysql_close($conexion);
-}
+include 'ConnectionFactory.php';
 
 function select($tabla) {
 
@@ -19,18 +8,20 @@ function select($tabla) {
 
     $conexion = getConnection();
 
-    $consulta = "select * from " .$tabla ." order by 1";
-    $resultado = mysql_query($consulta, $conexion);
+    $consulta = "select * from " . $tabla . " order by 1";
 
-    //CREACION DE ARRAY
+    //EXTRAER DATOS
 
-    while ($fila = mysql_fetch_array($resultado,MYSQL_ASSOC)) {
-        $datos[] = $fila;
+    if ($result = $conexion->query($consulta)) {
+
+        while ($row = $result->fetch_assoc()) {
+            $datos[] = $row;
+        }
+
+    //DEVOLVER DATOS
+
+        return $datos;
     }
-
-    closeConnection($conexion);
-
-    return $datos;
 }
 
 // RECOGIDA DE DATOS
