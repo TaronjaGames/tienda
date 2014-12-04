@@ -38,11 +38,22 @@ function mostrarNoticias() {
 
             //DIV CUERPO
 
-            texto_cuerpo = document.createTextNode(data[index].textoNoticia);
+            
 
+            texto = document.createTextNode(data[index].textoNoticia);
+            div_texto=document.createElement("p");
+            div_texto.className="articulos_texto";
+            div_texto.appendChild(texto);
+            
+            autor = document.createTextNode("Publicado por: "+data[index].autorNoticia +" ("+data[index].fechaNoticia+"):")
+            div_autor=document.createElement("p");
+            div_autor.className="articulos_autores";
+            div_autor.appendChild(autor);
+            
             cuerpo = document.createElement("div");
             cuerpo.className = "articulos_cuerpo";
-            cuerpo.appendChild(texto_cuerpo);
+            cuerpo.appendChild(div_autor);
+            cuerpo.appendChild(div_texto);
 
             //CREAR ARTICULO
 

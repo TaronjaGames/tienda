@@ -143,6 +143,11 @@ body {
             font-family: TimesNewYorker; }
           body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo {
             font-size: 0.75em; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo .articulos_autores {
+              margin: 3px 0px;
+              color: #aaaaaa; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo .articulos_texto {
+              margin: 0; }
         body #capaSuperior #seccionCentral #contenidos #panelInfo {
           float: left;
           width: 15%;

@@ -231,6 +231,13 @@ body{
 
                     .articulos_cuerpo{
                         font-size: 0.75em;
+                        .articulos_autores{
+                            margin:3px 0px;
+                            color:$colorGrisBase;
+                        }
+                        .articulos_texto{
+                            margin:0;
+                        }
 
                     }
 
