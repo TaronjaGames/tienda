@@ -45,7 +45,7 @@ function mostrarNoticias() {
             div_texto.className="articulos_texto";
             div_texto.appendChild(texto);
             
-            autor = document.createTextNode("Publicado por: "+data[index].autorNoticia +" ("+data[index].fechaNoticia+"):")
+            autor = document.createTextNode("Publicado por: "+data[index].autorNoticia +" ("+data[index].fechaNoticia+"):");
             div_autor=document.createElement("p");
             div_autor.className="articulos_autores";
             div_autor.appendChild(autor);
