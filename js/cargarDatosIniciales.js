@@ -5,7 +5,7 @@ function mostrarMenuDesplegable() {
 
 function mostrarNoticias() {
 
-    $promesa = getAjax("noticia");
+    $promesa = getAjax("noticia","asc");
 
     $promesa.success(function(data) {
         
@@ -81,7 +81,7 @@ function mostrarNoticias() {
 }
 function mostrarSeccion() {
 
-    $promesa = getAjax("seccion");
+    $promesa = getAjax("seccion","asc");
 
     $promesa.success(function(data) {
         var datos = "";
@@ -97,7 +97,7 @@ function mostrarSeccion() {
 
 function mostrarPlataforma() {
 
-    $promesa = getAjax("plataforma");
+    $promesa = getAjax("plataforma","asc");
 
     $promesa.success(function(data) {
         var datos = "";

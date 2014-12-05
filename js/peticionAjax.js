@@ -1,6 +1,6 @@
-function getAjax($tabla) {
+function getAjax($tabla,$order) {
     
-    $datos = { 'tabla' : $tabla };
+    $datos = { 'tabla' : $tabla,'orden' : $order };
     
     return $.ajax({
         type: 'POST',
