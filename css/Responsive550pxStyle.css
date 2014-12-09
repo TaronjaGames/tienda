@@ -19,13 +19,15 @@
         background-color: transparent;
         padding: 0px 4px;
         font-size: 1em; }
+        body #capaSuperior #menuH #plataformas #menuH_desplegable #opciones_menu_desplegable2 {
+          left: 26%; }
       body #capaSuperior #menuH #plataformas span {
         padding: 0px 4px; }
       body #capaSuperior #menuH #plataformas span:hover {
         cursor: pointer;
         background-color: #ffb062;
         transition-duration: 0.5s; }
-    body #capaSuperior .menuV_desplegable .menuV_desplegable_seccion {
+    body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
       font-size: 1.5em; }
     body #capaSuperior #buscar {
       display: none; }

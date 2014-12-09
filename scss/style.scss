@@ -98,7 +98,7 @@ body{
                     color:white;
                     font-weight: bold;
                     font-family: Farcry;
-                    font-size:0.8em;
+                    font-size:1em;
 
                     img{
                         height: 100%;
@@ -149,14 +149,6 @@ body{
 
         }
         
-        #opciones_menu_desplegable{
-            display:none;
-            
-        }
-        #opciones_menu_desplegable2{
-            display:none;
-            
-        }
         #seccionCentral{
             height: 68%;
             margin-top:5px;
@@ -172,7 +164,7 @@ body{
                     padding-left: 4px;
 
                     font-family: Calibri;
-                    font-size:0.8em;
+                    font-size:1em;
                     color:white;
 
                 }
@@ -226,6 +218,7 @@ body{
                     .articulos_titulo{
                         color:$colorNaranjaBase;
                         font-family: TimesNewYorker;
+                        font-size:1.2em;
 
                     }
 

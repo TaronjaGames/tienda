@@ -46,18 +46,18 @@
 
             <nav id="menuH"><!-- Menú de navegación horizontal -->
                 <section id="plataformas"><!-- Modelos de consola y PC -->
-                    <div id="icono_menu_desplegable" class="menuH_plataforma" onclick="document.getElementById('opciones_menu_desplegable').style = 'display:block;'">
-                        <img src="img/iconos/list.png" alt="Boton movil"/>
-
+                    <div id="icono_menu_desplegable" class="menuH_plataforma btn-group">
+                        <img src="img/iconos/list.png" alt="Boton movil" class="dropdown-toggle" data-toggle="dropdown"/>
+                        <ul class="dropdown-menu menu_desplegable" id="opciones_menu_desplegable">
+                            <!-- MENU DINAMICO -->
+                        </ul>
                     </div>
-                    <!-- 
-                    <div class="menuH_plataforma">PS4</div>
-                    <div class="menuH_plataforma">XONE</div>
-                    <div class="menuH_plataforma">PC</div>
-                    <div class="menuH_plataforma">WII U</div>
-                    <div class="menuH_plataforma">3DS</div>
-                    -->
-                    <div class="menuH_plataforma" id="menuH_desplegable" onclick="document.getElementById('opciones_menu_desplegable2').style = 'display:block;'"><span>PLATAFORMAS</span></div>
+                    <div id="menuH_desplegable" class="menuH_plataforma btn-group" >
+                        <span class="dropdown-toggle" data-toggle="dropdown">PLATAFORMAS</span>
+                        <ul class="dropdown-menu menu_desplegable" id="opciones_menu_desplegable2">
+                            <!-- MENU DINAMICO -->
+                        </ul>                    
+                    </div>
                 </section>
                 <section id="buscar">
                     <!--<img src="img/iconos/buscar.png" alt="buscar">-->
@@ -66,23 +66,6 @@
                 <section id="carrito">
                     <img src="img/iconos/carrito_icon.png" alt="carrito">
                 </section>
-            </nav>
-
-            <!-- MENUS DESPLEGABLES -->
-
-            <nav id="opciones_menu_desplegable" class="menuV_desplegable">
-
-                <!-- INFORMACION DINAMICA -->
-
-            </nav>
-            <nav id="opciones_menu_desplegable2" class="menuV_desplegable">
-                <!-- 
-                <div class="menuV_desplegable_seccion">PS4</div>
-                <div class="menuV_desplegable_seccion">XONE</div>
-                <div class="menuV_desplegable_seccion">PC</div>
-                <div class="menuV_desplegable_seccion">WII U</div>
-                <div class="menuV_desplegable_seccion">3DS</div>
-                -->
             </nav>
 
             <!-- SECCION CENTRAL -->

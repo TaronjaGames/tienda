@@ -35,6 +35,10 @@ $colorNaranjaSuave: rgb(255,176,98);
                         background-color:transparent;
                         padding: 0px 4px;
                         font-size:1em;
+                        
+                        #opciones_menu_desplegable2{
+                            left:26%;
+                        }
 
                     }
                     span{
@@ -47,9 +51,9 @@ $colorNaranjaSuave: rgb(255,176,98);
                     }
                 }
             }
-            .menuV_desplegable{
+            .menu_desplegable{
 
-                .menuV_desplegable_seccion{
+                .menu_desplegable_seccion{
                     font-size:1.5em;
                 }
             }
