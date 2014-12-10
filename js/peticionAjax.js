@@ -4,7 +4,7 @@ function getAjax($tabla,$order) {
     
     return $.ajax({
         type: 'POST',
-        url: 'php/GenericDAO.php',
+        url: 'persistencia/GenericDAO.php',
         data: $datos
     });
 }

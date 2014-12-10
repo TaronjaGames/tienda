@@ -22,7 +22,7 @@ function mostrarNoticias() {
             //IMG
 
             img = document.createElement("img");
-            img.src = "./img/noticias/"+data[index].imagenNoticia;
+            img.src = "./style/img/noticias/"+data[index].imagenNoticia;
             img.alt = data[index].tituloNoticia;
 
             //DIV TITULO
