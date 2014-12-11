@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACA,SAAS;EACL,OAAO,EAAC,GAAG;;AAEf,KAAK;EACD,MAAM,EAAC,GAAG",
+"sources": ["../scss/articulos.scss"],
+"names": [],
+"file": "articulos.css"
+}

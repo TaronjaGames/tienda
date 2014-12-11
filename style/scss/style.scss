@@ -32,16 +32,16 @@ body{
 
         #header{
             height: 14%;
-            
+
             #limitSup{
                 height: 40%;
             }
-            
+
             #cabeceraContenidos{
                 height: 60%;
                 background-color: rgba($colorNaranjaBase,.80);
                 border-radius:10px 10px 0px 0px;
-                
+
                 #cabeceraLogo{
                     width: 25%;
                     height: 100%;
@@ -86,7 +86,7 @@ body{
                 width: 70%;
                 height: 100%;
                 float: left;
-                
+
                 .menuH_plataforma{
                     width:15%;
                     height: 100%;
@@ -102,28 +102,28 @@ body{
                     img{
                         height: 100%;
                     }
-                    
+
 
                 }
-                
+
                 .menuH_plataforma:hover{
                     cursor:pointer;
                     background-color:$colorNaranjaSuave;
                     transition-duration: 0.5s;
                 }
-                
+
                 #icono_menu_desplegable{
                     display:none;
-                     background-color:transparent;
+                    background-color:transparent;
                 }
-                
+
                 #menuH_desplegable{
-                        display:none;
-                        
-                        
-                    }
-                
-                
+                    display:none;
+
+
+                }
+
+
 
             }
             #buscar{
@@ -149,7 +149,7 @@ body{
             }
 
         }
-        
+
         #seccionCentral{
             height: 68%;
             margin-top:5px;
@@ -188,9 +188,16 @@ body{
                 float: left;
                 width: 87%;
                 overflow-y:scroll;
+                #articulos{
+                    max-width:100%;
+                    padding-top:2%;
+                    float: left;
+                    background-color: rgba(white,.80);
+                    margin-right: 0.5%;
 
-                @import 'noticias.scss';
-                
+                    @import 'noticias.scss';
+                    @import "articulos.scss";
+                }
             }
         }
         #pie{

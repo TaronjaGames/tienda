@@ -108,7 +108,7 @@ function mostrarPlataforma() {
     });
 }
 
-mostrarNoticias();
+//mostrarNoticias();
 mostrarSeccion();
 mostrarPlataforma();
 

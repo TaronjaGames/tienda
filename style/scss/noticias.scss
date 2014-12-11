@@ -1,51 +1,45 @@
 
-    @import "common.scss";
+@import "common.scss";
 
-    #articulos{
-
-        float: left;
-        background-color: rgba(white,.80);
-        margin-right: 0.5%;           
-
-        .articulos_noticia{
-            width:45%;
-            margin:10px 10px;
-            img{
-                width:90%;
-            }
-
-        }
-        
-        .articulo_noticia_left{
-            float:left;
-            clear:left;
-        }
-        
-        .articulo_noticia_right{
-            float:right;
-            clear:right;
-
-        }
-
-        .articulos_titulo{
-            color:$colorNaranjaBase;
-            font-family: TimesNewYorker;
-            font-size:1.2em;
-
-        }
-
-        .articulos_cuerpo{
-            font-size: 0.75em;
-            .articulos_autores{
-                margin:3px 0px;
-                color:$colorGrisBase;
-            }
-            .articulos_texto{
-                margin:0;
-            }
-
-        }
-
+.articulos_noticia{
+    width:45%;
+    margin:10px 10px;
+    img{
+        width:90%;
     }
+
+}
+
+.articulo_noticia_left{
+    float:left;
+    clear:left;
+}
+
+.articulo_noticia_right{
+    float:right;
+    clear:right;
+
+}
+
+.articulos_titulo{
+    color:$colorNaranjaBase;
+    font-family: TimesNewYorker;
+    font-size:1.2em;
+
+}
+
+.articulos_cuerpo{
+    font-size: 0.75em;
+    .articulos_autores{
+        margin:3px 0px;
+        color:$colorGrisBase;
+    }
+    .articulos_texto{
+        margin:0;
+    }
+
+}
+
+
 
 

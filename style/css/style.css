@@ -123,18 +123,20 @@ body {
         float: left;
         width: 87%;
         overflow-y: scroll; }
-@font-face {
-  body #capaSuperior #seccionCentral #contenidos {
-    font-family: Farcry;
-    src: url("../fonts/Farcry.ttf"); } }
-@font-face {
-  body #capaSuperior #seccionCentral #contenidos {
-    font-family: TimesNewYorker;
-    src: url("../fonts/TimesNewYorker.ttf"); } }
         body #capaSuperior #seccionCentral #contenidos #articulos {
+          max-width: 100%;
+          padding-top: 2%;
           float: left;
           background-color: rgba(255, 255, 255, 0.8);
           margin-right: 0.5%; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
           body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia {
             width: 45%;
             margin: 10px 10px; }
@@ -157,6 +159,10 @@ body {
               color: #aaaaaa; }
             body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo .articulos_texto {
               margin: 0; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulo {
+            padding: 0px; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .fila {
+            margin: 0px; }
     body #capaSuperior #pie {
       height: 12%;
       margin-top: 5px; }
