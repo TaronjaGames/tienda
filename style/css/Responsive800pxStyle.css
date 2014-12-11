@@ -1,3 +1,9 @@
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
 @media all and (max-width: 800px) {
   body #capaSuperior {
     width: 90%; }

@@ -194,4 +194,77 @@ body {
       body #capaSuperior #pie #limitInf {
         height: 20%; }
 
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@media all and (max-width: 800px) {
+  body #capaSuperior {
+    width: 90%; }
+    body #capaSuperior #header #cabeceraContenidos #cabeceraLogo img {
+      width: 97px; }
+    body #capaSuperior #menuH #plataformas .menuH_plataforma {
+      font-size: 0.9em; }
+    body #capaSuperior #menuH #plataformas #icono_menu_desplegable {
+      display: inline-block; }
+    body #capaSuperior .menu_desplegable {
+      background-color: rgba(170, 170, 170, 0.85); }
+      body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
+        background-color: rgba(170, 170, 170, 0.75);
+        color: white;
+        font-family: calibri; }
+      body #capaSuperior .menu_desplegable .menu_desplegable_seccion:hover {
+        background-color: #ffb062;
+        transition-duration: 0.5s; }
+    body #capaSuperior #seccionCentral #contenidos {
+      width: 100%; }
+      body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia {
+        width: 95%;
+        float: left; }
+    body #capaSuperior #seccionCentral #menuV {
+      display: none; } }
+@media all and (max-width: 550px) {
+  body #capaSuperior {
+    width: 100%; }
+    body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
+      width: 25%; }
+    body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+      width: 50%; }
+      body #capaSuperior #header #cabeceraContenidos #cabeceraLogin .boton {
+        display: inline-block;
+        margin-top: 9%;
+        height: 34%; }
+    body #capaSuperior #menuH #plataformas {
+      width: 90%; }
+      body #capaSuperior #menuH #plataformas .menuH_plataforma {
+        display: none; }
+      body #capaSuperior #menuH #plataformas #menuH_desplegable {
+        display: inline-block;
+        width: 75%;
+        background-color: transparent;
+        padding: 0px 4px;
+        font-size: 1em; }
+        body #capaSuperior #menuH #plataformas #menuH_desplegable #opciones_menu_desplegable2 {
+          left: 26%; }
+      body #capaSuperior #menuH #plataformas span {
+        padding: 0px 4px; }
+      body #capaSuperior #menuH #plataformas span:hover {
+        cursor: pointer;
+        background-color: #ffb062;
+        transition-duration: 0.5s; }
+    body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
+      font-size: 1.5em; }
+    body #capaSuperior #buscar {
+      display: none; }
+    body #capaSuperior #pie #pieContenidos #infoContacto {
+      display: none; }
+    body #capaSuperior #pie #pieContenidos #infoContactoReducido {
+      display: block;
+      height: 30%;
+      clear: both;
+      font-size: 0.8em;
+      text-align: center; } }
+
 /*# sourceMappingURL=style.css.map */
