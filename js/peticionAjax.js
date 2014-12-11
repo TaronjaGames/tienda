@@ -9,5 +9,13 @@ function getAjax($tabla,$order) {
     });
 }
 
+function getAjaxRanking() {
+    
+    return $.ajax({
+        type: 'POST',
+        url: 'persistencia/RankingDAO.php'
+    });
+}
+
 
 

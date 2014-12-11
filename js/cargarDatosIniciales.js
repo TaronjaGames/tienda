@@ -22,8 +22,8 @@ function mostrarPlataforma() {
         var datos = "";
         var datosDesplegable = "";
         $.each(data, function(index) {
-            datos += "<div class='menuH_plataforma'>" + data[index].nombrePlataforma + "</div>";
-            datosDesplegable += "<li><a class='menu_desplegable_seccion' href='#'>" + data[index].nombrePlataforma + "</a></li>";
+            datos += "<div class='menuH_plataforma' onclick='mostrarPorPlataformas(\""+data[index].nombrePlataforma+"\")'>" + data[index].nombrePlataforma + "</div>";
+            datosDesplegable += "<li><a class='menu_desplegable_seccion' href='javascript:mostrarPorPlataformas(\""+data[index].nombrePlataforma+"\")'>" + data[index].nombrePlataforma + "</a></li>";
         });
         $("#plataformas").append(datos);
         $("#opciones_menu_desplegable2").append(datosDesplegable);
