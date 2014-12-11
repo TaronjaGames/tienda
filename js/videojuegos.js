@@ -1,0 +1,6 @@
+function mostrarVideojuegos(){
+    
+    mostrarArticulos("videojuego");
+
+}
+

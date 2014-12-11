@@ -1,0 +1,5 @@
+function mostrarConsolas() {
+
+    mostrarArticulos("consola");
+
+}
