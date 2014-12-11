@@ -4,6 +4,12 @@
 @font-face {
   font-family: TimesNewYorker;
   src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
 body {
   position: absolute;
   width: 100%;
@@ -28,7 +34,7 @@ body {
           width: 25%;
           height: 100%;
           float: left; }
-          body #capaSuperior #header #cabeceraContenidos #cabeceraLogo img {
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
             width: 70%;
             margin-top: -15%; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
@@ -119,6 +125,14 @@ body {
         float: left;
         width: 87%;
         overflow-y: scroll; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
         body #capaSuperior #seccionCentral #contenidos #articulos {
           float: left;
           background-color: rgba(255, 255, 255, 0.8);
@@ -145,10 +159,6 @@ body {
               color: #aaaaaa; }
             body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo .articulos_texto {
               margin: 0; }
-        body #capaSuperior #seccionCentral #contenidos #panelInfo {
-          float: left;
-          width: 15%;
-          background-color: darksalmon; }
     body #capaSuperior #pie {
       height: 12%;
       margin-top: 5px; }

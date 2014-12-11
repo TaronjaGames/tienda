@@ -1,10 +1,5 @@
 
-$colorGrisBase: rgb(170,170,170);
-$colorGrisSeccion: grey;
-$colorNaranjaBase: rgb(255,128,0);
-$colorNaranjaSuave: rgb(255,176,98);
-
-//CAMBIOS GENERALES
+@import "common.scss";
 
 //Fuentes
 
@@ -37,19 +32,22 @@ body{
 
         #header{
             height: 14%;
+            
             #limitSup{
                 height: 40%;
             }
+            
             #cabeceraContenidos{
                 height: 60%;
                 background-color: rgba($colorNaranjaBase,.80);
                 border-radius:10px 10px 0px 0px;
+                
                 #cabeceraLogo{
                     width: 25%;
                     height: 100%;
                     float: left;
 
-                    img{
+                    #logoImg{
                         width:70%;
                         margin-top: -15%;
                     }
@@ -188,58 +186,8 @@ body{
                 width: 87%;
                 overflow-y:scroll;
 
-                #articulos{
-
-                    float: left;
-                    background-color: rgba(white,.80);
-                    margin-right: 0.5%;           
-
-                    .articulos_noticia{
-                        width:45%;
-                        margin:10px 10px;
-                        img{
-                            width:90%;
-                        }
-
-                    }
-                    .articulo_noticia_left{
-                        float:left;
-                        clear:left;
-                    }
-                    .articulo_noticia_right{
-                        float:right;
-                        clear:right;
-
-                       
-                    }
-
-
-
-                    .articulos_titulo{
-                        color:$colorNaranjaBase;
-                        font-family: TimesNewYorker;
-                        font-size:1.2em;
-
-                    }
-
-                    .articulos_cuerpo{
-                        font-size: 0.75em;
-                        .articulos_autores{
-                            margin:3px 0px;
-                            color:$colorGrisBase;
-                        }
-                        .articulos_texto{
-                            margin:0;
-                        }
-
-                    }
-
-                }
-                #panelInfo{
-                    float: left;
-                    width: 15%;
-                    background-color: darksalmon;
-                }
+                @import 'noticias.scss';
+                
             }
         }
         #pie{

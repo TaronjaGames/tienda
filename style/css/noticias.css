@@ -1,0 +1,34 @@
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+#articulos {
+  float: left;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-right: 0.5%; }
+  #articulos .articulos_noticia {
+    width: 45%;
+    margin: 10px 10px; }
+    #articulos .articulos_noticia img {
+      width: 90%; }
+  #articulos .articulo_noticia_left {
+    float: left;
+    clear: left; }
+  #articulos .articulo_noticia_right {
+    float: right;
+    clear: right; }
+  #articulos .articulos_titulo {
+    color: #ff8000;
+    font-family: TimesNewYorker;
+    font-size: 1.2em; }
+  #articulos .articulos_cuerpo {
+    font-size: 0.75em; }
+    #articulos .articulos_cuerpo .articulos_autores {
+      margin: 3px 0px;
+      color: #aaaaaa; }
+    #articulos .articulos_cuerpo .articulos_texto {
+      margin: 0; }
+
+/*# sourceMappingURL=noticias.css.map */
