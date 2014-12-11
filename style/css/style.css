@@ -5,6 +5,9 @@
   font-family: TimesNewYorker;
   src: url("../fonts/TimesNewYorker.ttf"); }
 @font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+@font-face {
   font-family: Farcry;
   src: url("../fonts/Farcry.ttf"); }
 @font-face {
@@ -137,6 +140,10 @@ body {
   body #capaSuperior #seccionCentral #contenidos #articulos {
     font-family: TimesNewYorker;
     src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
           body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia {
             width: 45%;
             margin: 10px 10px; }
@@ -159,10 +166,39 @@ body {
               color: #aaaaaa; }
             body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo .articulos_texto {
               margin: 0; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
           body #capaSuperior #seccionCentral #contenidos #articulos .articulo {
-            padding: 0px; }
+            padding: 0px;
+            background-color: transparent;
+            border: transparent; }
           body #capaSuperior #seccionCentral #contenidos #articulos .fila {
             margin: 0px; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .producto_img {
+            height: 200px; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .producto_titulo {
+            color: #ff8000;
+            font-family: TimesNewYorker;
+            font-size: 1.2em; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .producto_descripcion {
+            font-size: 0.75em; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .producto_precio {
+            font-family: PlaneCrash;
+            font-size: 1.7em;
+            color: #ff8000;
+            text-align: center; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .producto_boton {
+            text-align: center; }
     body #capaSuperior #pie {
       height: 12%;
       margin-top: 5px; }
@@ -206,7 +242,10 @@ body {
 @font-face {
   font-family: TimesNewYorker;
   src: url("../fonts/TimesNewYorker.ttf"); }
-@media all and (max-width: 800px) {
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+@media all and (max-width: 992px) {
   body #capaSuperior {
     width: 90%; }
     body #capaSuperior #header #cabeceraContenidos #cabeceraLogo img {
@@ -231,7 +270,7 @@ body {
         float: left; }
     body #capaSuperior #seccionCentral #menuV {
       display: none; } }
-@media all and (max-width: 550px) {
+@media all and (max-width: 768px) {
   body #capaSuperior {
     width: 100%; }
     body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {

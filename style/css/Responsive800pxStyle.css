@@ -4,7 +4,10 @@
 @font-face {
   font-family: TimesNewYorker;
   src: url("../fonts/TimesNewYorker.ttf"); }
-@media all and (max-width: 800px) {
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+@media all and (max-width: 992px) {
   body #capaSuperior {
     width: 90%; }
     body #capaSuperior #header #cabeceraContenidos #cabeceraLogo img {

@@ -4,6 +4,9 @@
 @font-face {
   font-family: TimesNewYorker;
   src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
 .articulos_noticia {
   width: 45%;
   margin: 10px 10px; }
