@@ -74,8 +74,6 @@ body {
           font-size: 1em; }
           body #capaSuperior #menuH #plataformas .menuH_plataforma img {
             height: 100%; }
-        body #capaSuperior #menuH #plataformas #menuH_desplegable {
-          display: none; }
         body #capaSuperior #menuH #plataformas .menuH_plataforma:hover {
           cursor: pointer;
           background-color: #ffb062;
@@ -83,12 +81,12 @@ body {
         body #capaSuperior #menuH #plataformas #icono_menu_desplegable {
           display: none;
           background-color: transparent; }
+        body #capaSuperior #menuH #plataformas #menuH_desplegable {
+          display: none; }
       body #capaSuperior #menuH #buscar {
         width: 20%;
         height: 100%;
         float: left; }
-        body #capaSuperior #menuH #buscar img {
-          height: 100%; }
         body #capaSuperior #menuH #buscar #buscador {
           width: 100%; }
       body #capaSuperior #menuH #carrito {

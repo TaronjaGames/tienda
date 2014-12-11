@@ -86,6 +86,7 @@ body{
                 width: 70%;
                 height: 100%;
                 float: left;
+                
                 .menuH_plataforma{
                     width:15%;
                     height: 100%;
@@ -104,20 +105,25 @@ body{
                     
 
                 }
-                #menuH_desplegable{
-                        display:none;
-                        
-                        
-                    }
+                
                 .menuH_plataforma:hover{
                     cursor:pointer;
                     background-color:$colorNaranjaSuave;
                     transition-duration: 0.5s;
                 }
+                
                 #icono_menu_desplegable{
                     display:none;
                      background-color:transparent;
                 }
+                
+                #menuH_desplegable{
+                        display:none;
+                        
+                        
+                    }
+                
+                
 
             }
             #buscar{
@@ -125,9 +131,6 @@ body{
                 height: 100%;
                 float: left;
 
-                img{
-                    height: 100%;
-                }
                 #buscador{
                     width:100%
                 }
