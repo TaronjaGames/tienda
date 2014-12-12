@@ -1,20 +1,18 @@
-$colorGrisBase: rgb(170,170,170);
-$colorNaranjaSuave: rgb(255,176,98);
+@import "common.scss";
 
-@media all and (max-width:800px){
-
-
+@media all and (max-width:992px){
 
     body{
 
         #capaSuperior{
-
             width:90%;
+            
             #header{
                 #cabeceraContenidos{
                     #cabeceraLogo{
                         img{
                             width:97px;
+                            
                         }
                     }
                 }
@@ -26,9 +24,11 @@ $colorNaranjaSuave: rgb(255,176,98);
                 #plataformas{
                     .menuH_plataforma{
                         font-size:0.9em;
+                        
                     }
                     #icono_menu_desplegable{
                         display:inline-block;
+                        
                     }
                 }
             }

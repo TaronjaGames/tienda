@@ -1,0 +1,38 @@
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+.articulo {
+  padding: 0px;
+  background-color: transparent;
+  border: transparent; }
+
+.fila {
+  margin: 0px; }
+
+.producto_img {
+  height: 200px; }
+
+.producto_titulo {
+  color: #ff8000;
+  font-family: TimesNewYorker;
+  font-size: 1.2em; }
+
+.producto_descripcion {
+  font-size: 0.75em; }
+
+.producto_precio {
+  font-family: PlaneCrash;
+  font-size: 1.7em;
+  color: #ff8000;
+  text-align: center; }
+
+.producto_boton {
+  text-align: center; }
+
+/*# sourceMappingURL=articulos.css.map */

@@ -1,0 +1,23 @@
+//Colores
+
+$colorGrisBase: rgb(170,170,170);
+$colorGrisSeccion: grey;
+$colorNaranjaBase: rgb(255,128,0);
+$colorNaranjaSuave: rgb(255,176,98);
+
+
+//Fuentes
+
+@font-face {
+    font-family: Farcry;
+    src: url('../fonts/Farcry.ttf');
+}
+@font-face {
+    font-family: TimesNewYorker;
+    src: url('../fonts/TimesNewYorker.ttf');
+}
+@font-face {
+    font-family: PlaneCrash;
+    src: url('../fonts/PlaneCrash.ttf');
+}
+

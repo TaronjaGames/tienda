@@ -4,6 +4,15 @@
 @font-face {
   font-family: TimesNewYorker;
   src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
 body {
   position: absolute;
   width: 100%;
@@ -28,7 +37,7 @@ body {
           width: 25%;
           height: 100%;
           float: left; }
-          body #capaSuperior #header #cabeceraContenidos #cabeceraLogo img {
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
             width: 70%;
             margin-top: -15%; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
@@ -68,8 +77,6 @@ body {
           font-size: 1em; }
           body #capaSuperior #menuH #plataformas .menuH_plataforma img {
             height: 100%; }
-        body #capaSuperior #menuH #plataformas #menuH_desplegable {
-          display: none; }
         body #capaSuperior #menuH #plataformas .menuH_plataforma:hover {
           cursor: pointer;
           background-color: #ffb062;
@@ -77,12 +84,12 @@ body {
         body #capaSuperior #menuH #plataformas #icono_menu_desplegable {
           display: none;
           background-color: transparent; }
+        body #capaSuperior #menuH #plataformas #menuH_desplegable {
+          display: none; }
       body #capaSuperior #menuH #buscar {
         width: 20%;
         height: 100%;
         float: left; }
-        body #capaSuperior #menuH #buscar img {
-          height: 100%; }
         body #capaSuperior #menuH #buscar #buscador {
           width: 100%; }
       body #capaSuperior #menuH #carrito {
@@ -120,9 +127,23 @@ body {
         width: 87%;
         overflow-y: scroll; }
         body #capaSuperior #seccionCentral #contenidos #articulos {
+          max-width: 100%;
+          padding-top: 2%;
           float: left;
           background-color: rgba(255, 255, 255, 0.8);
           margin-right: 0.5%; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
           body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia {
             width: 45%;
             margin: 10px 10px; }
@@ -145,10 +166,39 @@ body {
               color: #aaaaaa; }
             body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo .articulos_texto {
               margin: 0; }
-        body #capaSuperior #seccionCentral #contenidos #panelInfo {
-          float: left;
-          width: 15%;
-          background-color: darksalmon; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulo {
+            padding: 0px;
+            background-color: transparent;
+            border: transparent; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .fila {
+            margin: 0px; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .producto_img {
+            height: 200px; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .producto_titulo {
+            color: #ff8000;
+            font-family: TimesNewYorker;
+            font-size: 1.2em; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .producto_descripcion {
+            font-size: 0.75em; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .producto_precio {
+            font-family: PlaneCrash;
+            font-size: 1.7em;
+            color: #ff8000;
+            text-align: center; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .producto_boton {
+            text-align: center; }
     body #capaSuperior #pie {
       height: 12%;
       margin-top: 5px; }
@@ -185,5 +235,81 @@ body {
           display: none; }
       body #capaSuperior #pie #limitInf {
         height: 20%; }
+
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+@media all and (max-width: 992px) {
+  body #capaSuperior {
+    width: 90%; }
+    body #capaSuperior #header #cabeceraContenidos #cabeceraLogo img {
+      width: 97px; }
+    body #capaSuperior #menuH #plataformas .menuH_plataforma {
+      font-size: 0.9em; }
+    body #capaSuperior #menuH #plataformas #icono_menu_desplegable {
+      display: inline-block; }
+    body #capaSuperior .menu_desplegable {
+      background-color: rgba(170, 170, 170, 0.85); }
+      body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
+        background-color: rgba(170, 170, 170, 0.75);
+        color: white;
+        font-family: calibri; }
+      body #capaSuperior .menu_desplegable .menu_desplegable_seccion:hover {
+        background-color: #ffb062;
+        transition-duration: 0.5s; }
+    body #capaSuperior #seccionCentral #contenidos {
+      width: 100%; }
+      body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia {
+        width: 95%;
+        float: left; }
+    body #capaSuperior #seccionCentral #menuV {
+      display: none; } }
+@media all and (max-width: 768px) {
+  body #capaSuperior {
+    width: 100%; }
+    body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
+      width: 25%; }
+    body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+      width: 50%; }
+      body #capaSuperior #header #cabeceraContenidos #cabeceraLogin .boton {
+        display: inline-block;
+        margin-top: 9%;
+        height: 34%; }
+    body #capaSuperior #menuH #plataformas {
+      width: 90%; }
+      body #capaSuperior #menuH #plataformas .menuH_plataforma {
+        display: none; }
+      body #capaSuperior #menuH #plataformas #menuH_desplegable {
+        display: inline-block;
+        width: 75%;
+        background-color: transparent;
+        padding: 0px 4px;
+        font-size: 1em; }
+        body #capaSuperior #menuH #plataformas #menuH_desplegable #opciones_menu_desplegable2 {
+          left: 26%; }
+      body #capaSuperior #menuH #plataformas span {
+        padding: 0px 4px; }
+      body #capaSuperior #menuH #plataformas span:hover {
+        cursor: pointer;
+        background-color: #ffb062;
+        transition-duration: 0.5s; }
+    body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
+      font-size: 1.5em; }
+    body #capaSuperior #buscar {
+      display: none; }
+    body #capaSuperior #pie #pieContenidos #infoContacto {
+      display: none; }
+    body #capaSuperior #pie #pieContenidos #infoContactoReducido {
+      display: block;
+      height: 30%;
+      clear: both;
+      font-size: 0.8em;
+      text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */

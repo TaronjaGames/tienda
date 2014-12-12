@@ -1,17 +1,20 @@
 $colorNaranjaSuave: rgb(255,176,98);
 
-@media all and (max-width:550px){
+@media all and (max-width:768px){
 
     body{
         #capaSuperior{
             width:100%;
+            
             #header{
                 #cabeceraContenidos{
                     #cabeceraCentro{
                         width:25%;
+                        
                     }
                     #cabeceraLogin{
                         width:50%;
+                        
                         .boton{
                             display:inline-block;
                             margin-top: 9%;

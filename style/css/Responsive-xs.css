@@ -1,4 +1,4 @@
-@media all and (max-width: 550px) {
+@media all and (max-width: 768px) {
   body #capaSuperior {
     width: 100%; }
     body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
@@ -40,4 +40,4 @@
       font-size: 0.8em;
       text-align: center; } }
 
-/*# sourceMappingURL=Responsive550pxStyle.css.map */
+/*# sourceMappingURL=Responsive-xs.css.map */

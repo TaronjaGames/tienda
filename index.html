@@ -6,14 +6,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="style/css/style.css" rel="stylesheet" type="text/css"/>
-        <link href="style/css/Responsive800pxStyle.css" rel="stylesheet" type="text/css"/>
-        <link href="style/css/Responsive550pxStyle.css" rel="stylesheet" type="text/css"/>
 
         <!-- Bootstrap -->
-        
+
         <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-  
-        
+
+
     </head>
 
 
@@ -60,8 +58,8 @@
                     </div>
                 </section>
                 <section id="buscar">
-                    <!--<img src="img/iconos/buscar.png" alt="buscar">-->
-                    <input id="buscador" name="buscador" type="text" value="buscar...">
+
+                    <input id="buscador" name="buscador" type="search" placeholder="buscar...">
                 </section>
                 <section id="carrito">
                     <img src="style/img/iconos/carrito_icon.png" alt="carrito">
@@ -81,11 +79,73 @@
                 </aside><!-- Menú lateral izquierdo -->
                 <section id="contenidos">
                     <section id="articulos">                      
-
                         <!-- INFORMACION DINAMICA-->
 
+                        <div class="row fila" >
+                            <div class="col-xs-12 col-sm-6 col-lg-4">
+                                <article id="producto01" class="articulo  thumbnail">
+
+                                    <img class="producto_img" src="style/img/articulos/SombrasDeMordor.png" alt="SombrasDeMordor"/>
+                                    <div class="caption">
+                                        <p class="producto_titulo">
+                                            La Tierra Media: Sombras de Mordor
+                                        </p>
+                                        <p class="producto_descripcion">  
+                                            Encarna a Talion, un guerrero resucitado por un misterioso poder en su afán de derrotar a las hordas de Sauron y vengar la muertes de sus seres queridos.
+                                        </p>
+                                        <p class="producto_precio col-xs-6">
+                                            44,95€
+                                        </p>
+                                        <p class="producto_boton col-xs-6">
+                                            <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>    
+                            <div class="col-xs-12 col-sm-6 col-lg-4">
+                                <article id="producto02" class="articulo  thumbnail">
+
+                                    <img class="producto_img" src="style/img/articulos/Chivalry.png" alt="Chivalry"/>
+                                    <div class="caption">
+                                        <p class="producto_titulo">
+                                            Chivalry: Medieval Warfare
+                                        </p>
+                                        <p class="producto_descripcion">  
+                                            El juego está basado en habilidades y se controla como un juego de disparos en primera persona, pero, en lugar de usar pistolas y granadas, los jugadores disponen de espadas, escudos, martillos, hachas y arcos. 
+                                        </p>
+                                        <p class="producto_precio col-xs-6">
+                                            14,95€
+                                        </p>
+                                        <p class="producto_boton col-xs-6">
+                                            <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-lg-4 ">
+                                <article id="producto03" class="articulo  thumbnail">
+
+                                    <img class="producto_img" src="style/img/articulos/Fifa15.png" alt="Fifa15"/>
+                                    <div class="caption">
+                                        <p class="producto_titulo">
+                                            FiFa 15
+                                        </p>
+                                        <p class="producto_descripcion">  
+                                            Vuelve la popular franquicia FIFA con una nueva entrega. Vive los enfrentamientos más intensos controlando a tu equipo y jugadores favoritos y consigue la victoria en los distintos modos de juego que te ofrece el título.
+                                        </p>
+                                        <p class="producto_precio col-xs-6">
+                                            59,95€
+                                        </p>
+                                        <p class="producto_boton col-xs-6">
+                                            <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart"></span></a>
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                            </div>
+
                     </section>
-                    <aside id="panelInfo"></aside><!-- Sección de información complementaria -->
+
                 </section>
             </section>
 
@@ -125,16 +185,16 @@
                 <section id="limitInf"></section><!-- Banda transparente inferior -->
             </footer>
         </section>
-        
+
         <!-- JQuery -->
-        
+
         <script src="lib/jquery/jquery.min.js" type="text/javascript"></script>
         <script src="lib/jquery/jquery-1.10.2.js" type="text/javascript"></script>
-        
+
         <!-- Otros -->
-        
+
         <script src="lib/moment/moment-with-locales.js" type="text/javascript"></script>
-        
+
         <!-- Scripts propios -->
         
 
@@ -150,10 +210,10 @@
         <script src="js/ranking.js" type="text/javascript"></script>
 
         <!-- Bootstrap -->
-        
+
         <script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        
-        
+
+
     </body>
 
 </html>
