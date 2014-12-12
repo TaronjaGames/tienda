@@ -1,6 +1,5 @@
 function mostrarRanking() {
     
-    //document.getElementById('articulos').style.width = "100%";
     document.getElementById('articulos').style.backgroundColor = "transparent";
     
     $promesa = getAjaxRanking();

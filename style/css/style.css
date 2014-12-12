@@ -341,7 +341,6 @@ body {
       body #capaSuperior #menuH #plataformas #menuH_desplegable {
         display: inline-block;
         width: 75%;
-        background-color: transparent;
         padding: 0px 4px;
         font-size: 1em; }
         body #capaSuperior #menuH #plataformas #menuH_desplegable #opciones_menu_desplegable2 {
@@ -356,6 +355,8 @@ body {
       font-size: 1.5em; }
     body #capaSuperior #buscar {
       display: none; }
+    body #capaSuperior #tablaRanking {
+      border: none; }
     body #capaSuperior #pie #pieContenidos #infoContacto {
       display: none; }
     body #capaSuperior #pie #pieContenidos #infoContactoReducido {

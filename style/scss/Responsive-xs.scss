@@ -35,7 +35,7 @@ $colorNaranjaSuave: rgb(255,176,98);
                     #menuH_desplegable{
                         display:inline-block;
                         width:75%;
-                        background-color:transparent;
+                        //background-color:transparent;
                         padding: 0px 4px;
                         font-size:1em;
                         
@@ -63,6 +63,11 @@ $colorNaranjaSuave: rgb(255,176,98);
             #buscar{
                 display:none;
             }
+            
+            #tablaRanking{
+                border: none;
+            }
+            
             #pie{
                 #pieContenidos{
                     #infoContacto{
