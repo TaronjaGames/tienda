@@ -1,6 +1,6 @@
 function mostrarNoticias() {
     
-    document.getElementById('articulos').style.backgroundColor = "rgba(255,255,255,.80)";
+    //document.getElementById('articulos').style.backgroundColor = "rgba(255,255,255,.80)";
     
     $promesa = getAjax("noticia", "asc");
 

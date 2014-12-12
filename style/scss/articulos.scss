@@ -2,15 +2,22 @@
 @import "common.scss";
 
 .articulo{
-    padding:0px;
+    padding:0px 45px;
     background-color: transparent;
     border:transparent;
 }
 .fila{
     margin:0px;
 }
-.producto_img{
-    height: 200px;
+#contenedorImgArticulo{
+    text-align: center;
+    vertical-align: middle;
+    height: 250px;
+    padding-top: 30px;
+    & .producto_img{
+        max-height: 100%;
+        max-width: 100%;
+    }
 }
 .producto_titulo{
     color:$colorNaranjaBase;
@@ -19,12 +26,13 @@
 }
 .producto_descripcion{
     font-size: 0.75em;
+    color: silver;
 }
 .producto_precio{
     font-family: PlaneCrash;
     font-size: 1.7em;
     color: $colorNaranjaBase;
-    text-align: center;
+    text-align: right;
 }
 .producto_boton{
     text-align:center;

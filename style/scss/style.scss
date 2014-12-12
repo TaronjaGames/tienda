@@ -48,8 +48,9 @@ body{
                     float: left;
 
                     #logoImg{
-                        width:70%;
-                        margin-top: -15%;
+                        margin-left: 30px;
+                        width: 195px;
+                        margin-top: -40px;
                     }
 
 
@@ -79,11 +80,11 @@ body{
         }
         #menuH{
             height: 3.5%;
-            background-color: rgba(0,0,0,.7);
-            margin-top:5px;
+            background-color: rgba(0,0,0,.85);
+            margin-top:2px;
 
             #plataformas{
-                width: 70%;
+                width: 80%;
                 height: 100%;
                 float: left;
 
@@ -92,7 +93,7 @@ body{
                     height: 100%;
                     float:left;
                     text-align: center;
-                    padding-top:2px;
+                    padding-top:7px;
 
                     color:white;
                     font-weight: bold;
@@ -119,36 +120,33 @@ body{
 
                 #menuH_desplegable{
                     display:none;
-
-
                 }
-
-
-
             }
+
             #buscar{
-                width: 20%;
+                padding: 1px;
+                width: 16%;
                 height: 100%;
                 float: left;
 
                 #buscador{
                     width:100%
                 }
+                @import 'search.scss';
             }
             #carrito{
-                text-align: right;             
-                width: 10%;
+                padding: 1px;
+                text-align: center;             
+                width: 4%;
                 height: 100%;
                 float: left;
-                
+
                 #botonCarrito{
                     height: 100%;
                     background-color: rgba($colorNaranjaSuave,1);
-                }
-
-                img{
-                    height: 100%;
-                    padding-right: 8%;
+                    & span{
+                        width: 95%;
+                    }
                 }
             }
 
@@ -156,13 +154,15 @@ body{
 
         #seccionCentral{
             height: 68%;
-            margin-top:5px;
+            //margin-top:2px;
+            padding: 5px;
+            background-color: rgba(0,0,0,.75);
 
             .menuV{
                 height: 100%;
                 float: left;
                 width: 13%;
-
+                padding: 5px;
 
                 .menuV_seccion, .menuV_grupo{
                     margin: 0px 2px 2px 0px;
@@ -170,14 +170,22 @@ body{
 
                     font-family: Calibri;
                     font-size:1em;
+                    font-weight: bold;
                     color:white;
 
                 }
                 .menuV_grupo{
-                    background-color: rgba($colorGrisSeccion,.90);
+                    background-color: rgba($colorGrisSeccion,.5);
+                    border-radius: 4px;
+                    box-shadow: 2px 2px 5px rgba(0,0,0,.7);
+                    padding: 5px 0 0 5px;
+                    margin-bottom: 2px;
                 }
                 .menuV_seccion{
-                    background-color: rgba($colorGrisBase,.75);
+                    background-color: rgba($colorGrisBase,.5);
+                    border-bottom-right-radius: 4px;
+                    box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+                    padding-left: 10px;
                 }
                 .menuV_seccion:hover{
                     cursor:pointer;
@@ -191,12 +199,13 @@ body{
                 height: 100%;
                 float: left;
                 width: 87%;
-                overflow-y:scroll;
+                overflow: auto;
                 #articulos{
-                    width:100%;
-                    padding-top:2%;
+                    width: 99%;
+                    padding: 1%;
+                    margin: 0 .5%;
                     float: left;
-                    background-color: rgba(white,.80);
+                    //background-color: rgba(white,.80);
                     margin-right: 0.5%;
 
                     @import 'noticias.scss';
@@ -211,7 +220,8 @@ body{
 
             #pieContenidos{
                 height: 80%;
-                background-color: rgba($colorGrisBase,.60);
+                //background-color: rgba(0,0,0,.6);
+                background-color: rgba($colorGrisBase,.80);
                 border-radius:0px 0px 10px 10px;
 
                 #enlaces{

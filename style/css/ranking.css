@@ -9,15 +9,13 @@
   src: url("../fonts/PlaneCrash.ttf"); }
 #contenedorRanking {
   text-align: center;
-  width: 680px;
+  width: 950px;
   margin: 20px auto;
   padding: 20px 40px;
-  background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  border-radius: 15px;
-  box-shadow: 13px 13px 15px grey; }
+  border-radius: 15px; }
   #contenedorRanking #tituloRanking {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: silver; }
   #contenedorRanking #fechaRanking {
     color: grey; }
@@ -41,8 +39,7 @@
       #contenedorRanking #contenedorTablaRanking #tablaRanking .encabezadoRanking th {
         text-align: center;
         color: black;
-        font-size: 1.1em;
-        font-weight: bolder; }
+        font-weight: bold; }
     #contenedorRanking #contenedorTablaRanking #tablaRanking .imgRanking {
       max-width: 80px; }
 
