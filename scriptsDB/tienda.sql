@@ -1,12 +1,12 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         5.6.19 - MySQL Community Server (GPL)
--- SO del servidor:              Win64
--- HeidiSQL Versión:             8.3.0.4694
+-- Versión del servidor:         10.0.14-MariaDB - mariadb.org binary distribution
+-- SO del servidor:              Win32
+-- HeidiSQL Versión:             9.1.0.4867
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
@@ -21,13 +21,23 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   `nombreArticulo` varchar(50) DEFAULT NULL,
   `descripcionArticulo` text,
   `precioArticulo` decimal(10,0) unsigned DEFAULT NULL,
-  `idCategoria` int(10) unsigned DEFAULT NULL,
+  `imagenArticulo` varchar(50) DEFAULT NULL,
   `idPlataforma` int(10) unsigned DEFAULT NULL,
+  `plataformaArticulo` varchar(50) DEFAULT NULL,
+  `tipoArticulo` varchar(50) DEFAULT NULL,
+  `ventaArticulo` int(11) DEFAULT NULL,
+  `ofertaArticulo` int(11) DEFAULT NULL,
   PRIMARY KEY (`idArticulo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.articulo: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.articulo: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `articulo` DISABLE KEYS */;
+INSERT INTO `articulo` (`idArticulo`, `nombreArticulo`, `descripcionArticulo`, `precioArticulo`, `imagenArticulo`, `idPlataforma`, `plataformaArticulo`, `tipoArticulo`, `ventaArticulo`, `ofertaArticulo`) VALUES
+	(1, 'Play Station 4', 'Consola 4ª gen.', 399, 'ps4', 1, 'PS4', 'consola', 50, NULL),
+	(2, 'Xbox One', 'Consola 4ª gen.', 499, 'xboxOne', 2, 'XONE', 'consola', 32, NULL),
+	(3, 'HearthStone', 'Juego de cartas', 0, 'hearthStone', 3, 'PC', 'videojuego', 10, NULL),
+	(4, 'Assassins Creed', 'Juego de aventura', 60, 'assassinsCreed', 2, 'XONE', 'videojuego', 3, 10),
+	(5, 'SingStar', 'Juego de cantar', 30, 'singStar', 1, 'PS4', 'videojuego', 5, 20);
 /*!40000 ALTER TABLE `articulo` ENABLE KEYS */;
 
 
@@ -137,8 +147,8 @@ CREATE TABLE IF NOT EXISTS `plataforma` (
 INSERT INTO `plataforma` (`idPlataforma`, `nombrePlataforma`) VALUES
 	(1, 'PS4'),
 	(2, 'XONE'),
-	(3, 'N3DS'),
-	(4, 'PC'),
+	(3, 'PC'),
+	(4, '3DS'),
 	(5, 'WII U');
 /*!40000 ALTER TABLE `plataforma` ENABLE KEYS */;
 
@@ -173,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `subseccion` (
   CONSTRAINT `seccion-idSeccion` FOREIGN KEY (`idSeccion`) REFERENCES `seccion` (`idSeccion`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.subseccion: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.subseccion: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `subseccion` DISABLE KEYS */;
 INSERT INTO `subseccion` (`idSubseccion`, `nombreSubseccion`, `idSeccion`) VALUES
 	(1, 'PlayStation 4', 4),
