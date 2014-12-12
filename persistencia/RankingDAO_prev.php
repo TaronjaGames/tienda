@@ -5,7 +5,7 @@ include 'ConnectionFactory.php';
 function getRanking() {
 
     $conexion = getConnection();
-    $consulta = "select * from articulo where tipoArticulo = 'videojuego' order by ventaArticulo desc limit 10";
+    $consulta = "select * from articulo order by ventaArticulo desc limit 10";
 
     if ($result = $conexion->query($consulta)) {
 

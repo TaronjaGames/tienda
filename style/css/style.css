@@ -59,7 +59,7 @@ body {
             background-color: rgba(255, 255, 255, 0.7); }
     body #capaSuperior #menuH {
       height: 3.5%;
-      background-color: rgba(170, 170, 170, 0.6);
+      background-color: rgba(0, 0, 0, 0.7);
       margin-top: 5px; }
       body #capaSuperior #menuH #plataformas {
         width: 70%;
@@ -97,6 +97,9 @@ body {
         width: 10%;
         height: 100%;
         float: left; }
+        body #capaSuperior #menuH #carrito #botonCarrito {
+          height: 100%;
+          background-color: #ffb062; }
         body #capaSuperior #menuH #carrito img {
           height: 100%;
           padding-right: 8%; }
@@ -127,7 +130,7 @@ body {
         width: 87%;
         overflow-y: scroll; }
         body #capaSuperior #seccionCentral #contenidos #articulos {
-          max-width: 100%;
+          width: 100%;
           padding-top: 2%;
           float: left;
           background-color: rgba(255, 255, 255, 0.8);
@@ -199,6 +202,56 @@ body {
             text-align: center; }
           body #capaSuperior #seccionCentral #contenidos #articulos .producto_boton {
             text-align: center; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking {
+            text-align: center;
+            width: 680px;
+            margin: 20px auto;
+            padding: 20px 40px;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 13px 13px 15px grey; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #tituloRanking {
+              font-size: 1.2em;
+              color: silver; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #fechaRanking {
+              color: grey; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking {
+              border-radius: 10px;
+              box-shadow: 13px 0 20px rgba(186, 241, 255, 0.2), -13px 0 20px rgba(186, 241, 255, 0.2), 0 13px 20px rgba(186, 241, 255, 0.2), 0 -13px 20px rgba(186, 241, 255, 0.2); }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking tr {
+                border-spacing: 2px; }
+                body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking tr td {
+                  border-top-color: rgba(186, 241, 255, 0.15); }
+                body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking tr:hover {
+                  background-color: rgba(186, 241, 255, 0.4); }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .row {
+                cursor: pointer; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .encabezadoRanking {
+                border-bottom: 2px solid rgba(0, 0, 0, 0.65);
+                cursor: default;
+                background-color: rgba(186, 241, 255, 0.6); }
+                body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .encabezadoRanking:hover {
+                  background-color: rgba(186, 241, 255, 0.6); }
+                body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .encabezadoRanking th {
+                  text-align: center;
+                  color: black;
+                  font-size: 1.1em;
+                  font-weight: bolder; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .imgRanking {
+                max-width: 80px; }
     body #capaSuperior #pie {
       height: 12%;
       margin-top: 5px; }

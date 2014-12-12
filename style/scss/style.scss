@@ -79,7 +79,7 @@ body{
         }
         #menuH{
             height: 3.5%;
-            background-color: rgba($colorGrisBase,.60);
+            background-color: rgba(0,0,0,.7);
             margin-top:5px;
 
             #plataformas{
@@ -140,7 +140,11 @@ body{
                 width: 10%;
                 height: 100%;
                 float: left;
-
+                
+                #botonCarrito{
+                    height: 100%;
+                    background-color: rgba($colorNaranjaSuave,1);
+                }
 
                 img{
                     height: 100%;
@@ -189,7 +193,7 @@ body{
                 width: 87%;
                 overflow-y:scroll;
                 #articulos{
-                    max-width:100%;
+                    width:100%;
                     padding-top:2%;
                     float: left;
                     background-color: rgba(white,.80);
@@ -197,6 +201,7 @@ body{
 
                     @import 'noticias.scss';
                     @import "articulos.scss";
+                    @import "ranking.scss";
                 }
             }
         }

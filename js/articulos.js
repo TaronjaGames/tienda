@@ -1,4 +1,7 @@
 function pintarArticulos($articulo){
+    
+    document.getElementById('articulos').style.backgroundColor = "rgba(255,255,255,.80)";
+    
     datos="<div class='col-xs-12 col-sm-6 col-lg-4'>\n\
                 <article id='producto01' class='articulo  thumbnail'>\n\
                     <img class='producto_img' src='style/img/articulos/"+$articulo.imagenArticulo+".png' alt='"+$articulo.nombreArticulo+"'/>\n\
@@ -19,12 +22,14 @@ function pintarArticulos($articulo){
 }
 
 function mostrarArticulos($tipo) {
-
+    
+    document.getElementById('articulos').style.backgroundColor = "rgba(255,255,255,.80)";
+    
     $promesa = getAjax("articulo", "asc");
 
     $promesa.success(function (data) {
 
-        datos = "";
+        datos = "<div id='rowArticulos' class='row fila'>";
 
         $.each(data, function (index) {
 
@@ -32,6 +37,7 @@ function mostrarArticulos($tipo) {
                 datos += pintarArticulos(data[index]);
             }
         });
+        datos += "</div>";
         $("#articulos").html(datos);
     });
 }

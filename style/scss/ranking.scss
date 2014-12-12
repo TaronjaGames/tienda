@@ -1,0 +1,73 @@
+
+@import 'common.scss';
+
+$resplandorTablaRanking: rgb(186,241,255);
+
+#contenedorRanking{
+    text-align: center;
+    width: 680px;
+    margin: 20px auto;
+    padding: 20px 40px;
+    background-color: rgba(0,0,0,.8);
+    color: white;
+    border-radius: 15px;
+    box-shadow: 13px 13px 15px grey;
+
+    #tituloRanking{
+        font-size: 1.2em;
+        color: silver;
+    }
+    #fechaRanking{
+        color: grey;
+    }
+
+    #contenedorTablaRanking{
+        border-radius: 10px;
+        box-shadow: 13px 0 20px rgba($resplandorTablaRanking,.2),
+            -13px 0 20px rgba($resplandorTablaRanking,.2),
+            0 13px 20px rgba($resplandorTablaRanking,.2),
+            0 -13px 20px rgba($resplandorTablaRanking,.2);
+
+        #tablaRanking{
+            tr{
+                border-spacing: 2px;
+                & td{
+                    border-top-color: rgba($resplandorTablaRanking,.15);
+                }
+                &:hover{
+                    background-color: rgba($resplandorTablaRanking,.4);
+                }
+            }
+
+            .row{
+                cursor: pointer;
+            }
+            .encabezadoRanking{
+                border-bottom: 2px solid rgba(0,0,0,.65);
+                cursor: default;
+                background-color: rgba($resplandorTablaRanking,.6);
+                
+                &:hover{
+                    background-color: rgba($resplandorTablaRanking,.6);
+                }
+                
+                & th{
+                    text-align: center;
+                    color: black;
+                    font-size: 1.1em;
+                    font-weight: bolder;
+                }
+            }
+            .imgRanking{
+                max-width: 80px;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
