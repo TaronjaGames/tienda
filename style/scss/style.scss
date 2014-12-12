@@ -41,6 +41,7 @@ body{
                 height: 60%;
                 background-color: rgba($colorNaranjaBase,.80);
                 border-radius:10px 10px 0px 0px;
+                box-shadow: 0 -10px 30px rgba(0,0,0,.4), -10px 0 30px rgba(0,0,0,.4), 10px 0 30px rgba(0,0,0,.4);
 
                 #cabeceraLogo{
                     width: 25%;
@@ -80,8 +81,9 @@ body{
         }
         #menuH{
             height: 3.5%;
-            background-color: rgba(0,0,0,.85);
-            margin-top:2px;
+            box-shadow: 0 -10px 20px rgba(0,0,0,.5);
+            //background-color: rgba(0,0,0,.85);
+            //margin-top:2px;
 
             #plataformas{
                 width: 80%;
@@ -154,7 +156,7 @@ body{
 
         #seccionCentral{
             height: 68%;
-            //margin-top:2px;
+            margin-top: 1px;
             padding: 5px;
             background-color: rgba(0,0,0,.75);
 
@@ -162,7 +164,7 @@ body{
                 height: 100%;
                 float: left;
                 width: 13%;
-                padding: 5px;
+                padding: 5px 10px;
 
                 .menuV_seccion, .menuV_grupo{
                     margin: 0px 2px 2px 0px;
@@ -175,19 +177,21 @@ body{
 
                 }
                 .menuV_grupo{
-                    background-color: rgba($colorGrisSeccion,.5);
+                    background-color: rgba($colorGrisSeccion,.55);
                     border-radius: 4px;
                     box-shadow: 2px 2px 5px rgba(0,0,0,.7);
                     padding: 5px 0 0 5px;
                     margin-bottom: 2px;
                 }
                 .menuV_seccion{
-                    background-color: rgba($colorGrisBase,.5);
+                    color: silver;
+                    background-color: rgba($colorGrisBase,.2);
                     border-bottom-right-radius: 4px;
-                    box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+                    box-shadow: 1px 1px 5px rgba(0,0,0,.5);
                     padding-left: 10px;
                 }
                 .menuV_seccion:hover{
+                    color: white;
                     cursor:pointer;
                     background-color:$colorNaranjaSuave;
                     transition-duration: 0.5s;
@@ -219,8 +223,8 @@ body{
             margin-top:5px;
 
             #pieContenidos{
-                height: 80%;
-                //background-color: rgba(0,0,0,.6);
+                height: 90%;
+                //background-color: rgba(0,0,0,.5);
                 background-color: rgba($colorGrisBase,.80);
                 border-radius:0px 0px 10px 10px;
 
@@ -267,7 +271,28 @@ body{
         }
     }
 
-
+    #capaFondo{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        #franjaSuperior{
+            width: 100%;
+            height: 14%;
+            background-color: rgba(0,0,0,.6);
+        }
+        #franjaBajoMenuH{
+            //position: relative;
+            //margin-top:2px;
+            //top: 14%;
+            width: 100%;
+            height: 3.5%;
+            background-color: rgba(0,0,0,.85);
+            box-shadow: 0 -10px 20px rgba(0,0,0,.4);
+        }
+    }
 
 }
 
