@@ -23,19 +23,22 @@ $resplandorTablaRanking: rgb(186,241,255);
 
     #contenedorTablaRanking{
         border-radius: 10px;
-        box-shadow: 13px 0 20px rgba($resplandorTablaRanking,.2),
+        padding: 10px;
+/*        box-shadow: 13px 0 20px rgba($resplandorTablaRanking,.2),
             -13px 0 20px rgba($resplandorTablaRanking,.2),
             0 13px 20px rgba($resplandorTablaRanking,.2),
-            0 -13px 20px rgba($resplandorTablaRanking,.2);
-
+            0 -13px 20px rgba($resplandorTablaRanking,.2);*/
+        @include sombraPerimetral(13px,20px,rgba($resplandorTablaRanking,.2),none);
+        
         #tablaRanking{
             tr{
-                border-spacing: 2px;
+                //border-spacing: 2px;
                 & td{
                     border-top-color: rgba($resplandorTablaRanking,.15);
                 }
                 &:hover{
                     background-color: rgba($resplandorTablaRanking,.4);
+                    transition-duration: 0.5s;
                 }
             }
 

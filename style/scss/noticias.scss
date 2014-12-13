@@ -11,6 +11,8 @@
 }
 .articulos_contenedorImagen{
     margin-bottom: 10px;
+    @include sombraPerimetral(2px,10px,rgba(0,0,0,.8),none);
+    //box-shadow: 0 -2px 10px rgba(0,0,0,.8), 2px 0 10px rgba(0,0,0,.8), 0 2px 10px rgba(0,0,0,.8),  -2px 0 10px rgba(0,0,0,.8);
     & img{
         width: 100%;
     }

@@ -21,13 +21,17 @@
     color: grey; }
   #contenedorRanking #contenedorTablaRanking {
     border-radius: 10px;
-    box-shadow: 13px 0 20px rgba(186, 241, 255, 0.2), -13px 0 20px rgba(186, 241, 255, 0.2), 0 13px 20px rgba(186, 241, 255, 0.2), 0 -13px 20px rgba(186, 241, 255, 0.2); }
-    #contenedorRanking #contenedorTablaRanking #tablaRanking tr {
-      border-spacing: 2px; }
-      #contenedorRanking #contenedorTablaRanking #tablaRanking tr td {
-        border-top-color: rgba(186, 241, 255, 0.15); }
-      #contenedorRanking #contenedorTablaRanking #tablaRanking tr:hover {
-        background-color: rgba(186, 241, 255, 0.4); }
+    padding: 10px;
+    /*        box-shadow: 13px 0 20px rgba($resplandorTablaRanking,.2),
+                -13px 0 20px rgba($resplandorTablaRanking,.2),
+                0 13px 20px rgba($resplandorTablaRanking,.2),
+                0 -13px 20px rgba($resplandorTablaRanking,.2);*/
+    box-shadow: 0 -13px 20px rgba(186, 241, 255, 0.2), 13px 0 20px rgba(186, 241, 255, 0.2), 0 13px 20px rgba(186, 241, 255, 0.2), -13px 0 20px rgba(186, 241, 255, 0.2); }
+    #contenedorRanking #contenedorTablaRanking #tablaRanking tr td {
+      border-top-color: rgba(186, 241, 255, 0.15); }
+    #contenedorRanking #contenedorTablaRanking #tablaRanking tr:hover {
+      background-color: rgba(186, 241, 255, 0.4);
+      transition-duration: 0.5s; }
     #contenedorRanking #contenedorTablaRanking #tablaRanking .row {
       cursor: pointer; }
     #contenedorRanking #contenedorTablaRanking #tablaRanking .encabezadoRanking {
