@@ -59,7 +59,7 @@
                 height: 100%;
             }
             &:hover{
-                transition-duration: .6s;
+                transition-duration: .4s;
                 @include sombraPerimetral(3px,8px,rgba(white,.7),none);
             }
         }

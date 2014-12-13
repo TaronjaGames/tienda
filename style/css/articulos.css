@@ -54,7 +54,7 @@
       width: 100%;
       height: 100%; }
     .contenedorArticulo .contenedorCompra .producto_boton:hover {
-      transition-duration: .6s;
+      transition-duration: .4s;
       box-shadow: 0 -3px 8px rgba(255, 255, 255, 0.7), 3px 0 8px rgba(255, 255, 255, 0.7), 0 3px 8px rgba(255, 255, 255, 0.7), -3px 0 8px rgba(255, 255, 255, 0.7); }
 
 /*# sourceMappingURL=articulos.css.map */

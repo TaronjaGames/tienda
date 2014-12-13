@@ -69,7 +69,7 @@
     margin: 7px 15px;
     padding: 3px 10px;
 
-    @include botonOut($colorNaranjaBase,silver,white,transparent,transparent);
+    @include botonOut($colorNaranjaBase,black,white,transparent,transparent);
 
     &:hover{
         transition-duration: .4s;
