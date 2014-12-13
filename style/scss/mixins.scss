@@ -1,3 +1,9 @@
+@mixin estiloEnlace($display,$color,$ancho){
+    display: $display;
+    text-decoration: none;
+    color: $color;
+    width: $ancho;
+}
 @mixin sombraPerimetral($size,$difuminacion,$color,$estilo){
     @if $estilo == inset{
         box-shadow: 0 ((-1)*$size) $difuminacion $color $estilo,
@@ -24,8 +30,7 @@
         height: 8px;
     }
 }
-
-/*//Botones header
+//Botones header
 @mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
     border:{
         radius: 4px;
@@ -56,17 +61,19 @@
 }
 @mixin estiloBotonHeader(){
     & a{
-        @include estiloEnlace(block,white);
+        @include estiloEnlace(inline,white,60px);
     }
 
     text-align: center;
     font-size: 10px;
-    margin: 4px 15px;
-    padding: 2px 10px;
+    margin: 7px 15px;
+    padding: 3px 10px;
 
-    @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
+    @include botonOut($colorNaranjaBase,silver,white,transparent,transparent);
 
     &:hover{
-        @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
+        @include botonIn(silver,transparent,rgb(230,230,230),rgba(0,0,0,.05));
+        @include sombraPerimetral(1px,12px,$colorNaranjaSuave,none);
+        transition-duration: .5s;
     }
-}*/
+}

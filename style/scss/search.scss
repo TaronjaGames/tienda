@@ -34,6 +34,9 @@
 .search-form .form-group:hover,
 .search-form .form-group.hover {
   width: 100%;
+  //@include sombraPerimetral(3px,8px,$colorNaranjaSuave,none);
+  @include sombraPerimetral(3px,8px,rgba($resplandorTablaRanking,.7),none);
+  transition-duration: .6s;
   //border-radius: 4px 25px 25px 4px;
 }
 .search-form .form-group span.form-control-feedback {

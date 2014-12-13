@@ -1,48 +1,3 @@
-/*//Botones header
-@mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
-    border:{
-        radius: 4px;
-
-        left: 1px solid $color-left-top;
-        top: 1px solid $color-left-top;
-        right: 1px solid $color-right-bottom;
-        bottom: 1px solid $color-right-bottom;
-    }
-    color: $color;
-    background-color: $background-color;
-    box-shadow: 1px 1px 2px $colorSombra;
-}
-@mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
-    border:{
-        radius: 4px;
-
-        left: 1px solid $color-left-top;
-        top: 1px solid $color-left-top;
-        right: 1px solid $color-right-bottom;
-        bottom: 1px solid $color-right-bottom;
-    }
-    cursor: pointer;
-    color: $color;
-    background-color: $background-color;
-    box-shadow: none;
-    opacity: .9;
-}
-@mixin estiloBotonHeader(){
-    & a{
-        @include estiloEnlace(block,white);
-    }
-
-    text-align: center;
-    font-size: 10px;
-    margin: 4px 15px;
-    padding: 2px 10px;
-
-    @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
-
-    &:hover{
-        @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
-    }
-}*/
 @font-face {
   font-family: Farcry;
   src: url("../fonts/Farcry.ttf"); }
@@ -93,24 +48,62 @@ body {
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
             margin-left: 30px;
             width: 195px;
-            margin-top: -40px; }
+            margin-top: -40px;
+            cursor: pointer; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg:hover {
+              transform: scale(1.05);
+              transition-duration: .5s; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
           width: 50%;
           height: 100%;
           float: left; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
           width: 25%;
-          text-align: left;
+          text-align: center;
           height: 100%;
           float: left; }
-          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin .boton {
-            box-shadow: 2px 2px 4px 1px black;
-            width: 40%;
-            margin: 4% auto;
-            text-align: center;
-            font-size: 0.7em;
-            font-style: italic;
-            background-color: rgba(255, 255, 255, 0.7); }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
+            width: 35%;
+            margin-top: 1%;
+            float: right; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton {
+              text-align: center;
+              font-size: 10px;
+              margin: 7px 15px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              border-left: 1px solid #ff8000;
+              border-top: 1px solid #ff8000;
+              border-right: 1px solid silver;
+              border-bottom: 1px solid silver;
+              color: white;
+              background-color: transparent;
+              box-shadow: 1px 1px 2px transparent;
+              /*                        box-shadow: 2px 2px 4px 1px black;
+                                      width: 40%;
+                                      margin: 4% auto;
+                                      text-align: center;
+                                      font-size: 0.7em;
+                                      font-style: italic;
+                                      background-color: rgba(white,.70);*/ }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton:hover {
+                border-radius: 4px;
+                border-left: 1px solid silver;
+                border-top: 1px solid silver;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                color: #e6e6e6;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: none;
+                opacity: .9;
+                box-shadow: 0 -1px 12px #ffb062, 1px 0 12px #ffb062, 0 1px 12px #ffb062, -1px 0 12px #ffb062;
+                transition-duration: .5s; }
     body #capaSuperior #menuH {
       height: 3.5%;
       box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5); }
@@ -130,6 +123,9 @@ body {
           font-size: 1em; }
           body #capaSuperior #menuH #plataformas .menuH_plataforma img {
             height: 100%; }
+          body #capaSuperior #menuH #plataformas .menuH_plataforma:hover {
+            border-radius: 6px;
+            box-shadow: 0 -1px 15px white, 1px 0 15px white, 0 1px 15px white, -1px 0 15px white; }
         body #capaSuperior #menuH #plataformas .menuH_plataforma:hover {
           cursor: pointer;
           background-color: #ffb062;
@@ -144,51 +140,6 @@ body {
         width: 16%;
         height: 100%;
         float: left;
-        /*//Botones header
-        @mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
-            border:{
-                radius: 4px;
-        
-                left: 1px solid $color-left-top;
-                top: 1px solid $color-left-top;
-                right: 1px solid $color-right-bottom;
-                bottom: 1px solid $color-right-bottom;
-            }
-            color: $color;
-            background-color: $background-color;
-            box-shadow: 1px 1px 2px $colorSombra;
-        }
-        @mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
-            border:{
-                radius: 4px;
-        
-                left: 1px solid $color-left-top;
-                top: 1px solid $color-left-top;
-                right: 1px solid $color-right-bottom;
-                bottom: 1px solid $color-right-bottom;
-            }
-            cursor: pointer;
-            color: $color;
-            background-color: $background-color;
-            box-shadow: none;
-            opacity: .9;
-        }
-        @mixin estiloBotonHeader(){
-            & a{
-                @include estiloEnlace(block,white);
-            }
-        
-            text-align: center;
-            font-size: 10px;
-            margin: 4px 15px;
-            padding: 2px 10px;
-        
-            @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
-        
-            &:hover{
-                @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
-            }
-        }*/
         /*.stylish-input-group .input-group-addon{
             background: white !important; 
         }
@@ -283,7 +234,9 @@ body {
           display: none; }
         body #capaSuperior #menuH #buscar .search-form .form-group:hover,
         body #capaSuperior #menuH #buscar .search-form .form-group.hover {
-          width: 100%; }
+          width: 100%;
+          box-shadow: 0 -3px 8px rgba(186, 241, 255, 0.7), 3px 0 8px rgba(186, 241, 255, 0.7), 0 3px 8px rgba(186, 241, 255, 0.7), -3px 0 8px rgba(186, 241, 255, 0.7);
+          transition-duration: .6s; }
         body #capaSuperior #menuH #buscar .search-form .form-group span.form-control-feedback {
           position: absolute;
           top: -1px;
@@ -307,6 +260,9 @@ body {
           height: 100%; }
           body #capaSuperior #menuH #carrito #botonCarrito span {
             width: 95%; }
+          body #capaSuperior #menuH #carrito #botonCarrito:hover {
+            transition-duration: .6s;
+            box-shadow: 0 -3px 8px rgba(186, 241, 255, 0.7), 3px 0 8px rgba(186, 241, 255, 0.7), 0 3px 8px rgba(186, 241, 255, 0.7), -3px 0 8px rgba(186, 241, 255, 0.7); }
     body #capaSuperior #seccionCentral {
       height: 68%;
       margin-top: 1px;
@@ -351,142 +307,7 @@ body {
           padding: 1%;
           margin: 0 .5%;
           float: left;
-          margin-right: 0.5%;
-          /*//Botones header
-          @mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
-              border:{
-                  radius: 4px;
-          
-                  left: 1px solid $color-left-top;
-                  top: 1px solid $color-left-top;
-                  right: 1px solid $color-right-bottom;
-                  bottom: 1px solid $color-right-bottom;
-              }
-              color: $color;
-              background-color: $background-color;
-              box-shadow: 1px 1px 2px $colorSombra;
-          }
-          @mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
-              border:{
-                  radius: 4px;
-          
-                  left: 1px solid $color-left-top;
-                  top: 1px solid $color-left-top;
-                  right: 1px solid $color-right-bottom;
-                  bottom: 1px solid $color-right-bottom;
-              }
-              cursor: pointer;
-              color: $color;
-              background-color: $background-color;
-              box-shadow: none;
-              opacity: .9;
-          }
-          @mixin estiloBotonHeader(){
-              & a{
-                  @include estiloEnlace(block,white);
-              }
-          
-              text-align: center;
-              font-size: 10px;
-              margin: 4px 15px;
-              padding: 2px 10px;
-          
-              @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
-          
-              &:hover{
-                  @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
-              }
-          }*/
-          /*//Botones header
-          @mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
-              border:{
-                  radius: 4px;
-          
-                  left: 1px solid $color-left-top;
-                  top: 1px solid $color-left-top;
-                  right: 1px solid $color-right-bottom;
-                  bottom: 1px solid $color-right-bottom;
-              }
-              color: $color;
-              background-color: $background-color;
-              box-shadow: 1px 1px 2px $colorSombra;
-          }
-          @mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
-              border:{
-                  radius: 4px;
-          
-                  left: 1px solid $color-left-top;
-                  top: 1px solid $color-left-top;
-                  right: 1px solid $color-right-bottom;
-                  bottom: 1px solid $color-right-bottom;
-              }
-              cursor: pointer;
-              color: $color;
-              background-color: $background-color;
-              box-shadow: none;
-              opacity: .9;
-          }
-          @mixin estiloBotonHeader(){
-              & a{
-                  @include estiloEnlace(block,white);
-              }
-          
-              text-align: center;
-              font-size: 10px;
-              margin: 4px 15px;
-              padding: 2px 10px;
-          
-              @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
-          
-              &:hover{
-                  @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
-              }
-          }*/
-          /*//Botones header
-          @mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
-              border:{
-                  radius: 4px;
-          
-                  left: 1px solid $color-left-top;
-                  top: 1px solid $color-left-top;
-                  right: 1px solid $color-right-bottom;
-                  bottom: 1px solid $color-right-bottom;
-              }
-              color: $color;
-              background-color: $background-color;
-              box-shadow: 1px 1px 2px $colorSombra;
-          }
-          @mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
-              border:{
-                  radius: 4px;
-          
-                  left: 1px solid $color-left-top;
-                  top: 1px solid $color-left-top;
-                  right: 1px solid $color-right-bottom;
-                  bottom: 1px solid $color-right-bottom;
-              }
-              cursor: pointer;
-              color: $color;
-              background-color: $background-color;
-              box-shadow: none;
-              opacity: .9;
-          }
-          @mixin estiloBotonHeader(){
-              & a{
-                  @include estiloEnlace(block,white);
-              }
-          
-              text-align: center;
-              font-size: 10px;
-              margin: 4px 15px;
-              padding: 2px 10px;
-          
-              @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
-          
-              &:hover{
-                  @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
-              }
-          }*/ }
+          margin-right: 0.5%; }
 @font-face {
   body #capaSuperior #seccionCentral #contenidos #articulos {
     font-family: Farcry;
@@ -671,51 +492,6 @@ body {
       background-color: rgba(0, 0, 0, 0.85);
       box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.4); }
 
-/*//Botones header
-@mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
-    border:{
-        radius: 4px;
-
-        left: 1px solid $color-left-top;
-        top: 1px solid $color-left-top;
-        right: 1px solid $color-right-bottom;
-        bottom: 1px solid $color-right-bottom;
-    }
-    color: $color;
-    background-color: $background-color;
-    box-shadow: 1px 1px 2px $colorSombra;
-}
-@mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
-    border:{
-        radius: 4px;
-
-        left: 1px solid $color-left-top;
-        top: 1px solid $color-left-top;
-        right: 1px solid $color-right-bottom;
-        bottom: 1px solid $color-right-bottom;
-    }
-    cursor: pointer;
-    color: $color;
-    background-color: $background-color;
-    box-shadow: none;
-    opacity: .9;
-}
-@mixin estiloBotonHeader(){
-    & a{
-        @include estiloEnlace(block,white);
-    }
-
-    text-align: center;
-    font-size: 10px;
-    margin: 4px 15px;
-    padding: 2px 10px;
-
-    @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
-
-    &:hover{
-        @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
-    }
-}*/
 @font-face {
   font-family: Farcry;
   src: url("../fonts/Farcry.ttf"); }

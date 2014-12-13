@@ -24,7 +24,7 @@ body{
     background-size:100%;
 
     font-family: Calibri;
-    
+
     @include reglasBarrasScroll();
 
     #capaSuperior{
@@ -54,6 +54,11 @@ body{
                         margin-left: 30px;
                         width: 195px;
                         margin-top: -40px;
+                        cursor: pointer;
+                        &:hover{
+                            transform: scale(1.05);
+                            transition-duration: .5s;
+                        }
                     }
 
 
@@ -65,19 +70,24 @@ body{
                 }
                 #cabeceraLogin{
                     width: 25%;
-                    text-align: left;
+                    text-align: center;
                     height: 100%;
                     float: left;
-                    .boton{
-                        box-shadow: 2px 2px 4px 1px black;
-                        width: 40%;
-                        margin: 4% auto;
-                        text-align: center;
-                        font-size: 0.7em;
-                        font-style: italic;
-                        background-color: rgba(white,.70);
+                    #botoneraLogin{
+                        width: 35%;
+                        margin-top: 1%;
+                        float: right;
+                        .boton{
+                            @include estiloBotonHeader();
+                            /*                        box-shadow: 2px 2px 4px 1px black;
+                                                    width: 40%;
+                                                    margin: 4% auto;
+                                                    text-align: center;
+                                                    font-size: 0.7em;
+                                                    font-style: italic;
+                                                    background-color: rgba(white,.70);*/
+                        }
                     }
-
                 }
             }
         }
@@ -105,7 +115,11 @@ body{
                     img{
                         height: 100%;
                     }
-
+                    
+                    &:hover{
+                        border-radius: 6px;
+                        @include sombraPerimetral(1px,15px,white,none);
+                    }
 
                 }
 
@@ -147,6 +161,10 @@ body{
                     height: 100%;
                     & span{
                         width: 95%;
+                    }
+                    &:hover{
+                        transition-duration: .6s;
+                        @include sombraPerimetral(3px,8px,rgba($resplandorTablaRanking,.7),none);
                     }
                 }
             }
