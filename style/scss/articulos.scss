@@ -1,39 +1,65 @@
  
 @import "common.scss";
 
-.articulo{
-    padding:0px 45px;
-    background-color: transparent;
-    border:transparent;
-}
-.fila{
-    margin:0px;
-}
-.contenedorImgArticulo{
-    text-align: center;
-    height: 250px;
-    padding-top: 30px;
-    margin-bottom: 20px;
-    & .producto_img{
-        max-height: 100%;
-        max-width: 100%;
+
+.contenedorArticulo{
+    .articulo{
+        width: 85%;
+        padding:10px 25px;
+        //background-color: transparent;
+        background-color: rgba(0,0,0,.4);
+        border:transparent;
+        @include sombraPerimetral(2px,30px,rgba(0,0,0,.6),none);
     }
-}
-.producto_titulo{
-    color:$colorNaranjaBase;
-    font-family: TimesNewYorker;
-    font-size:1.2em;
-}
-.producto_descripcion{
-    font-size: 0.75em;
-    color: silver;
-}
-.producto_precio{
-    font-family: PlaneCrash;
-    font-size: 1.7em;
-    color: $colorNaranjaBase;
-    text-align: right;
-}
-.producto_boton{
-    text-align:center;
+    .fila{
+        margin:0px;
+    }
+    .contenedorImgArticulo{
+        text-align: center;
+        height: 250px;
+        padding-top: 30px;
+        margin-bottom: 20px;
+        & .producto_img{
+            max-height: 100%;
+            max-width: 100%;
+        }
+    }
+    .producto_titulo{
+        color:$colorNaranjaBase;
+        font-family: TimesNewYorker;
+        font-size:1.2em;
+    }
+    .producto_descripcion{
+        font-size: 0.75em;
+        color: silver;
+        padding-bottom: 10px;
+    }
+    .contenedorCompra{
+        border: 1px solid white;
+        border-radius: 6px;
+        background-color: rgba(255,255,255,.8);
+        padding: 0;
+        box-shadow: 0 1px 2px rgba(0,0,0,.7) inset, 1px 0 2px rgba(0,0,0,.7) inset;
+        .producto_precio{
+            font-family: PlaneCrash;
+            font-size: 1.9em;
+            color: $colorNaranjaBase;
+            text-align: right;
+        }
+        .producto_boton{
+            border-radius: 6px;
+            height: 100%;
+            padding: 2px;
+            text-align:center;
+            & a{
+                width: 100%;
+                height: 100%;
+            }
+            &:hover{
+                transition-duration: .6s;
+                @include sombraPerimetral(3px,8px,rgba(white,.7),none);
+            }
+        }
+    }
+
 }

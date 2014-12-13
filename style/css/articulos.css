@@ -7,39 +7,51 @@
 @font-face {
   font-family: PlaneCrash;
   src: url("../fonts/PlaneCrash.ttf"); }
-.articulo {
-  padding: 0px 45px;
-  background-color: transparent;
-  border: transparent; }
-
-.fila {
+.contenedorArticulo .articulo {
+  width: 85%;
+  padding: 10px 25px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: transparent;
+  box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.6), 2px 0 30px rgba(0, 0, 0, 0.6), 0 2px 30px rgba(0, 0, 0, 0.6), -2px 0 30px rgba(0, 0, 0, 0.6); }
+.contenedorArticulo .fila {
   margin: 0px; }
-
-.contenedorImgArticulo {
+.contenedorArticulo .contenedorImgArticulo {
   text-align: center;
   height: 250px;
   padding-top: 30px;
   margin-bottom: 20px; }
-  .contenedorImgArticulo .producto_img {
+  .contenedorArticulo .contenedorImgArticulo .producto_img {
     max-height: 100%;
     max-width: 100%; }
-
-.producto_titulo {
+.contenedorArticulo .producto_titulo {
   color: #ff8000;
   font-family: TimesNewYorker;
   font-size: 1.2em; }
-
-.producto_descripcion {
+.contenedorArticulo .producto_descripcion {
   font-size: 0.75em;
-  color: silver; }
-
-.producto_precio {
-  font-family: PlaneCrash;
-  font-size: 1.7em;
-  color: #ff8000;
-  text-align: right; }
-
-.producto_boton {
-  text-align: center; }
+  color: silver;
+  padding-bottom: 10px; }
+.contenedorArticulo .contenedorCompra {
+  border: 1px solid white;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) inset, 1px 0 2px rgba(0, 0, 0, 0.7) inset; }
+  .contenedorArticulo .contenedorCompra .producto_precio {
+    font-family: PlaneCrash;
+    font-size: 1.9em;
+    color: #ff8000;
+    text-align: right; }
+  .contenedorArticulo .contenedorCompra .producto_boton {
+    border-radius: 6px;
+    height: 100%;
+    padding: 2px;
+    text-align: center; }
+    .contenedorArticulo .contenedorCompra .producto_boton a {
+      width: 100%;
+      height: 100%; }
+    .contenedorArticulo .contenedorCompra .producto_boton:hover {
+      transition-duration: .6s;
+      box-shadow: 0 -3px 8px rgba(255, 255, 255, 0.7), 3px 0 8px rgba(255, 255, 255, 0.7), 0 3px 8px rgba(255, 255, 255, 0.7), -3px 0 8px rgba(255, 255, 255, 0.7); }
 
 /*# sourceMappingURL=articulos.css.map */

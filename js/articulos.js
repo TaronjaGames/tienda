@@ -10,12 +10,14 @@ function pintarArticulos($index, $articulo) {
                     <div class='caption'>\n\
                         <p class='producto_titulo'>" + $articulo.nombreArticulo + "</p>\n\
                         <p class='producto_descripcion'>" + $articulo.descripcionArticulo + "</p>\n\
-                        <p class='producto_precio col-xs-10'>" + $articulo.precioArticulo + "€</p>\n\
-                        <p class='producto_boton col-xs-2'>\n\
-                            <a href='#' class='btn btn-primary' role='button'>\n\
-                                <span class='glyphicon glyphicon-shopping-cart'></span>\n\
-                            </a>\n\
-                        </p>\n\
+                        <div class='contenedorCompra row'>\n\
+                            <div class='producto_precio col-xs-10 col-sm-10 col-lg-10'>" + $articulo.precioArticulo + "€</div>\n\
+                            <div class='producto_boton col-xs-2 col-sm-2 col-lg-2'>\n\
+                                <a href='#' class='btn btn-success' role='button'>\n\
+                                    <span class='glyphicon glyphicon-shopping-cart'></span>\n\
+                                </a>\n\
+                            </div>\n\
+                        </div>\n\
                     </div>\n\
                 </article>\n\
             </div>";
