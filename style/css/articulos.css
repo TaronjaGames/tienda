@@ -9,6 +9,7 @@
   src: url("../fonts/PlaneCrash.ttf"); }
 .contenedorArticulo .articulo {
   width: 85%;
+  margin-top: 10px;
   padding: 10px 25px;
   background-color: rgba(0, 0, 0, 0.4);
   border: transparent;
