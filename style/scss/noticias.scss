@@ -16,6 +16,10 @@
     //box-shadow: 0 -2px 10px rgba(0,0,0,.8), 2px 0 10px rgba(0,0,0,.8), 0 2px 10px rgba(0,0,0,.8),  -2px 0 10px rgba(0,0,0,.8);
     & img{
         width: 100%;
+        &:hover{
+            transition-duration: 0.6s;
+            @include sombraPerimetral(2px,20px,$resplandorTablaRanking,none);
+        }
     }
 }
 .articulo_noticia_left{
@@ -34,6 +38,10 @@
     font-family: TimesNewYorker;
     font-size:1.2em;
     cursor: pointer;
+    &:hover{
+        transition-duration: 0.3s;
+        @include sombraPerimetralTexto(1px, 8px, white, none);
+    }
 }
 
 .articulos_cuerpo{

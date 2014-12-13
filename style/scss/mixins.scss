@@ -17,6 +17,19 @@
             ((-1)*$size) 0 $difuminacion $color;
     }
 }
+@mixin sombraPerimetralTexto($size,$difuminacion,$color,$estilo){
+    @if $estilo == inset{
+        text-shadow: 0 ((-1)*$size) $difuminacion $color $estilo,
+            $size 0 $difuminacion $color $estilo,
+            0 $size $difuminacion $color $estilo,
+            ((-1)*$size) 0 $difuminacion $color $estilo;
+    } @else if $estilo == none{
+        text-shadow: 0 ((-1)*$size) $difuminacion $color,
+            $size 0 $difuminacion $color,
+            0 $size $difuminacion $color,
+            ((-1)*$size) 0 $difuminacion $color;
+    }
+}
 @mixin reglasBarrasScroll(){
     // REGLAS PARA LAS BARRAS DE DESPLAZAMIENTO
     ::-webkit-scrollbar-thumb{
