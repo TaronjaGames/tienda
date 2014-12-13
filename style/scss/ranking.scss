@@ -31,9 +31,17 @@
         
         #tablaRanking{
             tr{
-                //border-spacing: 2px;
+                #numeroRanking-1{
+                    color: $colorNaranjaBase;
+                    font-size: 1.2em;
+                    font-weight: bolder;
+                }
+                .numeroRanking{
+                    color: $colorNaranjaSuave;
+                }
                 & td{
                     border-top-color: rgba($resplandorTablaRanking,.15);
+                    vertical-align: middle;
                 }
                 &:hover{
                     background-color: rgba($resplandorTablaRanking,.4);

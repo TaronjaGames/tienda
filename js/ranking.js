@@ -31,7 +31,7 @@ function mostrarRanking() {
 
         $.each(data, function (index) {
             datos += "<tr class='row'>"
-                    + "<td>" + (index + 1) + "</td>"
+                    + "<td id='numeroRanking-" + (index + 1) + "' class='numeroRanking'>" + (index + 1) + "</td>"
                     + "<td>"
                     + "<img class='imgRanking' src='style/img/articulos/" + data[index].imagenArticulo + ".png' alt='Imagen_Articulo'/>"
                     + "</td>"
