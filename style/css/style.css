@@ -1,3 +1,48 @@
+/*//Botones header
+@mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
+    border:{
+        radius: 4px;
+
+        left: 1px solid $color-left-top;
+        top: 1px solid $color-left-top;
+        right: 1px solid $color-right-bottom;
+        bottom: 1px solid $color-right-bottom;
+    }
+    color: $color;
+    background-color: $background-color;
+    box-shadow: 1px 1px 2px $colorSombra;
+}
+@mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
+    border:{
+        radius: 4px;
+
+        left: 1px solid $color-left-top;
+        top: 1px solid $color-left-top;
+        right: 1px solid $color-right-bottom;
+        bottom: 1px solid $color-right-bottom;
+    }
+    cursor: pointer;
+    color: $color;
+    background-color: $background-color;
+    box-shadow: none;
+    opacity: .9;
+}
+@mixin estiloBotonHeader(){
+    & a{
+        @include estiloEnlace(block,white);
+    }
+
+    text-align: center;
+    font-size: 10px;
+    margin: 4px 15px;
+    padding: 2px 10px;
+
+    @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
+
+    &:hover{
+        @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
+    }
+}*/
 @font-face {
   font-family: Farcry;
   src: url("../fonts/Farcry.ttf"); }
@@ -99,6 +144,51 @@ body {
         width: 16%;
         height: 100%;
         float: left;
+        /*//Botones header
+        @mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
+            border:{
+                radius: 4px;
+        
+                left: 1px solid $color-left-top;
+                top: 1px solid $color-left-top;
+                right: 1px solid $color-right-bottom;
+                bottom: 1px solid $color-right-bottom;
+            }
+            color: $color;
+            background-color: $background-color;
+            box-shadow: 1px 1px 2px $colorSombra;
+        }
+        @mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
+            border:{
+                radius: 4px;
+        
+                left: 1px solid $color-left-top;
+                top: 1px solid $color-left-top;
+                right: 1px solid $color-right-bottom;
+                bottom: 1px solid $color-right-bottom;
+            }
+            cursor: pointer;
+            color: $color;
+            background-color: $background-color;
+            box-shadow: none;
+            opacity: .9;
+        }
+        @mixin estiloBotonHeader(){
+            & a{
+                @include estiloEnlace(block,white);
+            }
+        
+            text-align: center;
+            font-size: 10px;
+            margin: 4px 15px;
+            padding: 2px 10px;
+        
+            @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
+        
+            &:hover{
+                @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
+            }
+        }*/
         /*.stylish-input-group .input-group-addon{
             background: white !important; 
         }
@@ -261,7 +351,142 @@ body {
           padding: 1%;
           margin: 0 .5%;
           float: left;
-          margin-right: 0.5%; }
+          margin-right: 0.5%;
+          /*//Botones header
+          @mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
+              border:{
+                  radius: 4px;
+          
+                  left: 1px solid $color-left-top;
+                  top: 1px solid $color-left-top;
+                  right: 1px solid $color-right-bottom;
+                  bottom: 1px solid $color-right-bottom;
+              }
+              color: $color;
+              background-color: $background-color;
+              box-shadow: 1px 1px 2px $colorSombra;
+          }
+          @mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
+              border:{
+                  radius: 4px;
+          
+                  left: 1px solid $color-left-top;
+                  top: 1px solid $color-left-top;
+                  right: 1px solid $color-right-bottom;
+                  bottom: 1px solid $color-right-bottom;
+              }
+              cursor: pointer;
+              color: $color;
+              background-color: $background-color;
+              box-shadow: none;
+              opacity: .9;
+          }
+          @mixin estiloBotonHeader(){
+              & a{
+                  @include estiloEnlace(block,white);
+              }
+          
+              text-align: center;
+              font-size: 10px;
+              margin: 4px 15px;
+              padding: 2px 10px;
+          
+              @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
+          
+              &:hover{
+                  @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
+              }
+          }*/
+          /*//Botones header
+          @mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
+              border:{
+                  radius: 4px;
+          
+                  left: 1px solid $color-left-top;
+                  top: 1px solid $color-left-top;
+                  right: 1px solid $color-right-bottom;
+                  bottom: 1px solid $color-right-bottom;
+              }
+              color: $color;
+              background-color: $background-color;
+              box-shadow: 1px 1px 2px $colorSombra;
+          }
+          @mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
+              border:{
+                  radius: 4px;
+          
+                  left: 1px solid $color-left-top;
+                  top: 1px solid $color-left-top;
+                  right: 1px solid $color-right-bottom;
+                  bottom: 1px solid $color-right-bottom;
+              }
+              cursor: pointer;
+              color: $color;
+              background-color: $background-color;
+              box-shadow: none;
+              opacity: .9;
+          }
+          @mixin estiloBotonHeader(){
+              & a{
+                  @include estiloEnlace(block,white);
+              }
+          
+              text-align: center;
+              font-size: 10px;
+              margin: 4px 15px;
+              padding: 2px 10px;
+          
+              @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
+          
+              &:hover{
+                  @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
+              }
+          }*/
+          /*//Botones header
+          @mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
+              border:{
+                  radius: 4px;
+          
+                  left: 1px solid $color-left-top;
+                  top: 1px solid $color-left-top;
+                  right: 1px solid $color-right-bottom;
+                  bottom: 1px solid $color-right-bottom;
+              }
+              color: $color;
+              background-color: $background-color;
+              box-shadow: 1px 1px 2px $colorSombra;
+          }
+          @mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
+              border:{
+                  radius: 4px;
+          
+                  left: 1px solid $color-left-top;
+                  top: 1px solid $color-left-top;
+                  right: 1px solid $color-right-bottom;
+                  bottom: 1px solid $color-right-bottom;
+              }
+              cursor: pointer;
+              color: $color;
+              background-color: $background-color;
+              box-shadow: none;
+              opacity: .9;
+          }
+          @mixin estiloBotonHeader(){
+              & a{
+                  @include estiloEnlace(block,white);
+              }
+          
+              text-align: center;
+              font-size: 10px;
+              margin: 4px 15px;
+              padding: 2px 10px;
+          
+              @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
+          
+              &:hover{
+                  @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
+              }
+          }*/ }
 @font-face {
   body #capaSuperior #seccionCentral #contenidos #articulos {
     font-family: Farcry;
@@ -446,6 +671,51 @@ body {
       background-color: rgba(0, 0, 0, 0.85);
       box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.4); }
 
+/*//Botones header
+@mixin botonOut($color-left-top,$color-right-bottom,$color,$background-color,$colorSombra){
+    border:{
+        radius: 4px;
+
+        left: 1px solid $color-left-top;
+        top: 1px solid $color-left-top;
+        right: 1px solid $color-right-bottom;
+        bottom: 1px solid $color-right-bottom;
+    }
+    color: $color;
+    background-color: $background-color;
+    box-shadow: 1px 1px 2px $colorSombra;
+}
+@mixin botonIn($color-left-top,$color-right-bottom,$color,$background-color){
+    border:{
+        radius: 4px;
+
+        left: 1px solid $color-left-top;
+        top: 1px solid $color-left-top;
+        right: 1px solid $color-right-bottom;
+        bottom: 1px solid $color-right-bottom;
+    }
+    cursor: pointer;
+    color: $color;
+    background-color: $background-color;
+    box-shadow: none;
+    opacity: .9;
+}
+@mixin estiloBotonHeader(){
+    & a{
+        @include estiloEnlace(block,white);
+    }
+
+    text-align: center;
+    font-size: 10px;
+    margin: 4px 15px;
+    padding: 2px 10px;
+
+    @include botonOut(lightgrey,$colorCorporativo,white,transparent,transparent);
+
+    &:hover{
+        @include botonIn($colorCorporativo,lightgrey,rgb(230,230,230),rgba($colorGrisBase,.05));
+    }
+}*/
 @font-face {
   font-family: Farcry;
   src: url("../fonts/Farcry.ttf"); }
