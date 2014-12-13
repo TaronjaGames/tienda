@@ -2,7 +2,7 @@ function pintarArticulos($index, $articulo) {
 
     //document.getElementById('articulos').style.backgroundColor = "rgba(255,255,255,.80)";
 
-    datos = "<div id='bloqueArticulo-" + $index + "' class='col-xs-12 col-sm-6 col-lg-4'>\n\
+    datos = "<div id='bloqueArticulo-" + $index + "' class='contenedorArticulo col-xs-12 col-sm-6 col-lg-4'>\n\
                 <article class='articulo thumbnail'>\n\
                     <div class='contenedorImgArticulo'>\n\
                         <img class='producto_img' src='style/img/articulos/" + $articulo.imagenArticulo + ".png' alt='" + $articulo.nombreArticulo + "'/>\n\
