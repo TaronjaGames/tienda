@@ -1,7 +1,7 @@
 function mostrarRanking() {
-    
+
     document.getElementById('articulos').style.backgroundColor = "transparent";
-    
+
     $promesa = getAjaxRanking();
 
     $promesa.success(function (data) {
@@ -30,7 +30,7 @@ function mostrarRanking() {
                 + "<tr>";
 
         $.each(data, function (index) {
-            datos += "<tr class='row'>"
+            datos += "<tr id='filaRanking-" + (index + 1) + "' class='row'>"
                     + "<td id='numeroRanking-" + (index + 1) + "' class='numeroRanking'>" + (index + 1) + "</td>"
                     + "<td>"
                     + "<img class='imgRanking' src='style/img/articulos/" + data[index].imagenArticulo + ".png' alt='Imagen_Articulo'/>"
@@ -45,7 +45,7 @@ function mostrarRanking() {
         datos += "</table>"
                 + "</div>"
                 + "</div>";
-        
+
         $("#articulos").html(datos);
 
     });

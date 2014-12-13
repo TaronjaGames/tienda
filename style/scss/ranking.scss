@@ -23,13 +23,21 @@
     #contenedorTablaRanking{
         border-radius: 10px;
         padding: 10px;
-/*        box-shadow: 13px 0 20px rgba($resplandorTablaRanking,.2),
-            -13px 0 20px rgba($resplandorTablaRanking,.2),
-            0 13px 20px rgba($resplandorTablaRanking,.2),
-            0 -13px 20px rgba($resplandorTablaRanking,.2);*/
+        /*        box-shadow: 13px 0 20px rgba($resplandorTablaRanking,.2),
+                    -13px 0 20px rgba($resplandorTablaRanking,.2),
+                    0 13px 20px rgba($resplandorTablaRanking,.2),
+                    0 -13px 20px rgba($resplandorTablaRanking,.2);*/
         @include sombraPerimetral(13px,20px,rgba($resplandorTablaRanking,.2),none);
-        
+
         #tablaRanking{
+            #filaRanking-1{
+                & td{
+                    color: $colorNaranjaBase;
+                }
+                &:hover{
+                    color: white;
+                }
+            }
             tr{
                 #numeroRanking-1{
                     color: $colorNaranjaBase;
@@ -56,11 +64,11 @@
                 border-bottom: 2px solid rgba(0,0,0,.65);
                 cursor: default;
                 background-color: rgba($resplandorTablaRanking,.6);
-                
+
                 &:hover{
                     background-color: rgba($resplandorTablaRanking,.6);
                 }
-                
+
                 & th{
                     text-align: center;
                     color: black;
