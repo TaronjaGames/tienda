@@ -371,12 +371,12 @@ body {
             border: transparent; }
           body #capaSuperior #seccionCentral #contenidos #articulos .fila {
             margin: 0px; }
-          body #capaSuperior #seccionCentral #contenidos #articulos #contenedorImgArticulo {
+          body #capaSuperior #seccionCentral #contenidos #articulos .contenedorImgArticulo {
             text-align: center;
             height: 250px;
             padding-top: 30px;
             margin-bottom: 20px; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #contenedorImgArticulo .producto_img {
+            body #capaSuperior #seccionCentral #contenidos #articulos .contenedorImgArticulo .producto_img {
               max-height: 100%;
               max-width: 100%; }
           body #capaSuperior #seccionCentral #contenidos #articulos .producto_titulo {

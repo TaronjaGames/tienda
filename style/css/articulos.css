@@ -15,12 +15,12 @@
 .fila {
   margin: 0px; }
 
-#contenedorImgArticulo {
+.contenedorImgArticulo {
   text-align: center;
   height: 250px;
   padding-top: 30px;
   margin-bottom: 20px; }
-  #contenedorImgArticulo .producto_img {
+  .contenedorImgArticulo .producto_img {
     max-height: 100%;
     max-width: 100%; }
 

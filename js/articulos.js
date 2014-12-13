@@ -1,10 +1,10 @@
-function pintarArticulos($articulo) {
+function pintarArticulos($index, $articulo) {
 
     //document.getElementById('articulos').style.backgroundColor = "rgba(255,255,255,.80)";
 
-    datos = "<div class='col-xs-12 col-sm-6 col-lg-4'>\n\
+    datos = "<div id='bloqueArticulo-" + $index + "' class='col-xs-12 col-sm-6 col-lg-4'>\n\
                 <article class='articulo thumbnail'>\n\
-                    <div id='contenedorImgArticulo'>\n\
+                    <div class='contenedorImgArticulo'>\n\
                         <img class='producto_img' src='style/img/articulos/" + $articulo.imagenArticulo + ".png' alt='" + $articulo.nombreArticulo + "'/>\n\
                     </div>\n\
                     <div class='caption'>\n\
@@ -36,7 +36,7 @@ function mostrarArticulos($tipo) {
         $.each(data, function (index) {
 
             if ($tipo === data[index].tipoArticulo) {
-                datos += pintarArticulos(data[index]);
+                datos += pintarArticulos(index, data[index]);
             }
         });
         datos += "</div>";
