@@ -72,8 +72,9 @@
     @include botonOut($colorNaranjaBase,silver,white,transparent,transparent);
 
     &:hover{
+        transition-duration: .4s;
         @include botonIn(silver,transparent,rgb(230,230,230),rgba(0,0,0,.05));
-        @include sombraPerimetral(1px,12px,$colorNaranjaSuave,none);
-        transition-duration: .5s;
+        @include sombraPerimetral(1px,12px,white,none);
+        //@include sombraPerimetral(1px,12px,$colorNaranjaSuave,none);
     }
 }

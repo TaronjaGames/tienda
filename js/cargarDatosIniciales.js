@@ -8,6 +8,7 @@ function mostrarSeccion() {
         $.each(data, function(index) {
             if (data[index].nombreSeccion === "Inicio"){
                 var on_click = "mostrarNoticias()";
+                //var on_click = "document.location.href = 'index.html'";
             } else {
                 var on_click = "mostrar" + data[index].nombreSeccion + "()";
             }

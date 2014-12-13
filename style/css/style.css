@@ -92,6 +92,7 @@ body {
                 color: white;
                 width: 60px; }
               body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton:hover {
+                transition-duration: .4s;
                 border-radius: 4px;
                 border-left: 1px solid silver;
                 border-top: 1px solid silver;
@@ -102,8 +103,7 @@ body {
                 background-color: rgba(0, 0, 0, 0.05);
                 box-shadow: none;
                 opacity: .9;
-                box-shadow: 0 -1px 12px #ffb062, 1px 0 12px #ffb062, 0 1px 12px #ffb062, -1px 0 12px #ffb062;
-                transition-duration: .5s; }
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
     body #capaSuperior #menuH {
       height: 3.5%;
       box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5); }
@@ -124,6 +124,7 @@ body {
           body #capaSuperior #menuH #plataformas .menuH_plataforma img {
             height: 100%; }
           body #capaSuperior #menuH #plataformas .menuH_plataforma:hover {
+            transition-duration: .5;
             border-radius: 6px;
             box-shadow: 0 -1px 15px white, 1px 0 15px white, 0 1px 15px white, -1px 0 15px white; }
         body #capaSuperior #menuH #plataformas .menuH_plataforma:hover {
@@ -292,6 +293,9 @@ body {
           border-bottom-right-radius: 4px;
           box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
           padding-left: 10px; }
+          body #capaSuperior #seccionCentral .menuV .menuV_seccion:hover {
+            transition-duration: .3;
+            box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
         body #capaSuperior #seccionCentral .menuV .menuV_seccion:hover {
           color: white;
           cursor: pointer;
@@ -346,6 +350,7 @@ body {
               margin: 3px 0px;
               color: #aaaaaa; }
             body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo .articulos_texto {
+              text-align: justify;
               margin: 0;
               color: silver; }
 @font-face {
@@ -451,6 +456,7 @@ body {
           height: 70%;
           float: left; }
         body #capaSuperior #pie #pieContenidos #otros {
+          padding-top: 5px;
           width: 20%;
           height: 70%;
           float: left; }
@@ -458,12 +464,18 @@ body {
             height: 50%;
             text-align: center; }
             body #capaSuperior #pie #pieContenidos #otros #redesSociales img {
+              margin: 1px;
+              border-radius: 3px;
+              box-shadow: 1px 1px 3px grey;
               height: 90%;
-              margin-top: 2%; }
+              margin-top: 2%;
+              cursor: pointer; }
           body #capaSuperior #pie #pieContenidos #otros #otraInfo {
+            margin-top: 5px;
             height: 50%;
             text-align: center; }
             body #capaSuperior #pie #pieContenidos #otros #otraInfo img {
+              margin: 1px;
               height: 90%;
               margin-top: 2%; }
         body #capaSuperior #pie #pieContenidos #infoContacto {
