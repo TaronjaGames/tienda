@@ -17,8 +17,8 @@
     & img{
         width: 100%;
         &:hover{
-            transition-duration: 0.6s;
-            @include sombraPerimetral(2px,20px,$resplandorTablaRanking,none);
+            transition-duration: .6s;
+            @include sombraPerimetral(1px,20px,$resplandorTablaRanking,none);
         }
     }
 }

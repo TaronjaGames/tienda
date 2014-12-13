@@ -11,6 +11,10 @@
         background-color: rgba(0,0,0,.4);
         border:transparent;
         @include sombraPerimetral(2px,30px,rgba(0,0,0,.6),none);
+        &:hover{
+            transition-duration: .6s;
+            @include sombraPerimetral(1px,20px,$resplandorTablaRanking,none);
+        }
     }
     .fila{
         margin:0px;
@@ -31,6 +35,10 @@
         font-family: TimesNewYorker;
         font-size:1.2em;
         cursor: pointer;
+        &:hover{
+            transition-duration: 0.3s;
+            @include sombraPerimetralTexto(1px, 8px, white, none);
+        }
     }
     .producto_descripcion{
         font-size: 0.75em;

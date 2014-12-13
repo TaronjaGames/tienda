@@ -336,8 +336,8 @@ body {
             body #capaSuperior #seccionCentral #contenidos #articulos .articulos_contenedorImagen img {
               width: 100%; }
               body #capaSuperior #seccionCentral #contenidos #articulos .articulos_contenedorImagen img:hover {
-                transition-duration: 0.6s;
-                box-shadow: 0 -2px 20px #baf1ff, 2px 0 20px #baf1ff, 0 2px 20px #baf1ff, -2px 0 20px #baf1ff; }
+                transition-duration: .6s;
+                box-shadow: 0 -1px 20px #baf1ff, 1px 0 20px #baf1ff, 0 1px 20px #baf1ff, -1px 0 20px #baf1ff; }
           body #capaSuperior #seccionCentral #contenidos #articulos .articulo_noticia_left {
             float: left;
             clear: left; }
@@ -380,6 +380,9 @@ body {
             background-color: rgba(0, 0, 0, 0.4);
             border: transparent;
             box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.6), 2px 0 30px rgba(0, 0, 0, 0.6), 0 2px 30px rgba(0, 0, 0, 0.6), -2px 0 30px rgba(0, 0, 0, 0.6); }
+            body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .articulo:hover {
+              transition-duration: .6s;
+              box-shadow: 0 -1px 20px #baf1ff, 1px 0 20px #baf1ff, 0 1px 20px #baf1ff, -1px 0 20px #baf1ff; }
           body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .fila {
             margin: 0px; }
           body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .contenedorImgArticulo {
@@ -396,6 +399,9 @@ body {
             font-family: TimesNewYorker;
             font-size: 1.2em;
             cursor: pointer; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .producto_titulo:hover {
+              transition-duration: 0.3s;
+              text-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
           body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .producto_descripcion {
             font-size: 0.75em;
             color: silver;
