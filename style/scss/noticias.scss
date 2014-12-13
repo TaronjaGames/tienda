@@ -3,13 +3,18 @@
 
 .articulos_noticia{
     width:45%;
-    margin:10px 10px;
+    margin:10px 10px 40px;
     img{
         width:90%;
     }
 
 }
-
+.articulos_contenedorImagen{
+    margin-bottom: 10px;
+    & img{
+        width: 100%;
+    }
+}
 .articulo_noticia_left{
     float:left;
     clear:left;

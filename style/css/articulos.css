@@ -17,9 +17,9 @@
 
 #contenedorImgArticulo {
   text-align: center;
-  vertical-align: middle;
   height: 250px;
-  padding-top: 30px; }
+  padding-top: 30px;
+  margin-bottom: 20px; }
   #contenedorImgArticulo .producto_img {
     max-height: 100%;
     max-width: 100%; }

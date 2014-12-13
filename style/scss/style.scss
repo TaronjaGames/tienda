@@ -24,6 +24,20 @@ body{
     background-size:100%;
 
     font-family: Calibri;
+    
+    // REGLAS PARA LAS BARRAS DE DESPLAZAMIENTO
+    ::-webkit-scrollbar-thumb{
+        background-color: $colorNaranjaBase;
+        //border-radius: 10px;
+        //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+    }
+    ::-webkit-scrollbar-track{
+        background-color: rgba($colorNaranjaSuave,.4);
+    }
+    ::-webkit-scrollbar{
+        width: 8px;
+        height: 8px;
+    }
 
     #capaSuperior{
         width: 70%;
@@ -145,7 +159,7 @@ body{
 
                 #botonCarrito{
                     height: 100%;
-                    background-color: rgba($colorNaranjaSuave,1);
+                    //background-color: rgba($colorNaranjaSuave,1);
                     & span{
                         width: 95%;
                     }

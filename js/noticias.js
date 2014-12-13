@@ -1,7 +1,7 @@
 function mostrarNoticias() {
-    
+
     //document.getElementById('articulos').style.backgroundColor = "rgba(255,255,255,.80)";
-    
+
     $promesa = getAjax("noticia", "asc");
 
     $promesa.success(function (data) {
@@ -28,13 +28,15 @@ function mostrarNoticias() {
                     + "):";
 
             datos += "<article id='articulo" + data[index].idNoticia + "' class='" + className + "'>"
-            + "<img src='style/img/noticias/" + data[index].imagenNoticia + "' alt='" + data[index].tituloNoticia + "'>"
-            + "<div class='articulos_titulo'>" + data[index].tituloNoticia + "</div>"
-            + "<div class='articulos_cuerpo'>"
-            + "<p class='articulos_autores'>" + autor + "</p>"
-            + "<p class='articulos_texto'>" + data[index].textoNoticia + "</p>"
-            + "</div>"
-            + "</article>";
+                    + "<div class='articulos_contenedorImagen'>"
+                    + "<img src='style/img/noticias/" + data[index].imagenNoticia + "' alt='" + data[index].tituloNoticia + "'>"
+                    + "</div>"
+                    + "<div class='articulos_titulo'>" + data[index].tituloNoticia + "</div>"
+                    + "<div class='articulos_cuerpo'>"
+                    + "<p class='articulos_autores'>" + autor + "</p>"
+                    + "<p class='articulos_texto'>" + data[index].textoNoticia + "</p>"
+                    + "</div>"
+                    + "</article>";
 
         });
         $("#articulos").html(datos);
