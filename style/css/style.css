@@ -350,7 +350,7 @@ body {
             font-size: 1.2em;
             cursor: pointer; }
             body #capaSuperior #seccionCentral #contenidos #articulos .articulos_titulo:hover {
-              transition-duration: 0.3s;
+              transition-duration: 0.6s;
               text-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
           body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo {
             font-size: 0.75em; }
@@ -373,61 +373,61 @@ body {
   body #capaSuperior #seccionCentral #contenidos #articulos {
     font-family: PlaneCrash;
     src: url("../fonts/PlaneCrash.ttf"); } }
-          body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .articulo {
-            width: 85%;
-            margin-top: 10px;
-            padding: 10px 25px;
-            background-color: rgba(0, 0, 0, 0.4);
-            border: transparent;
-            box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.6), 2px 0 30px rgba(0, 0, 0, 0.6), 0 2px 30px rgba(0, 0, 0, 0.6), -2px 0 30px rgba(0, 0, 0, 0.6); }
-            body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .articulo:hover {
-              transition-duration: .6s;
-              box-shadow: 0 -1px 20px #baf1ff, 1px 0 20px #baf1ff, 0 1px 20px #baf1ff, -1px 0 20px #baf1ff; }
-          body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .fila {
+          body #capaSuperior #seccionCentral #contenidos #articulos .fila {
             margin: 0px; }
-          body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .contenedorImgArticulo {
-            text-align: center;
-            height: 250px;
-            padding-top: 30px;
-            margin-bottom: 20px;
-            cursor: pointer; }
-            body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .contenedorImgArticulo .producto_img {
-              max-height: 100%;
-              max-width: 100%; }
-          body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .producto_titulo {
-            color: #ff8000;
-            font-family: TimesNewYorker;
-            font-size: 1.2em;
-            cursor: pointer; }
-            body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .producto_titulo:hover {
-              transition-duration: 0.3s;
-              text-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
-          body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .producto_descripcion {
-            font-size: 0.75em;
-            color: silver;
-            padding-bottom: 10px; }
-          body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .contenedorCompra {
-            border: 1px solid white;
-            border-radius: 6px;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 0;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) inset, 1px 0 2px rgba(0, 0, 0, 0.7) inset; }
-            body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .contenedorCompra .producto_precio {
-              font-family: PlaneCrash;
-              font-size: 1.9em;
+            body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .articulo {
+              width: 85%;
+              margin-top: 10px;
+              padding: 10px 25px;
+              background-color: rgba(0, 0, 0, 0.4);
+              border: transparent;
+              box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.6), 2px 0 30px rgba(0, 0, 0, 0.6), 0 2px 30px rgba(0, 0, 0, 0.6), -2px 0 30px rgba(0, 0, 0, 0.6); }
+              body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .articulo:hover {
+                box-shadow: 0 -1px 20px #baf1ff, 1px 0 20px #baf1ff, 0 1px 20px #baf1ff, -1px 0 20px #baf1ff;
+                transition-duration: .6s; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorImgArticulo {
+              text-align: center;
+              height: 250px;
+              padding-top: 30px;
+              margin-bottom: 20px;
+              cursor: pointer; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorImgArticulo .producto_img {
+                max-height: 100%;
+                max-width: 100%; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .producto_titulo {
               color: #ff8000;
-              text-align: right; }
-            body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .contenedorCompra .producto_boton {
+              font-family: TimesNewYorker;
+              font-size: 1.2em;
+              cursor: pointer; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .producto_titulo:hover {
+                transition-duration: 0.6s;
+                text-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .producto_descripcion {
+              font-size: 0.75em;
+              color: silver;
+              padding-bottom: 10px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra {
+              border: 1px solid white;
               border-radius: 6px;
-              height: 100%;
-              padding: 2px;
-              text-align: center; }
-              body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .contenedorCompra .producto_boton a {
-                width: 100%;
-                height: 100%; }
-              body #capaSuperior #seccionCentral #contenidos #articulos .contenedorArticulo .contenedorCompra .producto_boton:hover {
-                transition-duration: .4s;
-                box-shadow: 0 -3px 8px rgba(255, 255, 255, 0.7), 3px 0 8px rgba(255, 255, 255, 0.7), 0 3px 8px rgba(255, 255, 255, 0.7), -3px 0 8px rgba(255, 255, 255, 0.7); }
+              background-color: rgba(255, 255, 255, 0.8);
+              padding: 0;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) inset, 1px 0 2px rgba(0, 0, 0, 0.7) inset; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra .producto_precio {
+                font-family: PlaneCrash;
+                font-size: 1.9em;
+                color: #ff8000;
+                text-align: right; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra .producto_boton {
+                border-radius: 6px;
+                height: 100%;
+                padding: 2px;
+                text-align: center; }
+                body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra .producto_boton a {
+                  width: 100%;
+                  height: 100%; }
+                body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra .producto_boton:hover {
+                  transition-duration: .4s;
+                  box-shadow: 0 -3px 8px rgba(255, 255, 255, 0.7), 3px 0 8px rgba(255, 255, 255, 0.7), 0 3px 8px rgba(255, 255, 255, 0.7), -3px 0 8px rgba(255, 255, 255, 0.7); }
 @font-face {
   body #capaSuperior #seccionCentral #contenidos #articulos {
     font-family: Farcry;
