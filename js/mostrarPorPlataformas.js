@@ -7,7 +7,7 @@ function mostrarPorPlataformas($plataforma) {
         $.each(data, function (index) {
 
             if (data[index].plataformaArticulo === $plataforma) {
-                datos += pintarArticulos(data[index]);
+                datos += pintarArticulos(index,data[index]);
             }
         });
         datos += "</div>";
