@@ -76,10 +76,11 @@
     & a{
         @include estiloEnlace(inline,white,60px);
     }
-
+    
+    width: 115px;
     text-align: center;
     font-size: 10px;
-    margin: 7px 15px;
+    margin: 7px 5px;
     padding: 3px 10px;
 
     @include botonOut($colorNaranjaBase,black,white,transparent,transparent);
@@ -88,6 +89,5 @@
         transition-duration: .4s;
         @include botonIn(silver,transparent,rgb(230,230,230),rgba(0,0,0,.05));
         @include sombraPerimetral(1px,12px,white,none);
-        //@include sombraPerimetral(1px,12px,$colorNaranjaSuave,none);
     }
 }

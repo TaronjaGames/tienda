@@ -3,37 +3,61 @@
 @media all and (max-width:992px){
 
     body{
+        min-height: $altoTablet;
+        mix-height: $altoTablet;
+        //min-width: $anchoTablet;
 
         #capaSuperior{
-            width:90%;
-            
+            width:80%;
+
             #header{
+                height: $altoTablet*0.15;
                 #cabeceraContenidos{
                     #cabeceraLogo{
-                        img{
-                            width:97px;
-                            
+                        #logoImg{
+                            margin-left: 3%;
+                        }
+                    }
+                    #cabeceraCentro{
+                        width: 40%;
+                    }
+                    #cabeceraLogin{
+                        width: 25%;
+                        #botoneraLogin{
+                            width: 70%;
+                            float: right;
+                            .boton{
+                                width: 115px;
+                            }
                         }
                     }
                 }
-
             }
 
             #menuH{
+                min-height: $altoTablet*0.04;
 
                 #plataformas{
+                    width: 75%;
                     .menuH_plataforma{
                         font-size:0.9em;
-                        
+
                     }
                     #icono_menu_desplegable{
                         display:inline-block;
-                        
+
                     }
+                }
+                #buscar{
+                    width: 18%;
+                    height: 100%
+                }
+                #carrito{
+                    width: 5%;
                 }
             }
             .menu_desplegable{ 
-                
+
                 background-color: rgba($colorGrisBase,0.85);
 
                 .menu_desplegable_seccion{
@@ -51,6 +75,8 @@
             }
 
             #seccionCentral{
+                height: $altoTablet*0.69;
+                
                 #contenidos{
                     width:100%;
                     #articulos{
@@ -64,8 +90,20 @@
                     display:none;
                 }
             }
+            
+            #pie{
+                height: $altoTablet*0.12;
+            }
+            
+        }
 
-
+        #capaFondo{
+            #franjaSuperior{
+                height: $altoTablet*0.15;
+            }
+            #franjaBajoMenuH{
+                min-height: $altoTablet*0.04;
+            }
         }
 
     }

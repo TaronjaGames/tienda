@@ -1,44 +1,85 @@
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
 @media all and (max-width: 768px) {
-  body #capaSuperior {
-    width: 100%; }
-    body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
-      width: 25%; }
-    body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
-      width: 50%; }
-      body #capaSuperior #header #cabeceraContenidos #cabeceraLogin .boton {
-        display: inline-block;
-        margin-top: 9%;
-        height: 34%; }
-    body #capaSuperior #menuH #plataformas {
-      width: 90%; }
-      body #capaSuperior #menuH #plataformas .menuH_plataforma {
+  body {
+    min-height: 800px;
+    min-height: 800px;
+    min-width: 320px; }
+    body #capaSuperior {
+      width: 100%; }
+      body #capaSuperior #header {
+        height: 112.0px; }
+        body #capaSuperior #header #limitSup {
+          height: 40%; }
+        body #capaSuperior #header #cabeceraContenidos {
+          height: 60%; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogo {
+            width: 50%; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
+              margin-left: 3%; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
+            display: none; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+            width: 50%; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
+              width: 70%;
+              float: right;
+              margin-right: 15px; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton {
+                width: 105px; }
+      body #capaSuperior #menuH {
+        min-height: 28.0px; }
+        body #capaSuperior #menuH #plataformas {
+          width: 85%; }
+          body #capaSuperior #menuH #plataformas .menuH_plataforma {
+            display: none; }
+          body #capaSuperior #menuH #plataformas #menuH_desplegable {
+            display: inline-block;
+            width: 75%;
+            padding: 10px 4px;
+            font-size: 1em; }
+            body #capaSuperior #menuH #plataformas #menuH_desplegable #opciones_menu_desplegable2 {
+              left: 26%; }
+          body #capaSuperior #menuH #plataformas span {
+            padding: 0px 4px; }
+          body #capaSuperior #menuH #plataformas span:hover {
+            cursor: pointer;
+            background-color: #ffb062;
+            transition-duration: 0.5s; }
+      body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
+        font-size: 1.5em; }
+      body #capaSuperior #buscar {
         display: none; }
-      body #capaSuperior #menuH #plataformas #menuH_desplegable {
-        display: inline-block;
-        width: 75%;
-        padding: 0px 4px;
-        font-size: 1em; }
-        body #capaSuperior #menuH #plataformas #menuH_desplegable #opciones_menu_desplegable2 {
-          left: 26%; }
-      body #capaSuperior #menuH #plataformas span {
-        padding: 0px 4px; }
-      body #capaSuperior #menuH #plataformas span:hover {
-        cursor: pointer;
-        background-color: #ffb062;
-        transition-duration: 0.5s; }
-    body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
-      font-size: 1.5em; }
-    body #capaSuperior #buscar {
-      display: none; }
-    body #capaSuperior #tablaRanking {
-      border: none; }
-    body #capaSuperior #pie #pieContenidos #infoContacto {
-      display: none; }
-    body #capaSuperior #pie #pieContenidos #infoContactoReducido {
-      display: block;
-      height: 30%;
-      clear: both;
-      font-size: 0.8em;
-      text-align: center; } }
+      body #capaSuperior #carrito {
+        width: 8%; }
+      body #capaSuperior #seccionCentral {
+        max-height: 544px; }
+        body #capaSuperior #seccionCentral #tablaRanking {
+          border: none; }
+      body #capaSuperior #pie {
+        height: 96px; }
+        body #capaSuperior #pie #pieContenidos {
+          height: 80%; }
+          body #capaSuperior #pie #pieContenidos #infoContacto {
+            display: none; }
+          body #capaSuperior #pie #pieContenidos #infoContactoReducido {
+            display: block;
+            height: 30%;
+            clear: both;
+            font-size: 0.8em;
+            text-align: center; }
+        body #capaSuperior #pie #limitInf {
+          height: 20%; }
+    body #capaFondo #franjaSuperior {
+      height: 112.0px; }
+    body #capaFondo #franjaBajoMenuH {
+      min-height: 28.0px; } }
 
 /*# sourceMappingURL=Responsive-xs.css.map */
