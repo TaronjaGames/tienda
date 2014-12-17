@@ -21,7 +21,7 @@
       transition-duration: .6s; }
   .fila .contenedorArticulo .contenedorImgArticulo {
     text-align: center;
-    height: 250px;
+    height: 150px;
     padding-top: 30px;
     margin-bottom: 20px;
     cursor: pointer; }
