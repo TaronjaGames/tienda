@@ -19,15 +19,18 @@
                         }
                     }
                     #cabeceraCentro{
-                        width: 40%;
+                        width: 50%;
                     }
                     #cabeceraLogin{
                         width: 25%;
                         #botoneraLogin{
                             width: 70%;
                             float: right;
+                            
                             .boton{
                                 width: 115px;
+                                float:right;
+                                
                             }
                         }
                     }

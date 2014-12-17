@@ -18,14 +18,15 @@
         body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
           margin-left: 3%; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
-          width: 40%; }
+          width: 50%; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
           width: 25%; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
             width: 70%;
             float: right; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton {
-              width: 115px; }
+              width: 115px;
+              float: right; }
       body #capaSuperior #menuH {
         min-height: 30.72px; }
         body #capaSuperior #menuH #plataformas {

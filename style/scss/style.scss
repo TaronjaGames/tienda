@@ -75,11 +75,14 @@ body{
                     float: left;
                     #botoneraLogin{
                         width: 100%;
-                        margin: 1% 0 0;
+                        margin: 1% 10px 0;
                         float: right;
                         
+                        padding-top:10px;
                         .boton{
                             @include estiloBotonHeader();
+                            float:right;
+                            margin:auto;
                         }
                     }
                 }

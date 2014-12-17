@@ -21,13 +21,13 @@
         body #capaSuperior #header #cabeceraContenidos {
           height: 60%; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogo {
-            width: 50%; }
+            width: 70%; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
               margin-left: 3%; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
             display: none; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
-            width: 50%; }
+            width: 30%; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
               width: 70%;
               float: right;
