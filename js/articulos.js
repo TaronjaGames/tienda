@@ -11,8 +11,8 @@ function pintarArticulos($index, $articulo) {
                         <p class='producto_titulo'>" + $articulo.nombreArticulo + "</p>\n\
                         <p class='producto_descripcion'>" + $articulo.descripcionArticulo + "</p>\n\
                         <div class='contenedorCompra row'>\n\
-                            <div class='producto_precio col-xs-10 col-sm-10 col-lg-10'>" + $articulo.precioArticulo + "€</div>\n\
-                            <div class='producto_boton col-xs-2 col-sm-2 col-lg-2'>\n\
+                            <div class='producto_precio col-xs-9 col-sm-9 col-lg-8'>" + $articulo.precioArticulo + "€</div>\n\
+                            <div class='producto_boton col-xs-3 col-sm-3 col-lg-4'>\n\
                                 <a href='#' class='btn btn-success' role='button'>\n\
                                     <span class='glyphicon glyphicon-shopping-cart'></span>\n\
                                 </a>\n\
