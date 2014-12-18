@@ -1,12 +1,12 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         10.0.14-MariaDB - mariadb.org binary distribution
--- SO del servidor:              Win32
--- HeidiSQL Versión:             9.1.0.4867
+-- Versión del servidor:         5.6.19 - MySQL Community Server (GPL)
+-- SO del servidor:              Win64
+-- HeidiSQL Versión:             8.3.0.4694
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   `idArticulo` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `nombreArticulo` varchar(50) DEFAULT NULL,
   `descripcionArticulo` text,
-  `precioArticulo` decimal(10,0) unsigned DEFAULT NULL,
+  `precioArticulo` decimal(10,2) unsigned DEFAULT NULL,
   `imagenArticulo` varchar(50) DEFAULT NULL,
   `idPlataforma` int(10) unsigned DEFAULT NULL,
   `plataformaArticulo` varchar(50) DEFAULT NULL,
@@ -28,16 +28,44 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   `ventaArticulo` int(11) DEFAULT NULL,
   `ofertaArticulo` int(11) DEFAULT NULL,
   PRIMARY KEY (`idArticulo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.articulo: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.articulo: ~9 rows (aproximadamente)
 /*!40000 ALTER TABLE `articulo` DISABLE KEYS */;
 INSERT INTO `articulo` (`idArticulo`, `nombreArticulo`, `descripcionArticulo`, `precioArticulo`, `imagenArticulo`, `idPlataforma`, `plataformaArticulo`, `tipoArticulo`, `ventaArticulo`, `ofertaArticulo`) VALUES
-	(1, 'Play Station 4', 'Consola 4ª gen.', 399, 'ps4', 1, 'PS4', 'consola', 50, NULL),
-	(2, 'Xbox One', 'Consola 4ª gen.', 499, 'xboxOne', 2, 'XONE', 'consola', 32, NULL),
-	(3, 'HearthStone', 'Juego de cartas', 0, 'hearthStone', 3, 'PC', 'videojuego', 10, NULL),
-	(4, 'Assassins Creed', 'Juego de aventura', 60, 'assassinsCreed', 2, 'XONE', 'videojuego', 3, 10),
-	(5, 'SingStar', 'Juego de cantar', 30, 'singStar', 1, 'PS4', 'videojuego', 5, 20);
+	(1, 'Play Station 4 Negra', 'Consola 4ª gen.', 399.00, 'ps4Negra', 1, 'PS4', 'consola', 50, NULL),
+	(2, 'Xbox One Generica', 'Consola 4ª gen.', 499.99, 'xboxOneGenerica', 2, 'XONE', 'consola', 32, NULL),
+	(6, 'Play Station 4 Blanca', 'Consola 4ª gen.', 419.00, 'ps4Blanca', 1, 'PS4', 'consola', 15, NULL),
+	(7, 'Play Station 4 Gold', 'Consola 4ª gen.', 459.95, 'ps4Gold', 1, 'PS4', 'consola', 50, NULL),
+	(8, 'Xbox One Blanca ', 'Consola 4ª gen.', 499.99, 'xboxOneBlanca', 2, 'XONE', 'consola', 32, NULL),
+	(9, 'Xbox One Especial', 'Consola 4ª gen.', 550.00, 'xboxOneEspecial', 2, 'XONE', 'consola', 12, NULL),
+	(10, '3DS Blanca ', 'Consola Portatil.', 199.99, '3DSBlanca', 4, '3DS', 'consola', 66, NULL),
+	(11, '3DS Negra ', 'Consola Portatil.', 199.99, '3DSNegra', 4, '3DS', 'consola', 54, NULL),
+	(12, '3DS Zelda ', 'Consola Portatil.', 259.99, '3DSZelda', 4, '3DS', 'consola', 20, NULL),
+	(13, 'Assassins Creed Unity', 'Juego de aventura', 60.00, 'assassinsCreedUnityXboxOne', 2, 'XONE', 'videojuego', 3, 10),
+	(14, 'Destiny', 'Juego Futurista', 62.45, 'destinyXboxOne', 2, 'XONE', 'videojuego', 3, 10),
+	(15, 'Forza MotorSport', 'Juego de conducción', 60.00, 'forzaMotorSportXboxOne', 2, 'XONE', 'videojuego', 3, 10),
+	(16, 'Halo Master Chief', 'Juego de Acción', 60.00, 'haloMasterXboxOne', 2, 'XONE', 'videojuego', 3, 10),
+	(17, 'Call of Duty AdvancedWarfare', 'Juego Shooter', 45.50, 'callOfDutyAdvancedWarfarePS4', 1, 'PS4', 'videojuego', 5, 20),
+	(18, 'Destiny', 'Juego Futurista', 49.00, 'destinyPS4', 1, 'PS4', 'videojuego', 7, 20),
+	(19, 'Lego Marvel SuperHeroes', 'Juego de Acción', 58.00, 'legoMarvelSuperHeroesPS4', 1, 'PS4', 'videojuego', 5, 20),
+	(20, 'Second Son', 'Juego Plataformas', 20.00, 'secondSonPS4', 4, 'PS4', 'videojuego', 3, 20),
+	(21, 'The Last of Us', 'Juego Shooter', 39.00, 'theLastOfUsPS4', 1, 'PS4', 'videojuego', 5, 20),
+	(22, 'Watch Dogs', 'Juego Shooter', 50.10, 'watchDogsPS4', 1, 'PS4', 'videojuego', 6, 20),
+	(23, 'AdventureTime', 'Juego de Aventuras', 35.00, 'adventureTime3DS', 4, '3DS', 'videojuego', 5, 20),
+	(24, 'Lego StarWarsIII', 'Juego de Plataformas', 45.00, 'legoStarWarsIII3DS', 1, '3DS', 'videojuego', 5, 20),
+	(25, 'Pokemon Rumble Blast', 'Juego de Pokemon', 55.00, 'pokemonRumbleBlast3DS', 4, '3DS', 'videojuego', 5, 20),
+	(26, 'Rayman', 'Juego de Aventuras', 45.00, 'rayman3DS', 4, '3DS', 'videojuego', 5, 20),
+	(27, 'Funky', 'Juego de Aventuras', 29.30, 'funkyWIIU', 5, 'WII U', 'videojuego', 5, 20),
+	(28, 'Super Smash Brosh U', 'Juego de Peleas', 30.65, 'superSmashWIIU', 5, 'WII U', 'videojuego', 5, 20),
+	(29, 'Lego City UnderCover', 'Juego de Aventuras', 33.00, 'legoCityUndercoverWIIU', 5, 'WII U', 'videojuego', 5, 20),
+	(30, 'New Super Mario Bros', 'Juego de Plataformas', 30.00, 'newSuperMarioBrosWIIU', 5, 'WII U', 'videojuego', 5, 20),
+	(31, 'Lego City UnderCover', 'Juego de Aventuras', 45.20, 'legoCityUndercoverWIIU', 5, 'WII U', 'videojuego', 5, 20),
+	(32, 'Mando', 'Accesorio', 49.00, 'mandoWIIU', 5, 'WII U', 'consola', 32, NULL),
+	(33, 'Cascos', 'Accesorio', 499.00, 'cascosPC', 3, 'PC', 'consola', 32, NULL),
+	(34, 'Mouse-Gaming', 'Accesotio', 25.10, 'mouseGamerPC', 3, 'PC', 'consola', 32, NULL),
+	(35, 'Teclado-Gaming', 'Accesotio', 59.00, 'tecladoGamerPC', 3, 'PC', 'consola', 32, NULL),
+	(36, 'Teclado-GamingLogitech', 'Accesotio', 72.00, 'tecladoGamerLogitechPC', 3, 'PC', 'consola', 32, NULL);
 /*!40000 ALTER TABLE `articulo` ENABLE KEYS */;
 
 
