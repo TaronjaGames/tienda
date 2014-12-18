@@ -37,7 +37,7 @@
       body #capaSuperior #menuH {
         min-height: 28.0px; }
         body #capaSuperior #menuH #plataformas {
-          width: 85%; }
+          width: 90%; }
           body #capaSuperior #menuH #plataformas .menuH_plataforma {
             display: none; }
           body #capaSuperior #menuH #plataformas #menuH_desplegable {
@@ -58,7 +58,7 @@
       body #capaSuperior #buscar {
         display: none; }
       body #capaSuperior #carrito {
-        width: 8%; }
+        width: 10%; }
       body #capaSuperior #seccionCentral {
         max-height: 544px; }
         body #capaSuperior #seccionCentral #tablaRanking {
