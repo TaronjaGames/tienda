@@ -17,18 +17,18 @@ body{
             font-size: 1.5em;
             color:white;
         }
-        #CarritoTabla{
+        #carritoTabla{
             padding-top:0px; 
             overflow:hidden;
             background-color: white;
             box-shadow: 5px 5px 10px #000 ;
 
-            #EncabezadoTabla{
+            #encabezadoTabla{
                 background-color:darkred;
                 overflow: hidden;
                 color:white;
 
-                .ENtabla{
+                .enTabla{
                     float:left;
                     text-align: center;
 
@@ -39,7 +39,7 @@ body{
                 }
 
             }
-            #ZonaArticulosCarrito{
+            #zonaArticulosCarrito{
 
                 overflow:hidden;
 
@@ -73,7 +73,7 @@ body{
                     height:15px;
                 }
             }
-            #TotalFacturaCarrito{
+            #totalFacturaCarrito{
                 background-color:darkred;
                 color:white;
                 overflow: hidden;
@@ -84,36 +84,36 @@ body{
                 font-style: italic;
                 font-size: 1em;
                 
-                #TextoTotalFactura{
+                #textoTotalFactura{
                     float:left;
                     width:75%;
                 }
                 
             }
-            .ENimagen{
+            .enImagen{
                 width:10%;
             }
-            .ENnombre{
+            .enNombre{
                 width:40%;
                 text-align: center;
             }
-            .ENprecio{
+            .enPrecio{
                 width:10%;
                 text-align: center;
             }
-            .ENcantidad{
+            .enCantidad{
                 width:10%;
                 text-align: center;
             }
-            .ENtotal{
+            .enTotal{
                 width:10%;
                 text-align:center;
             }
-            .ENborrar{
+            .enBorrar{
                 width:10%;
                 text-align: center;
             }
-            .ENborrartodo{
+            .enBorrarTodo{
                 width:10%;
                 text-align: center;
             }

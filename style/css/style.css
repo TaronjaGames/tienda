@@ -27,43 +27,43 @@ body #carritoFixed {
     font-style: italic;
     font-size: 1.5em;
     color: white; }
-  body #carritoFixed #CarritoTabla {
+  body #carritoFixed #carritoTabla {
     padding-top: 0px;
     overflow: hidden;
     background-color: white;
     box-shadow: 5px 5px 10px #000; }
-    body #carritoFixed #CarritoTabla #EncabezadoTabla {
+    body #carritoFixed #carritoTabla #encabezadoTabla {
       background-color: darkred;
       overflow: hidden;
       color: white; }
-      body #carritoFixed #CarritoTabla #EncabezadoTabla .ENtabla {
+      body #carritoFixed #carritoTabla #encabezadoTabla .enTabla {
         float: left;
         text-align: center;
         font-family: Calibri;
         font-weight: bold;
         font-style: italic;
         font-size: 0.75em; }
-    body #carritoFixed #CarritoTabla #ZonaArticulosCarrito {
+    body #carritoFixed #carritoTabla #zonaArticulosCarrito {
       overflow: hidden;
       font-family: Calibri;
       font-style: italic;
       font-size: 0.8em;
       background-image: url("../img/fondos/fondoCarrito.png");
       color: white; }
-      body #carritoFixed #CarritoTabla #ZonaArticulosCarrito .carritoArticulo {
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo {
         overflow: hidden; }
-      body #carritoFixed #CarritoTabla #ZonaArticulosCarrito .carritoArticulo div {
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo div {
         float: left;
         padding-top: 15px; }
-      body #carritoFixed #CarritoTabla #ZonaArticulosCarrito .carritoArticulo div:first-child {
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo div:first-child {
         padding-top: 0; }
-      body #carritoFixed #CarritoTabla #ZonaArticulosCarrito .imgCarrito {
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgCarrito {
         height: 50px; }
-      body #carritoFixed #CarritoTabla #ZonaArticulosCarrito .imgBorrar {
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgBorrar {
         height: 15px; }
-      body #carritoFixed #CarritoTabla #ZonaArticulosCarrito .imgBorrarTodo {
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgBorrarTodo {
         height: 15px; }
-    body #carritoFixed #CarritoTabla #TotalFacturaCarrito {
+    body #carritoFixed #carritoTabla #totalFacturaCarrito {
       background-color: darkred;
       color: white;
       overflow: hidden;
@@ -71,27 +71,27 @@ body #carritoFixed {
       font-weight: bold;
       font-style: italic;
       font-size: 1em; }
-      body #carritoFixed #CarritoTabla #TotalFacturaCarrito #TextoTotalFactura {
+      body #carritoFixed #carritoTabla #totalFacturaCarrito #textoTotalFactura {
         float: left;
         width: 75%; }
-    body #carritoFixed #CarritoTabla .ENimagen {
+    body #carritoFixed #carritoTabla .enImagen {
       width: 10%; }
-    body #carritoFixed #CarritoTabla .ENnombre {
+    body #carritoFixed #carritoTabla .enNombre {
       width: 40%;
       text-align: center; }
-    body #carritoFixed #CarritoTabla .ENprecio {
+    body #carritoFixed #carritoTabla .enPrecio {
       width: 10%;
       text-align: center; }
-    body #carritoFixed #CarritoTabla .ENcantidad {
+    body #carritoFixed #carritoTabla .enCantidad {
       width: 10%;
       text-align: center; }
-    body #carritoFixed #CarritoTabla .ENtotal {
+    body #carritoFixed #carritoTabla .enTotal {
       width: 10%;
       text-align: center; }
-    body #carritoFixed #CarritoTabla .ENborrar {
+    body #carritoFixed #carritoTabla .enBorrar {
       width: 10%;
       text-align: center; }
-    body #carritoFixed #CarritoTabla .ENborrartodo {
+    body #carritoFixed #carritoTabla .enBorrarTodo {
       width: 10%;
       text-align: center; }
 
