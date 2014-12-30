@@ -1,0 +1,125 @@
+body{
+    #carritoFixed{
+        position: fixed;
+        bottom: 0px;
+        right: 20%; 
+        left: 20%;
+
+        #cabCarrito{   
+            padding-left: 10px;
+            border-radius: 10px 10px 0px 0px;
+
+            background-image:url("../img/fondos/fondoCarrito.png");
+
+            font-family: Calibri;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 1.5em;
+            color:white;
+        }
+        #CarritoTabla{
+            padding-top:0px; 
+            overflow:hidden;
+            background-color: white;
+            box-shadow: 5px 5px 10px #000 ;
+
+            #EncabezadoTabla{
+                background-color:darkred;
+                overflow: hidden;
+                color:white;
+
+                .ENtabla{
+                    float:left;
+                    text-align: center;
+
+                    font-family: Calibri;
+                    font-weight: bold;
+                    font-style: italic;
+                    font-size: 0.75em;
+                }
+
+            }
+            #ZonaArticulosCarrito{
+
+                overflow:hidden;
+
+                font-family: Calibri;
+                font-style: italic;
+                font-size: 0.8em;
+                background-image:url("../img/fondos/fondoCarrito.png");
+                color:white;
+
+                .carritoArticulo{
+                    overflow: hidden;    
+                }
+
+                .carritoArticulo div{
+                    float:left;
+                    padding-top:15px;
+                }
+
+                .carritoArticulo div:first-child{
+                    padding-top:0;
+                }
+                .imgCarrito{
+                    height:50px;
+                }
+
+                .imgBorrar{
+                    height:15px;
+                }
+
+                .imgBorrarTodo{
+                    height:15px;
+                }
+            }
+            #TotalFacturaCarrito{
+                background-color:darkred;
+                color:white;
+                overflow: hidden;
+
+
+                font-family: Calibri;
+                font-weight: bold;
+                font-style: italic;
+                font-size: 1em;
+                
+                #TextoTotalFactura{
+                    float:left;
+                    width:75%;
+                }
+                
+            }
+            .ENimagen{
+                width:10%;
+            }
+            .ENnombre{
+                width:40%;
+                text-align: center;
+            }
+            .ENprecio{
+                width:10%;
+                text-align: center;
+            }
+            .ENcantidad{
+                width:10%;
+                text-align: center;
+            }
+            .ENtotal{
+                width:10%;
+                text-align:center;
+            }
+            .ENborrar{
+                width:10%;
+                text-align: center;
+            }
+            .ENborrartodo{
+                width:10%;
+                text-align: center;
+            }
+        }
+    }
+
+
+}
+
