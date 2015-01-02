@@ -64,7 +64,8 @@ body #carritoFixed {
         float: left;
         text-align: center; }
     body #carritoFixed #carritoTabla .enImagen {
-      width: 10%; }
+      width: 10%;
+      text-align: center; }
     body #carritoFixed #carritoTabla .enNombre {
       width: 40%;
       text-align: center; }
@@ -79,10 +80,12 @@ body #carritoFixed {
       text-align: center; }
     body #carritoFixed #carritoTabla .enBorrar {
       width: 10%;
-      text-align: center; }
+      text-align: center;
+      cursor: pointer; }
     body #carritoFixed #carritoTabla .enBorrarTodo {
       width: 10%;
-      text-align: center; }
+      text-align: center;
+      cursor: pointer; }
 
 @media all and (max-width: 768px) {
   body #carritoFixed {

@@ -97,6 +97,7 @@ body{
             }
             .enImagen{
                 width:10%;
+                text-align:center;
             }
             .enNombre{
                 width:40%;
@@ -117,10 +118,12 @@ body{
             .enBorrar{
                 width:10%;
                 text-align: center;
+                cursor:pointer;
             }
             .enBorrarTodo{
                 width:10%;
                 text-align: center;
+                cursor:pointer;
             }
         }
     }
