@@ -73,7 +73,7 @@ function añadir(articulo) {
 
         divborrartodo = document.createElement("div");
         divborrartodo.className = "enBorrarTodo";
-        //divborrartodo.setAttribute("onclick", "eliminar(this.parentNode)");
+        divborrartodo.setAttribute("onclick", "eliminar(this.parentNode)");
 
         //Contenido BorrarTodo
 
