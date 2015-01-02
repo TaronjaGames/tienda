@@ -118,7 +118,7 @@ function añadir(articulo) {
         totalprecio = parseFloat(articulomod.getElementsByClassName("enPrecio")[0].getElementsByTagName("span")[0].firstChild.nodeValue) * newcantidad;
         totalmod.nodeValue = totalprecio.toFixed(2);
     }
-    //totalCarrito();
+    totalCarrito();
 
 }
 
@@ -153,22 +153,14 @@ function totalCarrito(){
     
     // Calculo del total de la Factura
     
-    totales=document.getElementById("ZonaArticulosCarrito").getElementsByClassName("total");
+    totales=document.getElementById("zonaArticulosCarrito").getElementsByClassName("enTotal");
     FacturaFinal=0;
     
     for(i=0;i<totales.length;i++){
         FacturaFinal=FacturaFinal+parseFloat(totales[i].getElementsByTagName("span")[0].firstChild.nodeValue);
     }
 
-    document.getElementById("ImporteTotalCarrito").firstChild.nodeValue=FacturaFinal.toFixed(2)+"€";
-    
-    //Visibilidad del Carrito
-    
-    if(FacturaFinal<=0){
-        document.getElementById("ZonaCarrito").className="zona HiddenElement";
-    }else {
-        document.getElementById("ZonaCarrito").className="zona ShowElement";
-    }
+    document.getElementById("importeTotalCarrito").firstChild.nodeValue=FacturaFinal.toFixed(2)+"€";
 }
 
 

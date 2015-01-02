@@ -73,7 +73,11 @@ body #carritoFixed {
       font-size: 1em; }
       body #carritoFixed #carritoTabla #totalFacturaCarrito #textoTotalFactura {
         float: left;
-        width: 75%; }
+        width: 70%; }
+      body #carritoFixed #carritoTabla #totalFacturaCarrito #importeTotalCarrito {
+        width: 10%;
+        float: left;
+        text-align: center; }
     body #carritoFixed #carritoTabla .enImagen {
       width: 10%; }
     body #carritoFixed #carritoTabla .enNombre {

@@ -83,12 +83,17 @@ body{
                 font-weight: bold;
                 font-style: italic;
                 font-size: 1em;
-                
+
                 #textoTotalFactura{
                     float:left;
-                    width:75%;
+                    width:70%;
                 }
-                
+                #importeTotalCarrito{
+                    width: 10%;
+                    float: left;
+                    text-align: center;
+                }
+
             }
             .enImagen{
                 width:10%;
