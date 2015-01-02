@@ -84,4 +84,19 @@ body #carritoFixed {
       width: 10%;
       text-align: center; }
 
+@media all and (max-width: 768px) {
+  body #carritoFixed {
+    right: 1%;
+    left: 1%; }
+    body #carritoFixed #carritoTabla .enImagen {
+      display: none; }
+    body #carritoFixed #carritoTabla .enPrecio {
+      width: 20%; }
+    body #carritoFixed #carritoTabla .enTotal {
+      width: 20%; }
+    body #carritoFixed #carritoTabla .enBorrar {
+      width: 5%; }
+    body #carritoFixed #carritoTabla .enBorrarTodo {
+      width: 5%; } }
+
 /*# sourceMappingURL=carrito.css.map */

@@ -128,3 +128,30 @@ body{
 
 }
 
+@media all and (max-width:768px){
+    body{
+        #carritoFixed{
+            right: 1%; 
+            left: 1%;
+
+            #carritoTabla{
+                .enImagen{
+                    display:none;
+                }
+                .enPrecio{
+                    width:20%;
+                }
+                .enTotal{
+                    width:20%;
+                }
+                .enBorrar{
+                    width:5%;
+                }
+                .enBorrarTodo{
+                    width:5%;
+                }
+            }
+
+        }
+    }
+}

@@ -163,4 +163,12 @@ function totalCarrito(){
     document.getElementById("importeTotalCarrito").firstChild.nodeValue=FacturaFinal.toFixed(2)+"€";
 }
 
-
+function mostrarCarrito(){
+    carrito=document.getElementById("carritoFixed");
+    
+    if (carrito.className=="hidden"){
+        carrito.className="";
+    } else{
+        carrito.className="hidden";
+    }
+}
