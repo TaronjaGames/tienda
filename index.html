@@ -8,14 +8,10 @@
         <link rel="icon" type="image/png" href="style/img/logo/favicon.png" />
         
         <!-- CSS propio -->
-        
         <link href="style/css/style.css" rel="stylesheet" type="text/css"/>
-
-        <!-- Bootstrap -->
-
-        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-
         
+        <!-- Bootstrap -->
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         
     </head>
 
@@ -34,16 +30,15 @@
                 <section id="cabeceraContenidos">
                     <section id="cabeceraLogo">
 
-                        <img id="logoImg" alt="logotipo" src="style/img/logo/logoTienda_blanco.png" onclick="document.location.href = 'index.html'"/>   
-
+                        <img id="logoImg" alt="logotipo" src="style/img/logo/logoTienda_blanco.png" onclick="mostrarNoticias()"/>   
+                        <!-- onclick="document.location.href = 'index.html'" -->
                     </section>
                     <section id="cabeceraCentro"></section>                    
                     <section id="cabeceraLogin">
                         <div id="botoneraLogin">
-                            <div id="botonLogin" class="boton"><span>Logeate</span></div>
-                            <div id="botonRegistro" class="boton"><span>Registro</span></div>
+                            <div id="botonRegistro" class="boton" onclick="mostrarRegistroUsuario()"><span>Registro</span></div>
+                            <div id="botonLogin" class="boton" onclick="mostrarLogin()"><span>Login</span></div>
                         </div>
-
                     </section>
                 </section>
             </header>
@@ -168,6 +163,9 @@
         <script src="js/videojuegos.js" type="text/javascript"></script>
         <script src="js/mostrarPorPlataformas.js" type="text/javascript"></script>
         <script src="js/ranking.js" type="text/javascript"></script>
+        <script src="js/validaciones.js" type="text/javascript"></script>
+        <script src="js/login.js" type="text/javascript"></script>
+        <script src="js/registroUsuario.js" type="text/javascript"></script>
 
         <!-- Bootstrap -->
 

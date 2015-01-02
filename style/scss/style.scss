@@ -82,7 +82,7 @@ body{
                         width: 100%;
                         margin: 1% 10px 0;
                         float: right;
-                        
+
                         padding-top:10px;
                         .boton{
                             @include estiloBotonHeader();
@@ -90,6 +90,8 @@ body{
                             margin:auto;
                         }
                     }
+
+                    @import "login.scss";
                 }
             }
         }
@@ -147,14 +149,17 @@ body{
                 width: 18%;
                 height: 100%;
                 float: left;
-                
+
                 @import 'search.scss';
-                
+
                 .search-form, .form-group{
                     height: 100%;
                 }
                 .form-control, .form-control-feedback{
                     height: 100%;
+                }
+                .search-form .form-group span.form-control-feedback {
+                    margin: -3px 0;
                 }
             }
             #carrito{
@@ -166,6 +171,7 @@ body{
 
                 #botonCarrito{
                     height: 100%;
+                    padding: 3px 8px;
                     & span{
                         width: 95%;
                     }
@@ -246,6 +252,8 @@ body{
                     @import 'noticias.scss';
                     @import "articulos.scss";
                     @import "ranking.scss";
+                    @import "login.scss";
+                    @import "registroUsuario.scss";
                 }
             }
         }

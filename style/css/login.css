@@ -1,0 +1,134 @@
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+#bloqueLogin {
+  padding: 20px;
+  font-size: 12px; }
+  #bloqueLogin .login-bloqueDatos {
+    margin-top: 10px; }
+  #bloqueLogin label {
+    color: white;
+    min-width: 70px; }
+  #bloqueLogin .login-input {
+    min-width: 190px;
+    padding-left: 5px;
+    border: none; }
+    #bloqueLogin .login-input:focus {
+      box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
+      transition-duration: .3s; }
+  #bloqueLogin .login-label-radio {
+    vertical-align: middle; }
+  #bloqueLogin .login-label-error {
+    color: red; }
+  #bloqueLogin #login-botonera {
+    margin-top: 5px; }
+  #bloqueLogin #login-botonera #login-boton-entrar {
+    width: 115px;
+    text-align: center;
+    font-size: 12px;
+    margin: 7px 5px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border-left: 1px solid grey;
+    border-top: 1px solid grey;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 1px 1px 2px transparent;
+    float: left; }
+    #bloqueLogin #login-botonera #login-boton-entrar a {
+      display: inline;
+      text-decoration: none;
+      color: white;
+      width: 60px; }
+    #bloqueLogin #login-botonera #login-boton-entrar:hover {
+      transition-duration: .4s;
+      border-radius: 4px;
+      border-left: 1px solid silver;
+      border-top: 1px solid silver;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      cursor: pointer;
+      color: #e6e6e6;
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: none;
+      opacity: .9;
+      box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+
+#cajaInfoLogin {
+  max-width: 95%;
+  margin: 10px;
+  text-align: right;
+  color: white; }
+  #cajaInfoLogin .btn {
+    width: 115px;
+    text-align: center;
+    font-size: 10px;
+    margin: 7px 5px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border-left: 1px solid #ff8000;
+    border-top: 1px solid #ff8000;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    color: white;
+    background-color: transparent;
+    box-shadow: 1px 1px 2px transparent;
+    background-color: transparent;
+    padding: 2px 10px;
+    font-size: 12px;
+    color: white; }
+    #cajaInfoLogin .btn a {
+      display: inline;
+      text-decoration: none;
+      color: white;
+      width: 60px; }
+    #cajaInfoLogin .btn:hover {
+      transition-duration: .4s;
+      border-radius: 4px;
+      border-left: 1px solid silver;
+      border-top: 1px solid silver;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      cursor: pointer;
+      color: #e6e6e6;
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: none;
+      opacity: .9;
+      box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+    #cajaInfoLogin .btn #caja-texto-login {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      padding: 0;
+      max-width: 60px;
+      /*Reglas necesarias para text-overflow*/
+      /*El contenedor debe ser de bloque*/
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+  #cajaInfoLogin #iconoUsuario {
+    width: 15px; }
+  #cajaInfoLogin ul {
+    width: 60px;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.9); }
+    #cajaInfoLogin ul li a {
+      text-overflow: ellipsis; }
+      #cajaInfoLogin ul li a:hover {
+        color: white;
+        background-color: #ffb062;
+        border-radius: 4px;
+        transition-duration: 0.3s;
+        font-weight: bolder;
+        font-style: italic;
+        box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+
+/*# sourceMappingURL=login.css.map */
