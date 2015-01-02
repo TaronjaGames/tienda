@@ -20,7 +20,8 @@ body #carritoFixed {
     body #carritoFixed #carritoTabla #encabezadoTabla {
       background-color: darkred;
       overflow: hidden;
-      color: white; }
+      color: white;
+      padding-right: 18px; }
       body #carritoFixed #carritoTabla #encabezadoTabla .enTabla {
         float: left;
         text-align: center;
@@ -29,12 +30,13 @@ body #carritoFixed {
         font-style: italic;
         font-size: 0.75em; }
     body #carritoFixed #carritoTabla #zonaArticulosCarrito {
-      overflow: hidden;
       font-family: Calibri;
       font-style: italic;
       font-size: 0.8em;
       background-color: black;
-      color: white; }
+      color: white;
+      max-height: 150px;
+      overflow-y: scroll; }
       body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo {
         overflow: hidden; }
       body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo div {
@@ -52,6 +54,7 @@ body #carritoFixed {
       background-color: darkred;
       color: white;
       overflow: hidden;
+      padding-right: 18px;
       font-family: Calibri;
       font-weight: bold;
       font-style: italic;

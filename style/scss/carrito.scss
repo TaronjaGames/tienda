@@ -27,6 +27,7 @@ body{
                 background-color:darkred;
                 overflow: hidden;
                 color:white;
+                padding-right: 18px;
 
                 .enTabla{
                     float:left;
@@ -41,13 +42,14 @@ body{
             }
             #zonaArticulosCarrito{
 
-                overflow:hidden;
-
                 font-family: Calibri;
                 font-style: italic;
                 font-size: 0.8em;
                 background-color:black;
                 color:white;
+
+                max-height: 150px;
+                overflow-y: scroll;
 
                 .carritoArticulo{
                     overflow: hidden;    
@@ -77,12 +79,14 @@ body{
                 background-color:darkred;
                 color:white;
                 overflow: hidden;
+                padding-right: 18px;
 
 
                 font-family: Calibri;
                 font-weight: bold;
                 font-style: italic;
                 font-size: 1em;
+                
 
                 #textoTotalFactura{
                     float:left;
