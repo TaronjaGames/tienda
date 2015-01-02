@@ -57,7 +57,7 @@ function añadir(articulo) {
 
         divborrar = document.createElement("div");
         divborrar.className = "enBorrar";
-        //divborrar.setAttribute("onclick", "restar(this.parentNode)");
+        divborrar.setAttribute("onclick", "restar(this.parentNode)");
         
 
 
@@ -124,17 +124,17 @@ function añadir(articulo) {
 
 
 function restar(articulo) {
-    if (articulo.getElementsByClassName("cantidad")[0].firstChild.nodeValue > 1) {
+    if (articulo.getElementsByClassName("enCantidad")[0].firstChild.nodeValue > 1) {
         //RESTAR CANTIDAD
 
-        cantidadmod = articulo.getElementsByClassName("cantidad")[0];
+        cantidadmod = articulo.getElementsByClassName("enCantidad")[0];
         newcantidad = parseInt(cantidadmod.firstChild.nodeValue) - 1;
         cantidadmod.replaceChild(document.createTextNode(newcantidad), cantidadmod.firstChild);
 
         //RECALCULAR TOTAL
 
-        totalmod = articulo.getElementsByClassName("total")[0].getElementsByTagName("span")[0].firstChild;
-        totalprecio = parseFloat(articulo.getElementsByClassName("precio")[0].getElementsByTagName("span")[0].firstChild.nodeValue) * newcantidad;
+        totalmod = articulomod.getElementsByClassName("enTotal")[0].getElementsByTagName("span")[0].firstChild;
+        totalprecio = parseFloat(articulomod.getElementsByClassName("enPrecio")[0].getElementsByTagName("span")[0].firstChild.nodeValue) * newcantidad;
         totalmod.nodeValue = totalprecio.toFixed(2);
 
     } else {
