@@ -38,7 +38,8 @@ body #carritoFixed {
       max-height: 150px;
       overflow-y: scroll; }
       body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo {
-        overflow: hidden; }
+        overflow: hidden;
+        min-height: 50px; }
       body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo div {
         float: left;
         padding-top: 15px; }
@@ -103,6 +104,8 @@ body #carritoFixed {
     body #carritoFixed #carritoTabla .enBorrar {
       width: 5%; }
     body #carritoFixed #carritoTabla .enBorrarTodo {
-      width: 5%; } }
+      width: 5%; }
+    body #carritoFixed #carritoTabla #totalFacturaCarrito #importeTotalCarrito {
+      width: 20%; } }
 
 /*# sourceMappingURL=carrito.css.map */

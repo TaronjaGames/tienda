@@ -52,7 +52,8 @@ body{
                 overflow-y: scroll;
 
                 .carritoArticulo{
-                    overflow: hidden;    
+                    overflow: hidden;  
+                    min-height: 50px;
                 }
 
                 .carritoArticulo div{
@@ -86,7 +87,7 @@ body{
                 font-weight: bold;
                 font-style: italic;
                 font-size: 1em;
-                
+
 
                 #textoTotalFactura{
                     float:left;
@@ -156,6 +157,13 @@ body{
                 }
                 .enBorrarTodo{
                     width:5%;
+                }
+                #totalFacturaCarrito{
+
+                    #importeTotalCarrito{
+                        width: 20%;
+
+                    }
                 }
             }
 
