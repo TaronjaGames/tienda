@@ -67,6 +67,7 @@ function mostrarRegistroUsuario() {
         //Validar contenidos
         errorValidacion += validarCorreo(formulario, inputCorreo.attr('name'), inputCorreo.val());
         errorValidacion += validarUsuario(formulario, inputUsuario.attr('name'), inputUsuario.val());
+        errorValidacion += validarPassword(formulario, inputPassword.attr('name'), inputPassword.val());
         errorValidacion += validarNif(formulario, inputNif.attr('name'), inputNif.val().toUpperCase());
         errorValidacion += validarCheckbox(formulario, checkCondiciones.attr('name'), checkCondiciones.is(':checked'));
 
@@ -94,10 +95,16 @@ function mostrarRegistroUsuario() {
             validarCorreo(formulario, this.name, this.value);
         }
     });
-    //Existencia de usuario
+    //Formato y existencia de usuario
     inputUsuario.keyup(function () {
         if (pulsado) {
             validarUsuario(formulario, this.name, this.value);
+        }
+    });
+    //Formato password
+    inputPassword.keyup(function () {
+        if (pulsado) {
+            validarPassword(formulario, this.name, this.value);
         }
     });
     //Formato y Letra NIF

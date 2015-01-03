@@ -19,6 +19,19 @@ function quitarMensaje(formulario, dato) {
 }
 
 
+//COMPROBAR CONTENIDO DE ESPACIOS EN BLANCO
+function comprobarEspacios(formulario, dato, valor) {
+    var error = 0;
+    if (/^\s+|\s+|\s+$/.test(valor)) {
+        //uno o más espacios principio(^) | enmedio | final($)
+        var mensajeEspacios = " *No debe contener espacios";
+        mostrarMensaje(formulario, dato, mensajeEspacios, "error");
+        error = -1;
+    }
+    return error;
+}
+
+
 //VALIDACIÓN CAMPOS REQUERIDOS
 function validarCampoRequerido(formulario, dato, valorInput) {
     var error = 0;
@@ -54,25 +67,29 @@ function validarCorreo(formulario, dato, correo) {
 }
 
 
-//VALIDACIÓN DE LA EXISTENCIA DEL USUARIO(LOGIN)
+//VALIDACIÓN USUARIO(LOGIN)
 function validarUsuario(formulario, dato, login) {
     var error = 0;
-    if (/^\s+|\s+|\s+$/.test(login)) {
-        //uno o más espacios principio(^) | enmedio | final($)
-        var mensajeEspacios = " *El usuario no debe llevar espacios";
-        mostrarMensaje(formulario, dato, mensajeEspacios, "error");
-        error = -1;
+    error = comprobarEspacios(formulario, dato, login);
+    if (error === 0) {
+        $promesa = getAjaxLoginGet(login);
+        $promesa.success(function (data) {
+            if (data[0] !== null) {
+                var mensajeLogin = " *El usuario ya existe";
+                mostrarMensaje(formulario, dato, mensajeLogin, "error");
+                //Desde dentro de success, la variable error no toma el valor de -1
+                //Solucionado haciendo UNIQUE a loginCliente en la BD
+            }
+        });
     }
-    $promesa = getAjaxLoginGet(login);
-    $promesa.success(function (data) {
-        if (data[0] !== null) {
-            var mensajeLogin = " *El usuario ya existe";
-            mostrarMensaje(formulario, dato, mensajeLogin, "error");
-            //error = -1;
-            //Desde dentro de success, la  variable error no toma el valor de -1
-            //He tenido que poner UNIQUE a loginCliente en la BD
-        }
-    });
+    return error;
+}
+
+
+//VALIDACIÓN PASSWORD
+function validarPassword(formulario, dato, password) {
+    var error = comprobarEspacios(formulario, dato, password);
+
     return error;
 }
 

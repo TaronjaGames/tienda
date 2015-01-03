@@ -18,7 +18,8 @@ function getAjaxRanking() {
 }
 
 function getAjaxUsuarioNew($correo, $login, $password, $nif) {
-
+    //Cuando haya más datos, será mejor pasar como parámetro la lista de valores
+    //como array asociativo campo=>valor
     $datos = {'correo': $correo, 'login': $login, 'password': $password, 'nif': $nif};
 
     return $.ajax({
