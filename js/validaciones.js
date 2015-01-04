@@ -97,11 +97,11 @@ function validarPassword(formulario, dato, password) {
 //VALIDACIÓN NIF
 function validarNif(formulario, dato, nif) {
     var error = 0;
-    var mensajeFormatoNif = " *Formato correcto: 00000000-L";
+    var mensajeFormatoNif = " *Formato correcto: 00000000L";
     var mensajeLetraNif = " *La letra del NIF ha sido corregida";
     var numNif = nif.substring(0, 8);
-    var letraNifInicial = nif.charAt(9);
-    if ((nif.length > 0 && nif.length !== 10) && (isNaN(numNif) || !isNaN(letraNifInicial))) {
+    var letraNifInicial = nif.charAt(8);
+    if ((nif.length > 0 && nif.length !== 9) && (isNaN(numNif) || !isNaN(letraNifInicial))) {
         mostrarMensaje(formulario, dato, mensajeFormatoNif, "error");
         error = -1;
     } else {
@@ -109,7 +109,7 @@ function validarNif(formulario, dato, nif) {
             var listaCaracteres = "TRWAGMYFPDXBNJZSQVHLCKET";
             var letraNifCorregida = listaCaracteres.charAt(numNif % 23);
             if (letraNifInicial !== letraNifCorregida) {
-                var nifCorregido = numNif + "-" + letraNifCorregida;
+                var nifCorregido = numNif + letraNifCorregida;
                 $("#" + formulario + "-input-" + dato).val(nifCorregido);
                 mostrarMensaje(formulario, dato, mensajeLetraNif);
             }

@@ -19,7 +19,7 @@ function mostrarRegistroUsuario() {
                 </section>\n\
                 <section id='registro-bloqueNif' class='registro-bloqueDatos'>\n\
                     <label for='registro-input-nif' class='registro-label'>NIF: </label>\n\
-                    <input id='registro-input-nif' title='Formato correcto: 00000000-L' name='nif' type='text' class='registro-input input-required' placeholder='Formato NIF: 00000000-L'/>\n\
+                    <input id='registro-input-nif' title='Formato correcto: 00000000L' name='nif' type='text' class='registro-input input-required' placeholder='Formato NIF: 00000000L'/>\n\
                     <label id='registro-label-error-nif' for='registro-input-nif' class='registro-label-error'></label>\n\
                 </section>\n\
                 <section id='registro-bloqueCondiciones' class='registro-bloqueDatos'>\n\
