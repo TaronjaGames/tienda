@@ -118,6 +118,12 @@ function mostrarRegistroUsuario() {
             validarPassword(formulario, this.name, this.value);
         }
     });
+    //Coincidencia password repetido
+    inputPasswordRepe.keyup(function () {
+        if (pulsado) {
+            validarCoincidencia(formulario, this.name, inputPassword.val(), this.value);
+        }
+    });
     //Formato y Letra NIF
     inputNif.keyup(function () {
         if (pulsado) {
