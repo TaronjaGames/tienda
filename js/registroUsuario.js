@@ -48,16 +48,8 @@ function mostrarRegistroUsuario() {
                 </section>\n\
             </div>";
 
-//REPETIR PARA COMPROBAR LA CONTRASEÑA????????
-
-//ESTRUCTURA TIPO BLOQUE DE DATOS:
-//                <section id='registro-bloqueCorreo' class='registro-bloqueDatos'>\n\
-//                    <label for='registro-input-correo' class='registro-label'>Correo: </label>\n\
-//                    <input id='registro-input-correo' name='correo' type='email' class='registro-input input-required' autofocus='autofocus'/>\n\
-//                    <label id='registro-label-error-correo' for='registro-input-correo' class='registro-label-error'></label>\n\
-//                </section>\n\
-
     $("#articulos").html(datos);
+
 
     formulario = "registro";
     listaRequeridos = document.getElementsByClassName("input-required");
@@ -65,6 +57,7 @@ function mostrarRegistroUsuario() {
     inputCorreo = $("#registro-input-correo");
     inputUsuario = $("#registro-input-usuario");
     inputPassword = $("#registro-input-password");
+    inputPasswordRepe = $("#registro-input-passwordRepe");
     inputNif = $("#registro-input-nif");
     inputTf = $("#registro-input-tf");
     checkCondiciones = $("#registro-check-condiciones");
@@ -84,6 +77,7 @@ function mostrarRegistroUsuario() {
         errorValidacion += validarCorreo(formulario, inputCorreo.attr('name'), inputCorreo.val());
         errorValidacion += validarUsuario(formulario, inputUsuario.attr('name'), inputUsuario.val());
         errorValidacion += validarPassword(formulario, inputPassword.attr('name'), inputPassword.val());
+        errorValidacion += validarCoincidencia(formulario, inputPasswordRepe.attr('name'), inputPassword.val(), inputPasswordRepe.val());
         errorValidacion += validarNif(formulario, inputNif.attr('name'), inputNif.val().toUpperCase());
         errorValidacion += validarTf(formulario, inputTf.attr('name'), inputTf.val());
         errorValidacion += validarCheckbox(formulario, checkCondiciones.attr('name'), checkCondiciones.is(':checked'));
