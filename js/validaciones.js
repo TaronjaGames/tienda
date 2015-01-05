@@ -32,11 +32,23 @@ function comprobarEspacios(formulario, dato, valor) {
 }
 
 
+//VALIDACIÓN DE COINCIDENCIA ENTRE DOS CAMPOS
+function validarCoincidencia(formulario, dato, valor, valorRepe) {
+    var error = 0;
+    if (!(valor === valorRepe)) {
+        var mensajeCampoRepe = " *No coincide";
+        mostrarMensaje(formulario, dato, mensajeCampoRepe, "error");
+        error = -1;
+    }
+    return error;
+}
+
+
 //VALIDACIÓN CAMPOS REQUERIDOS
 function validarCampoRequerido(formulario, dato, valorInput) {
     var error = 0;
-    var mensajeRequerido = " *Campo requerido";
     if (valorInput.length === 0) {
+        var mensajeRequerido = " *Campo requerido";
         mostrarMensaje(formulario, dato, mensajeRequerido, "error");
         error = -1;
     } else {
@@ -49,8 +61,8 @@ function validarCampoRequerido(formulario, dato, valorInput) {
 //VALIDACIÓN CORREO ELECTRÓNICO
 function validarCorreo(formulario, dato, correo) {
     var error = 0;
-    var mensajeCorreo = " *Formato incorrecto";
     if (!(/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(correo)) && correo !== "") {
+        var mensajeCorreo = " *Formato incorrecto";
         mostrarMensaje(formulario, dato, mensajeCorreo, "error");
         error = -1;
     } else {
@@ -89,7 +101,6 @@ function validarUsuario(formulario, dato, login) {
 //VALIDACIÓN PASSWORD
 function validarPassword(formulario, dato, password) {
     var error = comprobarEspacios(formulario, dato, password);
-
     return error;
 }
 
@@ -97,12 +108,11 @@ function validarPassword(formulario, dato, password) {
 //VALIDACIÓN NIF
 function validarNif(formulario, dato, nif) {
     var error = 0;
-    var mensajeFormatoNif = " *Formato correcto: 00000000L";
-    var mensajeLetraNif = " *La letra del NIF ha sido corregida";
     var numNif = nif.substring(0, 8);
     var letraNifInicial = nif.charAt(8);
     //if(!(/(\d{8})([a-zA-Z]{1})/.test(nif))){}//Con expresión regular
     if ((nif.length > 0 && nif.length !== 9) && (isNaN(numNif) || !isNaN(letraNifInicial))) {
+        var mensajeFormatoNif = " *Formato correcto: 00000000L";
         mostrarMensaje(formulario, dato, mensajeFormatoNif, "error");
         error = -1;
     } else {
@@ -110,6 +120,7 @@ function validarNif(formulario, dato, nif) {
             var listaCaracteres = "TRWAGMYFPDXBNJZSQVHLCKET";
             var letraNifCorregida = listaCaracteres.charAt(numNif % 23);
             if (letraNifInicial !== letraNifCorregida) {
+                var mensajeLetraNif = " *La letra del NIF ha sido corregida";
                 var nifCorregido = numNif + letraNifCorregida;
                 $("#" + formulario + "-input-" + dato).val(nifCorregido);
                 mostrarMensaje(formulario, dato, mensajeLetraNif);
@@ -122,10 +133,10 @@ function validarNif(formulario, dato, nif) {
 
 
 //VALIDACIÓN TELÉFONO
-function validarTf(formulario, dato, tf){
+function validarTf(formulario, dato, tf) {
     var error = 0;
-    var mensajeTf = " *Formato: 9 dígitos sin espacios";
-    if(tf !== "" && !(/\d{9}/.test(tf))){
+    if (tf !== "" && !(/\d{9}/.test(tf))) {
+        var mensajeTf = " *Formato: 9 dígitos sin espacios";
         mostrarMensaje(formulario, dato, mensajeTf, "error");
         error = -1;
     } else {
@@ -138,8 +149,8 @@ function validarTf(formulario, dato, tf){
 //VALIDACIÓN CHECKBOX
 function validarCheckbox(formulario, dato, valorCheck) {
     var error = 0;
-    var mensajeCheck = "  *Debe aceptar las condiciones de uso";
     if (valorCheck === false) {
+        var mensajeCheck = "  *Debe aceptar las condiciones de uso";
         mostrarMensaje(formulario, dato, mensajeCheck, "error");
         error = -1;
     } else {
