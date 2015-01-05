@@ -115,7 +115,8 @@ body {
     src: url("../fonts/PlaneCrash.ttf"); } }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin {
             padding: 20px;
-            font-size: 12px; }
+            font-size: 12px;
+            max-width: 550px; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-bloqueDatos {
               margin-top: 10px; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin label {
@@ -595,7 +596,8 @@ body {
     src: url("../fonts/PlaneCrash.ttf"); } }
           body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin {
             padding: 20px;
-            font-size: 12px; }
+            font-size: 12px;
+            max-width: 550px; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-bloqueDatos {
               margin-top: 10px; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin label {
@@ -729,10 +731,15 @@ body {
     src: url("../fonts/PlaneCrash.ttf"); } }
           body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro {
             padding: 20px;
-            font-size: 12px; }
+            font-size: 12px;
+            max-width: 550px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro #tituloRegistroCliente {
+              font-size: 15px;
+              font-weight: bolder;
+              color: white; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro label {
               color: white;
-              min-width: 70px; }
+              min-width: 110px; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-label-check {
               vertical-align: middle; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-input {

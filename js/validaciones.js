@@ -101,6 +101,7 @@ function validarNif(formulario, dato, nif) {
     var mensajeLetraNif = " *La letra del NIF ha sido corregida";
     var numNif = nif.substring(0, 8);
     var letraNifInicial = nif.charAt(8);
+    //if(!(/(\d{8})([a-zA-Z]{1})/.test(nif))){}//Con expresión regular
     if ((nif.length > 0 && nif.length !== 9) && (isNaN(numNif) || !isNaN(letraNifInicial))) {
         mostrarMensaje(formulario, dato, mensajeFormatoNif, "error");
         error = -1;
@@ -115,6 +116,20 @@ function validarNif(formulario, dato, nif) {
             }
         }
 
+    }
+    return error;
+}
+
+
+//VALIDACIÓN TELÉFONO
+function validarTf(formulario, dato, tf){
+    var error = 0;
+    var mensajeTf = " *Formato: 9 dígitos sin espacios";
+    if(tf !== "" && !(/\d{9}/.test(tf))){
+        mostrarMensaje(formulario, dato, mensajeTf, "error");
+        error = -1;
+    } else {
+        quitarMensaje(formulario, dato);
     }
     return error;
 }

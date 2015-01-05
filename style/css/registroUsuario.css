@@ -9,10 +9,15 @@
   src: url("../fonts/PlaneCrash.ttf"); }
 #bloqueRegistro {
   padding: 20px;
-  font-size: 12px; }
+  font-size: 12px;
+  max-width: 550px; }
+  #bloqueRegistro #tituloRegistroCliente {
+    font-size: 15px;
+    font-weight: bolder;
+    color: white; }
   #bloqueRegistro label {
     color: white;
-    min-width: 70px; }
+    min-width: 110px; }
   #bloqueRegistro .registro-label-check {
     vertical-align: middle; }
   #bloqueRegistro .registro-input {

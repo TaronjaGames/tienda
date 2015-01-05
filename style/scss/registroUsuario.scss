@@ -5,10 +5,19 @@
 #bloqueRegistro{
     padding: 20px;
     font-size: 12px;
-
+    max-width: 550px;
+    
+    #tituloRegistroCliente{
+        font:{
+            size: 15px;
+            weight: bolder;
+        }
+        color: white;
+    }
+    
     & label{
         color: white;
-        min-width: 70px;
+        min-width: 110px;
     }
 
     & .registro-label-check{

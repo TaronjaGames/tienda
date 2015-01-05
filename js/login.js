@@ -21,6 +21,7 @@ function mostrarLogin() {
                     <input name='password' id='login-input-password' type='password' class='login-input input-required'/>\n\
                     <label id='login-label-error-password' for='login-input-password' class='login-label-error'></label>\n\
                 </section>\n\
+                <br/>\n\
                 <section id='login-botonera'>\n\
                     <div id='login-boton-entrar' class='boton'><span>Entrar</span></div>\n\
                 </section>\n\
