@@ -33,9 +33,9 @@ function comprobarEspacios(formulario, dato, valor) {
 
 
 //VALIDACIÓN DE COINCIDENCIA ENTRE DOS CAMPOS
-function validarCoincidencia(formulario, dato, valor, valorRepe) {
+function validarCoincidencia(formulario, dato, valorOrigin, valorRepe) {
     var error = 0;
-    if (!(valor === valorRepe)) {
+    if (!(valorOrigin === valorRepe)) {
         var mensajeCampoRepe = " *No coincide";
         mostrarMensaje(formulario, dato, mensajeCampoRepe, "error");
         error = -1;
@@ -111,6 +111,7 @@ function validarNif(formulario, dato, nif) {
     var numNif = nif.substring(0, 8);
     var letraNifInicial = nif.charAt(8);
     //if(!(/(\d{8})([a-zA-Z]{1})/.test(nif))){}//Con expresión regular
+    //if(!(/(\d{8})([-]{1})([a-zA-Z]{1})/.test(nif))){}//Con guión
     if ((nif.length > 0 && nif.length !== 9) && (isNaN(numNif) || !isNaN(letraNifInicial))) {
         var mensajeFormatoNif = " *Formato correcto: 00000000L";
         mostrarMensaje(formulario, dato, mensajeFormatoNif, "error");
@@ -126,7 +127,6 @@ function validarNif(formulario, dato, nif) {
                 mostrarMensaje(formulario, dato, mensajeLetraNif);
             }
         }
-
     }
     return error;
 }
