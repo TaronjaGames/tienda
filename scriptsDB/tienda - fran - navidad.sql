@@ -1,12 +1,12 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         5.6.21 - MySQL Community Server (GPL)
+-- Versión del servidor:         5.6.19 - MySQL Community Server (GPL)
 -- SO del servidor:              Win64
--- HeidiSQL Versión:             9.1.0.4867
+-- HeidiSQL Versión:             8.3.0.4694
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
@@ -95,15 +95,15 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   UNIQUE KEY `loginCliente` (`loginCliente`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.cliente: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.cliente: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
 INSERT INTO `cliente` (`idCliente`, `nombreCliente`, `apellido1Cliente`, `apellido2Cliente`, `dniCliente`, `emailCliente`, `loginCliente`, `passwordCliente`) VALUES
-	(1, 'Marti', 'Gómez', 'Fabiá', '00000001-A', 'mail1@taronjagames.com', 'usuario1', 'password1'),
-	(2, 'Jona', 'Hidalgo', 'Mora', '00000002-B', 'mail2@taronjagames.com', 'usuario2', 'password2'),
-	(3, 'Iván', 'Sánchez', 'Castelló', '00000003-C', 'mail3@taronjagames.com', 'usuario3', 'password3'),
-	(4, 'Fran', 'Navarro', 'Flores', '00000004-D', 'mail4@taronjagames.com', 'usuario4', 'password4'),
-	(5, NULL, NULL, NULL, '00000005-M', 'mail5@taronjagames.com', 'usuario5', 'password5'),
-	(6, NULL, NULL, NULL, '00000006-Y', 'mail6@taronjagames.com', 'usuario6', 'password6');
+	(1, 'Marti', 'Gómez', 'Fabiá', '00000001R', 'mail1@taronjagames.com', 'usuario1', 'password1'),
+	(2, 'Jona', 'Hidalgo', 'Mora', '00000002W', 'mail2@taronjagames.com', 'usuario2', 'password2'),
+	(3, 'Iván', 'Sánchez', 'Castelló', '00000003A', 'mail3@taronjagames.com', 'usuario3', 'password3'),
+	(4, 'Fran', 'Navarro', 'Flores', '00000004G', 'mail4@taronjagames.com', 'usuario4', 'password4'),
+	(5, NULL, NULL, NULL, '00000005M', 'mail5@taronjagames.com', 'usuario5', 'password5'),
+	(6, NULL, NULL, NULL, '00000006Y', 'mail6@taronjagames.com', 'usuario6', 'password6');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 
 
@@ -138,10 +138,10 @@ CREATE TABLE IF NOT EXISTS `empleado` (
 -- Volcando datos para la tabla tienda.empleado: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `empleado` DISABLE KEYS */;
 INSERT INTO `empleado` (`idEmpleado`, `nombreEmpleado`, `apellido1Empleado`, `apellido2Empleado`, `dniEmpleado`, `emailEmpleado`, `loginEmpleado`, `passwordEmpleado`) VALUES
-	(1, 'Marti', 'Gómez', 'Fabiá', '00000001-A', 'mail1@taronjagames.com', 'a', 'a'),
-	(2, 'Jona', 'Hidalgo', 'Mora', '00000002-B', 'mail2@taronjagames.com', 'b', 'b'),
-	(3, 'Iván', 'Sánchez', 'Castelló', '00000003-C', 'mail3@taronjagames.com', 'c', 'c'),
-	(4, 'Fran', 'Navarro', 'Flores', '00000004-D', 'mail4@taronjagames.com', 'd', 'd');
+	(1, 'Marti', 'Gómez', 'Fabiá', '00000001-', 'mail1@taronjagames.com', 'a', 'a'),
+	(2, 'Jona', 'Hidalgo', 'Mora', '00000002-', 'mail2@taronjagames.com', 'b', 'b'),
+	(3, 'Iván', 'Sánchez', 'Castelló', '00000003-', 'mail3@taronjagames.com', 'c', 'c'),
+	(4, 'Fran', 'Navarro', 'Flores', '00000004-', 'mail4@taronjagames.com', 'd', 'd');
 /*!40000 ALTER TABLE `empleado` ENABLE KEYS */;
 
 
@@ -201,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `plataforma` (
   PRIMARY KEY (`idPlataforma`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.plataforma: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.plataforma: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `plataforma` DISABLE KEYS */;
 INSERT INTO `plataforma` (`idPlataforma`, `nombrePlataforma`) VALUES
 	(1, 'PS4'),
@@ -219,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `seccion` (
   PRIMARY KEY (`idSeccion`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.seccion: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.seccion: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `seccion` DISABLE KEYS */;
 INSERT INTO `seccion` (`idSeccion`, `nombreSeccion`) VALUES
 	(1, 'Inicio'),
@@ -242,7 +242,7 @@ CREATE TABLE IF NOT EXISTS `subseccion` (
   CONSTRAINT `seccion-idSeccion` FOREIGN KEY (`idSeccion`) REFERENCES `seccion` (`idSeccion`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.subseccion: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.subseccion: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `subseccion` DISABLE KEYS */;
 INSERT INTO `subseccion` (`idSubseccion`, `nombreSubseccion`, `idSeccion`) VALUES
 	(1, 'PlayStation 4', 4),
