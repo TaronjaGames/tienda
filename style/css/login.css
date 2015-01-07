@@ -135,5 +135,8 @@
         font-weight: bolder;
         font-style: italic;
         box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+  #cajaInfoLogin .dropdown-menu {
+    left: auto;
+    right: 0; }
 
 /*# sourceMappingURL=login.css.map */

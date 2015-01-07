@@ -89,7 +89,7 @@ function logIn($login, $password) {
                             <div id='caja-texto-login'><span id='texto-login'>" + data[0].loginUsuario + "</span></div>\n\
                             <span class='caret'></span>\n\
                         </button>\n\
-                        <ul class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>\n\
+                        <ul id='opcionesUsuario' class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>\n\
                             <li role='presentation'>\n\
                                 <a id='enlaceDesconectar' role='menuitem' tabindex='-1' href='#'>Desconectar</a>\n\
                             </li>\n\

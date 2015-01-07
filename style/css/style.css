@@ -59,7 +59,7 @@ body {
           height: 100%;
           float: left; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
-          max-width: 150px;
+          max-width: 135px;
           height: 100%;
           float: right; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
@@ -240,6 +240,9 @@ body {
                   font-weight: bolder;
                   font-style: italic;
                   box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .dropdown-menu {
+              left: auto;
+              right: 0; }
     body #capaSuperior #menuH {
       height: 3.5%;
       box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5); }
@@ -725,6 +728,9 @@ body {
                   font-weight: bolder;
                   font-style: italic;
                   box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .dropdown-menu {
+              left: auto;
+              right: 0; }
 @font-face {
   body #capaSuperior #seccionCentral #contenidos #articulos {
     font-family: Farcry;
