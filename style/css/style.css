@@ -59,9 +59,9 @@ body {
           height: 100%;
           float: left; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
-          width: 20%;
+          max-width: 150px;
           height: 100%;
-          float: left; }
+          float: right; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
             width: 100%;
             margin: 1% 10px 0;
