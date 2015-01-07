@@ -1,12 +1,12 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         5.6.19 - MySQL Community Server (GPL)
+-- Versión del servidor:         5.5.36 - MySQL Community Server (GPL)
 -- SO del servidor:              Win64
--- HeidiSQL Versión:             8.3.0.4694
+-- HeidiSQL Versión:             9.1.0.4867
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
@@ -201,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `plataforma` (
   PRIMARY KEY (`idPlataforma`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.plataforma: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.plataforma: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `plataforma` DISABLE KEYS */;
 INSERT INTO `plataforma` (`idPlataforma`, `nombrePlataforma`) VALUES
 	(1, 'PS4'),
@@ -219,7 +219,7 @@ CREATE TABLE IF NOT EXISTS `seccion` (
   PRIMARY KEY (`idSeccion`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.seccion: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.seccion: ~7 rows (aproximadamente)
 /*!40000 ALTER TABLE `seccion` DISABLE KEYS */;
 INSERT INTO `seccion` (`idSeccion`, `nombreSeccion`) VALUES
 	(1, 'Inicio'),
@@ -242,7 +242,7 @@ CREATE TABLE IF NOT EXISTS `subseccion` (
   CONSTRAINT `seccion-idSeccion` FOREIGN KEY (`idSeccion`) REFERENCES `seccion` (`idSeccion`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.subseccion: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.subseccion: ~6 rows (aproximadamente)
 /*!40000 ALTER TABLE `subseccion` DISABLE KEYS */;
 INSERT INTO `subseccion` (`idSubseccion`, `nombreSubseccion`, `idSeccion`) VALUES
 	(1, 'PlayStation 4', 4),
@@ -252,6 +252,34 @@ INSERT INTO `subseccion` (`idSubseccion`, `nombreSubseccion`, `idSeccion`) VALUE
 	(5, 'PC', 4),
 	(6, 'PSVita', 4);
 /*!40000 ALTER TABLE `subseccion` ENABLE KEYS */;
+
+
+-- Volcando estructura para tabla tienda.usuario
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
+  `rolUsuario` varchar(50) NOT NULL,
+  `nombreUsuario` varchar(50) DEFAULT NULL,
+  `apellido1Usuario` varchar(50) DEFAULT NULL,
+  `apellido2Usuario` varchar(50) DEFAULT NULL,
+  `dniUsuario` varchar(9) NOT NULL,
+  `telefonoUsuario` varchar(9) DEFAULT NULL,
+  `emailUsuario` varchar(50) NOT NULL,
+  `loginUsuario` varchar(50) NOT NULL,
+  `passwordUsuario` varchar(50) NOT NULL,
+  PRIMARY KEY (`idUsuario`),
+  UNIQUE KEY `loginUsuario` (`loginUsuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- Volcando datos para la tabla tienda.usuario: ~6 rows (aproximadamente)
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` (`idUsuario`, `rolUsuario`, `nombreUsuario`, `apellido1Usuario`, `apellido2Usuario`, `dniUsuario`, `telefonoUsuario`, `emailUsuario`, `loginUsuario`, `passwordUsuario`) VALUES
+	(1, 'administrador', 'admin', 'admin', 'admin', '00000000T', '960000000', 'mail0@taronjagames.com', 'admin', 'admin'),
+	(2, 'usuario', 'Marti', 'Gómez', 'Fabiá', '00000001R', '960000001', 'mail1@taronjagames.com', 'usuario1', 'password1'),
+	(3, 'usuario', 'Jona', 'Hidalgo', 'Mora', '00000002W', '960000002', 'mail2@taronjagames.com', 'usuario2', 'password2'),
+	(4, 'usuario', 'Iván', 'Sánchez', 'Castelló', '00000003A', '960000003', 'mail3@taronjagames.com', 'usuario3', 'password3'),
+	(5, 'usuario', 'Fran', 'Navarro', 'Flores', '00000004G', '960000004', 'mail4@taronjagames.com', 'usuario4', 'password4'),
+	(6, 'usuario', NULL, NULL, NULL, '00000005M', '960000005', 'mail5@taronjagames.com', 'usuario5', 'password5');
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

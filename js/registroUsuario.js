@@ -2,11 +2,19 @@
 function mostrarRegistroUsuario() {
 
     datos = "<div id='bloqueRegistro'>\n\
-                <p id='tituloRegistroCliente'>Registro de nuevo cliente.</p>\n\
+                <p id='tituloRegistroCliente' class='tituloFormulario'>Formulario de registro de nuevo usuario.</p>\n\
+                <hr/>\n\
+                <section id='registro-bloqueRol' class='registro-bloqueDatos'>\n\
+                    <label for='registro-select-rol' class='registro-label'>Rol: </label>\n\
+                    <select id='registro-select-rol' name='rol' class='registro-select' autofocus='autofocus'>\n\\n\
+                        <option value='usuario' selected='selected'>Usuario</option>\n\\n\
+                        <option value='administrador'>Administrador</option>\n\
+                    </select>\n\
+                </section>\n\
                 <br/>\n\
                 <section id='registro-bloqueCorreo' class='registro-bloqueDatos'>\n\
                     <label for='registro-input-correo' class='registro-label'>Correo: </label>\n\
-                    <input id='registro-input-correo' name='correo' type='email' class='registro-input input-required' autofocus='autofocus'/>\n\
+                    <input id='registro-input-correo' name='correo' type='email' class='registro-input input-required'/>\n\
                     <label id='registro-label-error-correo' for='registro-input-correo' class='registro-label-error'></label>\n\
                 </section>\n\
                 <section id='registro-bloqueUsuario' class='registro-bloqueDatos'>\n\
@@ -49,11 +57,12 @@ function mostrarRegistroUsuario() {
             </div>";
 
     $("#articulos").html(datos);
-
+    
 
     formulario = "registro";
     listaRequeridos = document.getElementsByClassName("input-required");
 
+    selectRol = $("#registro-select-rol");
     inputCorreo = $("#registro-input-correo");
     inputUsuario = $("#registro-input-usuario");
     inputPassword = $("#registro-input-password");
@@ -86,7 +95,7 @@ function mostrarRegistroUsuario() {
 //        alert(errorValidacion);
 //        errorValidacion = -1;
         if (errorValidacion === 0) {
-            registrarUsuario(inputCorreo.val(), inputUsuario.val(), inputPassword.val(), inputNif.val());
+            registrarUsuario(selectRol.val(), inputCorreo.val(), inputUsuario.val(), inputPassword.val(), inputNif.val(), inputTf.val());
         }
 
     };// Fin onclick botón enviar formulario
@@ -146,12 +155,15 @@ function mostrarRegistroUsuario() {
 }
 
 
-function registrarUsuario($correo, $login, $password, $nif) {
-    $promesa = getAjaxUsuarioNew($correo, $login, $password, $nif);
+function registrarUsuario($rol, $correo, $login, $password, $nif, $tf) {
+    $promesa = getAjaxUsuarioNew($rol, $correo, $login, $password, $nif, $tf);
     $promesa.success(function (data) {
-
-        alert("El usuario '" + data[0].loginCliente + "' se ha registrado correctamente");
-        mostrarLogin();
+        if (data[0] !== null) {
+            mostrarLogin();
+            alert("El usuario '" + data[0].loginUsuario + "' se ha registrado correctamente");
+        } else {
+            alert("Ha ocurrido un error: el usuario no ha podido ser registrado");
+        }
 
     });
 }

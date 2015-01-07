@@ -6,6 +6,14 @@
     padding: 20px;
     font-size: 12px;
     max-width: 550px;
+    
+    & .tituloFormulario{
+        font:{
+            size: 15px;
+            weight: bolder;
+        }
+        color: white;
+    }
 
     & .login-bloqueDatos{
         margin-top: 10px;

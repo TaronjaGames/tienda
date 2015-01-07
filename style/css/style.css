@@ -117,6 +117,10 @@ body {
             padding: 20px;
             font-size: 12px;
             max-width: 550px; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .tituloFormulario {
+              font-size: 15px;
+              font-weight: bolder;
+              color: white; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-bloqueDatos {
               margin-top: 10px; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin label {
@@ -598,6 +602,10 @@ body {
             padding: 20px;
             font-size: 12px;
             max-width: 550px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .tituloFormulario {
+              font-size: 15px;
+              font-weight: bolder;
+              color: white; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-bloqueDatos {
               margin-top: 10px; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin label {
@@ -733,7 +741,7 @@ body {
             padding: 20px;
             font-size: 12px;
             max-width: 550px; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro #tituloRegistroCliente {
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .tituloFormulario {
               font-size: 15px;
               font-weight: bolder;
               color: white; }
@@ -742,11 +750,11 @@ body {
               min-width: 110px; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-label-check {
               vertical-align: middle; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-input {
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-input, body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-select {
               min-width: 190px;
               padding-left: 5px;
               border: none; }
-              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-input:focus {
+              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-input:focus, body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-select:focus {
                 box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
                 transition-duration: .3s; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-label-error {

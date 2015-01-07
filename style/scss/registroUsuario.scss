@@ -7,7 +7,7 @@
     font-size: 12px;
     max-width: 550px;
     
-    #tituloRegistroCliente{
+    & .tituloFormulario{
         font:{
             size: 15px;
             weight: bolder;
@@ -23,8 +23,8 @@
     & .registro-label-check{
         vertical-align: middle;
     }
-
-    & .registro-input{
+    
+    & .registro-input, & .registro-select{
         min-width: 190px;
         padding-left: 5px;
         border: none;

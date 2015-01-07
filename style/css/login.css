@@ -11,6 +11,10 @@
   padding: 20px;
   font-size: 12px;
   max-width: 550px; }
+  #bloqueLogin .tituloFormulario {
+    font-size: 15px;
+    font-weight: bolder;
+    color: white; }
   #bloqueLogin .login-bloqueDatos {
     margin-top: 10px; }
   #bloqueLogin label {

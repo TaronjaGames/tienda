@@ -17,10 +17,10 @@ function getAjaxRanking() {
     });
 }
 
-function getAjaxUsuarioNew($correo, $login, $password, $nif) {
+function getAjaxUsuarioNew($rol, $correo, $login, $password, $nif, $tf) {
     //Cuando haya más datos, será mejor pasar como parámetro la lista de valores
     //como array asociativo campo=>valor
-    $datos = {'correo': $correo, 'login': $login, 'password': $password, 'nif': $nif};
+    $datos = {'rol': $rol, 'correo': $correo, 'login': $login, 'password': $password, 'nif': $nif, 'tf': $tf};
 
     return $.ajax({
         type: 'POST',
@@ -29,6 +29,7 @@ function getAjaxUsuarioNew($correo, $login, $password, $nif) {
     });
 }
 
+//Comprueba si existe el login introducido en la base de datos al registrar nuevo usuario
 function getAjaxLoginGet($login) {
     $datos = {'login': $login};
     return $.ajax({
@@ -41,10 +42,9 @@ function getAjaxLoginGet($login) {
 
 
 //GESTIÓN DE SESIÓN DE USUARIO
-function getAjaxLogIn($rolUsuario, $login, $password) {
-
-    $datos = {'rolUsuario': $rolUsuario, 'login': $login, 'password': $password};
-
+function getAjaxLogIn($login, $password) {
+    //$datos = {'rolUsuario': $rolUsuario, 'login': $login, 'password': $password};
+    $datos = {'login': $login, 'password': $password};
     return $.ajax({
         type: 'POST',
         url: 'seguridad/LogInFromDB.php',
