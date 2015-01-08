@@ -82,7 +82,7 @@ body{
                         width: 100%;
                         margin: 1% 10px 0;
                         float: right;
-                        
+
                         padding-top:10px;
                         .boton{
                             @include estiloBotonHeader();
@@ -147,9 +147,9 @@ body{
                 width: 18%;
                 height: 100%;
                 float: left;
-                
+
                 @import 'search.scss';
-                
+
                 .search-form, .form-group{
                     height: 100%;
                 }
@@ -192,44 +192,87 @@ body{
                 //min-width: 116px;
                 padding: 5px;
 
-                .menuV_seccion, .menuV_grupo{
-                    margin: 0px 2px 2px 0px;
-                    padding-left: 4px;
-
-                    font-family: Calibri;
-                    font-size:1em;
-                    font-weight: bold;
-                    color:white;
-
-                }
-                .menuV_grupo{
+                .menuV_inicio{
                     background-color: rgba($colorGrisSeccion,.55);
                     border-radius: 4px;
                     box-shadow: 2px 2px 5px rgba(0,0,0,.7);
                     padding: 5px 0 0 5px;
                     margin-bottom: 2px;
-                }
-                .menuV_seccion{
                     color: silver;
-                    background-color: rgba($colorGrisBase,.2);
-                    border-bottom-right-radius: 4px;
-                    box-shadow: 1px 1px 5px rgba(0,0,0,.5);
-                    padding-left: 7px;
                     &:hover{
                         transition-duration: .3;
-                        //border-radius: 6px;
                         @include sombraPerimetral(1px,8px,white,none);
+                        color: white;
+                        cursor:pointer;
+                        background-color:$colorNaranjaSuave;
                     }
                 }
-                .menuV_seccion:hover{
-                    color: white;
-                    cursor:pointer;
-                    background-color:$colorNaranjaSuave;
-                    transition-duration: 0.5s;
 
+                .contieneSecciones:hover>.menuV_subseccion{
+                    display: block;
                 }
 
+                .contieneSecciones{
+
+                    .menuV_seccion, .menuV_grupo{
+                        margin: 0px 2px 2px 0px;
+                        padding-left: 4px;
+
+                        font-family: Calibri;
+                        font-size:1em;
+                        font-weight: bold;
+                        color:white;
+
+                    }
+                    .menuV_grupo{
+                        background-color: rgba($colorGrisSeccion,.55);
+                        border-radius: 4px;
+                        box-shadow: 2px 2px 5px rgba(0,0,0,.7);
+                        padding: 5px 0 0 5px;
+                        margin-bottom: 2px;
+                    }
+                    .menuV_seccion{
+                        color: silver;
+                        background-color: rgba($colorGrisBase,.2);
+                        border-bottom-right-radius: 4px;
+                        box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+                        padding-left: 7px;
+                        &:hover{
+                            transition-duration: .3;
+                            //border-radius: 6px;
+                            @include sombraPerimetral(1px,8px,white,none);
+                        }
+                    }
+                    .menuV_seccion:hover{
+                        color: white;
+                        cursor:pointer;
+                        background-color:$colorNaranjaSuave;
+                        transition-duration: 0.5s;
+                    }
+                    .menuV_subseccion{
+                        display: none;
+                        width: 70%;
+                        color: silver;
+                        background-color: rgba($colorGrisBase,.2);
+                        border-bottom-right-radius: 4px;
+                        box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+                        padding-left: 7px;
+                        &:hover{
+                            transition-duration: .3;
+                            //border-radius: 6px;
+                            @include sombraPerimetral(1px,8px,white,none);
+                        }
+                    }
+                    .menuV_subseccion:hover{
+                        display: block;
+                        color: white;
+                        cursor:pointer;
+                        background-color:$colorNaranjaSuave;
+                        transition-duration: 0.5s;
+                    }
+                }
             }
+
             #contenidos{
                 height: 100%;
                 float: left;
