@@ -4,13 +4,14 @@ function subseccionPlataforma() {
     $promesa = getAjax("plataforma", "asc");
     if(a!==1){
     $promesa.success(function (data) {
-        var datos = "";
-        $.each(data, function (index) {
-            datos += "<div class='menuV_subseccion' onclick='mostrarPorFiltros(\""+$('.contieneSecciones').first().text()+"," +data[index].nombrePlataforma+"\")'>" + data[index].nombrePlataforma + "</div>";
-           
+        secciones=$('.contieneSecciones');
+        $.each(secciones, function (index1) {
+           var datos = "";
+           $.each(data, function (index2) {
+           datos += "<div class='menuV_subseccion' onclick='mostrarPorFiltros(\""+$('#contieneSecciones'+(index1+1)).text()+"," +data[index2].nombrePlataforma+"\")'>" + data[index2].nombrePlataforma + "</div>";
         });
-        $("#menuV_menu").find('.contieneSecciones').append(datos);
-        
+        $('#contieneSecciones'+(index1+1)).append(datos);
+        });
     });
     a=1;    
 }
@@ -30,7 +31,7 @@ function mostrarSeccion() {
                 var on_click = "mostrarNoticias()";
                 datos += "<div class='menuV_inicio' onclick=" + on_click + ">" + data[index].nombreSeccion + "</div>";
             } else {
-                datos += "<div id='contieneSecciones' class='contieneSecciones'>";
+                datos += "<div "+"id='contieneSecciones"+index+"' class='contieneSecciones'>";
                 var on_click = "mostrar" + data[index].nombreSeccion + "()";
                 datos += "<div class='menuV_seccion' onclick=" + on_click + ">" + data[index].nombreSeccion + "</div>";
 
