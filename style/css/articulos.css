@@ -52,11 +52,14 @@
       font-size: 1.1em;
       color: #ff8000;
       text-align: right;
-      padding-top: 5%; }
-      @media all and (max-width: 1200px) {
+      padding: 0px;
+      padding-top: 5%;
+      padding-right: 5px; }
+      @media all and (max-width: 768px) {
         .fila .contenedorArticulo .contenedorCompra .producto_precio {
           font-size: 1.7em;
-          padding-top: 0; } }
+          padding-top: 0px;
+          padding-right: 10px; } }
     .fila .contenedorArticulo .contenedorCompra .producto_boton {
       border-radius: 6px;
       height: 100%;
