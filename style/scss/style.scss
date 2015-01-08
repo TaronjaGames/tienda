@@ -16,6 +16,9 @@
 
 //@import "cursores.scss";
 
+//Carrito
+
+@import "carrito.scss";
 
 //ARBOL
 
@@ -75,9 +78,10 @@ body{
                     float:left;
                 }
                 #cabeceraLogin{
-                    width: 20%;
+                    //width: 20%;
+                    max-width: 135px;
                     height: 100%;
-                    float: left;
+                    float: right;
                     #botoneraLogin{
                         width: 100%;
                         margin: 1% 10px 0;
@@ -90,6 +94,8 @@ body{
                             margin:auto;
                         }
                     }
+
+                    @import "login.scss";
                 }
             }
         }
@@ -156,6 +162,9 @@ body{
                 .form-control, .form-control-feedback{
                     height: 100%;
                 }
+                .search-form .form-group span.form-control-feedback {
+                    margin: -3px 0;
+                }
             }
             #carrito{
                 padding: 1px;
@@ -166,6 +175,7 @@ body{
 
                 #botonCarrito{
                     height: 100%;
+                    padding: 3px 8px;
                     & span{
                         width: 95%;
                     }
@@ -289,6 +299,8 @@ body{
                     @import 'noticias.scss';
                     @import "articulos.scss";
                     @import "ranking.scss";
+                    @import "login.scss";
+                    @import "registroUsuario.scss";
                 }
             }
         }

@@ -5,14 +5,16 @@ include 'ConnectionFactory.php';
 function getRanking() {
 
     $conexion = getConnection();
-    $consulta = "select * from articulo where tipoArticulo = 'videojuego' order by ventaArticulo desc limit 10";
+    $consulta = "SELECT * FROM articulo WHERE tipoArticulo = 'videojuego' ORDER BY ventaArticulo DESC LIMIT 10";
 
     if ($result = $conexion->query($consulta)) {
 
         while ($row = $result->fetch_assoc()) {
             $datos[] = $row;
         }
-
+        
+        closeConnection($conexion);
+        
         return $datos;
     }
 }

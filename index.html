@@ -6,17 +6,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="style/img/logo/favicon.png" />
-        
+
         <!-- CSS propio -->
-        
+
         <link href="style/css/style.css" rel="stylesheet" type="text/css"/>
 
         <!-- Bootstrap -->
 
         <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        
+        <!-- Bootstrap -->
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        
 
-        
-        
     </head>
 
 
@@ -34,16 +36,15 @@
                 <section id="cabeceraContenidos">
                     <section id="cabeceraLogo">
 
-                        <img id="logoImg" alt="logotipo" src="style/img/logo/logoTienda_blanco.png" onclick="document.location.href = 'index.html'"/>   
-
+                        <img id="logoImg" alt="logotipo" src="style/img/logo/logoTienda_blanco.png" onclick="mostrarNoticias()"/>   
+                        <!-- onclick="document.location.href = 'index.html'" -->
                     </section>
                     <section id="cabeceraCentro"></section>                    
                     <section id="cabeceraLogin">
                         <div id="botoneraLogin">
-                            <div id="botonLogin" class="boton"><span>Logeate</span></div>
-                            <div id="botonRegistro" class="boton"><span>Registro</span></div>
+                            <div id="botonRegistro" class="boton" onclick="mostrarRegistroUsuario()"><span>Registro</span></div>
+                            <div id="botonLogin" class="boton" onclick="mostrarLogin()"><span>Login</span></div>
                         </div>
-
                     </section>
                 </section>
             </header>
@@ -67,14 +68,16 @@
                 </section>
                 <section id="buscar">
                     <!-- Expandable  -->
+                    
                         <div class="form-group has-feedback">
                             <label for="search" class="sr-only">Buscar...</label>
                             <input type="text" class="form-control" name="search" id="search" placeholder="Buscar...">
                             <span class="glyphicon glyphicon-search form-control-feedback"></span>
                         </div>
+                    
                 </section>
                 <section id="carrito">
-                    <a id="botonCarrito" href="#" class="btn btn-primary" role="button">
+                    <a id="botonCarrito" href="#" class="btn btn-primary" role="button" onclick="mostrarCarrito()">
                         <span class="glyphicon glyphicon-shopping-cart"></span>
                     </a>
                 </section>
@@ -143,6 +146,33 @@
             </section>
 
         </section>
+        
+        <!-- CARRITO DE LA COMPRA -->
+        
+        <section id="carritoFixed" class="hidden">
+
+            <div id="cabCarrito">Articulos del Carrito</div>
+
+            <div id="carritoTabla">
+                <div id="encabezadoTabla">
+                    <div class="enTabla enImagen">Imagen</div>
+                    <div class="enTabla enNombre">Nombre</div>
+                    <div class="enTabla enPrecio">Precio</div>
+                    <div class="enTabla enCantidad">Cantidad</div>
+                    <div class="enTabla enTotal">Total</div>
+                    <div class="enTabla enBorrar"></div>
+                    <div class="enTabla enBorrarTodo"></div>
+                </div>
+                <div id="zonaArticulosCarrito">
+                </div>
+                <div id="totalFacturaCarrito">
+                    <div id="textoTotalFactura">Total Factura:</div>
+                    <div id="importeTotalCarrito">0€</div>
+                </div>
+
+            </div>
+        </section>
+
 
         <!-- JQuery -->
 
@@ -166,8 +196,15 @@
         <script src="js/videojuegos.js" type="text/javascript"></script>
         <script src="js/mostrarPorPlataformas.js" type="text/javascript"></script>
         <script src="js/ranking.js" type="text/javascript"></script>
-        <script src="js/buscador.js" type="text/javascript"></script>
         
+        <script src="js/carrito.js" type="text/javascript"></script>
+
+        <script src="js/validaciones.js" type="text/javascript"></script>
+        <script src="js/login.js" type="text/javascript"></script>
+        <script src="js/registroUsuario.js" type="text/javascript"></script>
+        
+        <script src="js/buscador.js" type="text/javascript"></script>
+
         <!-- Bootstrap -->
 
         <script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>

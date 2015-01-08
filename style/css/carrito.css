@@ -1,0 +1,111 @@
+body #carritoFixed {
+  position: fixed;
+  bottom: 0px;
+  right: 20%;
+  left: 20%; }
+  body #carritoFixed #cabCarrito {
+    padding-left: 10px;
+    border-radius: 10px 10px 0px 0px;
+    background-image: url("../img/fondos/fondoCarrito.png");
+    font-family: Calibri;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5em;
+    color: white; }
+  body #carritoFixed #carritoTabla {
+    padding-top: 0px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 5px 5px 10px #000; }
+    body #carritoFixed #carritoTabla #encabezadoTabla {
+      background-color: darkred;
+      overflow: hidden;
+      color: white;
+      padding-right: 18px; }
+      body #carritoFixed #carritoTabla #encabezadoTabla .enTabla {
+        float: left;
+        text-align: center;
+        font-family: Calibri;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 0.75em; }
+    body #carritoFixed #carritoTabla #zonaArticulosCarrito {
+      font-family: Calibri;
+      font-style: italic;
+      font-size: 0.8em;
+      background-color: black;
+      color: white;
+      max-height: 150px;
+      overflow-y: scroll; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo {
+        overflow: hidden;
+        min-height: 50px; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo div {
+        float: left;
+        padding-top: 15px; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo div:first-child {
+        padding-top: 0; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgCarrito {
+        height: 50px; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgBorrar {
+        height: 15px; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgBorrarTodo {
+        height: 15px; }
+    body #carritoFixed #carritoTabla #totalFacturaCarrito {
+      background-color: darkred;
+      color: white;
+      overflow: hidden;
+      padding-right: 18px;
+      font-family: Calibri;
+      font-weight: bold;
+      font-style: italic;
+      font-size: 1em; }
+      body #carritoFixed #carritoTabla #totalFacturaCarrito #textoTotalFactura {
+        float: left;
+        width: 70%; }
+      body #carritoFixed #carritoTabla #totalFacturaCarrito #importeTotalCarrito {
+        width: 10%;
+        float: left;
+        text-align: center; }
+    body #carritoFixed #carritoTabla .enImagen {
+      width: 10%;
+      text-align: center; }
+    body #carritoFixed #carritoTabla .enNombre {
+      width: 40%;
+      text-align: center; }
+    body #carritoFixed #carritoTabla .enPrecio {
+      width: 10%;
+      text-align: center; }
+    body #carritoFixed #carritoTabla .enCantidad {
+      width: 10%;
+      text-align: center; }
+    body #carritoFixed #carritoTabla .enTotal {
+      width: 10%;
+      text-align: center; }
+    body #carritoFixed #carritoTabla .enBorrar {
+      width: 10%;
+      text-align: center;
+      cursor: pointer; }
+    body #carritoFixed #carritoTabla .enBorrarTodo {
+      width: 10%;
+      text-align: center;
+      cursor: pointer; }
+
+@media all and (max-width: 768px) {
+  body #carritoFixed {
+    right: 1%;
+    left: 1%; }
+    body #carritoFixed #carritoTabla .enImagen {
+      display: none; }
+    body #carritoFixed #carritoTabla .enPrecio {
+      width: 20%; }
+    body #carritoFixed #carritoTabla .enTotal {
+      width: 20%; }
+    body #carritoFixed #carritoTabla .enBorrar {
+      width: 5%; }
+    body #carritoFixed #carritoTabla .enBorrarTodo {
+      width: 5%; }
+    body #carritoFixed #carritoTabla #totalFacturaCarrito #importeTotalCarrito {
+      width: 20%; } }
+
+/*# sourceMappingURL=carrito.css.map */

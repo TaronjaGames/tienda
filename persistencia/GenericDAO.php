@@ -2,13 +2,13 @@
 
 include 'ConnectionFactory.php';
 
-function select($tabla,$order) {
+function select($tabla, $order) {
 
     //REALIZAR CONSULTA
 
     $conexion = getConnection();
 
-    $consulta = "select * from " . $tabla . " order by 1 ".$order;
+    $consulta = "select * from " . $tabla . " order by 1 " . $order;
 
     //EXTRAER DATOS
 
@@ -18,7 +18,7 @@ function select($tabla,$order) {
             $datos[] = $row;
         }
 
-    //DEVOLVER DATOS
+        //DEVOLVER DATOS
 
         return $datos;
     }
@@ -31,7 +31,7 @@ $order = $_POST['orden'];
 
 // CONSULTAR DATOS
 
-$datos = select($tabla,$order);
+$datos = select($tabla, $order);
 
 //DEVOLVER DATOS
 

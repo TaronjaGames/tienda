@@ -21,15 +21,15 @@
         body #capaSuperior #header #cabeceraContenidos {
           height: 60%; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogo {
-            width: 70%; }
+            width: 55%; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
               margin-left: 3%; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
             display: none; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
-            width: 30%; }
+            width: 45%; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
-              width: 70%;
+              width: 60%;
               float: right;
               margin-right: 15px; }
               body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton {
@@ -37,7 +37,7 @@
       body #capaSuperior #menuH {
         min-height: 28.0px; }
         body #capaSuperior #menuH #plataformas {
-          width: 90%; }
+          width: 87%; }
           body #capaSuperior #menuH #plataformas .menuH_plataforma {
             display: none; }
           body #capaSuperior #menuH #plataformas #menuH_desplegable {
@@ -59,6 +59,8 @@
         display: none; }
       body #capaSuperior #carrito {
         width: 10%; }
+        body #capaSuperior #carrito #botonCarrito {
+          width: 36px; }
       body #capaSuperior #seccionCentral {
         max-height: 544px; }
         body #capaSuperior #seccionCentral #tablaRanking {

@@ -1,0 +1,120 @@
+
+@import "common.scss";
+
+
+#bloqueLogin{
+    padding: 20px;
+    font-size: 12px;
+    max-width: 550px;
+    
+    & .tituloFormulario{
+        font:{
+            size: 15px;
+            weight: bolder;
+        }
+        color: white;
+    }
+
+    & .login-bloqueDatos{
+        margin-top: 10px;
+    }
+
+    & label{
+        color: white;
+        min-width: 70px;
+    }
+
+    & .login-input{
+        min-width: 190px;
+        padding-left: 5px;
+        border: none;
+
+        &:focus{
+            @include sombraPerimetral(1px,12px,white,none);
+            transition-duration: .3s;
+        }
+    }
+
+    & .login-label-radio{
+        vertical-align: middle;
+    }
+
+    & .login-label-error{
+        color: red;
+    }
+
+    #login-botonera{
+        margin-top: 5px;
+    }
+
+    #login-botonera #login-boton-entrar{
+        @include estiloBotonContenidos();
+        float: left;
+    }
+
+}
+
+#cajaInfoLogin{
+    max-width: 95%;
+    margin: 10px;
+    text-align: right;
+    color: white;
+
+    & .btn{
+        @include estiloBotonHeader();
+        //width: auto;
+        background-color: transparent;
+        padding: 2px 10px;
+        font-size: 12px;
+        color: white;
+
+        & #caja-texto-login{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+            max-width: 60px;
+            
+            /*Reglas necesarias para text-overflow*/
+            /*El contenedor debe ser de bloque*/
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    #iconoUsuario{
+        width: 15px;
+    }
+
+    & ul{
+        width: 60px;
+        font-size: 12px;
+        background-color: rgba(255,255,255,.9);
+
+        & li a{
+            text-overflow: ellipsis;
+
+            &:hover{
+                color: white;
+                background-color:$colorNaranjaSuave;
+                border-radius: 4px;
+                transition-duration: 0.3s;
+                font:{
+                    weight: bolder;
+                    style: italic;
+                }
+                @include sombraPerimetral(1px,8px,white,none);
+            }
+        }
+
+    }
+    
+    & .dropdown-menu{
+        left: auto;
+        right: 0;
+    }
+
+}
+
+

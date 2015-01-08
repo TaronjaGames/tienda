@@ -39,6 +39,7 @@
     font-size:1.2em;
     cursor: pointer;
     &:hover{
+        color: black;
         transition-duration: 0.6s;
         @include sombraPerimetralTexto(1px, 8px, white, none);
     }

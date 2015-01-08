@@ -1,0 +1,172 @@
+body{
+    #carritoFixed{
+        position: fixed;
+        bottom: 0px;
+        right: 20%; 
+        left: 20%;
+
+        #cabCarrito{   
+            padding-left: 10px;
+            border-radius: 10px 10px 0px 0px;
+
+            background-image:url("../img/fondos/fondoCarrito.png");
+
+            font-family: Calibri;
+            font-weight: bold;
+            font-style: italic;
+            font-size: 1.5em;
+            color:white;
+        }
+        #carritoTabla{
+            padding-top:0px; 
+            overflow:hidden;
+            background-color: white;
+            box-shadow: 5px 5px 10px #000 ;
+
+            #encabezadoTabla{
+                background-color:darkred;
+                overflow: hidden;
+                color:white;
+                padding-right: 18px;
+
+                .enTabla{
+                    float:left;
+                    text-align: center;
+
+                    font-family: Calibri;
+                    font-weight: bold;
+                    font-style: italic;
+                    font-size: 0.75em;
+                }
+
+            }
+            #zonaArticulosCarrito{
+
+                font-family: Calibri;
+                font-style: italic;
+                font-size: 0.8em;
+                background-color:black;
+                color:white;
+
+                max-height: 150px;
+                overflow-y: scroll;
+
+                .carritoArticulo{
+                    overflow: hidden;  
+                    min-height: 50px;
+                }
+
+                .carritoArticulo div{
+                    float:left;
+                    padding-top:15px;
+                }
+
+                .carritoArticulo div:first-child{
+                    padding-top:0;
+                }
+                .imgCarrito{
+                    height:50px;
+                }
+
+                .imgBorrar{
+                    height:15px;
+                }
+
+                .imgBorrarTodo{
+                    height:15px;
+                }
+            }
+            #totalFacturaCarrito{
+                background-color:darkred;
+                color:white;
+                overflow: hidden;
+                padding-right: 18px;
+
+
+                font-family: Calibri;
+                font-weight: bold;
+                font-style: italic;
+                font-size: 1em;
+
+
+                #textoTotalFactura{
+                    float:left;
+                    width:70%;
+                }
+                #importeTotalCarrito{
+                    width: 10%;
+                    float: left;
+                    text-align: center;
+                }
+
+            }
+            .enImagen{
+                width:10%;
+                text-align:center;
+            }
+            .enNombre{
+                width:40%;
+                text-align: center;
+            }
+            .enPrecio{
+                width:10%;
+                text-align: center;
+            }
+            .enCantidad{
+                width:10%;
+                text-align: center;
+            }
+            .enTotal{
+                width:10%;
+                text-align:center;
+            }
+            .enBorrar{
+                width:10%;
+                text-align: center;
+                cursor:pointer;
+            }
+            .enBorrarTodo{
+                width:10%;
+                text-align: center;
+                cursor:pointer;
+            }
+        }
+    }
+
+
+}
+
+@media all and (max-width:768px){
+    body{
+        #carritoFixed{
+            right: 1%; 
+            left: 1%;
+
+            #carritoTabla{
+                .enImagen{
+                    display:none;
+                }
+                .enPrecio{
+                    width:20%;
+                }
+                .enTotal{
+                    width:20%;
+                }
+                .enBorrar{
+                    width:5%;
+                }
+                .enBorrarTodo{
+                    width:5%;
+                }
+                #totalFacturaCarrito{
+
+                    #importeTotalCarrito{
+                        width: 20%;
+
+                    }
+                }
+            }
+
+        }
+    }
+}
