@@ -168,9 +168,9 @@ body {
           height: 100%;
           float: left; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
-          width: 20%;
+          max-width: 135px;
           height: 100%;
-          float: left; }
+          float: right; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
             width: 100%;
             margin: 1% 10px 0;
@@ -210,6 +210,148 @@ body {
                 box-shadow: none;
                 opacity: .9;
                 box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+@font-face {
+  body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin {
+            padding: 20px;
+            font-size: 12px;
+            max-width: 550px; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .tituloFormulario {
+              font-size: 15px;
+              font-weight: bolder;
+              color: white; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-bloqueDatos {
+              margin-top: 10px; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin label {
+              color: white;
+              min-width: 70px; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-input {
+              min-width: 190px;
+              padding-left: 5px;
+              border: none; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-input:focus {
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
+                transition-duration: .3s; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-label-radio {
+              vertical-align: middle; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-label-error {
+              color: red; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera {
+              margin-top: 5px; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar {
+              width: 115px;
+              text-align: center;
+              font-size: 12px;
+              margin: 7px 5px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              border-left: 1px solid grey;
+              border-top: 1px solid grey;
+              border-right: 1px solid black;
+              border-bottom: 1px solid black;
+              color: white;
+              background-color: rgba(255, 255, 255, 0.2);
+              box-shadow: 1px 1px 2px transparent;
+              float: left; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar:hover {
+                transition-duration: .4s;
+                border-radius: 4px;
+                border-left: 1px solid silver;
+                border-top: 1px solid silver;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                color: #e6e6e6;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: none;
+                opacity: .9;
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin {
+            max-width: 95%;
+            margin: 10px;
+            text-align: right;
+            color: white; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .btn {
+              width: 115px;
+              text-align: center;
+              font-size: 10px;
+              margin: 7px 5px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              border-left: 1px solid #ff8000;
+              border-top: 1px solid #ff8000;
+              border-right: 1px solid black;
+              border-bottom: 1px solid black;
+              color: white;
+              background-color: transparent;
+              box-shadow: 1px 1px 2px transparent;
+              background-color: transparent;
+              padding: 2px 10px;
+              font-size: 12px;
+              color: white; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .btn a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .btn:hover {
+                transition-duration: .4s;
+                border-radius: 4px;
+                border-left: 1px solid silver;
+                border-top: 1px solid silver;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                color: #e6e6e6;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: none;
+                opacity: .9;
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .btn #caja-texto-login {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                padding: 0;
+                max-width: 60px;
+                /*Reglas necesarias para text-overflow*/
+                /*El contenedor debe ser de bloque*/
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin #iconoUsuario {
+              width: 15px; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin ul {
+              width: 60px;
+              font-size: 12px;
+              background-color: rgba(255, 255, 255, 0.9); }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin ul li a {
+                text-overflow: ellipsis; }
+                body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin ul li a:hover {
+                  color: white;
+                  background-color: #ffb062;
+                  border-radius: 4px;
+                  transition-duration: 0.3s;
+                  font-weight: bolder;
+                  font-style: italic;
+                  box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .dropdown-menu {
+              left: auto;
+              right: 0; }
     body #capaSuperior #menuH {
       height: 3.5%;
       box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5); }
@@ -305,6 +447,8 @@ body {
           height: 100%; }
         body #capaSuperior #menuH #buscar .form-control, body #capaSuperior #menuH #buscar .form-control-feedback {
           height: 100%; }
+        body #capaSuperior #menuH #buscar .search-form .form-group span.form-control-feedback {
+          margin: -3px 0; }
       body #capaSuperior #menuH #carrito {
         padding: 1px;
         text-align: center;
@@ -312,7 +456,8 @@ body {
         height: 100%;
         float: left; }
         body #capaSuperior #menuH #carrito #botonCarrito {
-          height: 100%; }
+          height: 100%;
+          padding: 3px 8px; }
           body #capaSuperior #menuH #carrito #botonCarrito span {
             width: 95%; }
           body #capaSuperior #menuH #carrito #botonCarrito:hover {
@@ -405,6 +550,7 @@ body {
             font-size: 1.2em;
             cursor: pointer; }
             body #capaSuperior #seccionCentral #contenidos #articulos .articulos_titulo:hover {
+              color: black;
               transition-duration: 0.6s;
               text-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
           body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo {
@@ -456,6 +602,7 @@ body {
               cursor: pointer;
               height: 50px; }
               body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .producto_titulo:hover {
+                color: black;
                 transition-duration: 0.6s;
                 text-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
             body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .producto_descripcion {
@@ -554,6 +701,222 @@ body {
                   font-weight: bold; }
               body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .imgRanking {
                 max-width: 80px; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin {
+            padding: 20px;
+            font-size: 12px;
+            max-width: 550px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .tituloFormulario {
+              font-size: 15px;
+              font-weight: bolder;
+              color: white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-bloqueDatos {
+              margin-top: 10px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin label {
+              color: white;
+              min-width: 70px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-input {
+              min-width: 190px;
+              padding-left: 5px;
+              border: none; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-input:focus {
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
+                transition-duration: .3s; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-label-radio {
+              vertical-align: middle; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-label-error {
+              color: red; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera {
+              margin-top: 5px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar {
+              width: 115px;
+              text-align: center;
+              font-size: 12px;
+              margin: 7px 5px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              border-left: 1px solid grey;
+              border-top: 1px solid grey;
+              border-right: 1px solid black;
+              border-bottom: 1px solid black;
+              color: white;
+              background-color: rgba(255, 255, 255, 0.2);
+              box-shadow: 1px 1px 2px transparent;
+              float: left; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar:hover {
+                transition-duration: .4s;
+                border-radius: 4px;
+                border-left: 1px solid silver;
+                border-top: 1px solid silver;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                color: #e6e6e6;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: none;
+                opacity: .9;
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+          body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin {
+            max-width: 95%;
+            margin: 10px;
+            text-align: right;
+            color: white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .btn {
+              width: 115px;
+              text-align: center;
+              font-size: 10px;
+              margin: 7px 5px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              border-left: 1px solid #ff8000;
+              border-top: 1px solid #ff8000;
+              border-right: 1px solid black;
+              border-bottom: 1px solid black;
+              color: white;
+              background-color: transparent;
+              box-shadow: 1px 1px 2px transparent;
+              background-color: transparent;
+              padding: 2px 10px;
+              font-size: 12px;
+              color: white; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .btn a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .btn:hover {
+                transition-duration: .4s;
+                border-radius: 4px;
+                border-left: 1px solid silver;
+                border-top: 1px solid silver;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                color: #e6e6e6;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: none;
+                opacity: .9;
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .btn #caja-texto-login {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                padding: 0;
+                max-width: 60px;
+                /*Reglas necesarias para text-overflow*/
+                /*El contenedor debe ser de bloque*/
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin #iconoUsuario {
+              width: 15px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin ul {
+              width: 60px;
+              font-size: 12px;
+              background-color: rgba(255, 255, 255, 0.9); }
+              body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin ul li a {
+                text-overflow: ellipsis; }
+                body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin ul li a:hover {
+                  color: white;
+                  background-color: #ffb062;
+                  border-radius: 4px;
+                  transition-duration: 0.3s;
+                  font-weight: bolder;
+                  font-style: italic;
+                  box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .dropdown-menu {
+              left: auto;
+              right: 0; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro {
+            padding: 20px;
+            font-size: 12px;
+            max-width: 550px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .tituloFormulario {
+              font-size: 15px;
+              font-weight: bolder;
+              color: white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro label {
+              color: white;
+              min-width: 110px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-label-check {
+              vertical-align: middle; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-input, body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-select {
+              min-width: 190px;
+              padding-left: 5px;
+              border: none; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-input:focus, body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-select:focus {
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
+                transition-duration: .3s; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-label-error {
+              color: red;
+              font-size: 11px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-bloqueDatos {
+              margin-top: 10px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro .registro-bloqueDatos > span {
+                vertical-align: middle; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro #registro-botonera {
+              margin-top: 5px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro #registro-botonera #registro-boton-enviar {
+              width: 115px;
+              text-align: center;
+              font-size: 12px;
+              margin: 7px 5px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              border-left: 1px solid grey;
+              border-top: 1px solid grey;
+              border-right: 1px solid black;
+              border-bottom: 1px solid black;
+              color: white;
+              background-color: rgba(255, 255, 255, 0.2);
+              box-shadow: 1px 1px 2px transparent;
+              float: left; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro #registro-botonera #registro-boton-enviar a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueRegistro #registro-botonera #registro-boton-enviar:hover {
+                transition-duration: .4s;
+                border-radius: 4px;
+                border-left: 1px solid silver;
+                border-top: 1px solid silver;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                color: #e6e6e6;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: none;
+                opacity: .9;
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
     body #capaSuperior #pie {
       height: 12%;
       margin-top: 5px; }
@@ -703,15 +1066,15 @@ body {
         body #capaSuperior #header #cabeceraContenidos {
           height: 60%; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogo {
-            width: 70%; }
+            width: 55%; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
               margin-left: 3%; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
             display: none; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
-            width: 30%; }
+            width: 45%; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
-              width: 70%;
+              width: 60%;
               float: right;
               margin-right: 15px; }
               body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton {
@@ -719,7 +1082,7 @@ body {
       body #capaSuperior #menuH {
         min-height: 28.0px; }
         body #capaSuperior #menuH #plataformas {
-          width: 90%; }
+          width: 87%; }
           body #capaSuperior #menuH #plataformas .menuH_plataforma {
             display: none; }
           body #capaSuperior #menuH #plataformas #menuH_desplegable {
@@ -741,6 +1104,8 @@ body {
         display: none; }
       body #capaSuperior #carrito {
         width: 10%; }
+        body #capaSuperior #carrito #botonCarrito {
+          width: 36px; }
       body #capaSuperior #seccionCentral {
         max-height: 544px; }
         body #capaSuperior #seccionCentral #tablaRanking {

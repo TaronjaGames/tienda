@@ -1,0 +1,62 @@
+
+@import "common.scss";
+
+
+#bloqueRegistro{
+    padding: 20px;
+    font-size: 12px;
+    max-width: 550px;
+    
+    & .tituloFormulario{
+        font:{
+            size: 15px;
+            weight: bolder;
+        }
+        color: white;
+    }
+    
+    & label{
+        color: white;
+        min-width: 110px;
+    }
+
+    & .registro-label-check{
+        vertical-align: middle;
+    }
+    
+    & .registro-input, & .registro-select{
+        min-width: 190px;
+        padding-left: 5px;
+        border: none;
+
+        &:focus{
+            @include sombraPerimetral(1px,12px,white,none);
+            transition-duration: .3s;
+        }
+    }
+
+    & .registro-label-error{
+        color: red;
+        font-size: 11px;
+    }
+
+    & .registro-bloqueDatos{
+        margin-top: 10px;
+
+        & > span{
+            vertical-align: middle;
+        }
+    }
+
+    #registro-botonera{
+        margin-top: 5px;
+    }
+
+    #registro-botonera #registro-boton-enviar{
+        @include estiloBotonContenidos();
+        float: left;
+        //margin-left: 145px;
+    }
+
+}
+

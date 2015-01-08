@@ -6,7 +6,7 @@
         min-height: $altoTF;
         min-height: $altoTF;
         min-width: $anchoTF;
-        
+
         #capaSuperior{
             width:100%;
 
@@ -18,7 +18,7 @@
                 #cabeceraContenidos{
                     height: 60%;
                     #cabeceraLogo{
-                        width: 70%;
+                        width: 55%;
                         #logoImg{
                             margin-left: 3%;
                         }
@@ -27,9 +27,9 @@
                         display: none;
                     }
                     #cabeceraLogin{
-                        width: 30%;
+                        width: 45%;
                         #botoneraLogin{
-                            width: 70%;
+                            width: 60%;
                             float: right;
                             margin-right: 15px;
                             .boton{
@@ -43,7 +43,7 @@
                 min-height: $altoTF*0.035;
 
                 #plataformas{
-                    width:90%;
+                    width:87%;
 
                     .menuH_plataforma{
                         display:none;
@@ -81,22 +81,26 @@
             }
             #carrito{
                 width: 10%;
+                #botonCarrito{
+                    width: 36px;
+                }
             }
 
             #seccionCentral{
                 max-height: $altoTF*0.68;
-                
+
                 #tablaRanking{
                     border: none;
                 }
+
             }
 
             #pie{
                 height: $altoTF*0.12;
-                
+
                 #pieContenidos{
                     height: 80%;
-                    
+
                     #infoContacto{
                         display:none;
                     }
@@ -113,7 +117,7 @@
                 }
             }
         }
-        
+
         #capaFondo{
             #franjaSuperior{
                 height: $altoTF*0.14;
@@ -122,6 +126,6 @@
                 min-height: $altoTF*0.035;
             }
         }
-        
+
     }
 }
