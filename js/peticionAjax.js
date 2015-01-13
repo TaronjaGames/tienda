@@ -9,6 +9,43 @@ function getAjax($tabla, $order) {
     });
 }
 
+function getAjaxSubseccionesArticulos($parametro1, $parametro2, $order) {
+
+    $datos = {'parametro1': $parametro1, 'parametro2': $parametro2, 'orden': $order};
+
+    return $.ajax({
+        type: 'POST',
+        url: 'persistencia/SubseccionArticulosDAO.php',
+        data: $datos
+    });
+    alert($datos);
+
+}
+
+function getAjaxSubseccionesGenerico($tabla, $parametro, $order) {
+
+    $datos = {'tabla': $tabla, 'parametro': $parametro, 'orden': $order};
+
+    return $.ajax({
+        type: 'POST',
+        url: 'persistencia/SubseccionGenericoDAO.php',
+        data: $datos
+    });
+    alert($datos);
+}
+
+function getAjaxRankingSubseccion($parametro) {
+
+    $datos = {'parametro': $parametro};
+
+    return $.ajax({
+        type: 'POST',
+        url: 'persistencia/SubseccionRankingDAO.php',
+        data: $datos
+    });
+
+}
+
 function getAjaxRanking() {
 
     return $.ajax({

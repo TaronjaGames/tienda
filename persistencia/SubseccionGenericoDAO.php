@@ -1,0 +1,40 @@
+<?php
+
+include 'ConnectionFactory.php';
+
+function select($tabla, $parametro, $order) {
+
+    //REALIZAR CONSULTA
+
+    $conexion = getConnection();
+    $consulta = "select * from ".$tabla." where plataforma = '".$parametro."' order by 1 " . $order;
+
+    //EXTRAER DATOS
+
+    if ($result = $conexion->query($consulta)) {
+
+        while ($row = $result->fetch_assoc()) {
+            $datos[] = $row;
+        }
+
+        //DEVOLVER DATOS
+
+        return $datos;
+    }
+}
+
+// RECOGIDA DE DATOS
+
+$tabla = $_POST['tabla'];
+$parametro = $_POST['parametro'];
+$order = $_POST['orden'];
+
+// CONSULTAR DATOS
+
+$datos = select($tabla, $parametro, $order);
+
+//DEVOLVER DATOS
+
+header('Content-type: application/json');
+echo json_encode($datos);
+?>

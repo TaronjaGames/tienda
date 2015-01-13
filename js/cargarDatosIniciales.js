@@ -1,4 +1,4 @@
- a=0;
+a=0;
 function subseccionPlataforma() {
 
     $promesa = getAjax("plataforma", "asc");
@@ -8,8 +8,8 @@ function subseccionPlataforma() {
         $.each(secciones, function (index1) {
            var datos = "";
            $.each(data, function (index2) {
-           datos += "<div class='menuV_subseccion' onclick='mostrarPorFiltros(\""+$('#contieneSecciones'+(index1+1)).text()+"," +data[index2].nombrePlataforma+"\")'>" + data[index2].nombrePlataforma + "</div>";
-        });
+           datos += "<div class='menuV_subseccion' onclick='mostrarPorSubseccion(\""+$('#contieneSecciones'+(index1+1)).text()+"\",\"" +data[index2].nombrePlataforma+"\")'>" + data[index2].nombrePlataforma + "</div>";
+           });
         $('#contieneSecciones'+(index1+1)).append(datos);
         });
     });

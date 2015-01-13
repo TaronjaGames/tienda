@@ -36,7 +36,7 @@ function mostrarRanking() {
                     + "<img class='imgRanking' src='style/img/articulos/" + data[index].imagenArticulo + ".png' alt='Imagen_Articulo'/>"
                     + "</td>"
                     + "<td>" + data[index].nombreArticulo + "</td>"
-                    + "<td>" + data[index].plataformaArticulo + "</td>"
+                    + "<td>" + data[index].plataforma + "</td>"
                     + "<td>" + data[index].descripcionArticulo + "</td>"
                     + "<td>" + data[index].ventaArticulo + "</td>"
                     + "</tr>";
