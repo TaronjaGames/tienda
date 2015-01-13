@@ -474,29 +474,61 @@ body {
         width: 13%;
         max-width: 170px;
         padding: 5px; }
-        body #capaSuperior #seccionCentral .menuV .menuV_seccion, body #capaSuperior #seccionCentral .menuV .menuV_grupo {
+        body #capaSuperior #seccionCentral .menuV .menuV_inicio {
+          background-color: rgba(128, 128, 128, 0.55);
+          border-radius: 4px;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+          padding: 5px 0 0 5px;
+          margin-bottom: 2px;
+          color: silver; }
+          body #capaSuperior #seccionCentral .menuV .menuV_inicio:hover {
+            transition-duration: .3;
+            box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white;
+            color: white;
+            cursor: pointer;
+            background-color: #ffb062; }
+        body #capaSuperior #seccionCentral .menuV .contieneSecciones:hover > .menuV_subseccion {
+          display: block; }
+        body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_seccion, body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_grupo {
           margin: 0px 2px 2px 0px;
           padding-left: 4px;
           font-family: Calibri;
           font-size: 1em;
           font-weight: bold;
           color: white; }
-        body #capaSuperior #seccionCentral .menuV .menuV_grupo {
+        body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_grupo {
           background-color: rgba(128, 128, 128, 0.55);
           border-radius: 4px;
           box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
           padding: 5px 0 0 5px;
           margin-bottom: 2px; }
-        body #capaSuperior #seccionCentral .menuV .menuV_seccion {
+        body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_seccion {
           color: silver;
           background-color: rgba(170, 170, 170, 0.2);
           border-bottom-right-radius: 4px;
           box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
           padding-left: 7px; }
-          body #capaSuperior #seccionCentral .menuV .menuV_seccion:hover {
+          body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_seccion:hover {
             transition-duration: .3;
             box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
-        body #capaSuperior #seccionCentral .menuV .menuV_seccion:hover {
+        body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_seccion:hover {
+          color: white;
+          cursor: pointer;
+          background-color: #ffb062;
+          transition-duration: 0.5s; }
+        body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_subseccion {
+          display: none;
+          width: 70%;
+          color: silver;
+          background-color: rgba(170, 170, 170, 0.2);
+          border-bottom-right-radius: 4px;
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+          padding-left: 7px; }
+          body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_subseccion:hover {
+            transition-duration: .3;
+            box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+        body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_subseccion:hover {
+          display: block;
           color: white;
           cursor: pointer;
           background-color: #ffb062;
