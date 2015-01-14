@@ -40,6 +40,7 @@ function mostrarSeccion() {
         
         $("#menuV_menu").append(datos);
         $("#opciones_menu_desplegable").append(datosDesplegable);
+        subseccionPlataforma();
     });
     
 }
@@ -63,4 +64,3 @@ function mostrarPlataforma() {
 mostrarSeccion();
 mostrarNoticias();
 mostrarPlataforma();
-subseccionPlataforma();
