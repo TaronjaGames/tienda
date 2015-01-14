@@ -1,8 +1,6 @@
-a=0;
 function subseccionPlataforma() {
 
     $promesa = getAjax("plataforma", "asc");
-    if(a!==1){
     $promesa.success(function (data) {
         secciones=$('.contieneSecciones');
         $.each(secciones, function (index1) {
@@ -13,8 +11,7 @@ function subseccionPlataforma() {
         $('#contieneSecciones'+(index1+1)).append(datos);
         });
     });
-    a=1;    
-}
+  
 }
 
 
@@ -66,7 +63,9 @@ function mostrarPlataforma() {
 mostrarSeccion();
 mostrarNoticias();
 mostrarPlataforma();
-$(document).ajaxComplete(function(){
-           subseccionPlataforma();
-           
-        });
+//$(document).ajaxComplete(function(){
+//           subseccionPlataforma();
+//           
+//        });
+
+subseccionPlataforma();
