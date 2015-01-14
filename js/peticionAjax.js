@@ -96,4 +96,3 @@ function getAjaxLogOut() {
         url: 'seguridad/LogOut.php'
     });
 }
-
