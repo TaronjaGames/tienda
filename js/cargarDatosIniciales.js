@@ -63,9 +63,4 @@ function mostrarPlataforma() {
 mostrarSeccion();
 mostrarNoticias();
 mostrarPlataforma();
-//$(document).ajaxComplete(function(){
-//           subseccionPlataforma();
-//           
-//        });
-
 subseccionPlataforma();
