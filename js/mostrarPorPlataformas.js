@@ -6,7 +6,7 @@ function mostrarPorPlataformas($plataforma) {
         datos = "<div id='rowArticulos' class='row fila'>";
         $.each(data, function (index) {
 
-            if (data[index].plataformaArticulo === $plataforma) {
+            if (data[index].plataforma === $plataforma) {
                 datos += pintarArticulos(index,data[index]);
             }
         });
