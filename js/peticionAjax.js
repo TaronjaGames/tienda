@@ -18,7 +18,6 @@ function getAjaxSubseccionesArticulos($parametro1, $parametro2, $order) {
         url: 'persistencia/SubseccionArticulosDAO.php',
         data: $datos
     });
-    alert($datos);
 
 }
 
@@ -31,7 +30,6 @@ function getAjaxSubseccionesGenerico($tabla, $parametro, $order) {
         url: 'persistencia/SubseccionGenericoDAO.php',
         data: $datos
     });
-    alert($datos);
 }
 
 function getAjaxRankingSubseccion($parametro) {
@@ -43,7 +41,6 @@ function getAjaxRankingSubseccion($parametro) {
         url: 'persistencia/SubseccionRankingDAO.php',
         data: $datos
     });
-
 }
 
 function getAjaxRanking() {
@@ -51,6 +48,18 @@ function getAjaxRanking() {
     return $.ajax({
         type: 'POST',
         url: 'persistencia/RankingDAO.php'
+    });
+}
+
+
+function getAjaxBuscador($tabla, $parametro, $order) {
+
+    $datos = {'tabla': $tabla, 'parametro': $parametro, 'orden': $order};
+
+    return $.ajax({
+        type: 'POST',
+        url: 'persistencia/BuscadorDAO.php',
+        data: $datos
     });
 }
 
