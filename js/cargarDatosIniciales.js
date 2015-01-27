@@ -75,12 +75,12 @@ function comprobarSesion() {
         if (data.status === 200) {
             mostrarMenuLogin(data.usuario);
         } else {
-            mostrarSeccion();
             mostrarNoticias();
         }
     });
 }
 
+mostrarSeccion();
 comprobarSesion();
 mostrarPlataforma();
 

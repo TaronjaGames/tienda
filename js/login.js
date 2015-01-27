@@ -124,7 +124,8 @@ function mostrarMenuLogin(data){
                               <div id='opciones-admin-producto' class='menuV_opcion-admin' onclick='mostrarPanelesArticulo()'>Productos</div>\n\
                               <div id='opciones-admin-pedido' class='menuV_opcion-admin' onclick='mostrarListaPedidos()'>Pedidos</div>\n\
                               <div id='opciones-admin-newUsuario' class='menuV_opcion-admin'>Nuevo usuario</div>\n\
-                              <div id='opciones-admin-newArticulo' class='menuV_opcion-admin'>Nuevo artículo</div>";
+                              <div id='opciones-admin-newArticulo' class='menuV_opcion-admin'>Nuevo artículo</div>\n\
+                              <br/>";
                 
                 var menuAdminDesplegable = "<li><a id='opciones-desplegable-admin-panelAdmin' class='menu_desplegable_seccion' href='javascript:mostrarPanelesAdmin()'>Administración</a></li>\n\
                                         <li><a id='opciones-desplegable-admin-usuarios' class='menu_desplegable_seccion' href='javascript:mostrarPanelesUsuario()'>Usuarios</a></li>\n\
@@ -134,7 +135,7 @@ function mostrarMenuLogin(data){
                                         <li><a id='opciones-desplegable-admin-newArticulo' class='menu_desplegable_seccion' href='#'>Nuevo artículo</a></li>";
                 
                 
-                $("#menuV_menu").html(menuAdmin);
+                $("#menuV_menu").prepend(menuAdmin);
                 $("#opciones_menu_desplegable").html(menuAdminDesplegable);
                 
                 mostrarPanelesAdmin();
