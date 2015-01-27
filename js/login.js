@@ -1,7 +1,14 @@
 
 function mostrarLogin() {
-
-    datos = "<div id='bloqueLogin'>\n\
+    
+    var accionCancelar = "";
+    if(usuarioLogueado.rolUsuarioLogueado === "administrador"){
+        accionCancelar = "mostrarPanelesAdmin()";
+    } else {
+        accionCancelar = "mostrarNoticias()";
+    }
+    
+    var datos = "<div id='bloqueLogin'>\n\
                 <p id='tituloFormularioLogin' class='tituloFormulario'>Formulario de login.</p>\n\
                 <hr/>\n\
                 <section id='login-bloqueUsuario' class='login-bloqueDatos'>\n\
@@ -19,6 +26,9 @@ function mostrarLogin() {
                 <br/><br/>\n\
                 <section id='login-botonera'>\n\
                     <div id='login-boton-entrar' class='boton'><span>Entrar</span></div>\n\
+                    <div id='login-boton-cancelar' class='boton' onclick='" + accionCancelar + "'>\n\
+                        <span>Salir</span>\n\
+                    </div>\n\
                 </section>\n\
             </div>";
 

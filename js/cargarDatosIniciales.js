@@ -43,8 +43,13 @@ function mostrarSeccion() {
             datosDesplegable += "<li><a class='menu_desplegable_seccion' href='javascript:mostrar" + data[index].nombreSeccion + "()'>" + data[index].nombreSeccion + "</a></li>";
             datos += "</div>";
         });
+        
+        if (accionPrevia === "botonRegistro" || accionPrevia === "botonLogin") {
+            $("#menuV_menu").html(datos);
+        } else {
+            $("#menuV_menu").append(datos);
+        }
 
-        $("#menuV_menu").append(datos);
         $("#opciones_menu_desplegable").append(datosDesplegable);
         subseccionPlataforma();
     });
@@ -85,8 +90,17 @@ comprobarSesion();
 mostrarPlataforma();
 
 
+//Acciones al hacer click en el botón "Registro"
 $("#botonRegistro").click(function () {
     accionPrevia = this.id;
     mostrarRegistroUsuario();
+    mostrarSeccion();
+});
+
+//Acciones al hacer click en el botón "Login"
+$("#botonLogin").click(function () {
+    accionPrevia = this.id;
+    mostrarLogin();
+    mostrarSeccion();
 });
 

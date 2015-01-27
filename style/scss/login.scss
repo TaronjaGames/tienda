@@ -47,10 +47,12 @@
         margin-top: 5px;
     }
 
-    #login-botonera #login-boton-entrar{
-        @include estiloBotonContenidos();
-        float: left;
-    }
+    #login-botonera{
+        & #login-boton-entrar, & #login-boton-cancelar{
+            @include estiloBotonContenidos();
+            float: left;
+        }
+    } 
 
 }
 

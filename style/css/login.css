@@ -33,7 +33,7 @@
     color: red; }
   #bloqueLogin #login-botonera {
     margin-top: 5px; }
-  #bloqueLogin #login-botonera #login-boton-entrar {
+  #bloqueLogin #login-botonera #login-boton-entrar, #bloqueLogin #login-botonera #login-boton-cancelar {
     display: inline-block;
     width: 115px;
     text-align: center;
@@ -49,12 +49,12 @@
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 1px 1px 2px transparent;
     float: left; }
-    #bloqueLogin #login-botonera #login-boton-entrar a {
+    #bloqueLogin #login-botonera #login-boton-entrar a, #bloqueLogin #login-botonera #login-boton-cancelar a {
       display: inline;
       text-decoration: none;
       color: white;
       width: 60px; }
-    #bloqueLogin #login-botonera #login-boton-entrar:hover {
+    #bloqueLogin #login-botonera #login-boton-entrar:hover, #bloqueLogin #login-botonera #login-boton-cancelar:hover {
       transition-duration: .4s;
       border-radius: 4px;
       border-left: 1px solid silver;

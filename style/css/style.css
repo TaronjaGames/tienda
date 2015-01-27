@@ -358,7 +358,7 @@ body {
               color: red; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera {
               margin-top: 5px; }
-            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar {
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar, body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-cancelar {
               display: inline-block;
               width: 115px;
               text-align: center;
@@ -374,12 +374,12 @@ body {
               background-color: rgba(255, 255, 255, 0.2);
               box-shadow: 1px 1px 2px transparent;
               float: left; }
-              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar a {
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar a, body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-cancelar a {
                 display: inline;
                 text-decoration: none;
                 color: white;
                 width: 60px; }
-              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar:hover {
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar:hover, body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-cancelar:hover {
                 transition-duration: .4s;
                 border-radius: 4px;
                 border-left: 1px solid silver;
@@ -650,7 +650,7 @@ body {
             color: red; }
           body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera {
             margin-top: 5px; }
-          body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-entrar {
+          body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-entrar, body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-cancelar {
             display: inline-block;
             width: 115px;
             text-align: center;
@@ -666,12 +666,12 @@ body {
             background-color: rgba(255, 255, 255, 0.2);
             box-shadow: 1px 1px 2px transparent;
             float: left; }
-            body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-entrar a {
+            body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-entrar a, body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-cancelar a {
               display: inline;
               text-decoration: none;
               color: white;
               width: 60px; }
-            body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-entrar:hover {
+            body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-entrar:hover, body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-cancelar:hover {
               transition-duration: .4s;
               border-radius: 4px;
               border-left: 1px solid silver;
@@ -1056,7 +1056,7 @@ body {
               color: red; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera {
               margin-top: 5px; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar {
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar, body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-cancelar {
               display: inline-block;
               width: 115px;
               text-align: center;
@@ -1072,12 +1072,12 @@ body {
               background-color: rgba(255, 255, 255, 0.2);
               box-shadow: 1px 1px 2px transparent;
               float: left; }
-              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar a {
+              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar a, body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-cancelar a {
                 display: inline;
                 text-decoration: none;
                 color: white;
                 width: 60px; }
-              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar:hover {
+              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar:hover, body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-cancelar:hover {
                 transition-duration: .4s;
                 border-radius: 4px;
                 border-left: 1px solid silver;
