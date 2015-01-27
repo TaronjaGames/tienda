@@ -30,6 +30,19 @@
             ((-1)*$size) 0 $difuminacion $color;
     }
 }
+@mixin reglasHoverMenuV(){
+    color: white;
+    cursor:pointer;
+    background-color: rgba($colorNaranjaSuave,.7);
+    transition-duration: 0.3s;
+    @include sombraPerimetral(1px,8px,white,none);
+}
+@mixin reglasHoverFilaTabla(){
+    color: white;
+    cursor:pointer;
+    background-color:$colorNaranjaSuave;
+    transition-duration: 0.5s;
+}
 @mixin reglasBarrasScroll(){
     // REGLAS PARA LAS BARRAS DE DESPLAZAMIENTO
     ::-webkit-scrollbar-thumb{
@@ -76,7 +89,7 @@
     & a{
         @include estiloEnlace(inline,white,60px);
     }
-    
+
     width: 115px;
     text-align: center;
     font-size: 10px;
@@ -96,7 +109,8 @@
     & a{
         @include estiloEnlace(inline,white,60px);
     }
-    
+
+    display: inline-block;
     width: 115px;
     text-align: center;
     font-size: 12px;
@@ -110,4 +124,63 @@
         @include botonIn(silver,transparent,rgb(230,230,230),rgba(0,0,0,.05));
         @include sombraPerimetral(1px,12px,white,none);
     }
+}
+
+@mixin estiloIconoBackEnd(){
+    & a{
+        @include estiloEnlace(inline,white,60px);
+    }
+
+    cursor: pointer;
+    text-align: center;
+    color: silver;
+    width: 200px;
+    height: auto;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5%;
+    background-color: rgba(0,0,0,.25);
+    opacity: .8;
+
+    border:{
+        left: 1px solid black;
+        top: 1px solid black;
+        right: 1px solid rgba(0,0,0,.15);
+        bottom: 1px solid rgba(0,0,0,.15);
+    }
+    box-shadow: 2px 2px 20px black inset;
+
+    &:hover{
+        transform: translate(-3px,-5px);
+        transition-timing-function: ease-in-out;
+        transition-duration: .4s;
+
+        border:{
+            left: 1px solid rgba(0,0,0,.15);
+            top: 1px solid rgba(0,0,0,.15);
+            right: 1px solid black;
+            bottom: 1px solid black;
+        }
+        color: white;
+        //background-color: rgba(50,50,50,.8);
+        background-color: rgba(0,0,0,.7);
+        opacity: 1;
+        box-shadow: 2px 2px 20px black;
+    }
+}
+
+@mixin estiloPlataforma(){
+    text-align: center;
+    color: silver;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,.2);
+    opacity: 1;
+
+    border:{
+        left: 1px solid rgba(0,0,0,.15);
+        top: 1px solid rgba(0,0,0,.15);
+        right: 1px solid black;
+        bottom: 1px solid black;
+    }
+    box-shadow: 8px 8px 40px black;
 }

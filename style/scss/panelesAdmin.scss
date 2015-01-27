@@ -1,0 +1,60 @@
+
+@import "common.scss";
+
+.caja-paneles{
+    width: 80%;
+    height: 50%;
+    text-align: center;
+    margin: 50px;
+    padding: 30px 30px 75px;
+    @include estiloPlataforma();
+    background: url("../img/fondos/fondo-panel.png");
+
+    .titulo-caja-paneles{
+        font-size: 1.8em;
+        color: rgba(255,255,255,.75);
+        opacity: .9;
+        @include sombraPerimetralTexto(5px,15px,black,none);
+    }
+
+    & .panel-admin{
+        @include estiloIconoBackEnd();
+        box-shadow: 6px 6px 20px black inset;
+        background-color: rgba(0,0,0,.3);
+
+        .img-iconoGestion{
+            margin-top: 20px;
+            padding: 10px;
+            max-height: 180px;
+            opacity: .8;
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        .texto-iconoGestion{
+            font-size: 1.5em;
+            margin-top: 5px;
+        }
+        &:hover{
+            @include sombraPerimetral(5px,30px,white,none);
+            .texto-iconoGestion{
+                color: rgba(255,255,255,.7);
+                @include sombraPerimetralTexto(8px,15px,white,none);
+                transition-duration: .4s;
+            }
+        }
+    }
+
+}
+
+@media all and (max-width: 1280px){
+
+    .caja-paneles{
+        width: 95%;
+        height: 50%;
+        margin: 25px;
+        padding: 30px 25px 75px;
+    }
+
+}

@@ -6,7 +6,14 @@ function mostrarRanking() {
 
     $promesa.success(function (data) {
 
-        fechaRanking = new Date();//Fecha actual
+    pintarRanking(data);
+
+    });
+
+}
+
+function pintarRanking(data){
+            fechaRanking = new Date();//Fecha actual
         moment.locale('es');//Formato de la fecha
 
         var datos = "<div id='contenedorRanking'>"
@@ -47,9 +54,6 @@ function mostrarRanking() {
                 + "</div>";
 
         $("#articulos").html(datos);
-
-    });
-
 }
 
 

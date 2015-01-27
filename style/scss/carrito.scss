@@ -1,9 +1,11 @@
 body{
+
     #carritoFixed{
         position: fixed;
         bottom: 0px;
         right: 20%; 
         left: 20%;
+        display:none;
 
         #cabCarrito{   
             padding-left: 10px;
@@ -16,6 +18,8 @@ body{
             font-style: italic;
             font-size: 1.5em;
             color:white;
+
+            cursor:pointer;
         }
         #carritoTabla{
             padding-top:0px; 
@@ -68,7 +72,7 @@ body{
                     height:50px;
                 }
 
-                .imgBorrar{
+                .imgBorrar, .imgSumar{
                     height:15px;
                 }
 
@@ -88,16 +92,33 @@ body{
                 font-style: italic;
                 font-size: 1em;
 
+                #botonVaciarCarrito{
+                    float:left;
+                    width:60px;
+                    margin-left:5%;
+                }
+
+                #botonComprar{
+                    float:left;
+                    width:60px;
+                    margin-left:5%;
+                }
 
                 #textoTotalFactura{
-                    float:left;
-                    width:70%;
+                    text-align:right;
+                    float:right;
+
                 }
                 #importeTotalCarrito{
-                    width: 10%;
-                    float: left;
+                    width: 15%;
+                    float: right;
+                    margin-right:7.5%;
                     text-align: center;
                 }
+
+
+
+
 
             }
             .enImagen{
@@ -121,10 +142,16 @@ body{
                 text-align:center;
             }
             .enBorrar{
-                width:10%;
+                width:5%;
                 text-align: center;
                 cursor:pointer;
             }
+            .enSumar{
+                width:5%;
+                text-align: center;
+                cursor:pointer;
+            }
+
             .enBorrarTodo{
                 width:10%;
                 text-align: center;
@@ -143,6 +170,9 @@ body{
             left: 1%;
 
             #carritoTabla{
+                .enNombre{
+                    width:35%;
+                }
                 .enImagen{
                     display:none;
                 }
@@ -152,18 +182,15 @@ body{
                 .enTotal{
                     width:20%;
                 }
-                .enBorrar{
-                    width:5%;
-                }
                 .enBorrarTodo{
                     width:5%;
                 }
                 #totalFacturaCarrito{
-
-                    #importeTotalCarrito{
-                        width: 20%;
-
+                    
+                    #textoTotalFactura{
+                        display:none;
                     }
+
                 }
             }
 

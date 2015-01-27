@@ -2,7 +2,8 @@ body #carritoFixed {
   position: fixed;
   bottom: 0px;
   right: 20%;
-  left: 20%; }
+  left: 20%;
+  display: none; }
   body #carritoFixed #cabCarrito {
     padding-left: 10px;
     border-radius: 10px 10px 0px 0px;
@@ -11,7 +12,8 @@ body #carritoFixed {
     font-weight: bold;
     font-style: italic;
     font-size: 1.5em;
-    color: white; }
+    color: white;
+    cursor: pointer; }
   body #carritoFixed #carritoTabla {
     padding-top: 0px;
     overflow: hidden;
@@ -47,7 +49,7 @@ body #carritoFixed {
         padding-top: 0; }
       body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgCarrito {
         height: 50px; }
-      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgBorrar {
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgBorrar, body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgSumar {
         height: 15px; }
       body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgBorrarTodo {
         height: 15px; }
@@ -60,12 +62,21 @@ body #carritoFixed {
       font-weight: bold;
       font-style: italic;
       font-size: 1em; }
+      body #carritoFixed #carritoTabla #totalFacturaCarrito #botonVaciarCarrito {
+        float: left;
+        width: 60px;
+        margin-left: 5%; }
+      body #carritoFixed #carritoTabla #totalFacturaCarrito #botonComprar {
+        float: left;
+        width: 60px;
+        margin-left: 5%; }
       body #carritoFixed #carritoTabla #totalFacturaCarrito #textoTotalFactura {
-        float: left;
-        width: 70%; }
+        text-align: right;
+        float: right; }
       body #carritoFixed #carritoTabla #totalFacturaCarrito #importeTotalCarrito {
-        width: 10%;
-        float: left;
+        width: 15%;
+        float: right;
+        margin-right: 7.5%;
         text-align: center; }
     body #carritoFixed #carritoTabla .enImagen {
       width: 10%;
@@ -83,7 +94,11 @@ body #carritoFixed {
       width: 10%;
       text-align: center; }
     body #carritoFixed #carritoTabla .enBorrar {
-      width: 10%;
+      width: 5%;
+      text-align: center;
+      cursor: pointer; }
+    body #carritoFixed #carritoTabla .enSumar {
+      width: 5%;
       text-align: center;
       cursor: pointer; }
     body #carritoFixed #carritoTabla .enBorrarTodo {
@@ -95,17 +110,17 @@ body #carritoFixed {
   body #carritoFixed {
     right: 1%;
     left: 1%; }
+    body #carritoFixed #carritoTabla .enNombre {
+      width: 35%; }
     body #carritoFixed #carritoTabla .enImagen {
       display: none; }
     body #carritoFixed #carritoTabla .enPrecio {
       width: 20%; }
     body #carritoFixed #carritoTabla .enTotal {
       width: 20%; }
-    body #carritoFixed #carritoTabla .enBorrar {
-      width: 5%; }
     body #carritoFixed #carritoTabla .enBorrarTodo {
       width: 5%; }
-    body #carritoFixed #carritoTabla #totalFacturaCarrito #importeTotalCarrito {
-      width: 20%; } }
+    body #carritoFixed #carritoTabla #totalFacturaCarrito #textoTotalFactura {
+      display: none; } }
 
 /*# sourceMappingURL=carrito.css.map */

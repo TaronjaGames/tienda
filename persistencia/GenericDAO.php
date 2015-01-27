@@ -8,7 +8,7 @@ function select($tabla, $order) {
 
     $conexion = getConnection();
 
-    $consulta = "select * from " . $tabla . " order by 1 " . $order;
+    $consulta = "select * from ".$tabla." order by 1 " . $order;
 
     //EXTRAER DATOS
 
@@ -17,9 +17,10 @@ function select($tabla, $order) {
         while ($row = $result->fetch_assoc()) {
             $datos[] = $row;
         }
-
+        
+        closeConnection($conexion);
+        
         //DEVOLVER DATOS
-
         return $datos;
     }
 }

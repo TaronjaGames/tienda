@@ -9,12 +9,11 @@
   src: url("../fonts/PlaneCrash.ttf"); }
 @media all and (max-width: 992px) {
   body {
-    min-height: 768px;
-    mix-height: 768px; }
+    min-height: 750px; }
     body #capaSuperior {
-      width: 80%; }
+      width: 100%; }
       body #capaSuperior #header {
-        height: 115.2px; }
+        height: 112.5px; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
           margin-left: 3%; }
         body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
@@ -28,7 +27,7 @@
               width: 115px;
               float: right; }
       body #capaSuperior #menuH {
-        min-height: 30.72px; }
+        min-height: 30px; }
         body #capaSuperior #menuH #plataformas {
           width: 75%; }
           body #capaSuperior #menuH #plataformas .menuH_plataforma {
@@ -39,7 +38,7 @@
           width: 18%;
           height: 100%; }
         body #capaSuperior #menuH #carrito {
-          width: 5%; }
+          width: 7%; }
       body #capaSuperior .menu_desplegable {
         background-color: rgba(170, 170, 170, 0.85); }
         body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
@@ -50,19 +49,29 @@
           background-color: #ffb062;
           transition-duration: 0.5s; }
       body #capaSuperior #seccionCentral {
-        height: 529.92px; }
+        height: 517.5px; }
         body #capaSuperior #seccionCentral #contenidos {
           width: 100%; }
           body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia {
             width: 95%;
             float: left; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles {
+            /*                        width: 90%;
+                                    height: 50%;
+                                    text-align: center;
+                                    margin: 50px;
+                                    padding: 30px 30px 75px;
+                                    @include estiloPlataforma();
+                                    background: url("../img/fondos/chapa.png");
+                                    background-repeat: no-repeat;
+                                    background-size: 100% 100%;*/ }
         body #capaSuperior #seccionCentral #menuV {
           display: none; }
       body #capaSuperior #pie {
-        height: 92.16px; }
+        height: 90px; }
     body #capaFondo #franjaSuperior {
-      height: 115.2px; }
+      height: 112.5px; }
     body #capaFondo #franjaBajoMenuH {
-      min-height: 30.72px; } }
+      min-height: 30px; } }
 
 /*# sourceMappingURL=Responsive-sm.css.map */

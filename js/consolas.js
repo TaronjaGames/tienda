@@ -1,5 +1,10 @@
 function mostrarConsolas() {
+    
+$promesa = getAjaxArticuloPorTipo("consola", "asc");
 
-    mostrarArticulos("consola");
+    $promesa.success(function (data) {
+               
+        pintarArticulos(data);
 
+    });
 }

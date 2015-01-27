@@ -15,6 +15,8 @@ function mostrarLogin() {
                     <label id='login-label-error-password' for='login-input-password' class='login-label-error'></label>\n\
                 </section>\n\
                 <hr/>\n\
+                <a href='javascript:mostrarRegistroUsuario()'>Registro...</a>\n\\n\
+                <br/><br/>\n\
                 <section id='login-botonera'>\n\
                     <div id='login-boton-entrar' class='boton'><span>Entrar</span></div>\n\
                 </section>\n\
@@ -22,36 +24,18 @@ function mostrarLogin() {
 
     $("#articulos").html(datos);
 
-//                <section id='login-bloqueRolCliente' class='login-bloqueDatos'>\n\
-//                    <input id='login-radio-cliente' type='radio' name='login-radio-rol' value='Cliente' checked='checked'/>\n\
-//                    <label for='login-radio-cliente' class='login-label login-label-radio'>Cliente</label>\n\
-//                </section>\n\
-//                <section id='login-bloqueRolEmpleado' class='login-bloqueDatos'>\n\
-//                    <input id='login-radio-empleado' type='radio' name='login-radio-rol' value='Empleado'/>\n\
-//                    <label for='login-radio-empleado' class='login-label login-label-radio'>Empleado</label>\n\
-//                </section>\n\
-//                <hr/>\n\
-
     var formulario = "login";
     var listaRequeridos = document.getElementsByClassName("input-required");
-    //var listaRadios = document.getElementsByName("login-radio-rol");
 
     pulsado = false;
     document.getElementById("login-boton-entrar").onclick = function () {
         pulsado = true;
         $(".login-label-error").text("");
 
-//        for (var i = 0; i < listaRadios.length; i++) {
-//            if (listaRadios[i].checked) {
-//                var rolUsuario = listaRadios[i].value;
-//            }
-//        }
-
         var usuario = $("#login-input-usuario").val();
         var password = $("#login-input-password").val();
         if (usuario.length !== 0 && password.length !== 0) {
             logIn(usuario, password);
-            //logIn(rolUsuario, usuario, password);
         } else {
             for (var i = 0; i < listaRequeridos.length; i++) {
                 validarCampoRequerido(formulario, listaRequeridos[i].name, listaRequeridos[i].value);
@@ -70,62 +54,16 @@ function mostrarLogin() {
 
 
 function logIn($login, $password) {
-    //$promesa = getAjaxLogIn($rolUsuario, $login, $password);
     $promesa = getAjaxLogIn($login, $password);
     $promesa.success(function (data) {
 
-//        if ($rolUsuario === "Cliente" && data[0] != null) {
-//            var login = data[0].loginCliente;
-//        } else if ($rolUsuario === "Empleado" && data[0] != null) {
-//            login = data[0].loginEmpleado;
-//        }
-
+        //Zona info estado login header derecha
         if (data[0] !== null && data[0].loginUsuario === $login) {
-            var datos = "<div id='cajaInfoLogin' class='dropdown'>\n\
-                        <button class='btn dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown'>\n\
-                            <span>\n\
-                                <img id='iconoUsuario' src='style/img/iconos/iconoUsuarioTienda.png' alt='iconoUsuario'/>\n\
-                            </span>\n\
-                            <div id='caja-texto-login'><span id='texto-login'>" + data[0].loginUsuario + "</span></div>\n\
-                            <span class='caret'></span>\n\
-                        </button>\n\
-                        <ul id='opcionesUsuario' class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>\n\
-                            <li role='presentation'>\n\
-                                <a id='enlaceDesconectar' role='menuitem' tabindex='-1' href='#'>Desconectar</a>\n\
-                            </li>\n\
-                            <li role='presentation'>\n\
-                                <a id='enlaceCambiarUsuario' role='menuitem' tabindex='-1' href='#'>Cambiar usuario</a>\n\
-                            </li>\n\
-                            <li role='presentation'>\n\
-                                <a id='enlaceNuevoRegistro' role='menuitem' tabindex='-1' href='#'>Nuevo usuario</a>\n\
-                            </li>\n\
-                            <li role='presentation'>\n\
-                                <a id='enlaceDatosUsuario' role='menuitem' tabindex='-1' href='#'>Datos cuenta</a>\n\
-                            </li>\n\
-                            <li role='presentation'>\n\
-                                <a id='enlacePedidos' role='menuitem' tabindex='-1' href='#'>Lista pedidos</a>\n\
-                            </li>\n\
-                        </ul>\n\
-                    </div>";
-//alert(data[0].rolUsuario);
-            //$("#botonLogin").css("display","none");
-            //$("#cabeceraLogin").append(datos);
-            $("#cabeceraLogin").html(datos);
-            mostrarNoticias();
-
-            document.getElementById("enlaceDesconectar").onclick = function () {
-                logOut();
-            };
-            document.getElementById("enlaceCambiarUsuario").onclick = function () {
-                mostrarLogin();
-            };
-            document.getElementById("enlaceNuevoRegistro").onclick = function () {
-                mostrarRegistroUsuario();
-            };
+            
+            mostrarMenuLogin(data);
 
         } else {
             alert("Usuario o password incorrectos o usuario no registrado.\n\n Revise los datos introducidos...");
-            //alert("Usuario o password incorrectos o usuario no registrado como " + $rolUsuario + ".\n\n Revise los datos introducidos...");
         }
 
     });
@@ -139,4 +77,105 @@ function logOut() {
     });
 }
 
+function mostrarMenuLogin(data){
+    usuarioLogueado = {rolUsuarioLogueado: data[0].rolUsuario, loginUsuarioLogueado: data[0].loginUsuario};
+            var datos = "<div id='cajaInfoLogin' class='dropdown'>\n\
+                            <button class='btn dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown'>\n\
+                                <span>\n\
+                                    <img id='iconoUsuario' src='style/img/iconos/iconoUsuarioTienda.png' alt='iconoUsuario'/>\n\
+                                </span>\n\
+                                <div id='caja-texto-login'><span id='texto-login'>" + data[0].loginUsuario + "</span></div>\n\
+                                <span class='caret'></span>\n\
+                            </button>\n\
+                            <ul id='opcionesUsuario' class='dropdown-menu' role='menu' aria-labelledby='dropdownMenu1'>\n\
+                                <li role='presentation'>\n\
+                                    <a id='enlaceDesconectar' role='menuitem' tabindex='-1' href='#'>Desconectar</a>\n\
+                                </li>\n\
+                                <li role='presentation'>\n\
+                                    <a id='enlaceCambiarUsuario' role='menuitem' tabindex='-1' href='#'>Cambiar usuario</a>\n\
+                                </li>\n\
+                            </ul>\n\
+                        </div>";
+            
+//                            <li id='opcion-desplegable-usuario-new' role='presentation'>\n\
+//                                <a id='enlaceNuevoRegistro' role='menuitem' tabindex='-1' href='#'>Nuevo usuario</a>\n\
+//                            </li>";
+//
+//            if (data[0].rolUsuario === "administrador") {
+//                datos += "<li id='opcion-desplegable-articulo-new' role='presentation'>\n\
+//                                <a id='enlaceNuevoArticulo' role='menuitem' tabindex='-1' href='#'>Nuevo artículo</a>\n\
+//                            </li>";
+//            }
+           
 
+            $("#cabeceraLogin").html(datos);
+
+            $("#cajaInfoLogin").hover(function () {
+                $(this).children("ul").slideToggle(400);
+            });
+
+            //Construye menú vertical y paneles de administración
+            if (data[0].rolUsuario === "administrador") {
+
+                $("#iconoUsuario").attr("src", "style/img/iconos/iconoUsuarioTienda-rojo.png");
+
+                var menuAdmin = "<div id='titulo-menuV-admin' class='menuV_inicio' onclick='mostrarPanelesAdmin()'>Administración</div>\n\
+                              <div id='opciones-admin-usuario' class='menuV_opcion-admin' onclick='mostrarPanelesUsuario()'>Usuarios</div>\n\
+                              <div id='opciones-admin-producto' class='menuV_opcion-admin' onclick='mostrarPanelesArticulo()'>Productos</div>\n\
+                              <div id='opciones-admin-pedido' class='menuV_opcion-admin' onclick='mostrarListaPedidos()'>Pedidos</div>\n\
+                              <div id='opciones-admin-newUsuario' class='menuV_opcion-admin'>Nuevo usuario</div>\n\
+                              <div id='opciones-admin-newArticulo' class='menuV_opcion-admin'>Nuevo artículo</div>";
+                
+                var menuAdminDesplegable = "<li><a id='opciones-desplegable-admin-panelAdmin' class='menu_desplegable_seccion' href='javascript:mostrarPanelesAdmin()'>Administración</a></li>\n\
+                                        <li><a id='opciones-desplegable-admin-usuarios' class='menu_desplegable_seccion' href='javascript:mostrarPanelesUsuario()'>Usuarios</a></li>\n\
+                                        <li><a id='opciones-desplegable-admin-articulos' class='menu_desplegable_seccion' href='javascript:mostrarPanelesArticulo()'>Productos</a></li>\n\
+                                        <li><a id='opciones-desplegable-admin-pedidos' class='menu_desplegable_seccion' href='javascript:mostrarListaPedidos()'>Pedidos</a></li>\n\
+                                        <li><a id='opciones-desplegable-admin-newUsuario' class='menu_desplegable_seccion' href='#'>Nuevo usuario</a></li>\n\
+                                        <li><a id='opciones-desplegable-admin-newArticulo' class='menu_desplegable_seccion' href='#'>Nuevo artículo</a></li>";
+                
+                
+                $("#menuV_menu").html(menuAdmin);
+                $("#opciones_menu_desplegable").html(menuAdminDesplegable);
+                
+                mostrarPanelesAdmin();
+
+            } else {
+                $("#iconoUsuario").attr("src", "style/img/iconos/iconoUsuarioTienda.png");
+                $("#menuV_menu").html("");
+                mostrarSeccion();
+                mostrarNoticias();
+            }
+
+
+            //Acciones del menú desplegable de usuario logueado
+            document.getElementById("enlaceDesconectar").onclick = function () {
+                logOut();
+            };
+            document.getElementById("enlaceCambiarUsuario").onclick = function () {
+                mostrarLogin();
+            };
+//            document.getElementById("opcion-desplegable-usuario-new").onclick = function () {
+//                accionPrevia = this.id;
+//                mostrarRegistroUsuario();
+//            };
+//            if (data[0].rolUsuario === "administrador") {
+//                document.getElementById("opcion-desplegable-articulo-new").onclick = function () {
+//                    accionPrevia = this.id;
+//                    mostrarNewArticulo();
+//                };
+//            }
+            
+            //Acciones click del menuV
+            $("#opciones-admin-newUsuario, #opciones-desplegable-admin-newUsuario").click(function () {
+                accionPrevia = this.id;
+                mostrarRegistroUsuario();
+
+            });
+            if (data[0].rolUsuario === "administrador") {
+                $("#opciones-admin-newArticulo, #opciones-desplegable-admin-newArticulo").click(function () {
+                    accionPrevia = this.id;
+                    mostrarNewArticulo();
+                });
+            }
+
+        }

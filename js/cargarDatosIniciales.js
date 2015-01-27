@@ -2,16 +2,19 @@ function subseccionPlataforma() {
 
     $promesa = getAjax("plataforma", "asc");
     $promesa.success(function (data) {
-        secciones=$('.contieneSecciones');
+        listaPlataformas = data;
+        //alert(listaPlataformas[2].nombrePlataforma);
+        secciones = $('.contieneSecciones');
         $.each(secciones, function (index1) {
-           var datos = "";
-           $.each(data, function (index2) {
-           datos += "<div class='menuV_subseccion' onclick='mostrarPorSubseccion(\""+$('#contieneSecciones'+(index1+1)).text()+"\",\"" +data[index2].nombrePlataforma+"\")'>" + data[index2].nombrePlataforma + "</div>";
-           });
-        $('#contieneSecciones'+(index1+1)).append(datos);
+            var datos = "";
+            $.each(data, function (index2) {
+                datos += "<div class='menuV_subseccion' onclick='mostrarPorSubseccion(\"" + $('#menuV_seccion' + (index1 + 1)).text() + "\",\"" + data[index2].nombrePlataforma + "\")'>" + data[index2].nombrePlataforma + "</div>";
+            });
+
+            $('#caja-subsecciones' + (index1 + 1)).append(datos);
         });
+        accionarMenuV();
     });
-  
 }
 
 
@@ -28,21 +31,24 @@ function mostrarSeccion() {
                 var on_click = "mostrarNoticias()";
                 datos += "<div class='menuV_inicio' onclick=" + on_click + ">" + data[index].nombreSeccion + "</div>";
             } else {
-                datos += "<div "+"id='contieneSecciones"+index+"' class='contieneSecciones'>";
+                datos += "<div " + "id='contieneSecciones" + index + "' class='contieneSecciones'>";
                 var on_click = "mostrar" + data[index].nombreSeccion + "()";
-                datos += "<div class='menuV_seccion' onclick=" + on_click + ">" + data[index].nombreSeccion + "</div>";
+                datos += "<div id='menuV_seccion" + index + "' class='menuV_seccion'>" + data[index].nombreSeccion + "</div>\n\
+                          <div id='caja-subsecciones" + index + "' class='caja-subsecciones'>\n\
+                            <div class='menuV_subseccion menuV_subseccion-todo' onclick=" + on_click + ">Ver todo...</div>\n\
+                          </div>";
 
             }
 //            datos += "<div class='menuV_subseccion')>XBOX</div>";
             datosDesplegable += "<li><a class='menu_desplegable_seccion' href='javascript:mostrar" + data[index].nombreSeccion + "()'>" + data[index].nombreSeccion + "</a></li>";
             datos += "</div>";
         });
-        
+
         $("#menuV_menu").append(datos);
         $("#opciones_menu_desplegable").append(datosDesplegable);
         subseccionPlataforma();
     });
-    
+
 }
 
 function mostrarPlataforma() {
@@ -58,9 +64,29 @@ function mostrarPlataforma() {
         });
         $("#plataformas").append(datos);
         $("#opciones_menu_desplegable2").append(datosDesplegable);
+
     });
 }
 
-mostrarSeccion();
-mostrarNoticias();
+function comprobarSesion() {
+    $promesa = getAjaxSessionExist();
+
+    $promesa.success(function (data) {
+        if (data.status === 200) {
+            mostrarMenuLogin(data.usuario);
+        } else {
+            mostrarSeccion();
+            mostrarNoticias();
+        }
+    });
+}
+
+comprobarSesion();
 mostrarPlataforma();
+
+
+$("#botonRegistro").click(function () {
+    accionPrevia = this.id;
+    mostrarRegistroUsuario();
+});
+

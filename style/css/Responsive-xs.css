@@ -9,13 +9,12 @@
   src: url("../fonts/PlaneCrash.ttf"); }
 @media all and (max-width: 768px) {
   body {
-    min-height: 800px;
-    min-height: 800px;
+    min-height: 750px;
     min-width: 320px; }
     body #capaSuperior {
       width: 100%; }
       body #capaSuperior #header {
-        height: 112.0px; }
+        height: 105.0px; }
         body #capaSuperior #header #limitSup {
           height: 40%; }
         body #capaSuperior #header #cabeceraContenidos {
@@ -35,7 +34,7 @@
               body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton {
                 width: 105px; }
       body #capaSuperior #menuH {
-        min-height: 28.0px; }
+        min-height: 26.25px; }
         body #capaSuperior #menuH #plataformas {
           width: 87%; }
           body #capaSuperior #menuH #plataformas .menuH_plataforma {
@@ -53,20 +52,20 @@
             cursor: pointer;
             background-color: #ffb062;
             transition-duration: 0.5s; }
+        body #capaSuperior #menuH #carrito {
+          width: 13%; }
       body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
         font-size: 1.5em; }
       body #capaSuperior #buscar {
         display: none; }
-      body #capaSuperior #carrito {
-        width: 10%; }
-        body #capaSuperior #carrito #botonCarrito {
-          width: 36px; }
       body #capaSuperior #seccionCentral {
-        max-height: 544px; }
+        max-height: 510.0px; }
         body #capaSuperior #seccionCentral #tablaRanking {
           border: none; }
+        body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles {
+          min-width: 240px; }
       body #capaSuperior #pie {
-        height: 96px; }
+        height: 90px; }
         body #capaSuperior #pie #pieContenidos {
           height: 80%; }
           body #capaSuperior #pie #pieContenidos #infoContacto {
@@ -80,8 +79,8 @@
         body #capaSuperior #pie #limitInf {
           height: 20%; }
     body #capaFondo #franjaSuperior {
-      height: 112.0px; }
+      height: 105.0px; }
     body #capaFondo #franjaBajoMenuH {
-      min-height: 28.0px; } }
+      min-height: 26.25px; } }
 
 /*# sourceMappingURL=Responsive-xs.css.map */

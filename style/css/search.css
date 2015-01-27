@@ -10,7 +10,7 @@
 .search-form .form-group {
   float: right !important;
   transition: all 0.8s, border-radius 0s;
-  width: 32px;
+  width: 34px;
   height: 100%;
   background-color: #fff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
@@ -36,8 +36,7 @@
 .search-form .form-group input.form-control:-ms-input-placeholder {
   display: none; }
 
-.search-form .form-group:hover,
-.search-form .form-group.hover {
+.search-form .form-group:hover {
   width: 100%;
   height: 100%;
   box-shadow: 0 -3px 8px rgba(186, 241, 255, 0.7), 3px 0 8px rgba(186, 241, 255, 0.7), 0 3px 8px rgba(186, 241, 255, 0.7), -3px 0 8px rgba(186, 241, 255, 0.7);

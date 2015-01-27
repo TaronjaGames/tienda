@@ -1,4 +1,5 @@
 //GESTIÓN MENSAJES
+//Para input
 function mostrarMensaje(formulario, dato, mensaje, tipoMensaje) {
     var campo = "#" + formulario + "-input-" + dato;
     var labelError = "#" + formulario + "-label-error-" + dato;
@@ -16,6 +17,45 @@ function quitarMensaje(formulario, dato) {
     $(labelError).text("");
     $(campo).css('backgroundColor', 'white');
     $(campo).css('color', 'black');
+}
+//Para select
+function mostrarMensajeSelect(formulario, dato, mensaje, tipoMensaje) {
+    var campo = "#" + formulario + "-select-" + dato;
+    var labelError = "#" + formulario + "-label-error-" + dato;
+
+    $(labelError).text(mensaje);
+    if (tipoMensaje === "error") {
+        $(campo).css('backgroundColor', 'rgba(255,102,0,.6)');
+        $(campo).css('color', 'white');
+    }
+}
+function quitarMensajeSelect(formulario, dato) {
+    var campo = "#" + formulario + "-select-" + dato;
+    var labelError = "#" + formulario + "-label-error-" + dato;
+
+    $(labelError).text("");
+    $(campo).css('backgroundColor', 'white');
+    $(campo).css('color', 'black');
+}
+
+
+//COMPROBAR PRECIO
+function comprobarPrecio(formulario, dato, valor) {
+    var error = 0;
+    if (!(/^[0-9]+(\.[0-9]{1,2})?/.test(valor)) || isNaN(valor)) {
+        var mensaje = " *Número con 0-2 decimales";
+        mostrarMensaje(formulario, dato, mensaje, "error");
+        error = -1;
+    }
+    if (valor.indexOf(",") !== -1) {
+        var mensajeComa = " *Separador decimal: '.'";
+        mostrarMensaje(formulario, dato, mensajeComa, "error");
+        error = -1;
+    }
+    if (error === 0) {
+        quitarMensaje(formulario, dato);
+    }
+    return error;
 }
 
 
@@ -53,6 +93,20 @@ function validarCampoRequerido(formulario, dato, valorInput) {
         error = -1;
     } else {
         quitarMensaje(formulario, dato);
+    }
+    return error;
+}
+
+
+//VALIDACIÓN DE OPTION
+function validarOptionRequerido(formulario, dato, valorInput) {
+    var error = 0;
+    if (valorInput === "...") {
+        var mensajeRequerido = " *Selecciona una opción";
+        mostrarMensajeSelect(formulario, dato, mensajeRequerido, "error");
+        error = -1;
+    } else {
+        quitarMensajeSelect(formulario, dato);
     }
     return error;
 }
@@ -121,12 +175,22 @@ function validarNif(formulario, dato, nif) {
             var listaCaracteres = "TRWAGMYFPDXBNJZSQVHLCKET";
             var letraNifCorregida = listaCaracteres.charAt(numNif % 23);
             if (letraNifInicial !== letraNifCorregida) {
-                var mensajeLetraNif = " *La letra del NIF ha sido corregida";
-                var nifCorregido = numNif + letraNifCorregida;
-                $("#" + formulario + "-input-" + dato).val(nifCorregido);
-                mostrarMensaje(formulario, dato, mensajeLetraNif);
+                var mensajeLetraNif = " *El NIF introducido es incorrecto";
+                mostrarMensaje(formulario, dato, mensajeLetraNif, "error");
             }
         }
+        
+        //Corrige directamente la letra del NIF
+//        if (nif.length > 0 && error === 0) {
+//            var listaCaracteres = "TRWAGMYFPDXBNJZSQVHLCKET";
+//            var letraNifCorregida = listaCaracteres.charAt(numNif % 23);
+//            if (letraNifInicial !== letraNifCorregida) {
+//                var mensajeLetraNif = " *La letra del NIF ha sido corregida";
+//                var nifCorregido = numNif + letraNifCorregida;
+//                $("#" + formulario + "-input-" + dato).val(nifCorregido);
+//                mostrarMensaje(formulario, dato, mensajeLetraNif);
+//            }
+//        }
     }
     return error;
 }

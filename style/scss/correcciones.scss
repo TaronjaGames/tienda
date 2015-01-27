@@ -1,0 +1,34 @@
+
+@import "common.scss";
+
+
+@media all and (min-width: 993px) and (max-width: 1280px){
+    body{
+        #capaSuperior{
+            #seccionCentral{
+                .menuV{
+                    width: 15%;
+                }
+                #contenidos{
+                    width: 85%;
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (min-width: 1281px){
+    body{
+        #capaSuperior{
+            #seccionCentral{
+                .menuV{
+                    width: 13%;
+                }
+                #contenidos{
+                    width: 87%;
+                }
+            }
+        }
+    }
+}

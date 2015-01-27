@@ -1,6 +1,10 @@
 function mostrarVideojuegos(){
-    
-    mostrarArticulos("videojuego");
 
+$promesa = getAjaxArticuloPorTipo("videojuego","asc");
+
+    $promesa.success(function (data) {
+        
+        pintarArticulos(data);
+
+    });
 }
-

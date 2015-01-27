@@ -16,7 +16,9 @@ function select($parametro1, $parametro2, $order) {
         while ($row = $result->fetch_assoc()) {
             $datos[] = $row;
         }
-
+        
+        closeConnection($conexion);
+        
         //DEVOLVER DATOS
 
         return $datos;

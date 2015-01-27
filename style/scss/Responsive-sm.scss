@@ -4,11 +4,9 @@
 
     body{
         min-height: $altoTablet;
-        mix-height: $altoTablet;
-        //min-width: $anchoTablet;
 
         #capaSuperior{
-            width:80%;
+            width: 100%;//width:80%;
 
             #header{
                 height: $altoTablet*0.15;
@@ -26,11 +24,11 @@
                         #botoneraLogin{
                             width: 70%;
                             float: right;
-                            
+
                             .boton{
                                 width: 115px;
                                 float:right;
-                                
+
                             }
                         }
                     }
@@ -56,7 +54,7 @@
                     height: 100%
                 }
                 #carrito{
-                    width: 5%;
+                    width: 7%;
                 }
             }
             .menu_desplegable{ 
@@ -79,7 +77,7 @@
 
             #seccionCentral{
                 height: $altoTablet*0.69;
-                
+
                 #contenidos{
                     width:100%;
                     #articulos{
@@ -87,17 +85,28 @@
                             width:95%;
                             float:left;
                         }
+                        .caja-paneles{
+                            /*                        width: 90%;
+                                                    height: 50%;
+                                                    text-align: center;
+                                                    margin: 50px;
+                                                    padding: 30px 30px 75px;
+                                                    @include estiloPlataforma();
+                                                    background: url("../img/fondos/chapa.png");
+                                                    background-repeat: no-repeat;
+                                                    background-size: 100% 100%;*/
+                        }
                     }    
                 }
                 #menuV{
                     display:none;
                 }
             }
-            
+
             #pie{
                 height: $altoTablet*0.12;
             }
-            
+
         }
 
         #capaFondo{

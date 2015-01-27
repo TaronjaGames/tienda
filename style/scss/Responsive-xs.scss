@@ -4,7 +4,6 @@
 
     body{
         min-height: $altoTF;
-        min-height: $altoTF;
         min-width: $anchoTF;
 
         #capaSuperior{
@@ -68,6 +67,11 @@
                         background-color:$colorNaranjaSuave;
                         transition-duration: 0.5s;
                     }
+
+                }
+                #carrito{
+                    width: 13%;
+                    
                 }
             }
             .menu_desplegable{
@@ -79,18 +83,21 @@
             #buscar{
                 display: none;
             }
-            #carrito{
-                width: 10%;
-                #botonCarrito{
-                    width: 36px;
-                }
-            }
+
 
             #seccionCentral{
                 max-height: $altoTF*0.68;
 
                 #tablaRanking{
                     border: none;
+                }
+
+                #contenidos{
+                    #articulos{
+                        .caja-paneles{
+                            min-width: 240px;
+                        }
+                    }    
                 }
 
             }

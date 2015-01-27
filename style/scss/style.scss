@@ -23,6 +23,9 @@
 //ARBOL
 
 body{
+
+    @import "formularios.scss";
+
     position: absolute;
     width: 100%;
     height: 100%;
@@ -37,7 +40,7 @@ body{
     @include reglasBarrasScroll();
 
     #capaSuperior{
-        width: 70%;
+        width: 75%;//width: 70%;
         height: 100%;
         margin: 0 auto;
 
@@ -125,7 +128,7 @@ body{
                     }
 
                     &:hover{
-                        transition-duration: .5;
+                        transition-duration: 0.5s;
                         border-radius: 6px;
                         @include sombraPerimetral(1px,15px,white,none);
                     }
@@ -169,15 +172,27 @@ body{
             #carrito{
                 padding: 1px;
                 text-align: center;             
-                width: 5%;
+                width: 7%;
                 height: 100%;
                 float: left;
 
                 #botonCarrito{
                     height: 100%;
                     padding: 3px 8px;
+                    width:100%;
+
+                    #botonCarritoNew{
+                        
+                        position: relative;
+                        left: 15px;
+                        top: -10px;
+                        float: left;
+                        display:none;
+                    }
+
                     & span{
                         width: 95%;
+                        float:left;
                     }
                     &:hover{
                         transition-duration: .6s;
@@ -197,10 +212,12 @@ body{
             .menuV{
                 height: 100%;
                 float: left;
-                width: 13%;
+                width: 13%;//width: 13%;
                 max-width: 170px;
                 //min-width: 116px;
                 padding: 5px;
+                
+                @import "login.scss";
 
                 .menuV_inicio{
                     background-color: rgba($colorGrisSeccion,.55);
@@ -208,77 +225,39 @@ body{
                     box-shadow: 2px 2px 5px rgba(0,0,0,.7);
                     padding: 5px 0 0 5px;
                     margin-bottom: 2px;
-                    color: silver;
+                    color: rgba(255,255,255,.7);
                     &:hover{
-                        transition-duration: .3;
-                        @include sombraPerimetral(1px,8px,white,none);
-                        color: white;
-                        cursor:pointer;
-                        background-color:$colorNaranjaSuave;
+                        @include reglasHoverMenuV();
                     }
                 }
 
-                .contieneSecciones:hover>.menuV_subseccion{
-                    display: block;
-                }
-
                 .contieneSecciones{
-
-                    .menuV_seccion, .menuV_grupo{
-                        margin: 0px 2px 2px 0px;
-                        padding-left: 4px;
+                    .menuV_seccion, .menuV_subseccion{/*, .menuV_grupo*/
+                        margin: 0px 5% 2px 0px;
+                        padding-left: 7px;
 
                         font-family: Calibri;
                         font-size:1em;
                         font-weight: bold;
-                        color:white;
+                        color: rgba(255,255,255,.7);
+                        //color: silver;
 
-                    }
-                    .menuV_grupo{
-                        background-color: rgba($colorGrisSeccion,.55);
-                        border-radius: 4px;
-                        box-shadow: 2px 2px 5px rgba(0,0,0,.7);
-                        padding: 5px 0 0 5px;
-                        margin-bottom: 2px;
-                    }
-                    .menuV_seccion{
-                        color: silver;
+                        //background-color: rgba($colorNaranjaSuave,.4);
                         background-color: rgba($colorGrisBase,.2);
                         border-bottom-right-radius: 4px;
                         box-shadow: 1px 1px 5px rgba(0,0,0,.5);
-                        padding-left: 7px;
+
                         &:hover{
-                            transition-duration: .3;
-                            //border-radius: 6px;
-                            @include sombraPerimetral(1px,8px,white,none);
+                            @include reglasHoverMenuV();
                         }
                     }
-                    .menuV_seccion:hover{
-                        color: white;
-                        cursor:pointer;
-                        background-color:$colorNaranjaSuave;
-                        transition-duration: 0.5s;
-                    }
-                    .menuV_subseccion{
+                    .caja-subsecciones{
                         display: none;
-                        width: 70%;
-                        color: silver;
-                        background-color: rgba($colorGrisBase,.2);
-                        border-bottom-right-radius: 4px;
-                        box-shadow: 1px 1px 5px rgba(0,0,0,.5);
-                        padding-left: 7px;
-                        &:hover{
-                            transition-duration: .3;
-                            //border-radius: 6px;
-                            @include sombraPerimetral(1px,8px,white,none);
+                        .menuV_subseccion{
+                            width: 70%;
+                            padding-left: 11px;
+                            background-color: rgba($colorNaranjaSuave,.2);
                         }
-                    }
-                    .menuV_subseccion:hover{
-                        display: block;
-                        color: white;
-                        cursor:pointer;
-                        background-color:$colorNaranjaSuave;
-                        transition-duration: 0.5s;
                     }
                 }
             }
@@ -286,23 +265,25 @@ body{
             #contenidos{
                 height: 100%;
                 float: left;
-                width: 87%;
+                width: 87%;//width: 87%;
                 overflow: auto;
                 #articulos{
                     width: 99%;
                     padding: 1%;
                     margin: 0 .5%;
                     float: left;
-                    //background-color: rgba(white,.80);
                     margin-right: 0.5%;
 
                     @import 'noticias.scss';
                     @import "articulos.scss";
                     @import "ranking.scss";
                     @import "login.scss";
-                    @import "registroUsuario.scss";
+                    @import "formularios.scss";
+                    @import "panelesAdmin.scss";
+                    @import "tablasAdmin.scss";
                 }
             }
+
         }
         #pie{
             height: 12%;
@@ -387,4 +368,4 @@ body{
 
 @import "Responsive-sm.scss";
 @import "Responsive-xs.scss";
-
+@import "correcciones.scss";

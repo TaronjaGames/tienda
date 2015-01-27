@@ -1,14 +1,15 @@
 $("#search").keypress(function (e) {
     if (e.which === 13) {
 
-        textoABuscar = document.getElementById("search").value;
-
+        var textoABuscar = document.getElementById("search").value;
 
         $promesa = getAjaxBuscador("articulo", textoABuscar, "asc");
 
         $promesa.success(function (data) {
 
-            datos = "<div id='rowArticulos' class='row fila'>";
+            pintarArticulos(data);
+            
+            var datos = "<div id='rowArticulos' class='row fila'>";
 
             $.each(data, function (index) {
 

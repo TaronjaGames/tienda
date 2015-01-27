@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+#label-check-multiselect {
+  margin: 30px 0 0 50px;
+  color: silver; }
+
+#gbox_lista-usuarios, #gbox_lista-articulos, #gbox_lista-pedidos, #gbox_lista-detallepedido {
+  margin: 30px;
+  border-bottom-color: black;
+  box-shadow: 10px 10px 25px black; }
+
+.ui-jqgrid-titlebar {
+  padding: 5px 10px 0; }
+
+.ui-search-input {
+  color: silver; }
+  .ui-search-input input {
+    padding-left: 4px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.25); }
+
+.opersearchclass, .clearsearchclass {
+  color: #faaa1f; }
+
+td.jqgrid-rownum {
+  /*N├║mero de fila*/
+  border: none; }
+
+.ui-widget-content, .jqgrow, .ui-row-ltr {
+  cursor: pointer; }
+
+.ui-jqgrid tr.jqgrow td {
+  padding: 0 5px; }
+
+table {
+  border-collapse: initial; }
+
+tbody a {
+  font-style: italic;
+  font-weight: bolder;
+  color: white; }
+
+/*Cuerpo de la tabla*/
+.ui-widget-content, #pager-usuarios, #pager-articulos, #pager-pedidos {
+  background: rgba(0, 0, 0, 0.2);
+  color: silver;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+  border-left-color: transparent; }
+
+.ui-widget-content .ui-state-hover {
+  border-color: transparent; }
+  .ui-widget-content .ui-state-hover:hover {
+    color: white;
+    cursor: pointer;
+    background-color: #ffb062;
+    transition-duration: 0.5s;
+    color: black;
+    font-weight: bolder; }
+
+.ui-widget-content .ui-state-default {
+  background: rgba(0, 0, 0, 0.3);
+  border-color: transparent;
+  color: #faaa1f;
+  border-top-color: silver;
+  border-right-color: transparent;
+  border-bottom-color: silver;
+  border-left-color: transparent; }
+  .ui-widget-content .ui-state-default:hover {
+    color: white; }
+
+#pager-usuarios, #pager-articulos, #pager-pedidos, #pager-detallepedido {
+  color: #faaa1f;
+  border-top-color: silver;
+  border-bottom-color: black; }
+  #pager-usuarios .ui-pg-input, #pager-usuarios .ui-pg-selbox, #pager-articulos .ui-pg-input, #pager-articulos .ui-pg-selbox, #pager-pedidos .ui-pg-input, #pager-pedidos .ui-pg-selbox, #pager-detallepedido .ui-pg-input, #pager-detallepedido .ui-pg-selbox {
+    color: black; }
+  #pager-usuarios .ui-pg-input, #pager-articulos .ui-pg-input, #pager-pedidos .ui-pg-input, #pager-detallepedido .ui-pg-input {
+    height: 15px;
+    font-size: 0.9em; }
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {
+  border-color: transparent;
+  background: #fdf5ce url("images/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x;
+  font-weight: bold;
+  color: #c77405; }
+
+.ui-state-highlight a {
+  color: cornflowerblue; }
+
+.formulario-new-boton {
+  display: inline-block;
+  width: 115px;
+  text-align: center;
+  font-size: 12px;
+  margin: 7px 5px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  border-left: 1px solid grey;
+  border-top: 1px solid grey;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 1px 1px 2px transparent;
+  float: left; }
+  .formulario-new-boton a {
+    display: inline;
+    text-decoration: none;
+    color: white;
+    width: 60px; }
+  .formulario-new-boton:hover {
+    transition-duration: .4s;
+    border-radius: 4px;
+    border-left: 1px solid silver;
+    border-top: 1px solid silver;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+    color: #e6e6e6;
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+    opacity: .9;
+    box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+
+/*# sourceMappingURL=tablasAdmin.css.map */

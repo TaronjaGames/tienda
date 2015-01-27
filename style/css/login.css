@@ -34,6 +34,7 @@
   #bloqueLogin #login-botonera {
     margin-top: 5px; }
   #bloqueLogin #login-botonera #login-boton-entrar {
+    display: inline-block;
     width: 115px;
     text-align: center;
     font-size: 12px;
@@ -72,6 +73,10 @@
   margin: 10px;
   text-align: right;
   color: white; }
+  #cajaInfoLogin #opcionesUsuario {
+    margin-top: 0; }
+  #cajaInfoLogin #dropdownMenu1 {
+    margin-bottom: 2px; }
   #cajaInfoLogin .btn {
     width: 115px;
     text-align: center;
@@ -138,5 +143,22 @@
   #cajaInfoLogin .dropdown-menu {
     left: auto;
     right: 0; }
+
+#menuV_menu .menuV_opcion-admin {
+  margin: 0px 5% 2px 0px;
+  padding-left: 7px;
+  font-family: Calibri;
+  font-size: 1em;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(170, 170, 170, 0.2);
+  border-bottom-right-radius: 4px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
+  #menuV_menu .menuV_opcion-admin:hover {
+    color: white;
+    cursor: pointer;
+    background-color: rgba(255, 176, 98, 0.7);
+    transition-duration: 0.3s;
+    box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
 
 /*# sourceMappingURL=login.css.map */
