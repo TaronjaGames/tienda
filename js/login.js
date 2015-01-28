@@ -152,8 +152,8 @@ function mostrarMenuLogin(data){
 
             } else {
                 $("#iconoUsuario").attr("src", "style/img/iconos/iconoUsuarioTienda.png");
-                $("#menuV_menu").html("");
-                mostrarSeccion();
+//                $("#menuV_menu").html("");
+//                mostrarSeccion();
                 mostrarNoticias();
             }
 
