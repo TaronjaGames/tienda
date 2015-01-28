@@ -34,7 +34,7 @@ function insertCarrito($jsonCarrito) {
         $consulta = "select precioArticulo from articulo where idArticulo=" . $id;
         if ($result = $conexion->query($consulta)) {
             while ($row = $result->fetch_assoc()) {
-                $datos[] = $row;
+                $datos[0] = $row;
             }
         }
         $precio=$datos[0]['precioArticulo'];
