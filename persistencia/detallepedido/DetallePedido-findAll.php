@@ -44,24 +44,13 @@ switch ($examp) {
         if ($start < 0) {
             $start = 0;
         }
-
-        $SQL = "SELECT idDetallePedido, idArticulo, cantidadArticulo, concat(precioArticulo, ' €') AS precioArticulo, idPedido,"
-                . " concat(round(cantidadArticulo*precioArticulo,2),' €') AS importeLinea"
-                . " FROM detallepedido WHERE idPedido=" . $id . " ORDER BY $sidx $sord LIMIT $start , $limit";
         
-//        $SQL = "SELECT d.idDetallePedido, a.nombreArticulo, d.cantidadArticulo,"
-//                . " concat(d.precioArticulo, ' €') AS precioArticulo, d.idPedido,"
-//                . " concat(round(d.cantidadArticulo*d.precioArticulo,2),' €') AS importeLinea"
-//                . " FROM detallepedido d INNER JOIN articulo a"
-//                . " ON d.idArticulo = a.idArticulo"
-//                . " WHERE d.idPedido=" . $id . " ORDER BY $sidx $sord LIMIT $start , $limit";
-        
-//        SELECT d.idDetallePedido, a.nombreArticulo, d.cantidadArticulo,
-// concat(d.precioArticulo, ' €') AS precioArticulo, d.idPedido,
-// concat(round(d.cantidadArticulo*d.precioArticulo,2),' €') AS importeLinea
-// FROM detallepedido d INNER JOIN articulo a
-// ON d.idArticulo = a.idArticulo
-// WHERE d.idPedido=2 ORDER BY d.idDetallePedido ASC;
+        $SQL = "SELECT d.idDetallePedido, a.nombreArticulo, d.cantidadArticulo,"
+                . " concat(d.precioArticulo, ' €') AS precioArticulo, d.idPedido,"
+                . " concat(round(d.cantidadArticulo*d.precioArticulo,2),' €') AS importeLinea"
+                . " FROM detallepedido d INNER JOIN articulo a"
+                . " ON d.idArticulo = a.idArticulo"
+                . " WHERE d.idPedido=" . $id . " ORDER BY $sidx $sord LIMIT $start , $limit";
         
         $result = $conexion->query($SQL);
 
@@ -73,7 +62,7 @@ switch ($examp) {
 
         while ($row = $result->fetch_assoc()) {
             $respuesta->rows[$i]['id'] = $row['idDetallePedido'];
-            $respuesta->rows[$i]['cell'] = array($row['idDetallePedido'], $row['idArticulo'], $row['cantidadArticulo'],
+            $respuesta->rows[$i]['cell'] = array($row['idDetallePedido'], $row['nombreArticulo'], $row['cantidadArticulo'],
                 $row['precioArticulo'], $row['idPedido'], $row['importeLinea']/*, "€"*/);
             $i++;
         }

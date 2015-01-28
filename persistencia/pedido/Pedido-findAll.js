@@ -28,11 +28,11 @@ function mostrarListaPedidos() {
     jQuery("#lista-pedidos").jqGrid({
         url: 'persistencia/pedido/Pedido-findAll.php',
         datatype: "json",
-        colNames: ['Id pedido', 'Fecha', 'Id Cliente', 'Importe pedido'/*, 'Moneda'*/],
+        colNames: ['Id pedido', 'Fecha', 'Cliente', 'Importe pedido'/*, 'Moneda'*/],
         colModel: [
             {name: 'idPedido', index: 'idPedido', width: 50, align: "center", resizable: true},
             {name: 'fechaPedido', index: 'fechaPedido', width: 70, align: "center", resizable: true},
-            {name: 'idCliente', index: 'idCliente', width: 50, align: "center", resizable: true},
+            {name: 'nombreUsuario', index: 'nombreUsuario', width: 50, align: "center", resizable: true},
             {name: 'importePedido', index: 'importePedido', width: 50, align: "right", sortable: false, search: false,
                 formatter: {
                     number: {
@@ -93,7 +93,7 @@ function mostrarListaPedidos() {
         colNames: ['Id línea', 'Articulo', 'Cantidad', 'Precio', 'Id Pedido', 'Importe línea'/*, 'Moneda'*/],
         colModel: [
             {name: 'idDetallePedido', index: 'idDetallePedido', width: 50, align: "center", resizable: true},
-            {name: 'idArticulo', index: 'idArticulo', width: 90, resizable: true},
+            {name: 'nombreArticulo', index: 'nombreArticulo', width: 90, resizable: true},
             {name: 'cantidadArticulo', index: 'cantidadArticulo', width: 50, align: "center", resizable: true},
             {name: 'precioArticulo', index: 'precioArticulo', width: 50, align: "right", resizable: true},
             {name: 'idPedido', index: 'idPedido', width: 50, align: "center", resizable: true},
