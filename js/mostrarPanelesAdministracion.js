@@ -41,7 +41,7 @@ function mostrarPanelesUsuario() {
     $("#panel-admin-usuario-new").click(function () {
         accionPrevia = this.id;
         //alert(accionPrevia);
-        mostrarRegistroUsuario();
+        mostrarRegistroUsuarioAdmin();
     });
     $("#panel-admin-usuario-list").click(function () {
         accionPrevia = this.id;

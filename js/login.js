@@ -184,7 +184,7 @@ function mostrarMenuLogin(data) {
     //Acciones click del menuV
     $("#opciones-admin-newUsuario, #opciones-desplegable-admin-newUsuario").click(function () {
         accionPrevia = this.id;
-        mostrarRegistroUsuario();
+        mostrarRegistroUsuarioAdmin();
 
     });
     if (data[0].rolUsuario === "administrador") {
