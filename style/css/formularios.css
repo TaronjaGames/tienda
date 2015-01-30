@@ -18,7 +18,9 @@
   font-size: 12px;
   max-width: 550px;
   /*Reglas para ventanas modales*/ }
-  .caja-formulario.dialog-editar, .caja-formulario.dialog-new {
+  .caja-formulario a {
+    color: deepskyblue; }
+  .caja-formulario.dialog-editar, .caja-formulario.dialog-new, .caja-formulario.dialog-login {
     background-color: rgba(0, 0, 0, 0.9); }
   .caja-formulario input:disabled, .caja-formulario select:disabled {
     background-color: peachpuff; }

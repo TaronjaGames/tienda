@@ -16,8 +16,12 @@
     font-size: 12px;
     max-width: 550px;
     
+    & a{
+        color: $colorEnlaceFormulario;
+    }
+    
     /*Reglas para ventanas modales*/
-    &.dialog-editar, &.dialog-new{
+    &.dialog-editar, &.dialog-new, &.dialog-login{
         background-color: rgba(0,0,0,.9);
     }
 

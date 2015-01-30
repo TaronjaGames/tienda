@@ -169,7 +169,9 @@ body {
     font-size: 12px;
     max-width: 550px;
     /*Reglas para ventanas modales*/ }
-    body .caja-formulario.dialog-editar, body .caja-formulario.dialog-new {
+    body .caja-formulario a {
+      color: deepskyblue; }
+    body .caja-formulario.dialog-editar, body .caja-formulario.dialog-new, body .caja-formulario.dialog-login {
       background-color: rgba(0, 0, 0, 0.9); }
     body .caja-formulario input:disabled, body .caja-formulario select:disabled {
       background-color: peachpuff; }
@@ -336,6 +338,8 @@ body {
             padding: 20px;
             font-size: 12px;
             max-width: 550px; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin a {
+              color: deepskyblue; }
             body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .tituloFormulario {
               font-size: 15px;
               font-weight: bolder;
@@ -628,6 +632,8 @@ body {
           padding: 20px;
           font-size: 12px;
           max-width: 550px; }
+          body #capaSuperior #seccionCentral .menuV #bloqueLogin a {
+            color: deepskyblue; }
           body #capaSuperior #seccionCentral .menuV #bloqueLogin .tituloFormulario {
             font-size: 15px;
             font-weight: bolder;
@@ -1034,6 +1040,8 @@ body {
             padding: 20px;
             font-size: 12px;
             max-width: 550px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin a {
+              color: deepskyblue; }
             body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .tituloFormulario {
               font-size: 15px;
               font-weight: bolder;
@@ -1203,7 +1211,9 @@ body {
             font-size: 12px;
             max-width: 550px;
             /*Reglas para ventanas modales*/ }
-            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario.dialog-editar, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario.dialog-new {
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario a {
+              color: deepskyblue; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario.dialog-editar, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario.dialog-new, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario.dialog-login {
               background-color: rgba(0, 0, 0, 0.9); }
             body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario input:disabled, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario select:disabled {
               background-color: peachpuff; }
