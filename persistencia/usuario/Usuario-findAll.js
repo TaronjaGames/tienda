@@ -133,8 +133,8 @@ function mostrarListaUsuarios() {
                 buttonicon: "ui-icon-plus",
                 onClickButton: function() {
                     //alert(accionPrevia);
-                    mostrarRegistroUsuarioAdmin();
-//                    $("#bloqueRegistro-admin").dialog("open");
+//                    mostrarRegistroUsuarioAdmin();
+                    $("#bloqueRegistro-admin").dialog("open");
                 },
                 position: "first"
             });

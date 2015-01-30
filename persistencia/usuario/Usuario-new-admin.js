@@ -9,7 +9,7 @@ function mostrarRegistroUsuarioAdmin() {
 //    }
 
 //var datos = "<div id='bloqueRegistro' class='caja-formulario" + claseCajaFormulario + "'>\n\
-    var datos = "<div id='bloqueRegistro-admin' class='caja-formulario'>\n\
+    var datos = "<div id='bloqueRegistro-admin' class='caja-formulario dialog-new' style='display: none'>\n\
                 <p id='tituloRegistroUsuario-admin' class='tituloFormulario'>Registro de nuevo usuario.</p>\n\
                 <hr/>\n\
                 <section id='registro-admin-bloqueRol' class='registro-bloqueDatos'>\n\
@@ -82,20 +82,18 @@ function mostrarRegistroUsuarioAdmin() {
 
 
     $("#articulos").html(datos);
-    
+
     //Definición del dialog
-//        $(function () {
-//            $("#bloqueRegistro-admin").dialog(
-//                    {
-//                        autoOpen: false,
-//                        modal: true,
-//                        title: "Gestión de usuarios",
-//                        minWidth: 550,
-//                        show: "fadeIn",
-//                        hide: "fadeOut"
-//                    }
-//            );
-//        });
+    $("#bloqueRegistro-admin").dialog(
+            {
+                autoOpen: false,
+                modal: true,
+                title: "Gestión de usuarios",
+                minWidth: 550,
+                show: "fadeIn",
+                hide: "fadeOut"
+            }
+    );
 
 
     var formulario = "registro-admin";
@@ -188,13 +186,15 @@ function mostrarRegistroUsuarioAdmin() {
     $("#registro-admin-boton-cancelar").click(function () {
         if (accionPrevia === "panel-admin-usuario-new" || accionPrevia === "opciones-admin-newUsuario" || accionPrevia === "opciones-desplegable-admin-newUsuario") {
             if (accionPrevia === "panel-admin-usuario-new") {
-                mostrarPanelesUsuario();
+                $("#bloqueRegistro-admin").dialog("close");
+//                mostrarPanelesUsuario();
             } else {
-                mostrarPanelesAdmin();
+                $("#bloqueRegistro-admin").dialog("close");
+//                mostrarPanelesAdmin();
             }
         } else {
-            mostrarListaUsuarios();
-//            $("#bloqueRegistro-admin").dialog("close");
+//            mostrarListaUsuarios();
+            $("#bloqueRegistro-admin").dialog("close");
             $("#lista-usuarios").jqGrid().trigger("reloadGrid");
         }
     });
@@ -210,21 +210,20 @@ function registrarUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $logi
             alert("El usuario '" + data[0].loginUsuario + "' se ha registrado correctamente");
             if (accionPrevia === "panel-admin-usuario-new" || accionPrevia === "opciones-admin-newUsuario" || accionPrevia === "opciones-desplegable-admin-newUsuario") {
                 if (accionPrevia === "panel-admin-usuario-new") {
-                    mostrarRegistroUsuarioAdmin();
+                    $("#bloqueRegistro-admin input").val("");
+//                    $("#bloqueRegistro-admin").dialog("close");
+//                    mostrarRegistroUsuarioAdmin();
                     //mostrarPanelesUsuario();
                 } else {
-                    mostrarRegistroUsuarioAdmin();
+                    $("#bloqueRegistro-admin input").val("");
+//                    $("#bloqueRegistro-admin").dialog("close");
+//                    mostrarRegistroUsuarioAdmin();
                     //mostrarPanelesAdmin();
                 }
             } else {
-                if (accionPrevia === "botonRegistro") {
-                    mostrarNoticias();
-                } else {
-                    mostrarRegistroUsuarioAdmin();
-                    //mostrarListaUsuarios();
-                    //$("#bloqueRegistro-admin").dialog("close");
-                    jQuery("#lista-usuarios").jqGrid().trigger("reloadGrid");
-                }
+                $("#bloqueRegistro-admin input").val("");
+//                $("#bloqueRegistro-admin").dialog("close");
+                jQuery("#lista-usuarios").jqGrid().trigger("reloadGrid");
             }
         } else {
             alert("Ha ocurrido un error: el usuario no ha podido ser registrado");

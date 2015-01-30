@@ -71,17 +71,13 @@ function mostrarRegistroUsuario() {
     $("#articulos").html(datos);
 
     //Definición del dialog
-    $(function () {
-
-        $("#bloqueRegistro").dialog({
-            autoOpen: false,
-            modal: true,
-            title: "Gestión de usuarios",
-            minWidth: 550,
-            show: "fadeIn",
-            hide: "fadeOut"
-        });
-
+    $("#bloqueRegistro").dialog({
+        autoOpen: false,
+        modal: true,
+        title: "Gestión de usuarios",
+        minWidth: 550,
+        show: "fadeIn",
+        hide: "fadeOut"
     });
 
 
@@ -168,7 +164,7 @@ function mostrarRegistroUsuario() {
         }
 
     });
-    
+
     //BOTÓN CANCELAR
     $("#registro-boton-cancelar").click(function () {
         $("#bloqueRegistro").dialog("close");

@@ -93,6 +93,7 @@ $(document).ready(function () {
     mostrarPlataforma();
 
     mostrarRegistroUsuario();
+    mostrarRegistroUsuarioAdmin();
 
 
     $("#botonRegistro").click(function () {
