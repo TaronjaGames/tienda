@@ -325,6 +325,7 @@ function enviarCarrito($carrito){
         
         if(data.status==401){
             alert("Necesitas estar logueado para poder realizar la compra");
+            $("#bloqueLogin").dialog("open");
         }else if (data.status==200) {
             alert(data.mensaje);
             mostrarCarrito();
