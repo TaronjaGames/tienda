@@ -169,7 +169,10 @@ function mostrarRegistroUsuarioAdmin() {
 
         //ENVÍO PARA REGISTRO EN BD
         if (errorValidacion === 0) {
-            registrarUsuario(selectRol.val(), inputNombre.val(), inputApe1.val(), inputApe2.val(), inputNif.val(), inputTf.val(), inputCorreo.val(), inputUsuario.val(), inputPassword.val());
+            var numNif = inputNif.val().substring(0, 8);
+            var letraNif = (inputNif.val().charAt(8)).toUpperCase();
+            var nif = numNif+letraNif;
+            registrarUsuario(selectRol.val(), inputNombre.val(), inputApe1.val(), inputApe2.val(), nif, inputTf.val(), inputCorreo.val(), inputUsuario.val(), inputPassword.val());
         }
 
     });
