@@ -2,64 +2,6 @@
 @import "common.scss";
 
 
-#bloqueLogin{
-    padding: 20px;
-    font-size: 12px;
-    max-width: 550px;
-
-    & a{
-        color: $colorEnlaceFormulario;
-    }
-
-    & .tituloFormulario{
-        font:{
-            size: 15px;
-            weight: bolder;
-        }
-        color: white;
-    }
-
-    & .login-bloqueDatos{
-        margin-top: 10px;
-    }
-
-    & label{
-        color: white;
-        min-width: 70px;
-    }
-
-    & .login-input{
-        min-width: 190px;
-        padding-left: 5px;
-        border: none;
-
-        &:focus{
-            @include sombraPerimetral(1px,12px,white,none);
-            transition-duration: .3s;
-        }
-    }
-
-    & .login-label-radio{
-        vertical-align: middle;
-    }
-
-    & .login-label-error{
-        color: red;
-    }
-
-    #login-botonera{
-        margin-top: 5px;
-    }
-
-    #login-botonera{
-        & #login-boton-entrar, & #login-boton-cancelar{
-            @include estiloBotonContenidos();
-            float: left;
-        }
-    } 
-
-}
-
 #cajaInfoLogin{
     max-width: 95%;
     margin: 10px;

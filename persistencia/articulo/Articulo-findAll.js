@@ -78,8 +78,9 @@ function mostrarListaArticulos() {
                         $promesa.success(function (data) {
                             if (data[0] !== null) {
                                 var idPlataformaEdit = data[0].idPlataforma;
-                                mostrarEditArticulo();
-
+//                                mostrarEditArticulo();
+                                //alert(idPlataformaEdit);
+                                
                                 $("#editArticulo-input-id").val(data[0].idArticulo);
                                 $("#editArticulo-input-nombre").val(data[0].nombreArticulo);
                                 $("#editArticulo-input-descripcion").val(data[0].descripcionArticulo);
@@ -98,7 +99,7 @@ function mostrarListaArticulos() {
                                     $("#editArticulo-input-oferta").val(data[0].ofertaArticulo);
                                 }
 
-//                                $("#bloqueEditArticulo").dialog("open");
+                                $("#bloqueEditArticulo").dialog("open");
                             }
                         });
                     } else if (idFila.length === 0) {
@@ -115,8 +116,9 @@ function mostrarListaArticulos() {
                 title: "Nuevo registro",
                 buttonicon: "ui-icon-plus",
                 onClickButton: function () {
-                    mostrarNewArticulo();
-//                    $("#bloqueNuevoArticulo").dialog("open");
+//                    mostrarNewArticulo();
+                    $("#newArticulo-boton-listar").hide();
+                    $("#bloqueNuevoArticulo").dialog("open");
                 },
                 position: "first"
             });

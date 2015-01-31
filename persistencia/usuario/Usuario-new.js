@@ -71,17 +71,13 @@ function mostrarRegistroUsuario() {
     $("#articulos").html(datos);
 
     //Definición del dialog
-    $(function () {
-
-        $("#bloqueRegistro").dialog({
-            autoOpen: false,
-            modal: true,
-            title: "Gestión de usuarios",
-            minWidth: 550,
-            show: "fadeIn",
-            hide: "fadeOut"
-        });
-
+    $("#bloqueRegistro").dialog({
+        autoOpen: false,
+        modal: true,
+        title: "Gestión de usuarios",
+        minWidth: 550,
+        show: "fadeIn",
+        hide: "fadeOut"
     });
 
 
@@ -171,7 +167,7 @@ function mostrarRegistroUsuario() {
         }
 
     });
-    
+
     //BOTÓN CANCELAR
     $("#registro-boton-cancelar").click(function () {
         $("#bloqueRegistro").dialog("close");
@@ -185,9 +181,9 @@ function registrarUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $logi
     $promesa.success(function (data) {
         if (data[0] !== null) {
             alert("El usuario '" + data[0].loginUsuario + "' se ha registrado correctamente");
-            $("#bloqueRegistro input")
-                    .val("")
-                    .removeAttr("checked");
+            
+            $("#bloqueRegistro input").val("");
+            $("#bloqueRegistro input").removeAttr("checked");
             $("#bloqueRegistro").dialog("close");
             //mostrarNoticias();
         } else {

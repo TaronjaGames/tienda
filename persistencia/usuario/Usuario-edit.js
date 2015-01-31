@@ -1,24 +1,17 @@
 
 function mostrarEditUsuario() {
 
-    if (usuarioLogueado.rolUsuarioLogueado !== "administrador") {
-        var visible = "none";
-    } else {
-        visible = "block";
-    }
-
-//    var datos = "<div id='bloqueRegistro' class='caja-formulario dialog-editar'>\n\
-    var datos = "<div id='bloqueEditUsuario' class='caja-formulario'>\n\
+    var datos = "<div id='bloqueEditUsuario' class='caja-formulario dialog-editar' style='display: none'>\n\
                 <p id='tituloEditUsuario' class='tituloFormulario'>Edición de usuario.</p>\n\
                 <hr/>\n\
-                <section id='editUsuario-bloqueRol' class='registro-bloqueDatos' style='display: " + visible + "'>\n\
+                <section id='editUsuario-bloqueRol' class='registro-bloqueDatos'>\n\
                     <label for='editUsuario-select-rol' class='registro-label'>Rol: </label>\n\
                     <select id='editUsuario-select-rol' name='rol' class='registro-select' autofocus='autofocus'>\n\
                         <option value='usuario' selected='selected'>Usuario</option>\n\
                         <option value='administrador'>Administrador</option>\n\
                     </select>\n\
                 </section>\n\
-                <br id='linea-rol' style='display: " + visible + "'/>\n\
+                <br id='linea-rol'/>\n\
                 <section id='editUsuario-bloqueId' class='registro-bloqueDatos'>\n\
                     <label for='editUsuario-input-id' class='registro-label'>Id usuario: </label>\n\
                     <input id='editUsuario-input-id' name='id' type='text' class='registro-input' disabled/>\n\
@@ -73,18 +66,19 @@ function mostrarEditUsuario() {
                 </section>\n\
             </div>";
 
-    $("#articulos").html(datos);//Para dialog, cambiar a append
+    $("#articulos").html(datos);
+
     //Definición del dialog
-//    $(function () {
-//        $("#bloqueEditUsuario").dialog(
-//                {
-//                    autoOpen: false,
-//                    modal: true,
-//                    title: "Gestión de usuarios",
-//                    minWidth: 550
-//                }
-//        );
-//    });
+    $("#bloqueEditUsuario").dialog(
+            {
+                autoOpen: false,
+                modal: true,
+                title: "Gestión de usuarios",
+                minWidth: 550,
+                show: "fadeIn",
+                hide: "fadeOut"
+            }
+    );
 
 
     var formulario = "editUsuario";
@@ -153,19 +147,16 @@ function mostrarEditUsuario() {
         var errorValidacion = validarEditUsuario();
 
         //ENVÍO PARA REGISTRO EN BD
-//        alert(errorValidacion);
-//        errorValidacion = -1;
         if (errorValidacion === 0) {
             editarUsuario(inputId.val(), selectRol.val(), inputNombre.val(), inputApe1.val(), inputApe2.val(), inputNif.val(), inputTf.val(), inputCorreo.val(), inputUsuario.val(), inputPassword.val());
         }
-
-    });// Fin onclick botón enviar formulario
+    });
 
 
     //BOTÓN CANCELAR
     $("#editUsuario-boton-cerrar").click(function () {
-        mostrarListaUsuarios();
-//            $("#bloqueEditUsuario").dialog("close");
+//        mostrarListaUsuarios();
+        $("#bloqueEditUsuario").dialog("close");
         $("#lista-usuarios").jqGrid().trigger("reloadGrid");
     });
 
@@ -178,8 +169,8 @@ function editarUsuario($id, $rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $lo
     $promesa.success(function (data) {
         if (data[0] !== null) {
             alert("El usuario '" + data[0].loginUsuario + "' se ha actualizado correctamente");
-            mostrarListaUsuarios();
-//            $("#bloqueEditUsuario").dialog("close");
+//            mostrarListaUsuarios();
+            $("#bloqueEditUsuario").dialog("close");
             jQuery("#lista-usuarios").jqGrid().trigger("reloadGrid");
         } else {
             alert("Ha ocurrido un error: el usuario no ha podido ser actualizado");

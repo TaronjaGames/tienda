@@ -102,7 +102,7 @@ function mostrarListaUsuarios() {
                         $promesa = getAjaxById("usuario", idFila[0]);
                         $promesa.success(function(data) {
                             if (data[0] !== null) {
-                                mostrarEditUsuario();
+//                                mostrarEditUsuario();
                                 
                                 $("#editUsuario-select-rol option[value='" + data[0].rolUsuario + "']").attr("selected", "selected");
                                 $("#editUsuario-input-id").val(data[0].idUsuario);
@@ -115,7 +115,7 @@ function mostrarListaUsuarios() {
                                 $("#editUsuario-input-nif").val(data[0].dniUsuario);
                                 $("#editUsuario-input-tf").val(data[0].telefonoUsuario);
                                 
-//                                $("#bloqueEditUsuario").dialog("open");
+                                $("#bloqueEditUsuario").dialog("open");
                             }
                         });
                     } else if (idFila.length === 0) {
@@ -132,9 +132,11 @@ function mostrarListaUsuarios() {
                 caption: "",
                 buttonicon: "ui-icon-plus",
                 onClickButton: function() {
+//                    mostrarRegistroUsuarioAdmin();
+                    accionPrevia = this.id;
+                    $("#registro-admin-boton-listar").hide();
                     //alert(accionPrevia);
-                    mostrarRegistroUsuarioAdmin();
-//                    $("#bloqueRegistro-admin").dialog("open");
+                    $("#bloqueRegistro-admin").dialog("open");
                 },
                 position: "first"
             });

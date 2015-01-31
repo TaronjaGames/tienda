@@ -29,16 +29,22 @@
     font-size: 15px;
     font-weight: bolder;
     color: white; }
+  .caja-formulario .registro-bloqueDatos, .caja-formulario .login-bloqueDatos {
+    margin-top: 10px; }
+    .caja-formulario .registro-bloqueDatos > span, .caja-formulario .login-bloqueDatos > span {
+      vertical-align: middle; }
+    .caja-formulario .registro-bloqueDatos #newArticulo-label-precio-oferta, .caja-formulario .login-bloqueDatos #newArticulo-label-precio-oferta {
+      padding: 0 10px 0 5px; }
   .caja-formulario label {
     color: white;
     min-width: 110px; }
-  .caja-formulario .registro-label-check {
+  .caja-formulario .registro-label-check, .caja-formulario .login-label-radio {
     vertical-align: middle; }
-  .caja-formulario .registro-input, .caja-formulario .registro-select {
+  .caja-formulario .registro-input, .caja-formulario .login-input, .caja-formulario .registro-select {
     min-width: 190px;
     padding-left: 5px;
     border: none; }
-    .caja-formulario .registro-input:focus, .caja-formulario .registro-select:focus {
+    .caja-formulario .registro-input:focus, .caja-formulario .login-input:focus, .caja-formulario .registro-select:focus {
       box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
       transition-duration: .3s; }
   .caja-formulario .registro-input-corto {
@@ -47,15 +53,9 @@
     .caja-formulario .registro-input-corto:focus {
       box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
       transition-duration: .3s; }
-  .caja-formulario .registro-label-error {
+  .caja-formulario .registro-label-error, .caja-formulario .login-label-error {
     color: red;
     font-size: 11px; }
-  .caja-formulario .registro-bloqueDatos {
-    margin-top: 10px; }
-    .caja-formulario .registro-bloqueDatos > span {
-      vertical-align: middle; }
-    .caja-formulario .registro-bloqueDatos #newArticulo-label-precio-oferta {
-      padding: 0 10px 0 5px; }
   .caja-formulario .formulario-botonera {
     margin-top: 5px; }
   .caja-formulario .formulario-botonera .formulario-boton {
