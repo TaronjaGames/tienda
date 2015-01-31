@@ -14,7 +14,7 @@ function quitarMensaje(formulario, dato) {
     var campo = "#" + formulario + "-input-" + dato;
     var labelError = "#" + formulario + "-label-error-" + dato;
 
-    $(labelError).text("");
+    $(labelError).text("*");
     $(campo).css('backgroundColor', 'white');
     $(campo).css('color', 'black');
 }

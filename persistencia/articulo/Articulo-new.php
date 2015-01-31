@@ -9,7 +9,8 @@ if ($_SESSION["usuarioLogueado"][0]['rolUsuario'] == "administrador") {
     $descrip = $_POST['descripcionArticulo'];
     $precio = $_POST['precioArticulo'];
     $img = $_POST['imagenArticulo'];
-    $plataf = $_POST['plataforma'];
+    $idPlataf = $_POST['idPlataforma'];
+    $plataf = $_POST['nombrePlataforma'];
     $tipo = $_POST['tipoArticulo'];
     $precioOferta = $_POST['ofertaArticulo'];
     if ($precioOferta === "") {
@@ -18,9 +19,9 @@ if ($_SESSION["usuarioLogueado"][0]['rolUsuario'] == "administrador") {
 
 
     $consulta = "INSERT INTO articulo (idArticulo, nombreArticulo, descripcionArticulo, precioArticulo, imagenArticulo,"
-            . " plataforma, tipoArticulo, ofertaArticulo)"
+            . " idPlataforma, plataforma, tipoArticulo, ofertaArticulo)"
             . " VALUES(null, '" . $nombre . "', '" . $descrip . "', '" . $precio . "', '" . $img . "', "
-            . "'" . $plataf . "', '" . $tipo . "', '" . $precioOferta . "')";
+            . "'" . $idPlataf . "', '" . $plataf . "', '" . $tipo . "', '" . $precioOferta . "')";
 
     $consultaRetorno = "SELECT * FROM articulo WHERE idArticulo >= ALL(SELECT idArticulo FROM articulo)";
 

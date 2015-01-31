@@ -112,16 +112,6 @@ function mostrarMenuLogin(data) {
                             </ul>\n\
                         </div>";
 
-//                            <li id='opcion-desplegable-usuario-new' role='presentation'>\n\
-//                                <a id='enlaceNuevoRegistro' role='menuitem' tabindex='-1' href='#'>Nuevo usuario</a>\n\
-//                            </li>";
-//
-//            if (data[0].rolUsuario === "administrador") {
-//                datos += "<li id='opcion-desplegable-articulo-new' role='presentation'>\n\
-//                                <a id='enlaceNuevoArticulo' role='menuitem' tabindex='-1' href='#'>Nuevo artículo</a>\n\
-//                            </li>";
-//            }
-
 
     $("#cabeceraLogin").html(datos);
 
@@ -170,28 +160,21 @@ function mostrarMenuLogin(data) {
         accionPrevia = this.id;
         mostrarLogin();
     });
-//            document.getElementById("opcion-desplegable-usuario-new").onclick = function () {
-//                accionPrevia = this.id;
-//                mostrarRegistroUsuario();
-//            };
-//            if (data[0].rolUsuario === "administrador") {
-//                document.getElementById("opcion-desplegable-articulo-new").onclick = function () {
-//                    accionPrevia = this.id;
-//                    mostrarNewArticulo();
-//                };
-//            }
 
     //Acciones click del menuV
     $("#opciones-admin-newUsuario, #opciones-desplegable-admin-newUsuario").click(function () {
         accionPrevia = this.id;
 //        mostrarRegistroUsuarioAdmin();
+        $("#registro-admin-boton-listar").show();
         $("#bloqueRegistro-admin").dialog("open");
 
     });
     if (data[0].rolUsuario === "administrador") {
         $("#opciones-admin-newArticulo, #opciones-desplegable-admin-newArticulo").click(function () {
             accionPrevia = this.id;
-            mostrarNewArticulo();
+//            mostrarNewArticulo();
+            $("#newArticulo-boton-listar").show();
+            $("#bloqueNuevoArticulo").dialog("open");
         });
     }
 

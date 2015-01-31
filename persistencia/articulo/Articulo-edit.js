@@ -84,7 +84,7 @@ function mostrarEditArticulo() {
 
 
     function cargarPlataformaEdit() {
-        var datos = "<option id='mensaje-lista-option-plataforma' class='mensaje-lista-option' value='...'>...</option>";
+        var datos = "<option id='mensaje-lista-option-plataforma' class='mensaje-lista-option' value='...'>-- Elige una opción --</option>";
         $.each(listaPlataformas, function (index) {
             datos += "<option class='option-plataforma' value='" + listaPlataformas[index].nombrePlataforma + "'>" + listaPlataformas[index].nombrePlataforma + "</option>";
         });

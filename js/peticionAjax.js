@@ -139,9 +139,9 @@ function getAjaxUsuarioEdit($id, $rol, $nombre, $ape1, $ape2, $nif, $tf, $correo
     });
 }
 
-function getAjaxArticuloNew($nombre, $descrip, $precio, $img, $plataforma, $tipo, $precioOferta) {
+function getAjaxArticuloNew($nombre, $descrip, $precio, $img, $idPlataforma, $nombrePlataforma, $tipo, $precioOferta) {
     $datos = {'nombreArticulo': $nombre, 'descripcionArticulo': $descrip, 'precioArticulo': $precio,
-        'imagenArticulo': $img, 'plataforma': $plataforma, 'tipoArticulo': $tipo, 'ofertaArticulo': $precioOferta};
+        'imagenArticulo': $img, 'idPlataforma': $idPlataforma, 'nombrePlataforma': $nombrePlataforma, 'tipoArticulo': $tipo, 'ofertaArticulo': $precioOferta};
 
     return $.ajax({
         type: 'POST',

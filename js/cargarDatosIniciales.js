@@ -5,8 +5,6 @@ $(document).ready(function () {
 
         $promesa = getAjax("plataforma", "asc");
         $promesa.success(function (data) {
-            listaPlataformas = data;
-            //alert(listaPlataformas[2].nombrePlataforma);
             secciones = $('.contieneSecciones');
             $.each(secciones, function (index1) {
                 var datos = "";
@@ -64,6 +62,8 @@ $(document).ready(function () {
         $promesa = getAjax("plataforma", "asc");
 
         $promesa.success(function (data) {
+            listaPlataformas = data;
+            //alert(listaPlataformas[2].idPlataforma);
             var datos = "";
             var datosDesplegable = "";
             $.each(data, function (index) {
@@ -91,9 +91,13 @@ $(document).ready(function () {
     mostrarSeccion();
     comprobarSesion();
     mostrarPlataforma();
-
+    
+    //Carga inicial de los formularios
     mostrarRegistroUsuario();
     mostrarRegistroUsuarioAdmin();
+    mostrarEditUsuario();
+    
+    mostrarNewArticulo();
 
 
     $("#botonRegistro").click(function () {

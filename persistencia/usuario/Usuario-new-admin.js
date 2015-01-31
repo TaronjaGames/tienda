@@ -184,19 +184,8 @@ function mostrarRegistroUsuarioAdmin() {
 
     //BOTÓN CANCELAR
     $("#registro-admin-boton-cancelar").click(function () {
-        if (accionPrevia === "panel-admin-usuario-new" || accionPrevia === "opciones-admin-newUsuario" || accionPrevia === "opciones-desplegable-admin-newUsuario") {
-            if (accionPrevia === "panel-admin-usuario-new") {
-                $("#bloqueRegistro-admin").dialog("close");
-//                mostrarPanelesUsuario();
-            } else {
-                $("#bloqueRegistro-admin").dialog("close");
-//                mostrarPanelesAdmin();
-            }
-        } else {
-//            mostrarListaUsuarios();
-            $("#bloqueRegistro-admin").dialog("close");
-            $("#lista-usuarios").jqGrid().trigger("reloadGrid");
-        }
+        $("#bloqueRegistro-admin").dialog("close");
+        $("#lista-usuarios").jqGrid().trigger("reloadGrid");
     });
 
 
@@ -208,26 +197,9 @@ function registrarUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $logi
     $promesa.success(function (data) {
         if (data[0] !== null) {
             alert("El usuario '" + data[0].loginUsuario + "' se ha registrado correctamente");
-            if (accionPrevia === "panel-admin-usuario-new" || accionPrevia === "opciones-admin-newUsuario" || accionPrevia === "opciones-desplegable-admin-newUsuario") {
-                if (accionPrevia === "panel-admin-usuario-new") {
-                    $("#bloqueRegistro-admin input").val("");
-                    $(".registro-label-error").val("*");
-//                    $("#bloqueRegistro-admin").dialog("close");
-//                    mostrarRegistroUsuarioAdmin();
-                    //mostrarPanelesUsuario();
-                } else {
-                    $("#bloqueRegistro-admin input").val("");
-                    $(".registro-label-error").val("*");
-//                    $("#bloqueRegistro-admin").dialog("close");
-//                    mostrarRegistroUsuarioAdmin();
-                    //mostrarPanelesAdmin();
-                }
-            } else {
-                $("#bloqueRegistro-admin input").val("");
-                $(".registro-label-error").val("*");
-//                $("#bloqueRegistro-admin").dialog("close");
-                jQuery("#lista-usuarios").jqGrid().trigger("reloadGrid");
-            }
+
+            $("#bloqueRegistro-admin input").val("");
+            jQuery("#lista-usuarios").jqGrid().trigger("reloadGrid");
         } else {
             alert("Ha ocurrido un error: el usuario no ha podido ser registrado");
         }
