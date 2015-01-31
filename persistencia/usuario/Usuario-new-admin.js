@@ -172,7 +172,7 @@ function mostrarRegistroUsuarioAdmin() {
             var numNif = inputNif.val().substring(0, 8);
             var letraNif = (inputNif.val().charAt(8)).toUpperCase();
             var nif = numNif+letraNif;
-            registrarUsuario(selectRol.val(), inputNombre.val(), inputApe1.val(), inputApe2.val(), nif, inputTf.val(), inputCorreo.val(), inputUsuario.val(), inputPassword.val());
+            registrarUsuarioAdmin(selectRol.val(), inputNombre.val(), inputApe1.val(), inputApe2.val(), nif, inputTf.val(), inputCorreo.val(), inputUsuario.val(), inputPassword.val());
         }
 
     });
@@ -195,13 +195,14 @@ function mostrarRegistroUsuarioAdmin() {
 }
 
 
-function registrarUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $login, $password) {
+function registrarUsuarioAdmin($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $login, $password) {
     $promesa = getAjaxUsuarioNew($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $login, $password);
     $promesa.success(function (data) {
         if (data[0] !== null) {
             alert("El usuario '" + data[0].loginUsuario + "' se ha registrado correctamente");
 
             $("#bloqueRegistro-admin input").val("");
+            $("#bloqueRegistro-admin input").removeAttr("checked");
             jQuery("#lista-usuarios").jqGrid().trigger("reloadGrid");
         } else {
             alert("Ha ocurrido un error: el usuario no ha podido ser registrado");
