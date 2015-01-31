@@ -211,17 +211,20 @@ function registrarUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $logi
             if (accionPrevia === "panel-admin-usuario-new" || accionPrevia === "opciones-admin-newUsuario" || accionPrevia === "opciones-desplegable-admin-newUsuario") {
                 if (accionPrevia === "panel-admin-usuario-new") {
                     $("#bloqueRegistro-admin input").val("");
+                    $(".registro-label-error").val("*");
 //                    $("#bloqueRegistro-admin").dialog("close");
 //                    mostrarRegistroUsuarioAdmin();
                     //mostrarPanelesUsuario();
                 } else {
                     $("#bloqueRegistro-admin input").val("");
+                    $(".registro-label-error").val("*");
 //                    $("#bloqueRegistro-admin").dialog("close");
 //                    mostrarRegistroUsuarioAdmin();
                     //mostrarPanelesAdmin();
                 }
             } else {
                 $("#bloqueRegistro-admin input").val("");
+                $(".registro-label-error").val("*");
 //                $("#bloqueRegistro-admin").dialog("close");
                 jQuery("#lista-usuarios").jqGrid().trigger("reloadGrid");
             }

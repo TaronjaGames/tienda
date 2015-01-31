@@ -178,9 +178,9 @@ function registrarUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $logi
     $promesa.success(function (data) {
         if (data[0] !== null) {
             alert("El usuario '" + data[0].loginUsuario + "' se ha registrado correctamente");
-            $("#bloqueRegistro input")
-                    .val("")
-                    .removeAttr("checked");
+            $("#bloqueRegistro input").val("");
+            $(".registro-label-error").val("*");
+//            $("#bloqueRegistro input").removeAttr("checked");
             $("#bloqueRegistro").dialog("close");
             //mostrarNoticias();
         } else {
