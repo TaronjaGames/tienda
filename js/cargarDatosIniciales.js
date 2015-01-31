@@ -94,12 +94,12 @@ $(document).ready(function () {
     mostrarPlataforma();
 
     //Carga inicial de los formularios
-    mostrarRegistroUsuario();
-    mostrarRegistroUsuarioAdmin();
+    mostrarRegistroUsuario();//Registro de nuevo usuario sin loguear o usuario normal
+    mostrarRegistroUsuarioAdmin();//Registro de nuevo usuario desde administrador
     mostrarEditUsuario();
 
     mostrarNewArticulo();
-    //mostrarEditArticulo(listaPlataformas); --> En función mostrarPlataforma()
+    //mostrarEditArticulo(listaPlataformas); --> La ejecuto en función mostrarPlataforma()
 
 
     $("#botonRegistro").click(function () {
