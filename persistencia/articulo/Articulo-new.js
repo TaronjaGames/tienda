@@ -164,7 +164,18 @@ function mostrarNewArticulo() {
 
         //ENVÍO PARA REGISTRO EN BD
         if (errorValidacion === 0) {
-            grabarArticulo(inputNombre.val(), inputDescripcion.val(), inputPrecio.val(), inputImg.val(), selectPlataforma.val(), inputTipo.val(), inputOferta.val());
+            var tabla = "plataforma";
+            var orden = "asc";
+            var idPlataformaEdit = 0;
+            $promesa = getAjax(tabla, orden);
+            $promesa.success(function (data) {
+                $.each(data, function (index) {
+                    if (data[index].nombrePlataforma === selectPlataforma.val()) {
+                        idPlataformaEdit = data[index].idPlataforma;
+                    }
+                });
+                grabarArticulo(inputNombre.val(), inputDescripcion.val(), inputPrecio.val(), inputImg.val(), idPlataformaEdit, selectPlataforma.val(), inputTipo.val(), inputOferta.val());
+            });
         }
 
     });
@@ -193,8 +204,8 @@ function mostrarNewArticulo() {
 
 }
 
-function grabarArticulo($nombre, $descrip, $precio, $img, $plataforma, $tipo, $precioOferta) {
-    $promesa = getAjaxArticuloNew($nombre, $descrip, $precio, $img, $plataforma, $tipo, $precioOferta);
+function grabarArticulo($nombre, $descrip, $precio, $img, $idPlataforma, $plataforma, $tipo, $precioOferta) {
+    $promesa = getAjaxArticuloNew($nombre, $descrip, $precio, $img, $idPlataforma, $plataforma, $tipo, $precioOferta);
     $promesa.success(function (data) {
         if (data[0] !== null) {
             alert("El artículo '" + data[0].nombreArticulo + "' se ha grabado correctamente");
