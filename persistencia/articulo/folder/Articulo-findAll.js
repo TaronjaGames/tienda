@@ -78,9 +78,8 @@ function mostrarListaArticulos() {
                         $promesa.success(function (data) {
                             if (data[0] !== null) {
                                 var idPlataformaEdit = data[0].idPlataforma;
-//                                mostrarEditArticulo();
-                                //alert(idPlataformaEdit);
-                                
+                                mostrarEditArticulo();
+
                                 $("#editArticulo-input-id").val(data[0].idArticulo);
                                 $("#editArticulo-input-nombre").val(data[0].nombreArticulo);
                                 $("#editArticulo-input-descripcion").val(data[0].descripcionArticulo);
@@ -99,7 +98,7 @@ function mostrarListaArticulos() {
                                     $("#editArticulo-input-oferta").val(data[0].ofertaArticulo);
                                 }
 
-                                $("#bloqueEditArticulo").dialog("open");
+//                                $("#bloqueEditArticulo").dialog("open");
                             }
                         });
                     } else if (idFila.length === 0) {

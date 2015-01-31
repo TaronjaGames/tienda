@@ -63,6 +63,7 @@ $(document).ready(function () {
 
         $promesa.success(function (data) {
             listaPlataformas = data;
+            mostrarEditArticulo(listaPlataformas);
             //alert(listaPlataformas[2].idPlataforma);
             var datos = "";
             var datosDesplegable = "";
@@ -91,13 +92,14 @@ $(document).ready(function () {
     mostrarSeccion();
     comprobarSesion();
     mostrarPlataforma();
-    
+
     //Carga inicial de los formularios
     mostrarRegistroUsuario();
     mostrarRegistroUsuarioAdmin();
     mostrarEditUsuario();
-    
+
     mostrarNewArticulo();
+    //mostrarEditArticulo(listaPlataformas); --> En función mostrarPlataforma()
 
 
     $("#botonRegistro").click(function () {
