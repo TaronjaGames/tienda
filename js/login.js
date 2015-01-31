@@ -1,38 +1,48 @@
 
 function mostrarLogin() {
 
-    var accionCancelar = "";
-    if (usuarioLogueado.rolUsuarioLogueado === "administrador") {
-        accionCancelar = "mostrarPanelesAdmin()";
-    } else {
-        accionCancelar = "mostrarNoticias()";
-    }
+//    var accionCancelar = "";
+//    if (usuarioLogueado.rolUsuarioLogueado === "administrador") {
+//        accionCancelar = "mostrarPanelesAdmin()";
+//    } else {
+//        accionCancelar = "mostrarNoticias()";
+//    }
 
-    var datos = "<div id='bloqueLogin' class='caja-formulario'>\n\
+    var datos = "<div id='bloqueLogin' class='caja-formulario dialog-login' style='display: none'>\n\
                 <p id='tituloFormularioLogin' class='tituloFormulario'>Formulario de login.</p>\n\
                 <hr/>\n\
                 <section id='login-bloqueUsuario' class='login-bloqueDatos'>\n\
                     <label for='login-input-usuario' class='login-label'>Usuario: </label>\n\
-                    <input name='usuario' id='login-input-usuario' type='text' autofocus='autofocus' class='login-input input-required'/>\n\
+                    <input id='login-input-usuario' name='usuario' type='text' class='login-input input-required' autofocus='autofocus'/>\n\
                     <label id='login-label-error-usuario' for='login-input-usuario' class='login-label-error'></label>\n\
                 </section>\n\
                 <section id='login-bloquePassword' class='login-bloqueDatos'>\n\
                     <label for='login-input-password' class='login-label'>Password: </label>\n\
-                    <input name='password' id='login-input-password' type='password' class='login-input input-required'/>\n\
+                    <input id='login-input-password' name='password' type='password' class='login-input input-required'/>\n\
                     <label id='login-label-error-password' for='login-input-password' class='login-label-error'></label>\n\
                 </section>\n\
                 <hr/>\n\
-                <a id='login-enlace-registro' href='#'>Registro...</a>\n\\n\
+                <a id='login-enlace-registro' href='#'>Registro...</a>\n\
                 <br/><br/>\n\
-                <section id='login-botonera'>\n\
-                    <div id='login-boton-entrar' class='boton'><span>Entrar</span></div>\n\
-                    <div id='login-boton-cancelar' class='boton' onclick='" + accionCancelar + "'>\n\
+                <section id='login-botonera' class='formulario-botonera formulario-login-botonera'>\n\
+                    <div id='login-boton-entrar' class='formulario-boton formulario-login-boton'><span>Entrar</span></div>\n\
+                    <div id='login-boton-cancelar' class='formulario-boton formulario-login-boton'>\n\
                         <span>Salir</span>\n\
                     </div>\n\
                 </section>\n\
             </div>";
 
     $("#articulos").html(datos);
+    
+    //Definición del dialog
+    $("#bloqueLogin").dialog({
+        autoOpen: false,
+        modal: true,
+        title: "Acceso de usuarios",
+        minWidth: 550,
+        show: "fadeIn",
+        hide: "fadeOut"
+    });
 
     var formulario = "login";
     var listaRequeridos = document.getElementsByClassName("input-required");
@@ -60,7 +70,12 @@ function mostrarLogin() {
     });
 
     $("#login-enlace-registro").click(function () {
+        $("#bloqueLogin").dialog("close");
         $("#bloqueRegistro").dialog("open");
+    });
+    
+    $("#login-boton-cancelar").click(function(){
+        $("#bloqueLogin").dialog("close");
     });
 
 }
@@ -73,14 +88,14 @@ function logIn($login, $password) {
         $promesa = getAjaxLogIn($login, $password);
         $promesa.success(function (data) {
 
-            //Zona info estado login header derecha
             if (data[0] !== null && data[0].loginUsuario === $login) {
-
+                $("#bloqueLogin input").val("");
+                $("#bloqueLogin").dialog("close");
                 mostrarMenuLogin(data);
-
             } else {
                 alert("Usuario o password incorrectos o usuario no registrado.\n\n Revise los datos introducidos...");
             }
+            
         });
     }
 }
@@ -93,7 +108,8 @@ function logOut() {
 }
 
 function mostrarMenuLogin(data) {
-    usuarioLogueado = {rolUsuarioLogueado: data[0].rolUsuario, loginUsuarioLogueado: data[0].loginUsuario};
+//    usuarioLogueado = {rolUsuarioLogueado: data[0].rolUsuario, loginUsuarioLogueado: data[0].loginUsuario};
+    usuarioLogueado = data[0];
     var datos = "<div id='cajaInfoLogin' class='dropdown'>\n\
                             <button class='btn dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown'>\n\
                                 <span>\n\
@@ -158,7 +174,8 @@ function mostrarMenuLogin(data) {
     });
     $("#enlaceCambiarUsuario").click(function () {
         accionPrevia = this.id;
-        mostrarLogin();
+        $("#bloqueLogin").dialog("open");
+//        mostrarLogin();
     });
 
     //Acciones click del menuV

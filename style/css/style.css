@@ -180,16 +180,22 @@ body {
       font-size: 15px;
       font-weight: bolder;
       color: white; }
+    body .caja-formulario .registro-bloqueDatos, body .caja-formulario .login-bloqueDatos {
+      margin-top: 10px; }
+      body .caja-formulario .registro-bloqueDatos > span, body .caja-formulario .login-bloqueDatos > span {
+        vertical-align: middle; }
+      body .caja-formulario .registro-bloqueDatos #newArticulo-label-precio-oferta, body .caja-formulario .login-bloqueDatos #newArticulo-label-precio-oferta {
+        padding: 0 10px 0 5px; }
     body .caja-formulario label {
       color: white;
       min-width: 110px; }
-    body .caja-formulario .registro-label-check {
+    body .caja-formulario .registro-label-check, body .caja-formulario .login-label-radio {
       vertical-align: middle; }
-    body .caja-formulario .registro-input, body .caja-formulario .registro-select {
+    body .caja-formulario .registro-input, body .caja-formulario .login-input, body .caja-formulario .registro-select {
       min-width: 190px;
       padding-left: 5px;
       border: none; }
-      body .caja-formulario .registro-input:focus, body .caja-formulario .registro-select:focus {
+      body .caja-formulario .registro-input:focus, body .caja-formulario .login-input:focus, body .caja-formulario .registro-select:focus {
         box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
         transition-duration: .3s; }
     body .caja-formulario .registro-input-corto {
@@ -198,15 +204,9 @@ body {
       body .caja-formulario .registro-input-corto:focus {
         box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
         transition-duration: .3s; }
-    body .caja-formulario .registro-label-error {
+    body .caja-formulario .registro-label-error, body .caja-formulario .login-label-error {
       color: red;
       font-size: 11px; }
-    body .caja-formulario .registro-bloqueDatos {
-      margin-top: 10px; }
-      body .caja-formulario .registro-bloqueDatos > span {
-        vertical-align: middle; }
-      body .caja-formulario .registro-bloqueDatos #newArticulo-label-precio-oferta {
-        padding: 0 10px 0 5px; }
     body .caja-formulario .formulario-botonera {
       margin-top: 5px; }
     body .caja-formulario .formulario-botonera .formulario-boton {
@@ -334,68 +334,6 @@ body {
   body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
     font-family: PlaneCrash;
     src: url("../fonts/PlaneCrash.ttf"); } }
-          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin {
-            padding: 20px;
-            font-size: 12px;
-            max-width: 550px; }
-            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin a {
-              color: deepskyblue; }
-            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .tituloFormulario {
-              font-size: 15px;
-              font-weight: bolder;
-              color: white; }
-            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-bloqueDatos {
-              margin-top: 10px; }
-            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin label {
-              color: white;
-              min-width: 70px; }
-            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-input {
-              min-width: 190px;
-              padding-left: 5px;
-              border: none; }
-              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-input:focus {
-                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
-                transition-duration: .3s; }
-            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-label-radio {
-              vertical-align: middle; }
-            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin .login-label-error {
-              color: red; }
-            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera {
-              margin-top: 5px; }
-            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar, body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-cancelar {
-              display: inline-block;
-              width: 115px;
-              text-align: center;
-              font-size: 12px;
-              margin: 7px 5px;
-              padding: 3px 10px;
-              border-radius: 4px;
-              border-left: 1px solid grey;
-              border-top: 1px solid grey;
-              border-right: 1px solid black;
-              border-bottom: 1px solid black;
-              color: white;
-              background-color: rgba(255, 255, 255, 0.2);
-              box-shadow: 1px 1px 2px transparent;
-              float: left; }
-              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar a, body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-cancelar a {
-                display: inline;
-                text-decoration: none;
-                color: white;
-                width: 60px; }
-              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-entrar:hover, body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #bloqueLogin #login-botonera #login-boton-cancelar:hover {
-                transition-duration: .4s;
-                border-radius: 4px;
-                border-left: 1px solid silver;
-                border-top: 1px solid silver;
-                border-right: 1px solid transparent;
-                border-bottom: 1px solid transparent;
-                cursor: pointer;
-                color: #e6e6e6;
-                background-color: rgba(0, 0, 0, 0.05);
-                box-shadow: none;
-                opacity: .9;
-                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
           body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin {
             max-width: 95%;
             margin: 10px;
@@ -628,68 +566,6 @@ body {
   body #capaSuperior #seccionCentral .menuV {
     font-family: PlaneCrash;
     src: url("../fonts/PlaneCrash.ttf"); } }
-        body #capaSuperior #seccionCentral .menuV #bloqueLogin {
-          padding: 20px;
-          font-size: 12px;
-          max-width: 550px; }
-          body #capaSuperior #seccionCentral .menuV #bloqueLogin a {
-            color: deepskyblue; }
-          body #capaSuperior #seccionCentral .menuV #bloqueLogin .tituloFormulario {
-            font-size: 15px;
-            font-weight: bolder;
-            color: white; }
-          body #capaSuperior #seccionCentral .menuV #bloqueLogin .login-bloqueDatos {
-            margin-top: 10px; }
-          body #capaSuperior #seccionCentral .menuV #bloqueLogin label {
-            color: white;
-            min-width: 70px; }
-          body #capaSuperior #seccionCentral .menuV #bloqueLogin .login-input {
-            min-width: 190px;
-            padding-left: 5px;
-            border: none; }
-            body #capaSuperior #seccionCentral .menuV #bloqueLogin .login-input:focus {
-              box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
-              transition-duration: .3s; }
-          body #capaSuperior #seccionCentral .menuV #bloqueLogin .login-label-radio {
-            vertical-align: middle; }
-          body #capaSuperior #seccionCentral .menuV #bloqueLogin .login-label-error {
-            color: red; }
-          body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera {
-            margin-top: 5px; }
-          body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-entrar, body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-cancelar {
-            display: inline-block;
-            width: 115px;
-            text-align: center;
-            font-size: 12px;
-            margin: 7px 5px;
-            padding: 3px 10px;
-            border-radius: 4px;
-            border-left: 1px solid grey;
-            border-top: 1px solid grey;
-            border-right: 1px solid black;
-            border-bottom: 1px solid black;
-            color: white;
-            background-color: rgba(255, 255, 255, 0.2);
-            box-shadow: 1px 1px 2px transparent;
-            float: left; }
-            body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-entrar a, body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-cancelar a {
-              display: inline;
-              text-decoration: none;
-              color: white;
-              width: 60px; }
-            body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-entrar:hover, body #capaSuperior #seccionCentral .menuV #bloqueLogin #login-botonera #login-boton-cancelar:hover {
-              transition-duration: .4s;
-              border-radius: 4px;
-              border-left: 1px solid silver;
-              border-top: 1px solid silver;
-              border-right: 1px solid transparent;
-              border-bottom: 1px solid transparent;
-              cursor: pointer;
-              color: #e6e6e6;
-              background-color: rgba(0, 0, 0, 0.05);
-              box-shadow: none;
-              opacity: .9;
-              box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
         body #capaSuperior #seccionCentral .menuV #cajaInfoLogin {
           max-width: 95%;
           margin: 10px;
@@ -1036,68 +912,6 @@ body {
   body #capaSuperior #seccionCentral #contenidos #articulos {
     font-family: PlaneCrash;
     src: url("../fonts/PlaneCrash.ttf"); } }
-          body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin {
-            padding: 20px;
-            font-size: 12px;
-            max-width: 550px; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin a {
-              color: deepskyblue; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .tituloFormulario {
-              font-size: 15px;
-              font-weight: bolder;
-              color: white; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-bloqueDatos {
-              margin-top: 10px; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin label {
-              color: white;
-              min-width: 70px; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-input {
-              min-width: 190px;
-              padding-left: 5px;
-              border: none; }
-              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-input:focus {
-                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
-                transition-duration: .3s; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-label-radio {
-              vertical-align: middle; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin .login-label-error {
-              color: red; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera {
-              margin-top: 5px; }
-            body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar, body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-cancelar {
-              display: inline-block;
-              width: 115px;
-              text-align: center;
-              font-size: 12px;
-              margin: 7px 5px;
-              padding: 3px 10px;
-              border-radius: 4px;
-              border-left: 1px solid grey;
-              border-top: 1px solid grey;
-              border-right: 1px solid black;
-              border-bottom: 1px solid black;
-              color: white;
-              background-color: rgba(255, 255, 255, 0.2);
-              box-shadow: 1px 1px 2px transparent;
-              float: left; }
-              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar a, body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-cancelar a {
-                display: inline;
-                text-decoration: none;
-                color: white;
-                width: 60px; }
-              body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-entrar:hover, body #capaSuperior #seccionCentral #contenidos #articulos #bloqueLogin #login-botonera #login-boton-cancelar:hover {
-                transition-duration: .4s;
-                border-radius: 4px;
-                border-left: 1px solid silver;
-                border-top: 1px solid silver;
-                border-right: 1px solid transparent;
-                border-bottom: 1px solid transparent;
-                cursor: pointer;
-                color: #e6e6e6;
-                background-color: rgba(0, 0, 0, 0.05);
-                box-shadow: none;
-                opacity: .9;
-                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
           body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin {
             max-width: 95%;
             margin: 10px;
@@ -1222,16 +1036,22 @@ body {
               font-size: 15px;
               font-weight: bolder;
               color: white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-bloqueDatos, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-bloqueDatos {
+              margin-top: 10px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-bloqueDatos > span, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-bloqueDatos > span {
+                vertical-align: middle; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-bloqueDatos #newArticulo-label-precio-oferta, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-bloqueDatos #newArticulo-label-precio-oferta {
+                padding: 0 10px 0 5px; }
             body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario label {
               color: white;
               min-width: 110px; }
-            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-label-check {
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-label-check, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-label-radio {
               vertical-align: middle; }
-            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-input, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-select {
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-input, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-input, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-select {
               min-width: 190px;
               padding-left: 5px;
               border: none; }
-              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-input:focus, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-select:focus {
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-input:focus, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-input:focus, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-select:focus {
                 box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
                 transition-duration: .3s; }
             body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-input-corto {
@@ -1240,15 +1060,9 @@ body {
               body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-input-corto:focus {
                 box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
                 transition-duration: .3s; }
-            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-label-error {
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-label-error, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-label-error {
               color: red;
               font-size: 11px; }
-            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-bloqueDatos {
-              margin-top: 10px; }
-              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-bloqueDatos > span {
-                vertical-align: middle; }
-              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-bloqueDatos #newArticulo-label-precio-oferta {
-                padding: 0 10px 0 5px; }
             body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .formulario-botonera {
               margin-top: 5px; }
             body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .formulario-botonera .formulario-boton {

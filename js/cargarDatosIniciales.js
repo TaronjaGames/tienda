@@ -100,11 +100,20 @@ $(document).ready(function () {
 
     mostrarNewArticulo();
     //mostrarEditArticulo(listaPlataformas); --> La ejecuto en función mostrarPlataforma()
+    
+    mostrarLogin();
 
 
     $("#botonRegistro").click(function () {
         accionPrevia = this.id;
         $("#bloqueRegistro").dialog("open");
+        //mostrarRegistroUsuario();
+        //mostrarSeccion();
+    });
+    
+    $("#botonLogin").click(function () {
+        accionPrevia = this.id;
+        $("#bloqueLogin").dialog("open");
         //mostrarRegistroUsuario();
         //mostrarSeccion();
     });
