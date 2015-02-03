@@ -23,16 +23,33 @@
         />
         
         <mkdir dir="../tmp"/>
-        <copy dir="../taronjagames/.git" todir="../tmp"></copy>
-        <copy dir="../taronjagames/.openshift" todir="../tmp"></copy>
+        
+        <copy todir="../tmp">
+            <fileset dir="../taronjagames/.git"/>
+        </copy>
+        
+        <copy todir="../tmp">
+            <fileset dir="../taronjagames/.openshift"/>
+        </copy>
+        
         <delete dir="../taronjagames"></delete>
         <mkdir dir="../taronjagames"/>
-        <copy dir="../tmp/.git" todir="../taronjagames"></copy>
-        <copy dir="../tmp/.openshift" todir="../taronjagames"></copy>
+        
+        <copy todir="../taronjagames">
+            <fileset dir="../tmp/.git"/>
+        </copy>
+        
+        <copy todir="../taronjagames">
+            <fileset dir="../tmp/.openshift"/>
+        </copy>
+        
         <delete dir="../tmp"></delete>
         <delete dir=".git"></delete>
         <delete dir=".gitignore"></delete>
-        <copy dir="./*" todir="../taronjagames"></copy>
+
+        <copy todir="../taronjagames">
+            <fileset dir="./*"/>
+        </copy>
         
         <!--
         <git dir="../taronjagames" command="add *"></git>
