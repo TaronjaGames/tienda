@@ -5,7 +5,7 @@ usuarioLogueado = "";//Contiene el usuario logueado
 accionPrevia = "";//Contiene la id del elemento que desencadena el último evento
 //valor: this.id
 
-codigoCuentaBancaria = "E002-S003-1";
+codigoCuentaBancaria = "E002-S002-1";
 
 
 
