@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    
+    <target name="distOpenShift">
+        
+        <taskdef  resource="es/logongas/openshift/ant/antlib.xml" />
+        
+        <replace file="persistencia/ConnectionFactory.php" token="$server = 'localhost';" value="$server = '127.10.202.2:3306';"/>
+        <replace file="persistencia/ConnectionFactory.php" token="$username = 'root';" value="$username = 'admineZaIJ3D';"/>
+        <replace file="persistencia/ConnectionFactory.php" token="$password = 'root';" value="$password = '56b4Td6LUXPs';"/>
+        <replace file="persistencia/ConnectionFactory.php" token="$databasename = 'tienda';" value="$databasename = 'taronjagames';"/>
+        
+        <delete dir="../taronjagames"></delete>
+              
+        <gitcloneapplication    
+            userName="ivansc3@hotmail.com"
+            password="${password}"
+            domainName="taronjagames"
+            applicationName="taronjagames" 
+            privateKeyFile="../.ssh/id_rsa"
+            path="../taronjagames"
+        />
+        
+        <mkdir dir="../tmp"/>
+        <copy dir="../taronjagames/.git" todir="../tmp"></copy>
+        <copy dir="../taronjagames/.openshift" todir="../tmp"></copy>
+        <delete dir="../taronjagames"></delete>
+        <mkdir dir="../taronjagames"/>
+        <copy dir="../tmp/.git" todir="../taronjagames"></copy>
+        <copy dir="../tmp/.openshift" todir="../taronjagames"></copy>
+        <delete dir="../tmp"></delete>
+        <delete dir=".git"></delete>
+        <delete dir=".gitignore"></delete>
+        <copy dir="./*" todir="../taronjagames"></copy>
+        
+        <!--
+        <git dir="../taronjagames" command="add *"></git>
+        <git dir="../taronjagames" command="commit" options=" -am 'commit'"></git>
+        
+        <gitpushapplication    
+            userName="ivansc3@hotmail.com"
+            password="${password}"
+            domainName="taronjagames"
+            applicationName="taronjagames" 
+            privateKeyFile="../.ssh/id_rsa"
+            path="../taronjagames"
+        />
+        -->
+        
+    </target>
