@@ -6,10 +6,10 @@
         
         <taskdef  resource="es/logongas/openshift/ant/antlib.xml" />
         
-        <replace file="persistencia/ConnectionFactory.php" token="$server = 'localhost';" value="$server = '127.10.202.2:3306';"/>
-        <replace file="persistencia/ConnectionFactory.php" token="$username = 'root';" value="$username = 'admineZaIJ3D';"/>
-        <replace file="persistencia/ConnectionFactory.php" token="$password = 'root';" value="$password = '56b4Td6LUXPs';"/>
-        <replace file="persistencia/ConnectionFactory.php" token="$databasename = 'tienda';" value="$databasename = 'taronjagames';"/>
+        <replace file="persistencia/ConnectionFactory.php" token='$server = "localhost";' value='$server = "127.10.202.2:3306";'/>
+        <replace file="persistencia/ConnectionFactory.php" token='$username = "root";' value='$username = "admineZaIJ3D";'/>
+        <replace file="persistencia/ConnectionFactory.php" token='$password = "root";' value='$password = "56b4Td6LUXPs";'/>
+        <replace file="persistencia/ConnectionFactory.php" token='$databasename = "tienda";' value='$databasename = "taronjagames";'/>
         
         
         
@@ -34,7 +34,7 @@
             <fileset dir="../taronjagames/.git"/>
         </copy>
         
-        <copy todir="../.openshift">
+        <copy todir="../tmp/.openshift">
             <fileset dir="../taronjagames/.openshift"/>
         </copy>
         
@@ -49,7 +49,7 @@
             <fileset dir="../tmp/.git"/>
         </copy>
         
-        <copy todir="../taronjagames.openshift">
+        <copy todir="../taronjagames/.openshift">
             <fileset dir="../tmp/.openshift"/>
         </copy>
         
@@ -58,10 +58,9 @@
         <delete dir=".gitignore"></delete>
 
         <copy todir="../taronjagames">
-            <fileset dir="./*"/>
+            <fileset dir="./"/>
         </copy>
         
-        <!--
         <git dir="../taronjagames" command="add *"></git>
         <git dir="../taronjagames" command="commit" options=" -am 'commit'"></git>
         
@@ -73,7 +72,7 @@
             privateKeyFile="../.ssh/id_rsa"
             path="../taronjagames"
         />
-        -->
+        
         
     </target>
 </project>
