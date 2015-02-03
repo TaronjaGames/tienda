@@ -7,8 +7,8 @@
         <taskdef  resource="es/logongas/openshift/ant/antlib.xml" />
         
         <replace file="persistencia/ConnectionFactory.php" token='$server = "localhost";' value='$server = "127.10.202.2:3306";'/>
-        <replace file="persistencia/ConnectionFactory.php" token='$username = "root";' value='$username = "admineZaIJ3D";'/>
-        <replace file="persistencia/ConnectionFactory.php" token='$password = "root";' value='$password = "56b4Td6LUXPs";'/>
+        <replace file="persistencia/ConnectionFactory.php" token='$username = "root";' value='$username = "${username}";'/>
+        <replace file="persistencia/ConnectionFactory.php" token='$password = "root";' value='$password = "${passworddb}";'/>
         <replace file="persistencia/ConnectionFactory.php" token='$databasename = "tienda";' value='$databasename = "taronjagames";'/>
         
         
