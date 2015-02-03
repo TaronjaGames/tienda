@@ -48,9 +48,10 @@ switch ($examp) {
         $SQL = "SELECT d.idDetallePedido, a.nombreArticulo, d.cantidadArticulo,"
                 . " concat(d.precioArticulo, ' €') AS precioArticulo, d.idPedido,"
                 . " concat(round(d.cantidadArticulo*d.precioArticulo,2),' €') AS importeLinea"
-                . " FROM detallepedido d INNER JOIN articulo a"
-                . " ON d.idArticulo = a.idArticulo"
-                . " WHERE d.idPedido=" . $id . " ORDER BY $sidx $sord LIMIT $start , $limit";
+                . " FROM detallepedido d, articulo a"
+                . " WHERE d.idArticulo = a.idArticulo"
+                . " AND d.idPedido=" . $id . " ORDER BY $sidx $sord LIMIT $start , $limit";
+        
         
         $result = $conexion->query($SQL);
 
