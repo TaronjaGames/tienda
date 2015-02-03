@@ -11,6 +11,8 @@
         <replace file="persistencia/ConnectionFactory.php" token="$password = 'root';" value="$password = '56b4Td6LUXPs';"/>
         <replace file="persistencia/ConnectionFactory.php" token="$databasename = 'tienda';" value="$databasename = 'taronjagames';"/>
         
+        
+        
         <delete dir="../taronjagames"></delete>
               
         <gitcloneapplication    
@@ -22,24 +24,32 @@
             path="../taronjagames"
         />
         
-        <mkdir dir="../tmp"/>
         
-        <copy todir="../tmp">
+        
+        <mkdir dir="../tmp"/>
+        <mkdir dir="../.git"/>
+        <mkdir dir="../.openshift"/>
+        
+        <copy todir="../tmp/.git">
             <fileset dir="../taronjagames/.git"/>
         </copy>
         
-        <copy todir="../tmp">
+        <copy todir="../.openshift">
             <fileset dir="../taronjagames/.openshift"/>
         </copy>
         
+        
+        
         <delete dir="../taronjagames"></delete>
         <mkdir dir="../taronjagames"/>
+        <mkdir dir="../taronjagames/.git"/>
+        <mkdir dir="../taronjagames/.openshift"/>
         
-        <copy todir="../taronjagames">
+        <copy todir="../taronjagames/.git">
             <fileset dir="../tmp/.git"/>
         </copy>
         
-        <copy todir="../taronjagames">
+        <copy todir="../taronjagames.openshift">
             <fileset dir="../tmp/.openshift"/>
         </copy>
         
