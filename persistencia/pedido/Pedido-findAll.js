@@ -28,11 +28,12 @@ function mostrarListaPedidos() {
     jQuery("#lista-pedidos").jqGrid({
         url: 'persistencia/pedido/Pedido-findAll.php',
         datatype: "json",
-        colNames: ['Id pedido', 'Fecha', 'Cliente', 'Importe pedido'/*, 'Moneda'*/],
+        colNames: ['Id pedido', 'Fecha', 'DNI cliente', 'Usuario', 'Importe pedido'/*, 'Moneda'*/],
         colModel: [
             {name: 'idPedido', index: 'idPedido', width: 50, align: "center", resizable: true},
             {name: 'fechaPedido', index: 'fechaPedido', width: 70, align: "center", resizable: true},
-            {name: 'nombreUsuario', index: 'nombreUsuario', width: 50, align: "center", resizable: true},
+            {name: 'dniUsuario', index: 'dniUsuario', width: 50, align: "center", resizable: true},
+            {name: 'loginUsuario', index: 'loginUsuario', width: 50, align: "center", resizable: true},
             {name: 'importePedido', index: 'importePedido', width: 50, align: "right", sortable: false, search: false,
                 formatter: {
                     number: {

@@ -86,7 +86,7 @@ INSERT INTO `detallepedido` (`idDetallePedido`, `idArticulo`, `cantidadArticulo`
 	(2, 18, 1, 5.00, 1),
 	(3, 12, 2, 12.00, 2),
 	(4, 32, 2, 25.00, 2),
-	(5, 5, 1, 22.00, 3),
+	(5, 18, 1, 22.00, 3),
 	(6, 6, 3, 11.00, 4);
 /*!40000 ALTER TABLE `detallepedido` ENABLE KEYS */;
 
