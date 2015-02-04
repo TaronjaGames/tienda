@@ -57,6 +57,9 @@
         <delete dir=".git"></delete>
         <delete dir=".gitignore"></delete>
 
+        <git dir="../taronjagames" command="add *"></git>
+        <git dir="../taronjagames" command="commit" options=" -am 'commit'"></git>
+
         <copy todir="../taronjagames">
             <fileset dir="./"/>
         </copy>
