@@ -1,12 +1,12 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versión del servidor:         10.0.14-MariaDB - mariadb.org binary distribution
--- SO del servidor:              Win32
--- HeidiSQL Versión:             9.1.0.4867
+-- Versión del servidor:         5.6.19 - MySQL Community Server (GPL)
+-- SO del servidor:              Win64
+-- HeidiSQL Versión:             8.3.0.4694
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `articulo` (
   PRIMARY KEY (`idArticulo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.articulo: ~33 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.articulo: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `articulo` DISABLE KEYS */;
 INSERT INTO `articulo` (`idArticulo`, `nombreArticulo`, `descripcionArticulo`, `precioArticulo`, `imagenArticulo`, `idPlataforma`, `plataforma`, `tipoArticulo`, `ventaArticulo`, `ofertaArticulo`) VALUES
 	(1, 'Play Station 4 Negra', 'Consola 4ª gen.', 399.00, 'ps4Negra', 1, 'PS4', 'consola', 50, NULL),
@@ -83,10 +83,10 @@ CREATE TABLE IF NOT EXISTS `detallepedido` (
 /*!40000 ALTER TABLE `detallepedido` DISABLE KEYS */;
 INSERT INTO `detallepedido` (`idDetallePedido`, `idArticulo`, `cantidadArticulo`, `precioArticulo`, `idPedido`) VALUES
 	(1, 2, 5, 20.00, 1),
-	(2, 5, 1, 5.00, 1),
+	(2, 18, 1, 5.00, 1),
 	(3, 12, 2, 12.00, 2),
-	(4, 3, 2, 25.00, 2),
-	(5, 5, 1, 22.00, 3),
+	(4, 32, 2, 25.00, 2),
+	(5, 18, 1, 22.00, 3),
 	(6, 6, 3, 11.00, 4);
 /*!40000 ALTER TABLE `detallepedido` ENABLE KEYS */;
 
@@ -172,7 +172,7 @@ CREATE TABLE IF NOT EXISTS `seccion` (
   PRIMARY KEY (`idSeccion`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.seccion: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.seccion: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `seccion` DISABLE KEYS */;
 INSERT INTO `seccion` (`idSeccion`, `nombreSeccion`) VALUES
 	(1, 'Inicio'),
@@ -194,7 +194,7 @@ CREATE TABLE IF NOT EXISTS `subseccion` (
   CONSTRAINT `seccion-idSeccion` FOREIGN KEY (`idSeccion`) REFERENCES `seccion` (`idSeccion`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
--- Volcando datos para la tabla tienda.subseccion: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.subseccion: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `subseccion` DISABLE KEYS */;
 INSERT INTO `subseccion` (`idSubseccion`, `nombreSubseccion`, `idSeccion`) VALUES
 	(1, 'PlayStation 4', 4),
@@ -222,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   UNIQUE KEY `loginUsuario` (`loginUsuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
--- Volcando datos para la tabla tienda.usuario: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla tienda.usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`idUsuario`, `rolUsuario`, `nombreUsuario`, `apellido1Usuario`, `apellido2Usuario`, `dniUsuario`, `telefonoUsuario`, `emailUsuario`, `loginUsuario`, `passwordUsuario`) VALUES
 	(1, 'administrador', 'admin', 'admin', 'admin', '00000000T', '960000000', 'mail0@taronjagames.com', 'admin', 'admin'),
