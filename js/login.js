@@ -70,6 +70,7 @@ function mostrarLogin() {
     });
 
     $("#login-enlace-registro").click(function () {
+        $("#bloqueLogin input").val("");
         $("#bloqueLogin").dialog("close");
         $("#bloqueRegistro").dialog("open");
     });
