@@ -4,51 +4,78 @@ session_start();
 include 'ConnectionFactory.php';
 
 
-if(isset($_SESSION["usuarioLogueado"])){
+if (isset($_SESSION["usuarioLogueado"])) {
 
-function insertCarrito($jsonCarrito) {
+    function realizarTransaccion($importeCarrito) {
+        //$consultaNumCuentaTienda = "";
+        //$consultaNumCuentaCliente = "";
+        $numeroCuentaCliente = "0002-0002-0002";
+//        $numeroCuentaCliente = $_SESSION['usuarioLogueado'][0]['numeroCuentaBancaria'];
+        $numeroCuentaTienda = "0002-0002-0001";
+        //$pinTienda = "0001";
 
-    $conexion = getConnection();
+        $url = "http://localhost/banco/api/Transaccion";
+        $datos = [
+            "numeroCuentaOrigen" => $numeroCuentaCliente,
+            "numeroCuentaDestino" => $numeroCuentaTienda,
+            "importe" => $importeCarrito,
+            "concepto" => "Compra Taronja"
+        ];
 
-    //Insertar Pedido
+        $handler = curl_init();
+        curl_setopt($handler, CURLOPT_URL, $url);
+        curl_setopt($handler, CURLOPT_POST, true);
+        curl_setopt($handler, CURLOPT_POSTFIELDS, $datos);
+        //curl_setopt($handler, CURLOPT_RETURNTRANSFER, true);
+        $response = curl_exec($handler);
+        curl_close($handler);
+    }
 
-    $fecha = date("Ymd");
-    $idCliente = $_SESSION['usuarioLogueado'][0]['idUsuario'];
+    function insertCarrito($jsonCarrito) {
 
-    $insertPedido = "insert into pedido (fechaPedido, idCliente) values ('" . $fecha . "','" . $idCliente . "')";
-    $conexion->query($insertPedido);
+        $conexion = getConnection();
 
-    //Insertar DetallePedidos
+        //Insertar Pedido
 
-    $carrito = json_decode($jsonCarrito);
+        $fecha = date("Ymd");
+        $idCliente = $_SESSION['usuarioLogueado'][0]['idUsuario'];
 
-    $idPedido = $conexion->insert_id;
+        $insertPedido = "insert into pedido (fechaPedido, idCliente) values ('" . $fecha . "','" . $idCliente . "')";
+        $conexion->query($insertPedido);
 
-    for ($i = 0; $i < count($carrito->articulos); $i++) {
-        
-        //Id
-        
-        $id = $carrito->articulos[$i]->id;
+        //Insertar DetallePedidos
 
-        //Consulta de precio
-        $consulta = "select precioArticulo from articulo where idArticulo=" . $id;
-        if ($result = $conexion->query($consulta)) {
-            while ($row = $result->fetch_assoc()) {
-                $datos[0] = $row;
+        $carrito = json_decode($jsonCarrito);
+
+        $idPedido = $conexion->insert_id;
+
+        $importeCarrito = 0;
+
+        for ($i = 0; $i < count($carrito->articulos); $i++) {
+
+            //Id carrito
+            $id = $carrito->articulos[$i]->id;
+
+            //Consulta de precio
+            $consulta = "select precioArticulo from articulo where idArticulo=" . $id;
+            if ($result = $conexion->query($consulta)) {
+                while ($row = $result->fetch_assoc()) {
+                    $datos[0] = $row;
+                }
             }
-        }
-        $precio=$datos[0]['precioArticulo'];
-        
-        //Cantidad
-        
-        $cantidad = $carrito->articulos[$i]->cantidad;
-        
-        //Insertar linea Detalle Pedidos
-        $insertDetallePedido="insert into detallepedido (idArticulo, cantidadArticulo, precioArticulo, idPedido) values ('" .$id ."','" .$cantidad ."','" .$precio ."','" .$idPedido ."')";
-        $conexion->query($insertDetallePedido);
+            $precio = $datos[0]['precioArticulo'];
 
+            //Cantidad
+            $cantidad = $carrito->articulos[$i]->cantidad;
+
+            $importeCarrito += $precio * $cantidad;
+
+            //Insertar linea Detalle Pedidos
+            $insertDetallePedido = "insert into detallepedido (idArticulo, cantidadArticulo, precioArticulo, idPedido) values ('" . $id . "','" . $cantidad . "','" . $precio . "','" . $idPedido . "')";
+            $conexion->query($insertDetallePedido);
         }
 
+        realizarTransaccion($importeCarrito);
         closeConnection($conexion);
     }
 
@@ -56,16 +83,16 @@ function insertCarrito($jsonCarrito) {
     $jsonCarrito = $_POST['carrito'];
 // Llamada al metodo
     insertCarrito($jsonCarrito);
+
 // Respuesta
-    $respuesta=array(
-    'status'  => 200,
-    'mensaje' => $_SESSION['usuarioLogueado'][0]['loginUsuario'].", su compra se ha relizado correctamente"
+    $respuesta = array(
+        'status' => 200,
+        'mensaje' => $_SESSION['usuarioLogueado'][0]['loginUsuario'] . ", su compra se ha relizado correctamente"
     );
-    
-}else{
-    $respuesta=array(
-    'status'  => 401,
-    'mensaje' => "Necesitas estar logueado para poder realizar la compra"
+} else {
+    $respuesta = array(
+        'status' => 401,
+        'mensaje' => "Necesitas estar logueado para poder realizar la compra"
     );
 }
 echo json_encode($respuesta);

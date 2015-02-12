@@ -118,8 +118,8 @@ function getAjaxBuscador($tabla, $parametro, $order) {
 }
 
 
-function getAjaxUsuarioNew($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $login, $password) {
-    $datos = {'rol': $rol, 'nombre': $nombre, 'ape1': $ape1, 'ape2': $ape2, 'nif': $nif, 'tf': $tf, 'correo': $correo, 'login': $login, 'password': $password};
+function getAjaxUsuarioNew($rol, $nombre, $ape1, $ape2, $nif, $tf, $numCuenta, $correo, $login, $password) {
+    $datos = {'rol': $rol, 'nombre': $nombre, 'ape1': $ape1, 'ape2': $ape2, 'nif': $nif, 'tf': $tf, 'numCuenta': $numCuenta, 'correo': $correo, 'login': $login, 'password': $password};
 
     return $.ajax({
         type: 'POST',

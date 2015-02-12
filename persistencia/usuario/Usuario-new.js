@@ -50,6 +50,11 @@ function mostrarRegistroUsuario() {
                     <input id='registro-input-tf' title='Formato: 9 dígitos sin espacios' name='tf' type='text' class='registro-input' placeholder='Formato: 9 dígitos sin espacios'/>\n\
                     <label id='registro-label-error-tf' for='registro-input-tf' class='registro-label-error'></label>\n\
                 </section>\n\
+                <section id='registro-bloqueNumCuenta' class='registro-bloqueDatos'>\n\
+                    <label for='registro-input-numCuenta' class='registro-label'>Número cuenta: </label>\n\
+                    <input id='registro-input-numCuenta' title='Formato: 0000-0000-0000' name='numCuenta' type='text' class='registro-input input-required' placeholder='Formato: 0000-0000-0000'/>\n\
+                    <label id='registro-label-error-numCuenta' for='registro-input-numCuenta' class='registro-label-error'>*</label>\n\
+                </section>\n\
                 <hr/>\n\
                 <span id='msg-requerido' class='registro-label-error'>*Campos requeridos</span>\n\
                 <section id='registro-bloqueCondiciones' class='registro-bloqueDatos'>\n\
@@ -89,6 +94,7 @@ function mostrarRegistroUsuario() {
     var inputApe2 = $("#registro-input-ape2");
     var inputNif = $("#registro-input-nif");
     var inputTf = $("#registro-input-tf");
+    var inputNumCuenta = $("#registro-input-numCuenta");
     var inputCorreo = $("#registro-input-correo");
     var inputUsuario = $("#registro-input-usuario");
     var inputPassword = $("#registro-input-password");
@@ -113,6 +119,7 @@ function mostrarRegistroUsuario() {
         errorValidacion += validarCoincidencia(formulario, inputPasswordRepe.attr('name'), inputPassword.val(), inputPasswordRepe.val());
         errorValidacion += validarNif(formulario, inputNif.attr('name'), inputNif.val().toUpperCase());
         errorValidacion += validarTf(formulario, inputTf.attr('name'), inputTf.val());
+        errorValidacion += validarNumCuenta(formulario, inputNumCuenta.attr('name'), inputNumCuenta.val());
         errorValidacion += validarCheckbox(formulario, checkCondiciones.attr('name'), checkCondiciones.is(':checked'));
 
 
@@ -144,6 +151,10 @@ function mostrarRegistroUsuario() {
         inputTf.keyup(function () {
             errorValidacion += validarTf(formulario, this.name, this.value);
         });
+        //Formato número de cuenta bancaria
+        inputNumCuenta.keyup(function () {
+            errorValidacion += validarNumCuenta(formulario, this.name, this.value);
+        });
         //Aceptación de condiciones
         checkCondiciones.click(function () {
             errorValidacion += validarCheckbox(formulario, this.name, this.checked);
@@ -163,7 +174,7 @@ function mostrarRegistroUsuario() {
             var numNif = inputNif.val().substring(0, 8);
             var letraNif = (inputNif.val().charAt(8)).toUpperCase();
             var nif = numNif+letraNif;
-            registrarUsuario(rolUsuario, inputNombre.val(), inputApe1.val(), inputApe2.val(), nif, inputTf.val(), inputCorreo.val(), inputUsuario.val(), inputPassword.val());
+            registrarUsuario(rolUsuario, inputNombre.val(), inputApe1.val(), inputApe2.val(), nif, inputTf.val(), inputNumCuenta.val(), inputCorreo.val(), inputUsuario.val(), inputPassword.val());
         }
 
     });
@@ -176,8 +187,8 @@ function mostrarRegistroUsuario() {
 }
 
 
-function registrarUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $login, $password) {
-    $promesa = getAjaxUsuarioNew($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $login, $password);
+function registrarUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $numCuenta, $correo, $login, $password) {
+    $promesa = getAjaxUsuarioNew($rol, $nombre, $ape1, $ape2, $nif, $tf, $numCuenta, $correo, $login, $password);
     $promesa.success(function (data) {
         if (data[0] !== null) {
             alert("El usuario '" + data[0].loginUsuario + "' se ha registrado correctamente");

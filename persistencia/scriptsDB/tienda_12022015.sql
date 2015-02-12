@@ -215,23 +215,23 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `apellido2Usuario` varchar(50) DEFAULT NULL,
   `dniUsuario` varchar(9) NOT NULL,
   `telefonoUsuario` varchar(9) DEFAULT NULL,
+  `numeroCuentaBancaria` varchar(25) DEFAULT NULL,
   `emailUsuario` varchar(50) NOT NULL,
   `loginUsuario` varchar(50) NOT NULL,
   `passwordUsuario` varchar(50) NOT NULL,
   PRIMARY KEY (`idUsuario`),
   UNIQUE KEY `loginUsuario` (`loginUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Volcando datos para la tabla tienda.usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` (`idUsuario`, `rolUsuario`, `nombreUsuario`, `apellido1Usuario`, `apellido2Usuario`, `dniUsuario`, `telefonoUsuario`, `emailUsuario`, `loginUsuario`, `passwordUsuario`) VALUES
-	(1, 'administrador', 'admin', 'admin', 'admin', '00000000T', '960000000', 'mail0@taronjagames.com', 'admin', 'admin'),
-	(2, 'usuario', 'Marti', 'Gómez', 'Fabiá', '00000001R', '960000001', 'mail1@taronjagames.com', 'usuario1', 'password1'),
-	(3, 'usuario', 'Jona', 'Hidalgo', 'Mora', '00000002W', '960000002', 'mail2@taronjagames.com', 'usuario2', 'password2'),
-	(4, 'usuario', 'Iván', 'Sánchez', 'Castelló', '00000003A', '960000003', 'mail3@taronjagames.com', 'usuario3', 'password3'),
-	(5, 'usuario', 'Fran', 'Navarro', 'Flores', '00000004G', '960000004', 'mail4@taronjagames.com', 'usuario4', 'password4'),
-	(6, 'usuario', NULL, NULL, NULL, '00000005M', '960000005', 'mail5@taronjagames.com', 'usuario5', 'password5'),
-	(7, 'administrador', 'deprueba', 'deprueba', 'deprueba', '11111111H', '960000006', 'm@taronjagames.com', 'a', 'a');
+INSERT INTO `usuario` (`idUsuario`, `rolUsuario`, `nombreUsuario`, `apellido1Usuario`, `apellido2Usuario`, `dniUsuario`, `telefonoUsuario`, `numeroCuentaBancaria`, `emailUsuario`, `loginUsuario`, `passwordUsuario`) VALUES
+	(1, 'administrador', 'admin', 'admin', 'admin', '00000000T', '960000000', '', 'mail0@taronjagames.com', 'admin', 'admin'),
+	(2, 'usuario', 'Marti', 'Gómez', 'Fabiá', '00000001R', '960000001', '0002-0002-0001', 'mail1@taronjagames.com', 'usuario1', 'password1'),
+	(3, 'usuario', 'Jona', 'Hidalgo', 'Mora', '00000002W', '960000002', '0001-0003-0003', 'mail2@taronjagames.com', 'usuario2', 'password2'),
+	(4, 'usuario', 'Iván', 'Sánchez', 'Castelló', '00000003A', '960000003', '0002-0004-0004', 'mail3@taronjagames.com', 'usuario3', 'password3'),
+	(5, 'usuario', 'Fran', 'Navarro', 'Flores', '00000004G', '960000004', '0002-0002-0002', 'mail4@taronjagames.com', 'usuario4', 'password4'),
+	(6, 'usuario', NULL, NULL, NULL, '00000005M', '960000005', '', 'mail5@taronjagames.com', 'usuario5', 'password5');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
