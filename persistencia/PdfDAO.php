@@ -2,12 +2,12 @@
 
 include 'ConnectionFactory.php';
 
-function select($id) {
+function select($idPedido) {
 
     //REALIZAR CONSULTA
 
     $conexion = getConnection();
-    $consulta = "select * from pedido where idPedido=".$id;
+    $consulta = "select * from detallePedido where idPedido=".$idPedido;
 
     //EXTRAER DATOS
 
@@ -25,11 +25,11 @@ function select($id) {
 
 // RECOGIDA DE DATOS
 
-$id = $_POST['id'];
+$idPedido = $_POST['idPedido'];
 
 // CONSULTAR DATOS
 
-$datos = select($id);
+$datos = select($idPedido);
 
 //DEVOLVER DATOS
 

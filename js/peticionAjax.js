@@ -212,12 +212,13 @@ function getAjaxCarrito($carrito){
     });
 }
 
-function getAjaxPDF($id) {
+function getAjaxPDF($idPedido) {
 
-    $datos = {'id': $id};
+    $datos = {'idPedido': $idPedido};
     return $.ajax({
         type: 'POST',
-        url: 'persistencia/PdfDAO.php',
+        url: '../PdfDAO.php',
+        dataType: "json",
         data: $datos
     });        
 }

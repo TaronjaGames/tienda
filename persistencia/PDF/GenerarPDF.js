@@ -3,23 +3,30 @@ function abrirPestana(idPedido) {
 }
 
 function generarPDF(idPedido) {
-
-    var doc = new jsPDF();
-
-    doc.setFontSize(22);
-    doc.text(20, 20, 'Factura de la compra');
-    doc.setFontSize(16);
-
-
     $promesa = getAjaxPDF(idPedido);
 
     $promesa.success(function (data) {
         
-    
-$.each(data, function (index) {
-        nombreArticulo = data[index].nombreArticulo;
-        doc.text(20, 30, nombreArticulo);
+        alto=30;
+        ancho=10;
+        
+        var doc = new jsPDF();
+
+        alert(JSON.stringify(data));
+        
+        //doc.line(coorX1, coorY1, coorX2, coorY2);
+
+        doc.setFontSize(22);
+        doc.text(10, 20, 'Factura de la compra');
+        doc.setFontSize(16);
+
+        $.each(data, function (index) {
+            idArticulo = data[index].idArticulo;
+            precioArticulo = data[index].precioArticulo;
+            doc.text((ancho=ancho+10), (alto=alto+10), idArticulo);
+            doc.text((ancho=ancho+10), (alto=alto+10), precioArticulo);
+        });
+
+        doc.output('datauri');
     });
-});
-    doc.output('datauri');
 }
