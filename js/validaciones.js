@@ -6,7 +6,6 @@ function mostrarMensaje(formulario, dato, mensaje, tipoMensaje) {
 
     $(labelError).text(mensaje);
     if (tipoMensaje === "error") {
-        alert(campo);
         $(campo).css('backgroundColor', 'rgba(255,102,0,.6)');
         $(campo).css('color', 'white');
     }
@@ -214,7 +213,7 @@ function validarTf(formulario, dato, tf) {
 //VALIDACIÓN NÚMERO DE CUENTA
 function validarNumCuenta(formulario, dato, numCuenta) {
     var error = 0;
-    if (numCuenta !== "" && !(/\d{4}-\d{4}-\d{4}/.test(numCuenta))) {
+    if (!(/\d{4}-\d{4}-\d{4}/.test(numCuenta))) {
         var mensajeNumCuenta = " *Formato: 0000-0000-0000";
         mostrarMensaje(formulario, dato, mensajeNumCuenta, "error");
         error = -1;
