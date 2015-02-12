@@ -7,7 +7,7 @@ if (isset($_SESSION['usuarioLogueado'])) {
     function realizarTransaccion($importeCarrito) {
         $numeroCuentaCliente = $_SESSION['usuarioLogueado'][0]['numeroCuentaBancaria']; //Cuenta origen
         $numeroCuentaTienda = "0002-0002-0001"; //Cuenta destino -> Consultar BD
-        $pinTienda = "1111111111"; //PIN de la tienda en el banco -> Consultar BD
+        $pinTienda = "6666666666"; //PIN de la tienda en el banco -> Consultar BD
         $conceptoTransaccion = "Compra TaronjaGames";
 
         //Ejecución de la transacción
