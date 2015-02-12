@@ -6,25 +6,44 @@ function generarPDF(idPedido) {
     $promesa = getAjaxPDF(idPedido);
 
     $promesa.success(function (data) {
-        
-        alto=30;
-        ancho=10;
-        
+
+        alto = 50;
+        ancho = 10;
+
         var doc = new jsPDF();
 
-        alert(JSON.stringify(data));
-        
-        //doc.line(coorX1, coorY1, coorX2, coorY2);
+        //logo = new Image();
+        //logo.src = 'img/logo.jpg';
+        //doc.addImage(logo, 'JPEG', 10, 10, 50, 70);
 
-        doc.setFontSize(22);
-        doc.text(10, 20, 'Factura de la compra');
-        doc.setFontSize(16);
+        doc.setFontSize(12);
+        doc.text(10, 20, "Numero de pedido: " + data[0].idPedido);
+        doc.text(10, 30, "Fecha de la compra: " + new Date());
+        doc.setFontSize(14);
+
+        doc.text((ancho + 10), alto, "ID");
+        doc.text((ancho + 50), alto, "Cantidad");
+        doc.text((ancho + 100), alto, "Precio/Unidad");
+        doc.text((ancho + 150), alto, "Precio total");
+        doc.line(0, (alto + 5), 300, (alto + 5));
 
         $.each(data, function (index) {
+
+
+
+            doc.setFontSize(12);
+
             idArticulo = data[index].idArticulo;
+            cantidadArticulo = data[index].cantidadArticulo;
             precioArticulo = data[index].precioArticulo;
-            doc.text((ancho=ancho+10), (alto=alto+10), idArticulo);
-            doc.text((ancho=ancho+10), (alto=alto+10), precioArticulo);
+            //precioTotal = (parseFloat(precioArticulo) * parseInt(cantidadArticulo));
+
+            doc.text((ancho + 10), (alto = alto + 10), idArticulo);
+            doc.text((ancho + 50), alto, cantidadArticulo);
+            doc.text((ancho + 100), alto, precioArticulo);
+            //doc.text((ancho + 150), alto, precioTotal);
+
+
         });
 
         doc.output('datauri');
