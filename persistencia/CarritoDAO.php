@@ -2,7 +2,7 @@
 
 session_start();
 include 'ConnectionFactory.php';
-//include '../servicio/Transaccion.php';
+include '../servicio/Transaccion.php';
 
 
 if (isset($_SESSION["usuarioLogueado"])) {
@@ -22,8 +22,6 @@ if (isset($_SESSION["usuarioLogueado"])) {
         $carrito = json_decode($jsonCarrito);
 
         $idPedido = $conexion->insert_id;
-
-        $importeCarrito = 0;
 
         for ($i = 0; $i < count($carrito->articulos); $i++) {
 
@@ -48,21 +46,24 @@ if (isset($_SESSION["usuarioLogueado"])) {
             $insertDetallePedido = "insert into detallepedido (idArticulo, cantidadArticulo, precioArticulo, idPedido) values ('" . $id . "','" . $cantidad . "','" . $precio . "','" . $idPedido . "')";
             $conexion->query($insertDetallePedido);
         }
-
-//        realizarTransaccion($importeCarrito);
         closeConnection($conexion);
+
+        return $importeCarrito;
     }
 
 // RECOGIDA DE DATOS
     $jsonCarrito = $_POST['carrito'];
+
 // Llamada al metodo
-    insertCarrito($jsonCarrito);
+    $importeCarrito = insertCarrito($jsonCarrito);
 
 // Respuesta
     $respuesta = array(
         'status' => 200,
         'mensaje' => $_SESSION['usuarioLogueado'][0]['loginUsuario'] . ", su compra se ha relizado correctamente"
     );
+
+    realizarTransaccion($importeCarrito);
 } else {
     $respuesta = array(
         'status' => 401,
