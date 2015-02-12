@@ -7,19 +7,20 @@ include 'ConnectionFactory.php';
 if (isset($_SESSION["usuarioLogueado"])) {
 
     function realizarTransaccion($importeCarrito) {
-        //$consultaNumCuentaTienda = "";
-        //$consultaNumCuentaCliente = "";
-        $numeroCuentaCliente = "0002-0002-0002";
-//        $numeroCuentaCliente = $_SESSION['usuarioLogueado'][0]['numeroCuentaBancaria'];
-        $numeroCuentaTienda = "0002-0002-0001";
-        //$pinTienda = "0001";
+        $numeroCuentaCliente = $_SESSION['usuarioLogueado'][0]['numeroCuentaBancaria']; //Cuenta origen
+        $numeroCuentaTienda = "0002-0002-0001"; //Cuenta destino -> Consultar BD
+        $pinTienda = "1111111111"; //PIN de la tienda en el banco -> Consultar BD
+        $conceptoTransaccion = "Compra TaronjaGames";
 
+
+        //Ejecución de la transacción
         $url = "http://localhost/banco/api/Transaccion";
         $datos = [
             "numeroCuentaOrigen" => $numeroCuentaCliente,
             "numeroCuentaDestino" => $numeroCuentaTienda,
             "importe" => $importeCarrito,
-            "concepto" => "Compra Taronja"
+            "concepto" => $conceptoTransaccion,
+            "apiKey" => $pinTienda
         ];
 
         $handler = curl_init();
