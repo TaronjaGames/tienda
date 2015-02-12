@@ -2,42 +2,16 @@
 
 session_start();
 include 'ConnectionFactory.php';
+include '../servicio/Transaccion.php';
 
 
 if (isset($_SESSION["usuarioLogueado"])) {
-
-    function realizarTransaccion($importeCarrito) {
-        $numeroCuentaCliente = $_SESSION['usuarioLogueado'][0]['numeroCuentaBancaria']; //Cuenta origen
-        $numeroCuentaTienda = "0002-0002-0001"; //Cuenta destino -> Consultar BD
-        $pinTienda = "1111111111"; //PIN de la tienda en el banco -> Consultar BD
-        $conceptoTransaccion = "Compra TaronjaGames";
-
-
-        //Ejecución de la transacción
-        $url = "http://localhost/banco/api/Transaccion";
-        $datos = [
-            "numeroCuentaOrigen" => $numeroCuentaCliente,
-            "numeroCuentaDestino" => $numeroCuentaTienda,
-            "importe" => $importeCarrito,
-            "concepto" => $conceptoTransaccion,
-            "apiKey" => $pinTienda
-        ];
-
-        $handler = curl_init();
-        curl_setopt($handler, CURLOPT_URL, $url);
-        curl_setopt($handler, CURLOPT_POST, true);
-        curl_setopt($handler, CURLOPT_POSTFIELDS, $datos);
-        //curl_setopt($handler, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($handler);
-        curl_close($handler);
-    }
 
     function insertCarrito($jsonCarrito) {
 
         $conexion = getConnection();
 
         //Insertar Pedido
-
         $fecha = date("Ymd");
         $idCliente = $_SESSION['usuarioLogueado'][0]['idUsuario'];
 
@@ -45,7 +19,6 @@ if (isset($_SESSION["usuarioLogueado"])) {
         $conexion->query($insertPedido);
 
         //Insertar DetallePedidos
-
         $carrito = json_decode($jsonCarrito);
 
         $idPedido = $conexion->insert_id;
