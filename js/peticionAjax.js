@@ -211,3 +211,13 @@ function getAjaxCarrito($carrito){
         data: $datos
     });
 }
+
+function getAjaxPDF($id) {
+
+    $datos = {'id': $id};
+    return $.ajax({
+        type: 'POST',
+        url: 'persistencia/PdfDAO.php',
+        data: $datos
+    });        
+}
