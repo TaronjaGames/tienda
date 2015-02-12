@@ -2,7 +2,7 @@
 
 session_start();
 include 'ConnectionFactory.php';
-include '../servicio/Transaccion.php';
+//include '../servicio/Transaccion.php';
 
 
 if (isset($_SESSION["usuarioLogueado"])) {
@@ -49,7 +49,7 @@ if (isset($_SESSION["usuarioLogueado"])) {
             $conexion->query($insertDetallePedido);
         }
 
-        realizarTransaccion($importeCarrito);
+//        realizarTransaccion($importeCarrito);
         closeConnection($conexion);
     }
 
