@@ -123,9 +123,6 @@ function mostrarMenuLogin(data) {
                                 <li role='presentation'>\n\
                                     <a id='enlaceDesconectar' role='menuitem' tabindex='-1' href='#'>Desconectar</a>\n\
                                 </li>\n\
-                                <li role='presentation'>\n\
-                                    <a id='enlaceCambiarUsuario' role='menuitem' tabindex='-1' href='#'>Cambiar usuario</a>\n\
-                                </li>\n\
                             </ul>\n\
                         </div>";
 
@@ -169,14 +166,8 @@ function mostrarMenuLogin(data) {
     }
 
 
-    //Acciones del menú desplegable de usuario logueado
     $("#enlaceDesconectar").click(function () {
         logOut();
-    });
-    $("#enlaceCambiarUsuario").click(function () {
-        accionPrevia = this.id;
-        $("#bloqueLogin").dialog("open");
-//        mostrarLogin();
     });
 
     //Acciones click del menuV
