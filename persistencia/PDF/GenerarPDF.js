@@ -13,8 +13,9 @@ function generarPDF(idPedido) {
         var doc = new jsPDF();
 
         //logo = new Image();
+        logo = 'data:image/jpeg;base64,'+Base64.encode('img/logo.jpg');
         //logo.src = 'img/logo.jpg';
-        //doc.addImage(logo, 'JPEG', 10, 10, 50, 70);
+        doc.addImage(logo, 'JPEG', 10, 10, 50, 70);
 
         doc.setFontSize(12);
         doc.text(10, 20, "Numero de pedido: " + data[0].idPedido);
@@ -29,20 +30,17 @@ function generarPDF(idPedido) {
 
         $.each(data, function (index) {
 
-
-
             doc.setFontSize(12);
 
             idArticulo = data[index].idArticulo;
             cantidadArticulo = data[index].cantidadArticulo;
             precioArticulo = data[index].precioArticulo;
-            //precioTotal = (parseFloat(precioArticulo) * parseInt(cantidadArticulo));
-
+            precioTotal = (parseFloat(precioArticulo) * parseFloat(cantidadArticulo));
+            
             doc.text((ancho + 10), (alto = alto + 10), idArticulo);
             doc.text((ancho + 50), alto, cantidadArticulo);
             doc.text((ancho + 100), alto, precioArticulo);
-            //doc.text((ancho + 150), alto, precioTotal);
-
+            doc.text((ancho + 150), alto, precioTotal+"");
 
         });
 
