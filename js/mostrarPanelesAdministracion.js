@@ -41,7 +41,9 @@ function mostrarPanelesUsuario() {
     $("#panel-admin-usuario-new").click(function () {
         accionPrevia = this.id;
         //alert(accionPrevia);
-        mostrarRegistroUsuario();
+//        mostrarRegistroUsuarioAdmin();
+        $("#registro-admin-boton-listar").show();
+        $("#bloqueRegistro-admin").dialog("open");
     });
     $("#panel-admin-usuario-list").click(function () {
         accionPrevia = this.id;
@@ -72,7 +74,9 @@ function mostrarPanelesArticulo() {
     $("#panel-admin-articulo-new").click(function () {
         accionPrevia = this.id;
         //alert(accionPrevia);
-        mostrarNewArticulo();
+//        mostrarNewArticulo();
+        $("#newArticulo-boton-listar").show();
+        $("#bloqueNuevoArticulo").dialog("open");
     });
     $("#panel-admin-articulo-list").click(function () {
         accionPrevia = this.id;

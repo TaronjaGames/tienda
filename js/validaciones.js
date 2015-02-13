@@ -14,7 +14,7 @@ function quitarMensaje(formulario, dato) {
     var campo = "#" + formulario + "-input-" + dato;
     var labelError = "#" + formulario + "-label-error-" + dato;
 
-    $(labelError).text("");
+    $(labelError).text("*");
     $(campo).css('backgroundColor', 'white');
     $(campo).css('color', 'black');
 }
@@ -202,6 +202,20 @@ function validarTf(formulario, dato, tf) {
     if (tf !== "" && !(/\d{9}/.test(tf))) {
         var mensajeTf = " *Formato: 9 dígitos sin espacios";
         mostrarMensaje(formulario, dato, mensajeTf, "error");
+        error = -1;
+    } else {
+        quitarMensaje(formulario, dato);
+    }
+    return error;
+}
+
+
+//VALIDACIÓN NÚMERO DE CUENTA
+function validarNumCuenta(formulario, dato, numCuenta) {
+    var error = 0;
+    if (!(/\d{4}-\d{4}-\d{4}/.test(numCuenta))) {
+        var mensajeNumCuenta = " *Formato: 0000-0000-0000";
+        mostrarMensaje(formulario, dato, mensajeNumCuenta, "error");
         error = -1;
     } else {
         quitarMensaje(formulario, dato);

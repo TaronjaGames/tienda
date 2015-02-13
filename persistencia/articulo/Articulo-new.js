@@ -6,11 +6,11 @@ function mostrarNewArticulo() {
 //    if (accionPrevia === "panel-admin-articulo-new" || accionPrevia === "opciones-admin-newArticulo") {
 //        claseCajaFormulario = "";
 //    } else {
-//        claseCajaFormulario = "dialog-new";
+//        claseCajaFormulario = " dialog-new";
 //    }
 
-//var datos = "<div id='bloqueNuevoArticulo' class='caja-formulario " + claseCajaFormulario + "'>\n\
-    var datos = "<div id='bloqueNuevoArticulo' class='caja-formulario'>\n\
+//var datos = "<div id='bloqueNuevoArticulo' class='caja-formulario" + claseCajaFormulario + "'>\n\
+    var datos = "<div id='bloqueNuevoArticulo' class='caja-formulario dialog-new' style='display: none'>\n\
                 <p id='titulo-formulario-articulo-new' class='tituloFormulario'>Registro de nuevo artículo.</p>\n\
                 <hr/>\n\
                 <section id='newArticulo-bloqueNombre' class='registro-bloqueDatos'>\n\
@@ -63,23 +63,19 @@ function mostrarNewArticulo() {
             </div>";
 
     //En función del botón de donde venimos...
-    if (accionPrevia === "panel-admin-articulo-new" || accionPrevia === "opciones-admin-newArticulo" || accionPrevia === "opciones-desplegable-admin-newArticulo") {
-        $("#articulos").html(datos);//Para no dialog
-    } else {
-        $("#articulos").html(datos);//Para dialog, cambiar a append
-        //Definición del dialog
-//        $(function () {
-//            $("#bloqueNuevoArticulo").dialog(
-//                    {
-//                        autoOpen: false,
-//                        modal: true,
-//                        title: "Gestión de artículos",
-//                        minWidth: 550
-//                    }
-//            );
-//        });
-        $("#newArticulo-boton-listar").css("display", "none");
-    }
+    $("#articulos").html(datos);//Para no dialog
+
+    //Definición del dialog
+    $("#bloqueNuevoArticulo").dialog(
+            {
+                autoOpen: false,
+                modal: true,
+                title: "Gestión de artículos",
+                minWidth: 550,
+                show: "fadeIn",
+                hide: "fadeOut"
+            }
+    );
 
     $("#newArticulo-check-oferta").change(function () {
         if (this.checked) {
@@ -164,7 +160,18 @@ function mostrarNewArticulo() {
 
         //ENVÍO PARA REGISTRO EN BD
         if (errorValidacion === 0) {
-            grabarArticulo(inputNombre.val(), inputDescripcion.val(), inputPrecio.val(), inputImg.val(), selectPlataforma.val(), inputTipo.val(), inputOferta.val());
+            var tabla = "plataforma";
+            var orden = "asc";
+            var idPlataformaEdit = 0;
+            $promesa = getAjax(tabla, orden);
+            $promesa.success(function (data) {
+                $.each(data, function (index) {
+                    if (data[index].nombrePlataforma === selectPlataforma.val()) {
+                        idPlataformaEdit = data[index].idPlataforma;
+                    }
+                });
+                grabarArticulo(inputNombre.val(), inputDescripcion.val(), inputPrecio.val(), inputImg.val(), idPlataformaEdit, selectPlataforma.val(), inputTipo.val(), inputOferta.val());
+            });
         }
 
     });
@@ -178,42 +185,22 @@ function mostrarNewArticulo() {
 
     //BOTÓN CANCELAR
     $("#newArticulo-boton-cancelar").click(function () {
-        if (accionPrevia === "panel-admin-articulo-new" || accionPrevia === "opciones-admin-newArticulo" || accionPrevia === "opciones-desplegable-admin-newArticulo") {
-            if (accionPrevia === "panel-admin-articulo-new") {
-                mostrarPanelesArticulo();
-            } else {
-                mostrarPanelesAdmin();
-            }
-        } else {
-            mostrarListaArticulos();
-//            $("#bloqueNuevoArticulo").dialog("close");
-            $("#lista-articulos").jqGrid().trigger("reloadGrid");
-        }
+        $("#bloqueNuevoArticulo").dialog("close");
+        $("#lista-articulos").jqGrid().trigger("reloadGrid");
     });
 
 }
 
-function grabarArticulo($nombre, $descrip, $precio, $img, $plataforma, $tipo, $precioOferta) {
-    $promesa = getAjaxArticuloNew($nombre, $descrip, $precio, $img, $plataforma, $tipo, $precioOferta);
+function grabarArticulo($nombre, $descrip, $precio, $img, $idPlataforma, $plataforma, $tipo, $precioOferta) {
+    $promesa = getAjaxArticuloNew($nombre, $descrip, $precio, $img, $idPlataforma, $plataforma, $tipo, $precioOferta);
     $promesa.success(function (data) {
         if (data[0] !== null) {
             alert("El artículo '" + data[0].nombreArticulo + "' se ha grabado correctamente");
-            if (accionPrevia === "panel-admin-articulo-new" || accionPrevia === "opciones-admin-newArticulo" || accionPrevia === "opciones-desplegable-admin-newArticulo") {
-                if (accionPrevia === "panel-admin-articulo-new") {
-                    mostrarNewArticulo();
-                    //mostrarPanelesArticulo();
-                } else {
-                    mostrarNewArticulo();
-                    //mostrarPanelesAdmin();
-                }
-            } else {
-//            $(".registro-input").val("");
-//            $(".registro-select option[value='...']").attr("selected","selected");
-//                mostrarListaArticulos();
-//            $("#bloqueNuevoArticulo").dialog("close");
-                mostrarNewArticulo();
-                jQuery("#lista-articulos").jqGrid().trigger("reloadGrid");
-            }
+
+            $("#bloqueNuevoArticulo input").val("");
+            $("#bloqueNuevoArticulo option[value='...']").attr("selected", "selected");
+            $("#bloqueNuevoArticulo option[type='checkbox']").removeAttr("checked");
+            jQuery("#lista-articulos").jqGrid().trigger("reloadGrid");
         } else {
             alert("Ha ocurrido un error: el artículo no ha podido ser guardado");
         }

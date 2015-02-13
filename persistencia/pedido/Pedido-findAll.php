@@ -30,9 +30,9 @@ if ($_SESSION["usuarioLogueado"][0]['rolUsuario'] == "administrador") {
         $page = $total_pages;
     $start = $limit * $page - $limit; // do not put $limit*($page - 1)
 
-    $SQL = "SELECT p.idPedido, p.fechaPedido, p.idCliente, concat(round(sum(d.cantidadArticulo*d.precioArticulo),2),' €') AS importePedido"
-            . " FROM pedido p INNER JOIN detallepedido d"
-            . " ON p.idPedido = d.idPedido"
+    $SQL = "SELECT p.idPedido, p.fechaPedido, u.dniUsuario, u.loginUsuario, concat(round(sum(d.cantidadArticulo*d.precioArticulo),2),' €') AS importePedido"
+            . " FROM pedido p, detallepedido d, usuario u"
+            . " WHERE p.idPedido = d.idPedido AND p.idCliente = u.idUsuario"
             . " GROUP BY p.idPedido"
             . " ORDER BY $sidx $sord LIMIT $start , $limit";
 
@@ -46,7 +46,7 @@ if ($_SESSION["usuarioLogueado"][0]['rolUsuario'] == "administrador") {
 
     while ($row = $result->fetch_assoc()) {
         $respuesta->rows[$i]['id'] = $row['idPedido'];
-        $respuesta->rows[$i]['cell'] = array($row['idPedido'], $row['fechaPedido'], $row['idCliente'], $row['importePedido']/*, "€"*/);
+        $respuesta->rows[$i]['cell'] = array($row['idPedido'], $row['fechaPedido'], $row['dniUsuario'], $row['loginUsuario'], $row['importePedido']/*, "€"*/);
         $i++;
     }
     closeConnection($conexion);

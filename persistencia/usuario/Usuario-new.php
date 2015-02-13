@@ -2,13 +2,13 @@
 session_start();
 include '../ConnectionFactory.php';
 
-function newUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $login, $password) {
+function newUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $numCuenta, $correo, $login, $password) {
 
     $conexion = getConnection();
 
-    $consulta = "INSERT INTO usuario (idUsuario, rolUsuario, nombreUsuario, apellido1Usuario, apellido2Usuario,"
-            . " dniUsuario, telefonoUsuario, emailUsuario, loginUsuario, passwordUsuario)"
-            . " VALUES(null, '" . $rol . "', '" . $nombre . "', '" . $ape1 . "', '" . $ape2 . "', '" . $nif . "', '" . $tf . "', '" . $correo . "', '" . $login . "', '" . $password . "')";
+    $consulta = "INSERT INTO usuario (idUsuario, rolUsuario, nombreUsuario, apellido1Usuario, apellido2Usuario," 
+            . " dniUsuario, telefonoUsuario, numeroCuentaBancaria, emailUsuario, loginUsuario, passwordUsuario)"
+            . " VALUES(null, '" . $rol . "', '" . $nombre . "', '" . $ape1 . "', '" . $ape2 . "', '" . $nif . "', '" . $tf . "', '" . $numCuenta . "', '" . $correo . "', '" . $login . "', '" . $password . "')";
     
     $consultaRetorno = "SELECT * FROM usuario WHERE loginUsuario='" . $login . "'";
 
@@ -31,11 +31,12 @@ $ape1 = $_POST['ape1'];
 $ape2 = $_POST['ape2'];
 $nif = $_POST['nif'];
 $tf = $_POST['tf'];
+$numCuenta = $_POST['numCuenta'];
 $correo = $_POST['correo'];
 $login = $_POST['login'];
 $password = $_POST['password'];
 
-$datos = newUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $login, $password);
+$datos = newUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $numCuenta, $correo, $login, $password);
 
 header('Content-type: application/json');
 echo json_encode($datos);

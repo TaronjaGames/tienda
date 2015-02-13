@@ -1,8 +1,7 @@
 
-function mostrarEditArticulo() {
-
-//var datos = "<div id='bloqueEditArticulo' class='caja-formulario dialog-editar'>\n\
-    var datos = "<div id='bloqueEditArticulo' class='caja-formulario'>\n\
+function mostrarEditArticulo(listaPlataformas) {
+    //alert(listaPlataformas[2].nombrePlataforma);
+    var datos = "<div id='bloqueEditArticulo' class='caja-formulario dialog-editar' style='display: none'>\n\
                 <p id='titulo-formulario-articulo-edit' class='tituloFormulario'>Edición de artículo.</p>\n\
                 <hr/>\n\
                 <section id='editArticulo-bloqueId' class='registro-bloqueDatos'>\n\
@@ -59,19 +58,20 @@ function mostrarEditArticulo() {
                 </section>\n\
             </div>";
 
-    $("#articulos").html(datos);//Para dialog, cambiar a append
+    $("#articulos").html(datos);
+
     //Definición del dialog
-//    $(function () {
-//        $("#bloqueEditArticulo").dialog(
-//                {
-//                    autoOpen: false,
-//                    modal: true,
-//                    title: "Gestión de productos",
-//                    minWidth: 550
-//                }
-//        );
-//    });
-    
+    $("#bloqueEditArticulo").dialog(
+            {
+                autoOpen: false,
+                modal: true,
+                title: "Gestión de productos",
+                minWidth: 550,
+                show: "fadeIn",
+                hide: "fadeOut"
+            }
+    );
+
     $("#editArticulo-check-oferta").change(function () {
         if (this.checked) {
             $("#editArticulo-input-oferta").removeAttr("disabled");
@@ -84,7 +84,7 @@ function mostrarEditArticulo() {
 
 
     function cargarPlataformaEdit() {
-        var datos = "<option id='mensaje-lista-option-plataforma' class='mensaje-lista-option' value='...'>...</option>";
+        var datos = "<option id='mensaje-lista-option-plataforma' class='mensaje-lista-option' value='...'>-- Elige una opción --</option>";
         $.each(listaPlataformas, function (index) {
             datos += "<option class='option-plataforma' value='" + listaPlataformas[index].nombrePlataforma + "'>" + listaPlataformas[index].nombrePlataforma + "</option>";
         });
@@ -92,8 +92,8 @@ function mostrarEditArticulo() {
         $("#editArticulo-select-plataforma").append(datos);
     }
     cargarPlataformaEdit();//Carga las plataformas en el select
-    
-    
+
+
     var formulario = "editArticulo";
     var listaRequeridos = $("#bloqueEditArticulo input[class$='input-required']");
 
@@ -106,8 +106,8 @@ function mostrarEditArticulo() {
     var selectPlataforma = $("#editArticulo-select-plataforma");
     var inputTipo = $("#editArticulo-input-tipo");
     var inputOferta = $("#editArticulo-input-oferta");
-    
-    
+
+
     //VALIDACIONES
     function validarEditArticulo() {
         var errorValidacion = 0;
@@ -146,7 +146,7 @@ function mostrarEditArticulo() {
 
         return errorValidacion;
     }
-    
+
     //BOTÓN EDITAR
     pulsado = false;
     $("#editArticulo-boton-guardar").click(function () {
@@ -158,15 +158,15 @@ function mostrarEditArticulo() {
         }
 
     });
-    
-    
+
+
     //BOTÓN CANCELAR
-    $("#editArticulo-boton-cerrar").click(function(){
-        mostrarListaArticulos();
-//        $("#bloqueEditArticulo").dialog("close");
+    $("#editArticulo-boton-cerrar").click(function () {
+//        mostrarListaArticulos();
+        $("#bloqueEditArticulo").dialog("close");
         $("#lista-articulos").jqGrid().trigger("reloadGrid");
     });
-    
+
 
 }
 
@@ -177,8 +177,8 @@ function editarArticulo($id, $nombre, $descrip, $precio, $img, $idPlataforma, $p
     $promesa.success(function (data) {
         if (data[0] !== null) {
             alert("El artículo '" + data[0].nombreArticulo + "' se ha actualizado correctamente");
-            mostrarListaArticulos();
-//            $("#bloqueEditArticulo").dialog("close");
+//            mostrarListaArticulos();
+            $("#bloqueEditArticulo").dialog("close");
             jQuery("#lista-articulos").jqGrid().trigger("reloadGrid");
         } else {
             alert("Ha ocurrido un error: el artículo no ha podido ser actualizado");

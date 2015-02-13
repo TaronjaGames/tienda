@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="tienda" default="distOpenShift" basedir=".">
+        
+    <target name="distOpenShift">
+        
+        <taskdef  resource="es/logongas/openshift/ant/antlib.xml" />
+        
+        <replace file="persistencia/ConnectionFactory.php" token='$server = "localhost";' value='$server = "127.10.202.2:3306";'/>
+        <replace file="persistencia/ConnectionFactory.php" token='$username = "root";' value='$username = "${username}";'/>
+        <replace file="persistencia/ConnectionFactory.php" token='$password = "root";' value='$password = "${passworddb}";'/>
+        <replace file="persistencia/ConnectionFactory.php" token='$databasename = "tienda";' value='$databasename = "taronjagames";'/>
+        
+        
+        
+        <delete dir="../taronjagames"></delete>
+              
+        <gitcloneapplication    
+            userName="ivansc3@hotmail.com"
+            password="${password}"
+            domainName="taronjagames"
+            applicationName="taronjagames" 
+            privateKeyFile="../.ssh/id_rsa"
+            path="../taronjagames"
+        />
+        
+        
+        
+        <mkdir dir="../tmp"/>
+        <mkdir dir="../.git"/>
+        <mkdir dir="../.openshift"/>
+        
+        <copy todir="../tmp/.git">
+            <fileset dir="../taronjagames/.git"/>
+        </copy>
+        
+        <copy todir="../tmp/.openshift">
+            <fileset dir="../taronjagames/.openshift"/>
+        </copy>
+        
+        
+        
+        <delete dir="../taronjagames"></delete>
+        <mkdir dir="../taronjagames"/>
+        <mkdir dir="../taronjagames/.git"/>
+        <mkdir dir="../taronjagames/.openshift"/>
+        
+        <copy todir="../taronjagames/.git">
+            <fileset dir="../tmp/.git"/>
+        </copy>
+        
+        <copy todir="../taronjagames/.openshift">
+            <fileset dir="../tmp/.openshift"/>
+        </copy>
+        
+        <delete dir="../tmp"></delete>
+        <delete dir=".git"></delete>
+        <delete dir=".gitignore"></delete>
+
+        <git dir="../taronjagames" command="add *"></git>
+        <git dir="../taronjagames" command="commit" options=" -am 'commit'"></git>
+
+        <copy todir="../taronjagames">
+            <fileset dir="./"/>
+        </copy>
+        
+        <git dir="../taronjagames" command="add *"></git>
+        <git dir="../taronjagames" command="commit" options=" -am 'commit'"></git>
+        
+        <gitpushapplication    
+            userName="ivansc3@hotmail.com"
+            password="${password}"
+            domainName="taronjagames"
+            applicationName="taronjagames" 
+            privateKeyFile="../.ssh/id_rsa"
+            path="../taronjagames"
+        />
+        
+        
+    </target>
+</project>

@@ -278,17 +278,15 @@ function enviarCarrito($carrito) {
             $promesa = getAjaxCarrito($carrito);
             $promesa.success(function (data) {
 
-                if (data.status === 401) {
-                    alert("Necesitas estar logueado para poder realizar la compra");
-                } else if (data.status === 200) {
-
-                    alert(data.mensaje);
-                    abrirPestana(data.idPedido);
-                    mostrarCarrito();
-                    vaciarCarrito();
-                }
-
-            });
+    $promesa.success(function (data) {
+        
+        if(data.status==401){
+            alert("Necesitas estar logueado para poder realizar la compra");
+            $("#bloqueLogin").dialog("open");
+        }else if (data.status==200) {
+            alert(data.mensaje);
+            mostrarCarrito();
+            vaciarCarrito();
         }
     } else {
         alert("No tienes ningun articulo en el carrito");

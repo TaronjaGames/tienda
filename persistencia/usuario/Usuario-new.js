@@ -1,35 +1,9 @@
 
 function mostrarRegistroUsuario() {
-    //alert(accionPrevia);
-    if (usuarioLogueado.rolUsuarioLogueado !== "administrador") {
-        var esAdmin = false;
-        var ocultoUsuario = "none";
-        var ocultoAdmin = "block";
-    } else {
-        esAdmin = true;
-        ocultoUsuario = "block";
-        ocultoAdmin = "none";
-    }
 
-//    var claseCajaFormulario = "";
-//    if (accionPrevia === "botonRegistro" || accionPrevia === "panel-admin-usuario-new" || accionPrevia === "opciones-admin-newUsuario" || accionPrevia === "opciones-desplegable-admin-newUsuario") {
-//        claseCajaFormulario = "";
-//    } else {
-//        claseCajaFormulario = " dialog-new";
-//    }
-
-//var datos = "<div id='bloqueRegistro' class='caja-formulario" + claseCajaFormulario + "'>\n\
-    var datos = "<div id='bloqueRegistro' class='caja-formulario'>\n\
+    var datos = "<div id='bloqueRegistro' class='caja-formulario dialog-new' style='display: none'>\n\
                 <p id='tituloRegistroUsuario' class='tituloFormulario'>Registro de nuevo usuario.</p>\n\
                 <hr/>\n\
-                <section id='registro-bloqueRol' class='registro-bloqueDatos' style='display: " + ocultoUsuario + "'>\n\
-                    <label for='registro-select-rol' class='registro-label'>Rol: </label>\n\
-                    <select id='registro-select-rol' name='rol' class='registro-select' autofocus='autofocus'>\n\
-                        <option value='usuario' selected='selected'>Usuario</option>\n\
-                        <option value='administrador'>Administrador</option>\n\
-                    </select>\n\
-                </section>\n\
-                <br id='linea-rol' style='display: " + ocultoUsuario + "'/>\n\
                 <section id='registro-bloqueCorreo' class='registro-bloqueDatos'>\n\
                     <label for='registro-input-correo' class='registro-label'>Correo: </label>\n\
                     <input id='registro-input-correo' name='correo' type='email' class='registro-input input-required'/>\n\
@@ -76,9 +50,14 @@ function mostrarRegistroUsuario() {
                     <input id='registro-input-tf' title='Formato: 9 dígitos sin espacios' name='tf' type='text' class='registro-input' placeholder='Formato: 9 dígitos sin espacios'/>\n\
                     <label id='registro-label-error-tf' for='registro-input-tf' class='registro-label-error'></label>\n\
                 </section>\n\
+                <section id='registro-bloqueNumCuenta' class='registro-bloqueDatos'>\n\
+                    <label for='registro-input-numCuenta' class='registro-label'>Número cuenta: </label>\n\
+                    <input id='registro-input-numCuenta' title='Formato: 0000-0000-0000' name='numCuenta' type='text' class='registro-input input-required' placeholder='Formato: 0000-0000-0000'/>\n\
+                    <label id='registro-label-error-numCuenta' for='registro-input-numCuenta' class='registro-label-error'>*</label>\n\
+                </section>\n\
                 <hr/>\n\
                 <span id='msg-requerido' class='registro-label-error'>*Campos requeridos</span>\n\
-                <section id='registro-bloqueCondiciones' class='registro-bloqueDatos' style='display: " + ocultoAdmin + "'>\n\
+                <section id='registro-bloqueCondiciones' class='registro-bloqueDatos'>\n\
                     <input id='registro-check-condiciones' type='checkbox' name='condiciones' value='si'/>\n\
                     <label for='registro-check-condiciones' class='registro-label registro-label-check'>\n\
                     Acepto las <a href='#'>condiciones</a> de uso.</label>\n\
@@ -87,56 +66,41 @@ function mostrarRegistroUsuario() {
                 <br/>\n\
                 <section id='registro-botonera' class='formulario-botonera formulario-new-botonera'>\n\
                     <div id='registro-boton-enviar' class='formulario-boton formulario-new-boton'><span>Enviar</span></div>\n\
-                    <div id='registro-boton-listar' class='formulario-boton formulario-new-boton' style='display: " + ocultoUsuario + "'>\n\
-                        <span>Ver listado</span>\n\
-                    </div>\n\
-                    <div id='registro-boton-cancelar-usuario' class='formulario-boton formulario-new-boton' onclick='mostrarNoticias()' style='display: " + ocultoAdmin + "'>\n\
-                        <span>Salir</span>\n\
-                    </div>\n\
-                    <div id='registro-boton-cancelar-admin' class='formulario-boton formulario-new-boton' style='display: " + ocultoUsuario + "'>\n\
+                    <div id='registro-boton-cancelar' class='formulario-boton formulario-new-boton'>\n\
                         <span>Salir</span>\n\
                     </div>\n\
                 </section>\n\
             </div>";
 
 
-    //En función del botón de donde venimos...
-    if (accionPrevia === "botonRegistro" || accionPrevia === "panel-admin-usuario-new" || accionPrevia === "opciones-admin-newUsuario" || accionPrevia === "opciones-desplegable-admin-newUsuario") {
-        $("#articulos").html(datos);//Opción NO-dialog
-        if (accionPrevia === "botonRegistro") {
-            $("#registro-boton-listar").css("display", "none");
-        }
-    } else {
-        $("#articulos").html(datos);//Para dialog, cambiar a append
-        //Definición del dialog
-//        $(function () {
-//            $("#bloqueRegistro").dialog(
-//                    {
-//                        autoOpen: false,
-//                        modal: true,
-//                        title: "Gestión de usuarios",
-//                        minWidth: 550
-//                    }
-//            );
-//        });
-        $("#registro-boton-listar").css("display", "none");
-    }
+    $("#articulos").html(datos);
+
+    //Definición del dialog
+    $("#bloqueRegistro").dialog({
+        autoOpen: false,
+        modal: true,
+        title: "Gestión de usuarios",
+        minWidth: 550,
+        show: "fadeIn",
+        hide: "fadeOut"
+    });
 
 
     var formulario = "registro";
     var listaRequeridos = $("#bloqueRegistro input[class$='input-required']");
 
-    var selectRol = $("#registro-select-rol");
     var inputNombre = $("#registro-input-nombre");
     var inputApe1 = $("#registro-input-ape1");
     var inputApe2 = $("#registro-input-ape2");
     var inputNif = $("#registro-input-nif");
     var inputTf = $("#registro-input-tf");
+    var inputNumCuenta = $("#registro-input-numCuenta");
     var inputCorreo = $("#registro-input-correo");
     var inputUsuario = $("#registro-input-usuario");
     var inputPassword = $("#registro-input-password");
     var inputPasswordRepe = $("#registro-input-passwordRepe");
     var checkCondiciones = $("#registro-check-condiciones");
+
 
     //VALIDACIONES
     function validarNewUsuario() {
@@ -155,118 +119,84 @@ function mostrarRegistroUsuario() {
         errorValidacion += validarCoincidencia(formulario, inputPasswordRepe.attr('name'), inputPassword.val(), inputPasswordRepe.val());
         errorValidacion += validarNif(formulario, inputNif.attr('name'), inputNif.val().toUpperCase());
         errorValidacion += validarTf(formulario, inputTf.attr('name'), inputTf.val());
-        if (!esAdmin) {
-            errorValidacion += validarCheckbox(formulario, checkCondiciones.attr('name'), checkCondiciones.is(':checked'));
-        }
+        errorValidacion += validarNumCuenta(formulario, inputNumCuenta.attr('name'), inputNumCuenta.val());
+        errorValidacion += validarCheckbox(formulario, checkCondiciones.attr('name'), checkCondiciones.is(':checked'));
 
 
         //VALIDACIONES DE CORRECCIÓN CON EVENTO DE TECLADO keyup
         $(".input-required").keyup(function () {
-                validarCampoRequerido(formulario, this.name, this.value);
+            errorValidacion += validarCampoRequerido(formulario, this.name, this.value);
         });
         //Formato correo
         inputCorreo.keyup(function () {
-                validarCorreo(formulario, this.name, this.value);
+            errorValidacion += validarCorreo(formulario, this.name, this.value);
         });
         //Formato y existencia de usuario
         inputUsuario.keyup(function () {
-                validarUsuario(formulario, this.name, this.value);
+            errorValidacion += validarUsuario(formulario, this.name, this.value);
         });
         //Formato password
         inputPassword.keyup(function () {
-                validarPassword(formulario, this.name, this.value);
+            errorValidacion += validarPassword(formulario, this.name, this.value);
         });
         //Coincidencia password repetido
         inputPasswordRepe.keyup(function () {
-                validarCoincidencia(formulario, this.name, inputPassword.val(), this.value);
+            errorValidacion += validarCoincidencia(formulario, this.name, inputPassword.val(), this.value);
         });
         //Formato y Letra NIF
         inputNif.keyup(function () {
-                validarNif(formulario, this.name, this.value.toUpperCase());
+            errorValidacion += validarNif(formulario, this.name, this.value.toUpperCase());
         });
         //Formato Tf
         inputTf.keyup(function () {
-                validarTf(formulario, this.name, this.value);
+            errorValidacion += validarTf(formulario, this.name, this.value);
         });
-        if (!esAdmin) {
-            //Aceptación de condiciones
-            checkCondiciones.click(function () {
-                    validarCheckbox(formulario, this.name, this.checked);
-            });
-        }
+        //Formato número de cuenta bancaria
+        inputNumCuenta.keyup(function () {
+            errorValidacion += validarNumCuenta(formulario, this.name, this.value);
+        });
+        //Aceptación de condiciones
+        checkCondiciones.click(function () {
+            errorValidacion += validarCheckbox(formulario, this.name, this.checked);
+        });
 
         return errorValidacion;
     }
 
-    
-    //BOTÓN ENVIAR
+
+    //BOTÓN REGISTRO
     $("#registro-boton-enviar").click(function () {
-        //alert(accionPrevia);
         var errorValidacion = validarNewUsuario();
 
         //ENVÍO PARA REGISTRO EN BD
-//        alert(errorValidacion);
-//        errorValidacion = -1;
         if (errorValidacion === 0) {
-            if(usuarioLogueado.rolUsuarioLogueado !== "administrador"){
-                var rolUsuario = "usuario";
-            } else {
-                rolUsuario = selectRol.val();
-            }
-            registrarUsuario(rolUsuario, inputNombre.val(), inputApe1.val(), inputApe2.val(), inputNif.val(), inputTf.val(), inputCorreo.val(), inputUsuario.val(), inputPassword.val());
+            var rolUsuario = "usuario";
+            var numNif = inputNif.val().substring(0, 8);
+            var letraNif = (inputNif.val().charAt(8)).toUpperCase();
+            var nif = numNif+letraNif;
+            registrarUsuario(rolUsuario, inputNombre.val(), inputApe1.val(), inputApe2.val(), nif, inputTf.val(), inputNumCuenta.val(), inputCorreo.val(), inputUsuario.val(), inputPassword.val());
         }
 
-    });
-
-
-    //BOTÓN LISTADO
-    $("#registro-boton-listar").click(function () {
-        accionPrevia = this.id;
-        mostrarListaUsuarios();
     });
 
     //BOTÓN CANCELAR
-    $("#registro-boton-cancelar-admin").click(function () {
-        if (accionPrevia === "panel-admin-usuario-new" || accionPrevia === "opciones-admin-newUsuario" || accionPrevia === "opciones-desplegable-admin-newUsuario") {
-            if(accionPrevia === "panel-admin-usuario-new"){
-                mostrarPanelesUsuario();
-            } else {
-                mostrarPanelesAdmin();
-            }
-        } else {
-            mostrarListaUsuarios();
-//            $("#bloqueRegistro").dialog("close");
-            $("#lista-usuarios").jqGrid().trigger("reloadGrid");
-        }
+    $("#registro-boton-cancelar").click(function () {
+        $("#bloqueRegistro").dialog("close");
     });
-
 
 }
 
 
-function registrarUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $login, $password) {
-    $promesa = getAjaxUsuarioNew($rol, $nombre, $ape1, $ape2, $nif, $tf, $correo, $login, $password);
+function registrarUsuario($rol, $nombre, $ape1, $ape2, $nif, $tf, $numCuenta, $correo, $login, $password) {
+    $promesa = getAjaxUsuarioNew($rol, $nombre, $ape1, $ape2, $nif, $tf, $numCuenta, $correo, $login, $password);
     $promesa.success(function (data) {
         if (data[0] !== null) {
             alert("El usuario '" + data[0].loginUsuario + "' se ha registrado correctamente");
-            if(accionPrevia === "panel-admin-usuario-new" || accionPrevia === "opciones-admin-newUsuario" || accionPrevia === "opciones-desplegable-admin-newUsuario"){
-                if (accionPrevia === "panel-admin-usuario-new"){
-                    mostrarRegistroUsuario();
-                    //mostrarPanelesUsuario();
-                } else {
-                    mostrarRegistroUsuario();
-                    //mostrarPanelesAdmin();
-                }
-            } else {
-                if(accionPrevia === "botonRegistro"){
-                    mostrarNoticias();
-                } else {
-                    mostrarRegistroUsuario();
-                    //mostrarListaUsuarios();
-                    //$("#bloqueRegistro").dialog("close");
-                    jQuery("#lista-usuarios").jqGrid().trigger("reloadGrid");
-                }
-            }
+            
+            $("#bloqueRegistro input").val("");
+            $("#bloqueRegistro input").removeAttr("checked");
+            $("#bloqueRegistro").dialog("close");
+            //mostrarNoticias();
         } else {
             alert("Ha ocurrido un error: el usuario no ha podido ser registrado");
         }

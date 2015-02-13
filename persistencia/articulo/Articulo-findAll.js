@@ -77,7 +77,9 @@ function mostrarListaArticulos() {
                         $promesa = getAjaxById("articulo", idFila[0]);
                         $promesa.success(function (data) {
                             if (data[0] !== null) {
-                                mostrarEditArticulo();
+                                var idPlataformaEdit = data[0].idPlataforma;
+//                                mostrarEditArticulo();
+                                //alert(idPlataformaEdit);
                                 
                                 $("#editArticulo-input-id").val(data[0].idArticulo);
                                 $("#editArticulo-input-nombre").val(data[0].nombreArticulo);
@@ -85,15 +87,19 @@ function mostrarListaArticulos() {
                                 $("#editArticulo-input-precio").val(data[0].precioArticulo);
                                 $("#editArticulo-input-imagen").val(data[0].imagenArticulo);
                                 $("#editArticulo-input-id-plataforma").val(data[0].idPlataforma);
-                                $("#editArticulo-select-plataforma> option[value='" + listaPlataformas[0].nombrePlataforma + "']").attr("selected", "selected");
+                                $promesaPlataforma = getAjaxById("plataforma", idPlataformaEdit);
+                                $promesaPlataforma.success(function (data) {
+                                    $("#editArticulo-select-plataforma> option[value='" + data[0].nombrePlataforma + "']").attr("selected", "selected");
+                                });
+
                                 $("#editArticulo-input-tipo").val(data[0].tipoArticulo);
                                 if (data[0].ofertaArticulo > 0) {
                                     $("#editArticulo-check-oferta").attr("checked", "checked");
                                     $("#editArticulo-input-oferta").removeAttr("disabled");
                                     $("#editArticulo-input-oferta").val(data[0].ofertaArticulo);
                                 }
-                                
-//                                $("#bloqueEditArticulo").dialog("open");
+
+                                $("#bloqueEditArticulo").dialog("open");
                             }
                         });
                     } else if (idFila.length === 0) {
@@ -110,8 +116,9 @@ function mostrarListaArticulos() {
                 title: "Nuevo registro",
                 buttonicon: "ui-icon-plus",
                 onClickButton: function () {
-                    mostrarNewArticulo();
-//                    $("#bloqueNuevoArticulo").dialog("open");
+//                    mostrarNewArticulo();
+                    $("#newArticulo-boton-listar").hide();
+                    $("#bloqueNuevoArticulo").dialog("open");
                 },
                 position: "first"
             });
