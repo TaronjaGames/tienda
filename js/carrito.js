@@ -276,20 +276,18 @@ function enviarCarrito($carrito) {
         confirmacion = confirm("¿Está seguro de que desea confirmar la compra?");
         if (confirmacion === true) {
             $promesa = getAjaxCarrito($carrito);
+
             $promesa.success(function (data) {
 
-                $promesa.success(function (data) {
-
-                    if (data.status == 401) {
-                        alert("Necesitas estar logueado para poder realizar la compra");
-                        $("#bloqueLogin").dialog("open");
-                    } else if (data.status == 200) {
-                        alert(data.mensaje);
-                        abrirPestana(data.idPedido);
-                        mostrarCarrito();
-                        vaciarCarrito();
-                    }
-                });
+                if (data.status == 401) {
+                    alert("Necesitas estar logueado para poder realizar la compra");
+                    $("#bloqueLogin").dialog("open");
+                } else if (data.status == 200) {
+                    alert(data.mensaje);
+                    abrirPestana(data.idPedido);
+                    mostrarCarrito();
+                    vaciarCarrito();
+                }
             });
         }
     } else {
