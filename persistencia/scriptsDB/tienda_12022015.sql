@@ -226,7 +226,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
 -- Volcando datos para la tabla tienda.usuario: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`idUsuario`, `rolUsuario`, `nombreUsuario`, `apellido1Usuario`, `apellido2Usuario`, `dniUsuario`, `telefonoUsuario`, `numeroCuentaBancaria`, `emailUsuario`, `loginUsuario`, `passwordUsuario`) VALUES
-	(1, 'administrador', 'admin', 'admin', 'admin', '00000000T', '960000000', '', 'mail0@taronjagames.com', 'admin', 'admin'),
+	(1, 'administrador', 'admin', 'admin', 'admin', '00000000T', '960000000', '', 'mail0@taronjagames.com', 'a', 'a'),
 	(2, 'usuario', 'Marti', 'Gómez', 'Fabiá', '00000001R', '960000001', '0002-0002-0001', 'mail1@taronjagames.com', 'usuario1', 'password1'),
 	(3, 'usuario', 'Jona', 'Hidalgo', 'Mora', '00000002W', '960000002', '0001-0003-0003', 'mail2@taronjagames.com', 'usuario2', 'password2'),
 	(4, 'usuario', 'Iván', 'Sánchez', 'Castelló', '00000003A', '960000003', '0002-0004-0004', 'mail3@taronjagames.com', 'usuario3', 'password3'),
