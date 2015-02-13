@@ -12,10 +12,9 @@ function generarPDF(idPedido) {
 
         var doc = new jsPDF();
 
-        //logo = new Image();
-        logo = 'data:image/jpeg;base64,'+Base64.encode('img/logo.jpg');
-        //logo.src = 'img/logo.jpg';
+        logo = Base64.encode('logo.jpeg');
         doc.addImage(logo, 'JPEG', 10, 10, 50, 70);
+        writeFile();
 
         doc.setFontSize(12);
         doc.text(10, 20, "Numero de pedido: " + data[0].idPedido);
