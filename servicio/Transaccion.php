@@ -5,29 +5,31 @@ session_start();
 if (isset($_SESSION['usuarioLogueado'])) {
 
     function realizarTransaccion($importeCarrito) {
-        $numeroCuentaCliente = $_SESSION['usuarioLogueado'][0]['numeroCuentaBancaria']; //Cuenta origen
-        $numeroCuentaTienda = "0002-0002-0001"; //Cuenta destino
-        $pinTienda = "6666666666"; //PIN de la tienda en el banco
-        $conceptoTransaccion = "Compra TaronjaGames";
+        if (isset($_SESSION['usuarioLogueado'])) {
+            $numeroCuentaCliente = $_SESSION['usuarioLogueado'][0]['numeroCuentaBancaria']; //Cuenta origen
+            $numeroCuentaTienda = "0002-0002-0001"; //Cuenta destino
+            $pinTienda = "6666666666"; //PIN de la tienda en el banco
+            $conceptoTransaccion = "Compra TaronjaGames";
 
-        //Ejecución de la transacción
-        $url = "172.16.205.18:8084/banco/api/Transaccion";
-//        $url = "http://taronjabank-taronjabank.rhcloud.com/api/Transaccion";
-        $datos = [
-            "numeroCuentaOrigen" => $numeroCuentaCliente,
-            "numeroCuentaDestino" => $numeroCuentaTienda,
-            "importe" => $importeCarrito,
-            "concepto" => $conceptoTransaccion,
-            "apiKey" => $pinTienda
-        ];
+            //Ejecución de la transacción
+            $url = "http://taronjabank-taronjabank.rhcloud.com/api/Transaccion";
+//        $url = "172.16.205.18:8084/banco/api/Transaccion";
+            $datos = [
+                "numeroCuentaOrigen" => $numeroCuentaCliente,
+                "numeroCuentaDestino" => $numeroCuentaTienda,
+                "importe" => $importeCarrito,
+                "concepto" => $conceptoTransaccion,
+                "apiKey" => $pinTienda
+            ];
 
-        $handler = curl_init();
-        curl_setopt($handler, CURLOPT_URL, $url);
-        curl_setopt($handler, CURLOPT_POST, true);
-        curl_setopt($handler, CURLOPT_POSTFIELDS, $datos);
-        //curl_setopt($handler, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($handler);
-        curl_close($handler);
+            $handler = curl_init();
+            curl_setopt($handler, CURLOPT_URL, $url);
+            curl_setopt($handler, CURLOPT_POST, true);
+            curl_setopt($handler, CURLOPT_POSTFIELDS, $datos);
+            //curl_setopt($handler, CURLOPT_RETURNTRANSFER, true);
+            $response = curl_exec($handler);
+            curl_close($handler);
+        }
     }
 
 }
