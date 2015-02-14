@@ -11,7 +11,8 @@ if (isset($_SESSION['usuarioLogueado'])) {
         $conceptoTransaccion = "Compra TaronjaGames";
 
         //Ejecución de la transacción
-        $url = "http://taronjabank-taronjabank.rhcloud.com/api/Transaccion";
+        $url = "172.16.205.18:8084/banco/api/Transaccion";
+//        $url = "http://taronjabank-taronjabank.rhcloud.com/api/Transaccion";
         $datos = [
             "numeroCuentaOrigen" => $numeroCuentaCliente,
             "numeroCuentaDestino" => $numeroCuentaTienda,
