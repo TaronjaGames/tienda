@@ -6,36 +6,7 @@ include 'ConnectionFactory.php';
 
 if (isset($_SESSION["usuarioLogueado"])) {
 
-    function realizarTransaccion($importeCarrito) {
-        if (isset($_SESSION['usuarioLogueado'])) {
-            $numeroCuentaCliente = $_SESSION['usuarioLogueado'][0]['numeroCuentaBancaria']; //Cuenta origen (cta. cliente)
-//            echo "Número de cuenta del cliente: " . $numeroCuentaCliente;
-            $numeroCuentaTienda = "0002-0002-0006"; //Cuenta destino (cta. Tienda)
-            $pinTienda = "6666666666"; //PIN de la tienda en el banco
-            $conceptoTransaccion = "Compra en TaronjaGames";
-
-            //Ejecución de la transacción
-            $url = "http://taronjabank-taronjabank.rhcloud.com/api/Transaccion";
-//        $url = "172.16.205.18:8084/banco/api/Transaccion";
-            $datosEnviados = [
-                "numeroCuentaOrigen" => $numeroCuentaCliente,
-                "numeroCuentaDestino" => $numeroCuentaTienda,
-                "importe" => $importeCarrito,
-                "concepto" => $conceptoTransaccion,
-                "apiKey" => $pinTienda
-            ];
-//            echo json_encode($datos);
-
-            $handler = curl_init();
-            curl_setopt($handler, CURLOPT_URL, $url);
-            curl_setopt($handler, CURLOPT_POST, true);
-            curl_setopt($handler, CURLOPT_POSTFIELDS, $datosEnviados);
-            //curl_setopt($handler, CURLOPT_RETURNTRANSFER, true);
-            //$respuesta = curl_exec($handler);
-            curl_exec($handler);
-            curl_close($handler);
-        }
-    }
+    include '../servicio/TransaccionBancaria.php';
 
     function insertCarrito($jsonCarrito) {
 
@@ -88,14 +59,14 @@ if (isset($_SESSION["usuarioLogueado"])) {
 
 // Llamada al metodo
     $importeCarrito = insertCarrito($jsonCarrito);
-
+    
     realizarTransaccion($importeCarrito);
-
-// Respuesta
-    $respuesta = array(
-        'status' => 200,
-        'mensaje' => $_SESSION['usuarioLogueado'][0]['loginUsuario'] . ", su compra se ha relizado correctamente"
-    );
+    
+    // Respuesta
+        $respuesta = array(
+            'status' => 200,
+            'mensaje' => $_SESSION['usuarioLogueado'][0]['loginUsuario'] . ", su compra se ha relizado correctamente"
+        );
 } else {
     $respuesta = array(
         'status' => 401,
