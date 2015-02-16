@@ -19,7 +19,7 @@ function realizarTransaccion($importeCarrito) {
         "apiKey" => $pinTienda
     ];
     $json = json_encode($datosEnviados);
-    echo $json;
+//    echo $json;
 
     $handler = curl_init();
     curl_setopt($handler, CURLOPT_URL, $url);
@@ -29,8 +29,22 @@ function realizarTransaccion($importeCarrito) {
         'Content-Type: application/json',
         'Content-Length: ' . strlen($json))
     );
-    curl_exec($handler);
-    curl_close($handler);
+    curl_setopt($handler, CURLOPT_CONNECTTIMEOUT, 10);//Tiempo máximo de espera para conectar
+//    curl_setopt($handler, CURLOPT_RETURNTRANSFER, true);
+
+    $result = curl_exec($handler);
+    $errorDescription = curl_error($handler);
+    $errorNum = curl_errno($handler);
+    $http_status = curl_getinfo($handler, CURLINFO_HTTP_CODE);
+
+    $curlInfo = [
+        'resultado' => $result,
+        'estadoHttp' => $http_status,
+        'errorDescription' => $errorDescription,
+        'errorNum' => $errorNum
+    ];
+
+    return $curlInfo;
 }
 ?>
 

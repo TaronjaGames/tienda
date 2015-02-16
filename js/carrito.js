@@ -16,6 +16,7 @@ Carrito.prototype.getTotal = function () {
 
 function Carrito() {
     this.articulos = new Array();
+    this.importeTotal;
 }
 
 Carrito.prototype.getArticulo = function (idArticulo) {
@@ -297,7 +298,7 @@ function totalCarrito() {
     for (i = 0; i < totales.length; i++) {
         FacturaFinal = FacturaFinal + parseFloat(totales[i].getElementsByTagName("span")[0].firstChild.nodeValue);
     }
-
+    carrito.importeTotal = FacturaFinal;
     document.getElementById("importeTotalCarrito").firstChild.nodeValue = FacturaFinal.toFixed(2) + "€";
 }
 
@@ -319,22 +320,22 @@ function mostrarCarrito() {
 
 function enviarCarrito($carrito) {
     if ($carrito.articulos.length !== 0) {
-        $promesa = getAjaxCarrito($carrito);
+        confirmacion = confirm("¿Está seguro de que desea confirmar la compra?");
+        if (confirmacion === true) {
+            $promesa = getAjaxCarrito($carrito);
 
-        $promesa.success(function (data) {
-
-            if (data.status === 401) {
-                alert("Necesitas estar logueado para poder realizar la compra");
-                $("#bloqueLogin").dialog("open");
-            } else if (data.status === 200) {
-                alert(data.mensaje);
-                mostrarCarrito();
-                vaciarCarrito();
-            }/* else if (data.status === 503) {
-                alert(data);
-            }*/
-
-        });
+            $promesa.success(function (data) {
+                if (data.status == 401) {
+                    alert("Necesitas estar logueado para poder realizar la compra");
+                    $("#bloqueLogin").dialog("open");
+                } else if (data.status == 200) {
+                    alert(data.mensaje);
+                    abrirPestana(data.idPedido);
+                    mostrarCarrito();
+                    vaciarCarrito();
+                }
+            });
+        }
     } else {
         alert("No tienes ningun articulo en el carrito");
     }
