@@ -55,12 +55,12 @@ if (isset($_SESSION["usuarioLogueado"])) {
             }
 
             closeConnection($conexion);
+            return $idPedido;
         }
 
         // Llamada al metodo
-        insertCarrito($jsonCarrito);
+        $respuesta['idPedido'] = insertCarrito($jsonCarrito);
 
-        $respuesta['idPedido'] = $idPedido;
         $respuesta['status'] = 200;
         $respuesta['mensaje'] = $_SESSION['usuarioLogueado'][0]['loginUsuario'] . ", su compra se ha relizado correctamente";
 //    } else {
