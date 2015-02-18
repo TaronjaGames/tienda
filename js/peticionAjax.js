@@ -203,22 +203,20 @@ function getAjaxSessionExist() {
 }
 
 function getAjaxCarrito($carrito){
-    $datos={'carrito':JSON.stringify($carrito)};
     return $.ajax({
         type: 'POST',
         url: 'persistencia/CarritoDAO.php',
         dataType: "json",
-        data: $datos
+        data: {'carrito':JSON.stringify($carrito)}
     });
 }
 
 function getAjaxPDF($idPedido) {
 
-    $datos = {'idPedido': $idPedido};
     return $.ajax({
         type: 'POST',
         url: '../PdfDAO.php',
         dataType: "json",
-        data: $datos
+        data:  {'idPedido': $idPedido}
     });        
 }

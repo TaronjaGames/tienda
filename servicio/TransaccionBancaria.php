@@ -63,6 +63,7 @@ function ejecutarTransaccion($importeCarrito) {
             'mensaje' => "Error " . $http_status . ": no se ha podido realizar la transacción"
         ];
     } else {
+        http_response_code(500);
         $curlInfo = [
             'status' => $http_status,
             'mensaje' => "Se ha producido error interno del servidor"
