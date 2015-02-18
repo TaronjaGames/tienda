@@ -24,10 +24,10 @@ function ejecutarTransaccion($importeCarrito) {
     $handler = curl_init();
 
     //Información de proxy
-    curl_setopt($handler, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
-    curl_setopt($handler, CURLOPT_PROXY, "wpad.fpmislata.local:8080");
-    curl_setopt($handler, CURLOPT_PROXYPORT, 8080);
-    curl_setopt($ch, CURLOPT_PROXYUSERPWD, "user-proxy:user-pass");
+//    curl_setopt($handler, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
+//    curl_setopt($handler, CURLOPT_PROXY, "wpad.fpmislata.local:8080");
+//    curl_setopt($handler, CURLOPT_PROXYPORT, 8080);
+//    curl_setopt($ch, CURLOPT_PROXYUSERPWD, "user-proxy:user-pass");
     curl_setopt($handler, CURLOPT_URL, $url);
     curl_setopt($handler, CURLOPT_POST, true);
     curl_setopt($handler, CURLOPT_POSTFIELDS, $json);
