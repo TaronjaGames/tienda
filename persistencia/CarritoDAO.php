@@ -7,14 +7,8 @@ $respuesta = array();
 
 if (isset($_SESSION["usuarioLogueado"])) {
 
-//    include '../servicio/TransaccionBancaria.php';
-
     // RECOGIDA DE DATOS
     $jsonCarrito = $_POST['carrito'];
-//    $objetoCarrito = json_decode($jsonCarrito);
-//
-//    $curlInfo = realizarTransaccion($objetoCarrito->importeTotal);
-//    if ($curlInfo['resultado']) {
 
         function insertCarrito($jsonCarrito) {
 
@@ -59,15 +53,10 @@ if (isset($_SESSION["usuarioLogueado"])) {
         }
 
         // Llamada al metodo
-        $respuesta['idPedido'] = insertCarrito($jsonCarrito);
-
-        $respuesta['status'] = 200;
-        $respuesta['mensaje'] = $_SESSION['usuarioLogueado'][0]['loginUsuario'] . ", su compra se ha relizado correctamente";
-//    } else {
-////        $respuesta['status'] = 0;
-////        $respuesta['mensaje'] = "No se ha podido realizar la transacción bancaria";
-//        $respuesta['curlInfo'] = $curlInfo;
-//    }
+        if ($respuesta['idPedido'] = insertCarrito($jsonCarrito)) {
+            $respuesta['status'] = 200;
+            $respuesta['mensaje'] = $_SESSION['usuarioLogueado'][0]['loginUsuario'] . ", su compra se ha relizado correctamente";
+        }
 } else {
     $respuesta['status'] = 401;
     $respuesta['mensaje'] = "Necesitas estar logueado para poder realizar la compra";
