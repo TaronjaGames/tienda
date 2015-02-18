@@ -22,9 +22,11 @@ function ejecutarTransaccion($importeCarrito) {
 //    echo $json;
 
     $handler = curl_init();
-    curl_setopt($handler, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
-    curl_setopt($handler, CURLOPT_PROXY, "wpad.fpmislata.local:8080");
-    curl_setopt($handler, CURLOPT_PROXYPORT, 8080);
+
+    //Información de proxy
+//    curl_setopt($handler, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
+//    curl_setopt($handler, CURLOPT_PROXY, "wpad.fpmislata.local:8080");
+//    curl_setopt($handler, CURLOPT_PROXYPORT, 8080);
 //    curl_setopt($ch, CURLOPT_PROXYUSERPWD, "user-proxy:user-pass");
     curl_setopt($handler, CURLOPT_URL, $url);
     curl_setopt($handler, CURLOPT_POST, true);
@@ -32,7 +34,7 @@ function ejecutarTransaccion($importeCarrito) {
     curl_setopt($handler, CURLOPT_HTTPHEADER, array(
         'Content-Type: application/json',
         'Content-Length: ' . strlen($json))
-    ); //Tiempo máximo de espera para conectar
+    );
     curl_setopt($handler, CURLOPT_CONNECTTIMEOUT, 60); //Tiempo máximo de espera para conectar
 
     $result = curl_exec($handler);
