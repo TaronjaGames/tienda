@@ -296,7 +296,7 @@ function enviarCarrito($carrito) {
     }
 }
 
-function realizarTransaccion(callback) {
+function realizarTransaccion() {
     $.ajax({
         url: 'servicio/TransaccionBancaria.php',
         dataType: 'json',
@@ -304,12 +304,12 @@ function realizarTransaccion(callback) {
         data: {
             importeCarrito: carrito.importeTotal
         }
-    }).success(function (data) {
-        if (data.status === 200) {
-            alert(data.mensaje);
-            callback();
-        } else if (data.status === 404) {
-            alert(data.mensaje);
+    }).complete(function (status) {
+        if(status==="parsererror"){
+            enviarCarrito(carrito);
+        }
+        if(status==="error"){
+             alert("No se ha podido realizar transaccion por algun problema en la cuentaBancaria");
         }
     });
 }
