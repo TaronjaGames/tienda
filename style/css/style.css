@@ -1334,6 +1334,9 @@ body {
               height: 90%;
               margin-top: 2%;
               cursor: pointer; }
+            body #capaSuperior #pie #pieContenidos #otros #redesSociales #icono-english {
+              margin-left: 15px;
+              box-shadow: none; }
           body #capaSuperior #pie #pieContenidos #otros #otraInfo {
             margin-top: 5px;
             height: 50%;
