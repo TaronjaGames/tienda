@@ -1324,10 +1324,14 @@ body {
             width: 60%;
             margin: 30px; }
             body #capaSuperior #seccionCentral #contenidos #articulos #contenedor-ingles .ingles-titulo {
-              color: #ff8000; }
+              color: #ff8000;
+              font-weight: bold; }
             body #capaSuperior #seccionCentral #contenidos #articulos #contenedor-ingles .ingles-contenido {
               text-align: justify;
-              color: white; }
+              color: white;
+              font-weight: bold; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #contenedor-ingles #ingles-titulo-principal {
+              font-size: 17px; }
     body #capaSuperior #pie {
       height: 12%;
       margin-top: 5px; }

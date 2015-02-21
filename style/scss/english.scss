@@ -6,10 +6,15 @@
     margin: 30px;
     .ingles-titulo{
         color: $colorNaranjaBase;
+        font-weight: bold;
     }
     .ingles-contenido{
         text-align: justify;
         color: white;
+        font-weight: bold;
+    }
+    #ingles-titulo-principal{
+        font-size: 17px;
     }
 }
 

@@ -11,9 +11,13 @@
   width: 60%;
   margin: 30px; }
   #contenedor-ingles .ingles-titulo {
-    color: #ff8000; }
+    color: #ff8000;
+    font-weight: bold; }
   #contenedor-ingles .ingles-contenido {
     text-align: justify;
-    color: white; }
+    color: white;
+    font-weight: bold; }
+  #contenedor-ingles #ingles-titulo-principal {
+    font-size: 17px; }
 
 /*# sourceMappingURL=english.css.map */
