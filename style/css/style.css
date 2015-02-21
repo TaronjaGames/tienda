@@ -1308,6 +1308,26 @@ body {
               box-shadow: none;
               opacity: .9;
               box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos #contenedor-ingles {
+            width: 60%;
+            margin: 30px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #contenedor-ingles .ingles-titulo {
+              color: #ff8000; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #contenedor-ingles .ingles-contenido {
+              text-align: justify;
+              color: white; }
     body #capaSuperior #pie {
       height: 12%;
       margin-top: 5px; }

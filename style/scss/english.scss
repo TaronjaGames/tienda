@@ -1,0 +1,16 @@
+
+@import "common.scss";
+
+#contenedor-ingles{
+    width: 60%;
+    margin: 30px;
+    .ingles-titulo{
+        color: $colorNaranjaBase;
+    }
+    .ingles-contenido{
+        text-align: justify;
+        color: white;
+    }
+}
+
+

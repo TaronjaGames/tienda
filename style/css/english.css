@@ -1,0 +1,19 @@
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+#contenedor-ingles {
+  width: 60%;
+  margin: 30px; }
+  #contenedor-ingles .ingles-titulo {
+    color: #ff8000; }
+  #contenedor-ingles .ingles-contenido {
+    text-align: justify;
+    color: white; }
+
+/*# sourceMappingURL=english.css.map */
