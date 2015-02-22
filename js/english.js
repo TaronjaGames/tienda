@@ -9,7 +9,7 @@ $(document).ready(function () {
                         Taronja Games is an online shop dedicated to commercialize video games in a physical format \n\
                         and offers online information services about this sector of computer entertainment systems.\n\
                         Our philosophy is to offer the best service to our customers by offering the best products \n\
-                        at the best prices and with the best and latest information.\n\
+                        at the best prices and with the best and latest information of the gamer world.\n\
                     </p>\n\
                     <br/><br/>\n\
                     <p class='ingles-titulo'>News</p>\n\
