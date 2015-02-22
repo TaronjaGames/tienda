@@ -10,6 +10,9 @@ $(document).ready(function () {
                         and offers online information services about this sector of computer entertainment systems.\n\
                         Our philosophy is to offer the best service to our customers by offering the best products \n\
                         at the best prices and with the best and latest information of the gamer world.\n\
+                        <br/><br/>\n\
+                        In our web, you have access to the new releases of best titles of more important companies of video games distribution, \n\
+                        comfortably from your home, to quickly and easilly way.\n\
                     </p>\n\
                     <br/><br/>\n\
                     <p class='ingles-titulo'>News</p>\n\
@@ -33,12 +36,21 @@ $(document).ready(function () {
                         whether directly by title or platform or price, etc.\n\
                     </p>\n\
                     <br/><br/>\n\
-                    <p class='ingles-titulo'>The web register</p>\n\
+                    <p class='ingles-titulo'>Customers and users service</p>\n\
                     <p class='ingles-contenido'>\n\
-                        Also, if you register on our website, you will have access to the all this information and much more. \n\
-                        You will receive periodically in your email, without having to do anything for your part, our newsletter, \n\
-                        where you will find the latest sector information, latest releases of the market, offers and promotions of special products for our users, \n\
-                        interviews with relevant persons the field of software development and evolution of new technologies applicable to the gamer world, etc.\n\
+                        Our customers can shop comfortable and easily from home in a few clicks of mouse. \n\
+                        The only requirement is that they are registered on our website and have been logged at the moment of purchase. \n\
+                        To make the payment, our customers will have the possibility of choose various payment methods: making a bank transfer, \n\
+                        directly making a deposit in our account and through PayPal payment gangway and too, if they prefer, \n\
+                        we also offer the possibility to pay when receiving the order, through COD system (Cash on Delivery). \n\
+                        Besides, all of these services offer the best guarantee; if you are not satisfied with the product, you will have a space of time \n\
+                        to make your return and we will refund the full amount of the order.\n\
+                        <br/><br/>\n\
+                        The users registered on our website will be able to access a lot of information and much more. \n\
+                        They will receive periodically in your email, without having to do anything for your part, our newsletter, \n\
+                        where they will find the latest sector information, latest releases of the market, special offers and promotions \n\
+                        of exclusive products for our customers, interviews with relevant persons of field of software development \n\
+                        and all the information on the evolution of new technologies applicable to the gamer world, etc.\n\
                     </p>";
 
         $("#articulos").html(datos);
