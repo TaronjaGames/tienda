@@ -8,7 +8,7 @@ function ejecutarTransaccion($importeCarrito) {
     $pinTienda = "6666666666"; //PIN del usuario tienda en el banco
     $conceptoTransaccion = "Compra en TaronjaGames";
 
-//    //Ejecución de la transacción
+    //Ejecución de la transacción
 //    $url = "http://172.16.205.18:8084/banco/api/Transaccion";
     $url = "http://taronjabank-taronjabank.rhcloud.com/api/Transaccion";
     $datosEnviados = [
@@ -42,31 +42,20 @@ function ejecutarTransaccion($importeCarrito) {
     $errorNum = curl_errno($handler);
     $http_status = curl_getinfo($handler, CURLINFO_HTTP_CODE);
 
-    if ($http_status === 200) {
-        http_response_code(200);
+    if ($http_status !== 404) {
         $curlInfo = [
-            
-            'status' => $http_status,
+            'status' => 200,
             'mensaje' => "La transacción bancaria se ha realizado correctamente"
         ];
     } else if ($http_status === 404) {
-        http_response_code(404);
         $curlInfo = [
-            
-            'status' => $http_status,
+            'status' => 404,
             'mensaje' => "Error " . $http_status . ": no se ha podido conectar al servidor del banco"
         ];
-    } else if ($http_status === 400) {
-        http_response_code(400);
+    } else if ($http_status !== 404 && $http_status !== 200) {
         $curlInfo = [
             'status' => $http_status,
             'mensaje' => "Error " . $http_status . ": no se ha podido realizar la transacción"
-        ];
-    } else {
-        http_response_code(500);
-        $curlInfo = [
-            'status' => $http_status,
-            'mensaje' => "Se ha producido error interno del servidor"
         ];
     }
 

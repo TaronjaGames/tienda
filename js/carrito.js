@@ -280,11 +280,10 @@ function enviarCarrito($carrito) {
             $promesa = getAjaxCarrito($carrito);
 
             $promesa.success(function (data) {
-                
-                if (data.status === 401) {
+                if (data.status == 401) {
                     alert("Necesitas estar logueado para poder realizar la compra");
                     $("#bloqueLogin").dialog("open");
-                } else if (data.status === 200) {
+                } else if (data.status == 200) {
                     alert(data.mensaje);
                     abrirPestana(data.idPedido);
                     mostrarCarrito();
@@ -297,7 +296,7 @@ function enviarCarrito($carrito) {
     }
 }
 
-function realizarTransaccion() {
+function realizarTransaccion(callback) {
     $.ajax({
         url: 'servicio/TransaccionBancaria.php',
         dataType: 'json',
@@ -305,13 +304,13 @@ function realizarTransaccion() {
         data: {
             importeCarrito: carrito.importeTotal
         }
-    }).complete(function (status) {
-        if(status.status===200){
-            enviarCarrito(carrito);
-        }else{
-             alert("No se ha podido realizar transaccion por algun problema en la cuentaBancaria");
+    }).success(function (data) {
+        if (data.status === 200) {
+            alert(data.mensaje);
+            callback();
+        } else if (data.status === 404) {
+            alert(data.mensaje);
         }
-        
     });
 }
 
