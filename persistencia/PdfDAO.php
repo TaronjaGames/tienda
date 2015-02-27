@@ -8,9 +8,9 @@ function select($idPedido) {
 
     $conexion = getConnection();
     $consulta = "select articulo.nombreArticulo, detallePedido.idPedido, detallePedido.cantidadArticulo, detallePedido.precioArticulo, usuario.nombreUsuario, usuario.apellido1Usuario, usuario.apellido2Usuario, pedido.fechaPedido 
-                from articulo inner join detallePedido inner join usuario inner join pedido 
-                on articulo.idArticulo=detallePedido.idArticulo and detallePedido.idPedido=pedido.idPedido and pedido.idCliente=usuario.idUsuario 
-                where detallePedido.idPedido=".$idPedido;
+                from articulo inner join detallepedido inner join usuario inner join pedido 
+                on articulo.idArticulo=detallepedido.idArticulo and detallepedido.idPedido=pedido.idPedido and pedido.idCliente=usuario.idUsuario 
+                where detallepedido.idPedido=".$idPedido;
 
     //EXTRAER DATOS
 
