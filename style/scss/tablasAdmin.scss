@@ -1,0 +1,128 @@
+
+@import "common.scss";
+
+
+#label-check-multiselect{
+    margin: 30px 0 0 50px;
+    color: silver;
+}
+
+//Caja total lista
+#gbox_lista-usuarios, #gbox_lista-articulos, #gbox_lista-pedidos, #gbox_lista-detallepedido{
+    margin: 30px;
+    border-bottom-color: black;
+    box-shadow: 10px 10px 25px black;
+}
+
+//Barra de título
+.ui-jqgrid-titlebar{
+    padding: 5px 10px 0;
+}
+
+//inputs de filtrado
+.ui-search-input{
+    color: silver;
+    & input{
+        padding-left: 4px;
+        border: none;
+        background-color: rgba(255,255,255,.25);
+    }
+}
+.opersearchclass, .clearsearchclass{
+    color: rgba(250,170,31,1);
+}
+
+//Filas lista
+td.jqgrid-rownum{/*Número de fila*/
+    border: none;
+}
+.ui-widget-content, .jqgrow, .ui-row-ltr{
+    cursor: pointer;
+}
+.ui-jqgrid tr.jqgrow td{
+    padding: 0 5px;
+}
+
+table{
+    border-collapse: initial;
+}
+tbody a{
+    font-style: italic;
+    font-weight: bolder;
+    color: white;//mediumblue;// #1c94c4;
+}
+
+/*Cuerpo de la tabla*/
+.ui-widget-content, #pager-usuarios, #pager-articulos, #pager-pedidos{
+    background: rgba(0,0,0,.2);
+    color: silver;
+    border:{
+        top-color: transparent;
+        right-color: transparent;
+        bottom-color: rgba(255,255,255,.25);
+        left-color: transparent;
+    }
+}
+.ui-widget-content .ui-state-hover{
+    border-color: transparent;
+    &:hover{
+        @include reglasHoverFilaTabla();
+        color: black;
+        font-weight: bolder;
+    }
+}
+
+
+//Cabecera columnas
+.ui-widget-content .ui-state-default{
+    background: rgba(0,0,0,.3);
+    border-color: transparent;
+    //color: white;
+    color: rgba(250,170,31,1);
+    border:{
+        top-color: silver;
+        right-color: transparent;
+        bottom-color: silver;
+        left-color: transparent;
+    }
+    &:hover{
+        color: white;
+    }
+}
+
+
+//Pie de tabla
+#pager-usuarios, #pager-articulos, #pager-pedidos, #pager-detallepedido{
+    color: rgba(250,170,31,1);
+    border:{
+        top-color: silver;
+        bottom-color: black;
+    }
+
+    .ui-pg-input, .ui-pg-selbox{
+        color: black;
+    }
+    .ui-pg-input{
+        height: 15px;
+        font-size: 0.9em;
+    }
+}
+
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight{
+    border-color: transparent;
+    background: #fdf5ce url("images/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x;
+    font-weight: bold;
+    color: #c77405;
+}
+.ui-state-highlight a{
+    color: cornflowerblue;
+}
+
+.formulario-new-boton{
+    @include estiloBotonContenidos();
+    float: left;
+}
+
+
+

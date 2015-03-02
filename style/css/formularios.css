@@ -1,0 +1,96 @@
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+.ui-dialog {
+  box-shadow: 0 -1px 50px rgba(0, 0, 0, 0.8), 1px 0 50px rgba(0, 0, 0, 0.8), 0 1px 50px rgba(0, 0, 0, 0.8), -1px 0 50px rgba(0, 0, 0, 0.8); }
+  .ui-dialog .ui-dialog-titlebar-close {
+    /*Quita el icono de cerrar ventana por defecto*/
+    display: none; }
+
+.caja-formulario {
+  padding: 20px;
+  font-size: 12px;
+  max-width: 550px;
+  /*Reglas para ventanas modales*/ }
+  .caja-formulario a {
+    color: deepskyblue; }
+  .caja-formulario.dialog-editar, .caja-formulario.dialog-new, .caja-formulario.dialog-login {
+    background-color: rgba(0, 0, 0, 0.9); }
+  .caja-formulario input:disabled, .caja-formulario select:disabled {
+    background-color: peachpuff; }
+  .caja-formulario .tituloFormulario {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: white; }
+  .caja-formulario .registro-bloqueDatos, .caja-formulario .login-bloqueDatos {
+    margin-top: 10px; }
+    .caja-formulario .registro-bloqueDatos > span, .caja-formulario .login-bloqueDatos > span {
+      vertical-align: middle; }
+    .caja-formulario .registro-bloqueDatos #newArticulo-label-precio-oferta, .caja-formulario .login-bloqueDatos #newArticulo-label-precio-oferta {
+      padding: 0 10px 0 5px; }
+  .caja-formulario label {
+    color: white;
+    min-width: 110px; }
+  .caja-formulario .registro-label-check, .caja-formulario .login-label-radio {
+    vertical-align: middle; }
+  .caja-formulario .registro-input, .caja-formulario .login-input, .caja-formulario .registro-select {
+    min-width: 190px;
+    padding-left: 5px;
+    border: none; }
+    .caja-formulario .registro-input:focus, .caja-formulario .login-input:focus, .caja-formulario .registro-select:focus {
+      box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
+      transition-duration: .3s; }
+  .caja-formulario .registro-input-corto {
+    padding-left: 5px;
+    border: none; }
+    .caja-formulario .registro-input-corto:focus {
+      box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
+      transition-duration: .3s; }
+  .caja-formulario .registro-label-error, .caja-formulario .login-label-error {
+    color: red;
+    font-size: 11px; }
+  .caja-formulario .formulario-botonera {
+    margin-top: 5px; }
+  .caja-formulario .formulario-botonera .formulario-boton {
+    display: inline-block;
+    width: 115px;
+    text-align: center;
+    font-size: 12px;
+    margin: 7px 5px;
+    padding: 3px 10px;
+    border-radius: 4px;
+    border-left: 1px solid grey;
+    border-top: 1px solid grey;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 1px 1px 2px transparent;
+    float: left; }
+    .caja-formulario .formulario-botonera .formulario-boton a {
+      display: inline;
+      text-decoration: none;
+      color: white;
+      width: 60px; }
+    .caja-formulario .formulario-botonera .formulario-boton:hover {
+      transition-duration: .4s;
+      border-radius: 4px;
+      border-left: 1px solid silver;
+      border-top: 1px solid silver;
+      border-right: 1px solid transparent;
+      border-bottom: 1px solid transparent;
+      cursor: pointer;
+      color: #e6e6e6;
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: none;
+      opacity: .9;
+      box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+
+/*# sourceMappingURL=formularios.css.map */

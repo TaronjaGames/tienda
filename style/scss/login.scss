@@ -1,0 +1,96 @@
+
+@import "common.scss";
+
+
+#cajaInfoLogin{
+    max-width: 95%;
+    margin: 10px;
+    text-align: right;
+    color: white;
+
+    #opcionesUsuario{
+        margin-top: 0;
+    }
+
+    #dropdownMenu1{
+        margin-bottom: 2px;
+    }
+
+    & .btn{
+        @include estiloBotonHeader();
+        //width: auto;
+        background-color: transparent;
+        padding: 2px 10px;
+        font-size: 12px;
+        color: white;
+
+        & #caja-texto-login{
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+            max-width: 60px;
+
+            /*Reglas necesarias para text-overflow*/
+            /*El contenedor debe ser de bloque*/
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    #iconoUsuario{
+        width: 15px;
+    }
+
+    & ul{
+        width: 60px;
+        font-size: 12px;
+        background-color: rgba(255,255,255,.9);
+
+        & li a{
+            text-overflow: ellipsis;
+
+            &:hover{
+                color: white;
+                background-color:$colorNaranjaSuave;
+                border-radius: 4px;
+                transition-duration: 0.3s;
+                font:{
+                    weight: bolder;
+                    style: italic;
+                }
+                @include sombraPerimetral(1px,8px,white,none);
+            }
+        }
+
+    }
+
+    & .dropdown-menu{
+        left: auto;
+        right: 0;
+    }
+
+}
+
+
+#menuV_menu{
+    .menuV_opcion-admin{
+        margin: 0px 5% 2px 0px;
+        padding-left: 7px;
+
+        font-family: Calibri;
+        font-size:1em;
+        font-weight: bold;
+        color: rgba(255,255,255,.7);
+
+        background-color: rgba($colorGrisBase,.2);
+        border-bottom-right-radius: 4px;
+        box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+
+        &:hover{
+            @include reglasHoverMenuV();
+        }
+    }
+}
+

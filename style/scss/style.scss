@@ -1,0 +1,371 @@
+
+@import "common.scss";
+
+//Fuentes
+
+@font-face {
+    font-family: Farcry;
+    src: url('../fonts/Farcry.ttf');
+}
+@font-face {
+    font-family: TimesNewYorker;
+    src: url('../fonts/TimesNewYorker.ttf');
+}
+
+//Cursores
+
+//@import "cursores.scss";
+
+//Carrito
+
+@import "carrito.scss";
+
+//ARBOL
+
+body{
+
+    @import "formularios.scss";
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    min-height: $altoPC;
+    margin: 0;
+
+    background-image: url('../img/fondos/imgFondo.jpg');
+    background-size:100%;
+
+    font-family: Calibri;
+
+    @include reglasBarrasScroll();
+
+    #capaSuperior{
+        width: 75%;//width: 70%;
+        height: 100%;
+        margin: 0 auto;
+
+        #header{
+            height: 14%;
+
+            #limitSup{
+                height: 40%;
+            }
+
+            #cabeceraContenidos{
+                height: 60%;
+                background-color: rgba($colorNaranjaBase,.80);
+                border-radius:10px 10px 0px 0px;
+                box-shadow: 0 -10px 30px rgba(0,0,0,.4), -10px 0 30px rgba(0,0,0,.4), 10px 0 30px rgba(0,0,0,.4);
+
+                #cabeceraLogo{
+                    width: 25%;
+                    height: 100%;
+                    float: left;
+
+                    #logoImg{
+                        margin-left: 30px;
+                        width: 180px;
+                        margin-top: -40px;
+                        cursor: pointer;
+                        &:hover{
+                            transform: scale(1.05);
+                            transition-duration: .5s;
+                        }
+                    }
+
+
+                }
+                #cabeceraCentro{
+                    width: 55%;
+                    height:100%;
+                    float:left;
+                }
+                #cabeceraLogin{
+                    //width: 20%;
+                    max-width: 135px;
+                    height: 100%;
+                    float: right;
+                    #botoneraLogin{
+                        width: 100%;
+                        margin: 1% 10px 0;
+                        float: right;
+
+                        padding-top:10px;
+                        .boton{
+                            @include estiloBotonHeader();
+                            float:right;
+                            margin:auto;
+                        }
+                    }
+
+                    @import "login.scss";
+                }
+            }
+        }
+        #menuH{
+            height: 3.5%;
+            box-shadow: 0 -10px 20px rgba(0,0,0,.5);
+
+            #plataformas{
+                width: 75%;
+                height: 100%;
+                float: left;
+
+                .menuH_plataforma{
+                    width:15%;
+                    height: 100%;
+                    float:left;
+                    text-align: center;
+                    padding-top:7px;
+
+                    color:white;
+                    font-weight: bold;
+                    font-family: Farcry;
+                    font-size:1em;
+
+                    img{
+                        height: 100%;
+                    }
+
+                    &:hover{
+                        transition-duration: 0.5s;
+                        border-radius: 6px;
+                        @include sombraPerimetral(1px,15px,white,none);
+                    }
+
+                }
+
+                .menuH_plataforma:hover{
+                    cursor:pointer;
+                    background-color:$colorNaranjaSuave;
+                    transition-duration: 0.5s;
+                }
+
+                #icono_menu_desplegable{
+                    display:none;
+                    background-color:transparent;
+                }
+
+                #menuH_desplegable{
+                    display:none;
+                }
+            }
+
+            #buscar{
+                padding: 1px;
+                width: 18%;
+                height: 100%;
+                float: left;
+
+                @import 'search.scss';
+
+                .search-form, .form-group{
+                    height: 100%;
+                }
+                .form-control, .form-control-feedback{
+                    height: 100%;
+                }
+                .search-form .form-group span.form-control-feedback {
+                    margin: -3px 0;
+                }
+            }
+            #carrito{
+                padding: 1px;
+                text-align: center;             
+                width: 7%;
+                height: 100%;
+                float: left;
+
+                #botonCarrito{
+                    height: 100%;
+                    padding: 3px 8px;
+                    width:100%;
+
+                    #botonCarritoNew{
+                        
+                        position: relative;
+                        left: 15px;
+                        top: -10px;
+                        float: left;
+                        display:none;
+                    }
+
+                    & span{
+                        width: 95%;
+                        float:left;
+                    }
+                    &:hover{
+                        transition-duration: .6s;
+                        @include sombraPerimetral(3px,8px,rgba($resplandorTablaRanking,.7),none);
+                    }
+                }
+            }
+
+        }
+
+        #seccionCentral{
+            height: 68%;
+            margin-top: 1px;
+            padding: 5px;
+            background-color: rgba(0,0,0,.75);
+
+            .menuV{
+                height: 100%;
+                float: left;
+                width: 13%;//width: 13%;
+                max-width: 170px;
+                //min-width: 116px;
+                padding: 5px;
+                
+                @import "login.scss";
+
+                .menuV_inicio{
+                    background-color: rgba($colorGrisSeccion,.55);
+                    border-radius: 4px;
+                    box-shadow: 2px 2px 5px rgba(0,0,0,.7);
+                    padding: 5px 0 0 5px;
+                    margin-bottom: 2px;
+                    color: rgba(255,255,255,.7);
+                    &:hover{
+                        @include reglasHoverMenuV();
+                    }
+                }
+
+                .contieneSecciones{
+                    .menuV_seccion, .menuV_subseccion{/*, .menuV_grupo*/
+                        margin: 0px 5% 2px 0px;
+                        padding-left: 7px;
+
+                        font-family: Calibri;
+                        font-size:1em;
+                        font-weight: bold;
+                        color: rgba(255,255,255,.7);
+                        //color: silver;
+
+                        //background-color: rgba($colorNaranjaSuave,.4);
+                        background-color: rgba($colorGrisBase,.2);
+                        border-bottom-right-radius: 4px;
+                        box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+
+                        &:hover{
+                            @include reglasHoverMenuV();
+                        }
+                    }
+                    .caja-subsecciones{
+                        display: none;
+                        .menuV_subseccion{
+                            width: 70%;
+                            padding-left: 11px;
+                            background-color: rgba($colorNaranjaSuave,.2);
+                        }
+                    }
+                }
+            }
+
+            #contenidos{
+                height: 100%;
+                float: left;
+                width: 87%;//width: 87%;
+                overflow: auto;
+                #articulos{
+                    width: 99%;
+                    padding: 1%;
+                    margin: 0 .5%;
+                    float: left;
+                    margin-right: 0.5%;
+
+                    @import 'noticias.scss';
+                    @import "articulos.scss";
+                    @import "ranking.scss";
+                    @import "login.scss";
+                    @import "formularios.scss";
+                    @import "panelesAdmin.scss";
+                    @import "tablasAdmin.scss";
+                }
+            }
+
+        }
+        #pie{
+            height: 12%;
+            margin-top:5px;
+
+            #pieContenidos{
+                height: 90%;
+                background-color: rgba($colorGrisBase,.80);
+                border-radius:0px 0px 10px 10px;
+
+                #enlaces{
+                    width: 80%;
+                    height: 70%;
+                    float: left;
+                }
+                #otros{
+                    padding-top: 5px;
+                    width: 20%;
+                    height: 70%;
+                    float: left;
+                    #redesSociales{
+                        height: 50%;
+                        text-align:center;
+                        img{
+                            margin: 1px;
+                            border-radius: 3px;
+                            box-shadow: 1px 1px 3px grey;
+                            height: 90%;
+                            margin-top: 2%;
+                            cursor: pointer;
+                        }
+                    }
+                    #otraInfo{
+                        margin-top: 5px;
+                        height: 50%;
+                        text-align:center;
+                        img{
+                            margin: 1px;
+                            height: 90%;
+                            margin-top: 2%;
+                        }
+                    }
+                }
+                #infoContacto{
+                    height: 30%;
+                    clear: both;
+                    font-size:0.73em;
+                    text-align: center;
+                }
+                #infoContactoReducido{
+                    display:none;
+                }
+            }
+            #limitInf{
+                height: 20%;
+
+            }
+        }
+    }
+
+    #capaFondo{
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        #franjaSuperior{
+            width: 100%;
+            height: 14%;
+            background-color: rgba(0,0,0,.6);
+        }
+        #franjaBajoMenuH{
+            width: 100%;
+            height: 3.5%;
+            background-color: rgba(0,0,0,.85);
+            box-shadow: 0 -10px 20px rgba(0,0,0,.4);
+        }
+    }
+
+}
+
+@import "Responsive-sm.scss";
+@import "Responsive-xs.scss";
+@import "correcciones.scss";

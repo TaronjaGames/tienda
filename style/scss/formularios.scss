@@ -1,0 +1,99 @@
+
+@import "common.scss";
+
+
+.ui-dialog{
+    @include sombraPerimetral(1px,50px,rgba(0,0,0,.8),none);
+
+    .ui-dialog-titlebar-close{/*Quita el icono de cerrar ventana por defecto*/
+        //color: black;
+        display: none;
+    }
+}
+
+.caja-formulario{
+    padding: 20px;
+    font-size: 12px;
+    max-width: 550px;
+
+    & a{
+        color: $colorEnlaceFormulario;
+    }
+
+    /*Reglas para ventanas modales*/
+    &.dialog-editar, &.dialog-new, &.dialog-login{
+        background-color: rgba(0,0,0,.9);
+    }
+
+    & input:disabled, & select:disabled{
+        background-color: $colorFormDisabled;
+    }
+
+    & .tituloFormulario{
+        margin-top: 10px;
+        font:{
+            size: 15px;
+            weight: bolder;
+        }
+        color: white;
+    }
+
+    & .registro-bloqueDatos, & .login-bloqueDatos{
+        margin-top: 10px;
+
+        & > span{
+            vertical-align: middle;
+        }
+
+        #newArticulo-label-precio-oferta{
+            padding: 0 10px 0 5px;
+        }
+    }
+
+    & label{
+        color: white;
+        min-width: 110px;
+    }
+
+    & .registro-label-check, & .login-label-radio{
+        vertical-align: middle;
+    }
+
+    & .registro-input, & .login-input, & .registro-select{
+        min-width: 190px;
+        padding-left: 5px;
+        border: none;
+
+        &:focus{
+            @include sombraPerimetral(1px,12px,white,none);
+            transition-duration: .3s;
+        }
+    }
+
+    & .registro-input-corto{
+        padding-left: 5px;
+        border: none;
+
+        &:focus{
+            @include sombraPerimetral(1px,12px,white,none);
+            transition-duration: .3s;
+        }
+    }
+
+    & .registro-label-error, & .login-label-error{
+        color: red;
+        font-size: 11px;
+    }
+
+    .formulario-botonera{
+        margin-top: 5px;
+    }
+
+    .formulario-botonera .formulario-boton{
+        @include estiloBotonContenidos();
+        float: left;
+    }
+
+}
+
+

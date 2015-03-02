@@ -1,0 +1,86 @@
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+@media all and (max-width: 768px) {
+  body {
+    min-height: 750px;
+    min-width: 320px; }
+    body #capaSuperior {
+      width: 100%; }
+      body #capaSuperior #header {
+        height: 105.0px; }
+        body #capaSuperior #header #limitSup {
+          height: 40%; }
+        body #capaSuperior #header #cabeceraContenidos {
+          height: 60%; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogo {
+            width: 55%; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
+              margin-left: 3%; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
+            display: none; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+            width: 45%; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
+              width: 60%;
+              float: right;
+              margin-right: 15px; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton {
+                width: 105px; }
+      body #capaSuperior #menuH {
+        min-height: 26.25px; }
+        body #capaSuperior #menuH #plataformas {
+          width: 87%; }
+          body #capaSuperior #menuH #plataformas .menuH_plataforma {
+            display: none; }
+          body #capaSuperior #menuH #plataformas #menuH_desplegable {
+            display: inline-block;
+            width: 75%;
+            padding: 10px 4px;
+            font-size: 1em; }
+            body #capaSuperior #menuH #plataformas #menuH_desplegable #opciones_menu_desplegable2 {
+              left: 26%; }
+          body #capaSuperior #menuH #plataformas span {
+            padding: 0px 4px; }
+          body #capaSuperior #menuH #plataformas span:hover {
+            cursor: pointer;
+            background-color: #ffb062;
+            transition-duration: 0.5s; }
+        body #capaSuperior #menuH #carrito {
+          width: 13%; }
+      body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
+        font-size: 1.5em; }
+      body #capaSuperior #buscar {
+        display: none; }
+      body #capaSuperior #seccionCentral {
+        max-height: 510.0px; }
+        body #capaSuperior #seccionCentral #tablaRanking {
+          border: none; }
+        body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles {
+          min-width: 240px; }
+      body #capaSuperior #pie {
+        height: 90px; }
+        body #capaSuperior #pie #pieContenidos {
+          height: 80%; }
+          body #capaSuperior #pie #pieContenidos #infoContacto {
+            display: none; }
+          body #capaSuperior #pie #pieContenidos #infoContactoReducido {
+            display: block;
+            height: 30%;
+            clear: both;
+            font-size: 0.8em;
+            text-align: center; }
+        body #capaSuperior #pie #limitInf {
+          height: 20%; }
+    body #capaFondo #franjaSuperior {
+      height: 105.0px; }
+    body #capaFondo #franjaBajoMenuH {
+      min-height: 26.25px; } }
+
+/*# sourceMappingURL=Responsive-xs.css.map */

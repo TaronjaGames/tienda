@@ -1,0 +1,72 @@
+
+@import "common.scss";
+
+.articulos_noticia{
+    width:45%;
+    margin:10px 10px 40px
+}
+
+.articulos_contenedorImagen{
+    cursor: pointer;
+    margin-bottom: 10px;
+    @include sombraPerimetral(2px,10px,rgba(0,0,0,.8),none);
+    //box-shadow: 0 -2px 10px rgba(0,0,0,.8), 2px 0 10px rgba(0,0,0,.8), 0 2px 10px rgba(0,0,0,.8),  -2px 0 10px rgba(0,0,0,.8);
+
+    .imgNoticia{
+        width: 100%;
+        &:hover{
+            transition-duration: .6s;
+            @include sombraPerimetral(1px,20px,$resplandorTablaRanking,none);
+        }
+    }
+
+    .videoNoticia{
+        width: 100%;
+        height: 200px;
+        display: none;
+    }
+}
+
+.articulos_contenedorImagen:hover > .imgNoticia{
+    display: none;
+}
+
+.articulos_contenedorImagen:hover > .videoNoticia{
+    display: block;
+}
+
+.articulo_noticia_left{
+    float:left;
+    clear:left;
+}
+
+.articulo_noticia_right{
+    float:right;
+    clear:right;
+
+}
+
+.articulos_titulo{
+    color:$colorNaranjaBase;
+    font-family: TimesNewYorker;
+    font-size:1.2em;
+    cursor: pointer;
+    &:hover{
+        color: black;
+        transition-duration: 0.6s;
+        @include sombraPerimetralTexto(1px, 8px, white, none);
+    }
+}
+
+.articulos_cuerpo{
+    font-size: 0.75em;
+    .articulos_autores{
+        margin:3px 0px;
+        color:$colorGrisBase;
+    }
+    .articulos_texto{
+        text-align: justify;
+        margin:0;
+        color: silver;
+    }
+}

@@ -1,0 +1,40 @@
+
+@import 'mixins.scss';
+
+//Colores
+
+$colorGrisBase: rgb(170,170,170);
+$colorGrisSeccion: grey;
+$colorNaranjaBase: rgb(255,128,0);
+$colorNaranjaSuave: rgb(255,176,98);
+$colorFormDisabled: peachpuff;
+$colorEnlaceFormulario: deepskyblue;
+
+$resplandorTablaRanking: rgb(186,241,255);
+
+//Fuentes
+
+@font-face {
+    font-family: Farcry;
+    src: url('../fonts/Farcry.ttf');
+}
+@font-face {
+    font-family: TimesNewYorker;
+    src: url('../fonts/TimesNewYorker.ttf');
+}
+@font-face {
+    font-family: PlaneCrash;
+    src: url('../fonts/PlaneCrash.ttf');
+}
+
+//Tamaños de pantalla límite superior por dispositivo
+//Teléfono
+$anchoTF: 320px;
+$altoTF: 750px;
+
+//Tablet
+$anchoTablet: 992px;
+$altoTablet: 750px;
+
+//Escritorio
+$altoPC: 750px;

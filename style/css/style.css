@@ -1,0 +1,1550 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+body #carritoFixed {
+  position: fixed;
+  bottom: 0px;
+  right: 20%;
+  left: 20%;
+  display: none; }
+  body #carritoFixed #cabCarrito {
+    padding-left: 10px;
+    border-radius: 10px 10px 0px 0px;
+    background-image: url("../img/fondos/fondoCarrito.png");
+    font-family: Calibri;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer; }
+  body #carritoFixed #carritoTabla {
+    padding-top: 0px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 5px 5px 10px #000; }
+    body #carritoFixed #carritoTabla #encabezadoTabla {
+      background-color: darkred;
+      overflow: hidden;
+      color: white;
+      padding-right: 18px; }
+      body #carritoFixed #carritoTabla #encabezadoTabla .enTabla {
+        float: left;
+        text-align: center;
+        font-family: Calibri;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 0.75em; }
+    body #carritoFixed #carritoTabla #zonaArticulosCarrito {
+      font-family: Calibri;
+      font-style: italic;
+      font-size: 0.8em;
+      background-color: black;
+      color: white;
+      max-height: 150px;
+      overflow-y: scroll; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo {
+        overflow: hidden;
+        min-height: 50px; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo div {
+        float: left;
+        padding-top: 15px; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .carritoArticulo div:first-child {
+        padding-top: 0; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgCarrito {
+        height: 50px; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgBorrar, body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgSumar {
+        height: 15px; }
+      body #carritoFixed #carritoTabla #zonaArticulosCarrito .imgBorrarTodo {
+        height: 15px; }
+    body #carritoFixed #carritoTabla #totalFacturaCarrito {
+      background-color: darkred;
+      color: white;
+      overflow: hidden;
+      padding-right: 18px;
+      font-family: Calibri;
+      font-weight: bold;
+      font-style: italic;
+      font-size: 1em; }
+      body #carritoFixed #carritoTabla #totalFacturaCarrito #botonVaciarCarrito {
+        float: left;
+        width: 60px;
+        margin-left: 5%; }
+      body #carritoFixed #carritoTabla #totalFacturaCarrito #botonComprar {
+        float: left;
+        width: 60px;
+        margin-left: 5%; }
+      body #carritoFixed #carritoTabla #totalFacturaCarrito #textoTotalFactura {
+        text-align: right;
+        float: right; }
+      body #carritoFixed #carritoTabla #totalFacturaCarrito #importeTotalCarrito {
+        width: 15%;
+        float: right;
+        margin-right: 7.5%;
+        text-align: center; }
+    body #carritoFixed #carritoTabla .enImagen {
+      width: 10%;
+      text-align: center; }
+    body #carritoFixed #carritoTabla .enNombre {
+      width: 40%;
+      text-align: center; }
+    body #carritoFixed #carritoTabla .enPrecio {
+      width: 10%;
+      text-align: center; }
+    body #carritoFixed #carritoTabla .enCantidad {
+      width: 10%;
+      text-align: center; }
+    body #carritoFixed #carritoTabla .enTotal {
+      width: 10%;
+      text-align: center; }
+    body #carritoFixed #carritoTabla .enBorrar {
+      width: 5%;
+      text-align: center;
+      cursor: pointer; }
+    body #carritoFixed #carritoTabla .enSumar {
+      width: 5%;
+      text-align: center;
+      cursor: pointer; }
+    body #carritoFixed #carritoTabla .enBorrarTodo {
+      width: 10%;
+      text-align: center;
+      cursor: pointer; }
+
+@media all and (max-width: 768px) {
+  body #carritoFixed {
+    right: 1%;
+    left: 1%; }
+    body #carritoFixed #carritoTabla .enNombre {
+      width: 35%; }
+    body #carritoFixed #carritoTabla .enImagen {
+      display: none; }
+    body #carritoFixed #carritoTabla .enPrecio {
+      width: 20%; }
+    body #carritoFixed #carritoTabla .enTotal {
+      width: 20%; }
+    body #carritoFixed #carritoTabla .enBorrarTodo {
+      width: 5%; }
+    body #carritoFixed #carritoTabla #totalFacturaCarrito #textoTotalFactura {
+      display: none; } }
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 750px;
+  margin: 0;
+  background-image: url("../img/fondos/imgFondo.jpg");
+  background-size: 100%;
+  font-family: Calibri; }
+@font-face {
+  body {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+  body .ui-dialog {
+    box-shadow: 0 -1px 50px rgba(0, 0, 0, 0.8), 1px 0 50px rgba(0, 0, 0, 0.8), 0 1px 50px rgba(0, 0, 0, 0.8), -1px 0 50px rgba(0, 0, 0, 0.8); }
+    body .ui-dialog .ui-dialog-titlebar-close {
+      /*Quita el icono de cerrar ventana por defecto*/
+      display: none; }
+  body .caja-formulario {
+    padding: 20px;
+    font-size: 12px;
+    max-width: 550px;
+    /*Reglas para ventanas modales*/ }
+    body .caja-formulario a {
+      color: deepskyblue; }
+    body .caja-formulario.dialog-editar, body .caja-formulario.dialog-new, body .caja-formulario.dialog-login {
+      background-color: rgba(0, 0, 0, 0.9); }
+    body .caja-formulario input:disabled, body .caja-formulario select:disabled {
+      background-color: peachpuff; }
+    body .caja-formulario .tituloFormulario {
+      margin-top: 10px;
+      font-size: 15px;
+      font-weight: bolder;
+      color: white; }
+    body .caja-formulario .registro-bloqueDatos, body .caja-formulario .login-bloqueDatos {
+      margin-top: 10px; }
+      body .caja-formulario .registro-bloqueDatos > span, body .caja-formulario .login-bloqueDatos > span {
+        vertical-align: middle; }
+      body .caja-formulario .registro-bloqueDatos #newArticulo-label-precio-oferta, body .caja-formulario .login-bloqueDatos #newArticulo-label-precio-oferta {
+        padding: 0 10px 0 5px; }
+    body .caja-formulario label {
+      color: white;
+      min-width: 110px; }
+    body .caja-formulario .registro-label-check, body .caja-formulario .login-label-radio {
+      vertical-align: middle; }
+    body .caja-formulario .registro-input, body .caja-formulario .login-input, body .caja-formulario .registro-select {
+      min-width: 190px;
+      padding-left: 5px;
+      border: none; }
+      body .caja-formulario .registro-input:focus, body .caja-formulario .login-input:focus, body .caja-formulario .registro-select:focus {
+        box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
+        transition-duration: .3s; }
+    body .caja-formulario .registro-input-corto {
+      padding-left: 5px;
+      border: none; }
+      body .caja-formulario .registro-input-corto:focus {
+        box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
+        transition-duration: .3s; }
+    body .caja-formulario .registro-label-error, body .caja-formulario .login-label-error {
+      color: red;
+      font-size: 11px; }
+    body .caja-formulario .formulario-botonera {
+      margin-top: 5px; }
+    body .caja-formulario .formulario-botonera .formulario-boton {
+      display: inline-block;
+      width: 115px;
+      text-align: center;
+      font-size: 12px;
+      margin: 7px 5px;
+      padding: 3px 10px;
+      border-radius: 4px;
+      border-left: 1px solid grey;
+      border-top: 1px solid grey;
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      color: white;
+      background-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 1px 1px 2px transparent;
+      float: left; }
+      body .caja-formulario .formulario-botonera .formulario-boton a {
+        display: inline;
+        text-decoration: none;
+        color: white;
+        width: 60px; }
+      body .caja-formulario .formulario-botonera .formulario-boton:hover {
+        transition-duration: .4s;
+        border-radius: 4px;
+        border-left: 1px solid silver;
+        border-top: 1px solid silver;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        cursor: pointer;
+        color: #e6e6e6;
+        background-color: rgba(0, 0, 0, 0.05);
+        box-shadow: none;
+        opacity: .9;
+        box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+  body ::-webkit-scrollbar-thumb {
+    background-color: #ff8000; }
+  body ::-webkit-scrollbar-track {
+    background-color: rgba(255, 176, 98, 0.4); }
+  body ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px; }
+  body #capaSuperior {
+    width: 75%;
+    height: 100%;
+    margin: 0 auto; }
+    body #capaSuperior #header {
+      height: 14%; }
+      body #capaSuperior #header #limitSup {
+        height: 40%; }
+      body #capaSuperior #header #cabeceraContenidos {
+        height: 60%;
+        background-color: rgba(255, 128, 0, 0.8);
+        border-radius: 10px 10px 0px 0px;
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4), -10px 0 30px rgba(0, 0, 0, 0.4), 10px 0 30px rgba(0, 0, 0, 0.4); }
+        body #capaSuperior #header #cabeceraContenidos #cabeceraLogo {
+          width: 25%;
+          height: 100%;
+          float: left; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
+            margin-left: 30px;
+            width: 180px;
+            margin-top: -40px;
+            cursor: pointer; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg:hover {
+              transform: scale(1.05);
+              transition-duration: .5s; }
+        body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
+          width: 55%;
+          height: 100%;
+          float: left; }
+        body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+          max-width: 135px;
+          height: 100%;
+          float: right; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
+            width: 100%;
+            margin: 1% 10px 0;
+            float: right;
+            padding-top: 10px; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton {
+              width: 115px;
+              text-align: center;
+              font-size: 10px;
+              margin: 7px 5px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              border-left: 1px solid #ff8000;
+              border-top: 1px solid #ff8000;
+              border-right: 1px solid black;
+              border-bottom: 1px solid black;
+              color: white;
+              background-color: transparent;
+              box-shadow: 1px 1px 2px transparent;
+              float: right;
+              margin: auto; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton:hover {
+                transition-duration: .4s;
+                border-radius: 4px;
+                border-left: 1px solid silver;
+                border-top: 1px solid silver;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                color: #e6e6e6;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: none;
+                opacity: .9;
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+@font-face {
+  body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin {
+            max-width: 95%;
+            margin: 10px;
+            text-align: right;
+            color: white; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin #opcionesUsuario {
+              margin-top: 0; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin #dropdownMenu1 {
+              margin-bottom: 2px; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .btn {
+              width: 115px;
+              text-align: center;
+              font-size: 10px;
+              margin: 7px 5px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              border-left: 1px solid #ff8000;
+              border-top: 1px solid #ff8000;
+              border-right: 1px solid black;
+              border-bottom: 1px solid black;
+              color: white;
+              background-color: transparent;
+              box-shadow: 1px 1px 2px transparent;
+              background-color: transparent;
+              padding: 2px 10px;
+              font-size: 12px;
+              color: white; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .btn a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .btn:hover {
+                transition-duration: .4s;
+                border-radius: 4px;
+                border-left: 1px solid silver;
+                border-top: 1px solid silver;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                color: #e6e6e6;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: none;
+                opacity: .9;
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .btn #caja-texto-login {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                padding: 0;
+                max-width: 60px;
+                /*Reglas necesarias para text-overflow*/
+                /*El contenedor debe ser de bloque*/
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin #iconoUsuario {
+              width: 15px; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin ul {
+              width: 60px;
+              font-size: 12px;
+              background-color: rgba(255, 255, 255, 0.9); }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin ul li a {
+                text-overflow: ellipsis; }
+                body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin ul li a:hover {
+                  color: white;
+                  background-color: #ffb062;
+                  border-radius: 4px;
+                  transition-duration: 0.3s;
+                  font-weight: bolder;
+                  font-style: italic;
+                  box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #cajaInfoLogin .dropdown-menu {
+              left: auto;
+              right: 0; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #menuV_menu .menuV_opcion-admin {
+            margin: 0px 5% 2px 0px;
+            padding-left: 7px;
+            font-family: Calibri;
+            font-size: 1em;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(170, 170, 170, 0.2);
+            border-bottom-right-radius: 4px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #menuV_menu .menuV_opcion-admin:hover {
+              color: white;
+              cursor: pointer;
+              background-color: rgba(255, 176, 98, 0.7);
+              transition-duration: 0.3s;
+              box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+    body #capaSuperior #menuH {
+      height: 3.5%;
+      box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5); }
+      body #capaSuperior #menuH #plataformas {
+        width: 75%;
+        height: 100%;
+        float: left; }
+        body #capaSuperior #menuH #plataformas .menuH_plataforma {
+          width: 15%;
+          height: 100%;
+          float: left;
+          text-align: center;
+          padding-top: 7px;
+          color: white;
+          font-weight: bold;
+          font-family: Farcry;
+          font-size: 1em; }
+          body #capaSuperior #menuH #plataformas .menuH_plataforma img {
+            height: 100%; }
+          body #capaSuperior #menuH #plataformas .menuH_plataforma:hover {
+            transition-duration: 0.5s;
+            border-radius: 6px;
+            box-shadow: 0 -1px 15px white, 1px 0 15px white, 0 1px 15px white, -1px 0 15px white; }
+        body #capaSuperior #menuH #plataformas .menuH_plataforma:hover {
+          cursor: pointer;
+          background-color: #ffb062;
+          transition-duration: 0.5s; }
+        body #capaSuperior #menuH #plataformas #icono_menu_desplegable {
+          display: none;
+          background-color: transparent; }
+        body #capaSuperior #menuH #plataformas #menuH_desplegable {
+          display: none; }
+      body #capaSuperior #menuH #buscar {
+        padding: 1px;
+        width: 18%;
+        height: 100%;
+        float: left; }
+@font-face {
+  body #capaSuperior #menuH #buscar {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #menuH #buscar {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #menuH #buscar {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+        body #capaSuperior #menuH #buscar .search-form .form-group {
+          float: right !important;
+          transition: all 0.8s, border-radius 0s;
+          width: 34px;
+          height: 100%;
+          background-color: #fff;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+          border-radius: 5px;
+          border: 1px solid #ccc; }
+        body #capaSuperior #menuH #buscar .search-form .form-group input.form-control {
+          padding-right: 20px;
+          border: 0 none;
+          background: transparent;
+          box-shadow: none;
+          display: block; }
+        body #capaSuperior #menuH #buscar .search-form .form-group input.form-control::-webkit-input-placeholder {
+          display: none; }
+        body #capaSuperior #menuH #buscar .search-form .form-group input.form-control:-moz-placeholder {
+          display: none; }
+        body #capaSuperior #menuH #buscar .search-form .form-group input.form-control::-moz-placeholder {
+          display: none; }
+        body #capaSuperior #menuH #buscar .search-form .form-group input.form-control:-ms-input-placeholder {
+          display: none; }
+        body #capaSuperior #menuH #buscar .search-form .form-group:hover {
+          width: 100%;
+          height: 100%;
+          box-shadow: 0 -3px 8px rgba(186, 241, 255, 0.7), 3px 0 8px rgba(186, 241, 255, 0.7), 0 3px 8px rgba(186, 241, 255, 0.7), -3px 0 8px rgba(186, 241, 255, 0.7);
+          transition-duration: .6s; }
+        body #capaSuperior #menuH #buscar .search-form .form-group span.form-control-feedback {
+          position: absolute;
+          top: -1px;
+          right: -2px;
+          z-index: 2;
+          display: block;
+          width: 34px;
+          height: 100%;
+          line-height: 34px;
+          text-align: center;
+          color: #3596e0;
+          left: initial;
+          font-size: 14px; }
+        body #capaSuperior #menuH #buscar .search-form, body #capaSuperior #menuH #buscar .form-group {
+          height: 100%; }
+        body #capaSuperior #menuH #buscar .form-control, body #capaSuperior #menuH #buscar .form-control-feedback {
+          height: 100%; }
+        body #capaSuperior #menuH #buscar .search-form .form-group span.form-control-feedback {
+          margin: -3px 0; }
+      body #capaSuperior #menuH #carrito {
+        padding: 1px;
+        text-align: center;
+        width: 7%;
+        height: 100%;
+        float: left; }
+        body #capaSuperior #menuH #carrito #botonCarrito {
+          height: 100%;
+          padding: 3px 8px;
+          width: 100%; }
+          body #capaSuperior #menuH #carrito #botonCarrito #botonCarritoNew {
+            position: relative;
+            left: 15px;
+            top: -10px;
+            float: left;
+            display: none; }
+          body #capaSuperior #menuH #carrito #botonCarrito span {
+            width: 95%;
+            float: left; }
+          body #capaSuperior #menuH #carrito #botonCarrito:hover {
+            transition-duration: .6s;
+            box-shadow: 0 -3px 8px rgba(186, 241, 255, 0.7), 3px 0 8px rgba(186, 241, 255, 0.7), 0 3px 8px rgba(186, 241, 255, 0.7), -3px 0 8px rgba(186, 241, 255, 0.7); }
+    body #capaSuperior #seccionCentral {
+      height: 68%;
+      margin-top: 1px;
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.75); }
+      body #capaSuperior #seccionCentral .menuV {
+        height: 100%;
+        float: left;
+        width: 13%;
+        max-width: 170px;
+        padding: 5px; }
+@font-face {
+  body #capaSuperior #seccionCentral .menuV {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral .menuV {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral .menuV {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+        body #capaSuperior #seccionCentral .menuV #cajaInfoLogin {
+          max-width: 95%;
+          margin: 10px;
+          text-align: right;
+          color: white; }
+          body #capaSuperior #seccionCentral .menuV #cajaInfoLogin #opcionesUsuario {
+            margin-top: 0; }
+          body #capaSuperior #seccionCentral .menuV #cajaInfoLogin #dropdownMenu1 {
+            margin-bottom: 2px; }
+          body #capaSuperior #seccionCentral .menuV #cajaInfoLogin .btn {
+            width: 115px;
+            text-align: center;
+            font-size: 10px;
+            margin: 7px 5px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            border-left: 1px solid #ff8000;
+            border-top: 1px solid #ff8000;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            color: white;
+            background-color: transparent;
+            box-shadow: 1px 1px 2px transparent;
+            background-color: transparent;
+            padding: 2px 10px;
+            font-size: 12px;
+            color: white; }
+            body #capaSuperior #seccionCentral .menuV #cajaInfoLogin .btn a {
+              display: inline;
+              text-decoration: none;
+              color: white;
+              width: 60px; }
+            body #capaSuperior #seccionCentral .menuV #cajaInfoLogin .btn:hover {
+              transition-duration: .4s;
+              border-radius: 4px;
+              border-left: 1px solid silver;
+              border-top: 1px solid silver;
+              border-right: 1px solid transparent;
+              border-bottom: 1px solid transparent;
+              cursor: pointer;
+              color: #e6e6e6;
+              background-color: rgba(0, 0, 0, 0.05);
+              box-shadow: none;
+              opacity: .9;
+              box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+            body #capaSuperior #seccionCentral .menuV #cajaInfoLogin .btn #caja-texto-login {
+              display: inline-block;
+              vertical-align: middle;
+              margin: 0;
+              padding: 0;
+              max-width: 60px;
+              /*Reglas necesarias para text-overflow*/
+              /*El contenedor debe ser de bloque*/
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; }
+          body #capaSuperior #seccionCentral .menuV #cajaInfoLogin #iconoUsuario {
+            width: 15px; }
+          body #capaSuperior #seccionCentral .menuV #cajaInfoLogin ul {
+            width: 60px;
+            font-size: 12px;
+            background-color: rgba(255, 255, 255, 0.9); }
+            body #capaSuperior #seccionCentral .menuV #cajaInfoLogin ul li a {
+              text-overflow: ellipsis; }
+              body #capaSuperior #seccionCentral .menuV #cajaInfoLogin ul li a:hover {
+                color: white;
+                background-color: #ffb062;
+                border-radius: 4px;
+                transition-duration: 0.3s;
+                font-weight: bolder;
+                font-style: italic;
+                box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+          body #capaSuperior #seccionCentral .menuV #cajaInfoLogin .dropdown-menu {
+            left: auto;
+            right: 0; }
+        body #capaSuperior #seccionCentral .menuV #menuV_menu .menuV_opcion-admin {
+          margin: 0px 5% 2px 0px;
+          padding-left: 7px;
+          font-family: Calibri;
+          font-size: 1em;
+          font-weight: bold;
+          color: rgba(255, 255, 255, 0.7);
+          background-color: rgba(170, 170, 170, 0.2);
+          border-bottom-right-radius: 4px;
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
+          body #capaSuperior #seccionCentral .menuV #menuV_menu .menuV_opcion-admin:hover {
+            color: white;
+            cursor: pointer;
+            background-color: rgba(255, 176, 98, 0.7);
+            transition-duration: 0.3s;
+            box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+        body #capaSuperior #seccionCentral .menuV .menuV_inicio {
+          background-color: rgba(128, 128, 128, 0.55);
+          border-radius: 4px;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+          padding: 5px 0 0 5px;
+          margin-bottom: 2px;
+          color: rgba(255, 255, 255, 0.7); }
+          body #capaSuperior #seccionCentral .menuV .menuV_inicio:hover {
+            color: white;
+            cursor: pointer;
+            background-color: rgba(255, 176, 98, 0.7);
+            transition-duration: 0.3s;
+            box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+        body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_seccion, body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_subseccion {
+          /*, .menuV_grupo*/
+          margin: 0px 5% 2px 0px;
+          padding-left: 7px;
+          font-family: Calibri;
+          font-size: 1em;
+          font-weight: bold;
+          color: rgba(255, 255, 255, 0.7);
+          background-color: rgba(170, 170, 170, 0.2);
+          border-bottom-right-radius: 4px;
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
+          body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_seccion:hover, body #capaSuperior #seccionCentral .menuV .contieneSecciones .menuV_subseccion:hover {
+            color: white;
+            cursor: pointer;
+            background-color: rgba(255, 176, 98, 0.7);
+            transition-duration: 0.3s;
+            box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+        body #capaSuperior #seccionCentral .menuV .contieneSecciones .caja-subsecciones {
+          display: none; }
+          body #capaSuperior #seccionCentral .menuV .contieneSecciones .caja-subsecciones .menuV_subseccion {
+            width: 70%;
+            padding-left: 11px;
+            background-color: rgba(255, 176, 98, 0.2); }
+      body #capaSuperior #seccionCentral #contenidos {
+        height: 100%;
+        float: left;
+        width: 87%;
+        overflow: auto; }
+        body #capaSuperior #seccionCentral #contenidos #articulos {
+          width: 99%;
+          padding: 1%;
+          margin: 0 .5%;
+          float: left;
+          margin-right: 0.5%;
+          /*Cuerpo de la tabla*/ }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia {
+            width: 45%;
+            margin: 10px 10px 40px; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulos_contenedorImagen {
+            cursor: pointer;
+            margin-bottom: 10px;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.8), 2px 0 10px rgba(0, 0, 0, 0.8), 0 2px 10px rgba(0, 0, 0, 0.8), -2px 0 10px rgba(0, 0, 0, 0.8); }
+            body #capaSuperior #seccionCentral #contenidos #articulos .articulos_contenedorImagen .imgNoticia {
+              width: 100%; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .articulos_contenedorImagen .imgNoticia:hover {
+                transition-duration: .6s;
+                box-shadow: 0 -1px 20px #baf1ff, 1px 0 20px #baf1ff, 0 1px 20px #baf1ff, -1px 0 20px #baf1ff; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .articulos_contenedorImagen .videoNoticia {
+              width: 100%;
+              height: 200px;
+              display: none; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulos_contenedorImagen:hover > .imgNoticia {
+            display: none; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulos_contenedorImagen:hover > .videoNoticia {
+            display: block; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulo_noticia_left {
+            float: left;
+            clear: left; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulo_noticia_right {
+            float: right;
+            clear: right; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulos_titulo {
+            color: #ff8000;
+            font-family: TimesNewYorker;
+            font-size: 1.2em;
+            cursor: pointer; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .articulos_titulo:hover {
+              color: black;
+              transition-duration: 0.6s;
+              text-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo {
+            font-size: 0.75em; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo .articulos_autores {
+              margin: 3px 0px;
+              color: #aaaaaa; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .articulos_cuerpo .articulos_texto {
+              text-align: justify;
+              margin: 0;
+              color: silver; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos .fila {
+            margin: 0px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .articulo {
+              width: 85%;
+              margin-top: 10px;
+              padding: 10px 25px;
+              background-color: rgba(0, 0, 0, 0.4);
+              border: transparent;
+              box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.6), 2px 0 30px rgba(0, 0, 0, 0.6), 0 2px 30px rgba(0, 0, 0, 0.6), -2px 0 30px rgba(0, 0, 0, 0.6); }
+              body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .articulo:hover {
+                box-shadow: 0 -1px 20px #baf1ff, 1px 0 20px #baf1ff, 0 1px 20px #baf1ff, -1px 0 20px #baf1ff;
+                transition-duration: .6s; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorImgArticulo {
+              text-align: center;
+              height: 150px;
+              padding-top: 30px;
+              margin-bottom: 20px;
+              cursor: pointer; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorImgArticulo .producto_img {
+                max-height: 100%;
+                max-width: 100%; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .producto_titulo {
+              color: #ff8000;
+              font-family: TimesNewYorker;
+              font-size: 1.2em;
+              cursor: pointer;
+              height: 50px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .producto_titulo:hover {
+                color: black;
+                transition-duration: 0.6s;
+                text-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .producto_descripcion {
+              font-size: 0.75em;
+              color: silver;
+              padding-bottom: 10px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra {
+              border: 1px solid white;
+              border-radius: 6px;
+              background-color: rgba(255, 255, 255, 0.8);
+              padding: 0;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7) inset, 1px 0 2px rgba(0, 0, 0, 0.7) inset; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra .producto_precio {
+                font-family: PlaneCrash;
+                font-size: 1.1em;
+                color: #ff8000;
+                text-align: right;
+                padding: 0px;
+                padding-top: 5%;
+                padding-right: 5px; }
+                @media all and (max-width: 768px) {
+                  body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra .producto_precio {
+                    font-size: 1.7em;
+                    padding-top: 0px;
+                    padding-right: 10px; } }
+              body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra .producto_boton {
+                border-radius: 6px;
+                height: 100%;
+                padding: 2px;
+                text-align: center; }
+                body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra .producto_boton a {
+                  width: 100%;
+                  height: 100%; }
+                body #capaSuperior #seccionCentral #contenidos #articulos .fila .contenedorArticulo .contenedorCompra .producto_boton:hover {
+                  transition-duration: .4s;
+                  box-shadow: 0 -3px 8px rgba(255, 255, 255, 0.7), 3px 0 8px rgba(255, 255, 255, 0.7), 0 3px 8px rgba(255, 255, 255, 0.7), -3px 0 8px rgba(255, 255, 255, 0.7); }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking {
+            text-align: center;
+            width: 950px;
+            margin: 20px auto;
+            padding: 20px 40px;
+            color: white;
+            border-radius: 15px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #tituloRanking {
+              font-size: 1.1em;
+              color: silver; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #fechaRanking {
+              color: grey; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking {
+              border-radius: 10px;
+              padding: 10px;
+              /*        box-shadow: 13px 0 20px rgba($resplandorTablaRanking,.2),
+                          -13px 0 20px rgba($resplandorTablaRanking,.2),
+                          0 13px 20px rgba($resplandorTablaRanking,.2),
+                          0 -13px 20px rgba($resplandorTablaRanking,.2);*/
+              box-shadow: 0 -13px 20px rgba(186, 241, 255, 0.2), 13px 0 20px rgba(186, 241, 255, 0.2), 0 13px 20px rgba(186, 241, 255, 0.2), -13px 0 20px rgba(186, 241, 255, 0.2); }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking #filaRanking-1 td {
+                color: #ff8000; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking #filaRanking-1:hover {
+                color: white; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking tr #numeroRanking-1 {
+                color: #ff8000;
+                font-size: 1.2em;
+                font-weight: bolder; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking tr .numeroRanking {
+                color: #ffb062; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking tr td {
+                border-top-color: rgba(186, 241, 255, 0.15);
+                vertical-align: middle; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking tr:hover {
+                background-color: rgba(186, 241, 255, 0.4);
+                transition-duration: 0.5s; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .row {
+                cursor: pointer; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .encabezadoRanking {
+                border-bottom: 2px solid rgba(0, 0, 0, 0.65);
+                cursor: default;
+                background-color: rgba(186, 241, 255, 0.6); }
+                body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .encabezadoRanking:hover {
+                  background-color: rgba(186, 241, 255, 0.6); }
+                body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .encabezadoRanking th {
+                  text-align: center;
+                  color: black;
+                  font-weight: bold; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #contenedorRanking #contenedorTablaRanking #tablaRanking .imgRanking {
+                max-width: 80px; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin {
+            max-width: 95%;
+            margin: 10px;
+            text-align: right;
+            color: white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin #opcionesUsuario {
+              margin-top: 0; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin #dropdownMenu1 {
+              margin-bottom: 2px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .btn {
+              width: 115px;
+              text-align: center;
+              font-size: 10px;
+              margin: 7px 5px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              border-left: 1px solid #ff8000;
+              border-top: 1px solid #ff8000;
+              border-right: 1px solid black;
+              border-bottom: 1px solid black;
+              color: white;
+              background-color: transparent;
+              box-shadow: 1px 1px 2px transparent;
+              background-color: transparent;
+              padding: 2px 10px;
+              font-size: 12px;
+              color: white; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .btn a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .btn:hover {
+                transition-duration: .4s;
+                border-radius: 4px;
+                border-left: 1px solid silver;
+                border-top: 1px solid silver;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                color: #e6e6e6;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: none;
+                opacity: .9;
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+              body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .btn #caja-texto-login {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0;
+                padding: 0;
+                max-width: 60px;
+                /*Reglas necesarias para text-overflow*/
+                /*El contenedor debe ser de bloque*/
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin #iconoUsuario {
+              width: 15px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin ul {
+              width: 60px;
+              font-size: 12px;
+              background-color: rgba(255, 255, 255, 0.9); }
+              body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin ul li a {
+                text-overflow: ellipsis; }
+                body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin ul li a:hover {
+                  color: white;
+                  background-color: #ffb062;
+                  border-radius: 4px;
+                  transition-duration: 0.3s;
+                  font-weight: bolder;
+                  font-style: italic;
+                  box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #cajaInfoLogin .dropdown-menu {
+              left: auto;
+              right: 0; }
+          body #capaSuperior #seccionCentral #contenidos #articulos #menuV_menu .menuV_opcion-admin {
+            margin: 0px 5% 2px 0px;
+            padding-left: 7px;
+            font-family: Calibri;
+            font-size: 1em;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(170, 170, 170, 0.2);
+            border-bottom-right-radius: 4px;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); }
+            body #capaSuperior #seccionCentral #contenidos #articulos #menuV_menu .menuV_opcion-admin:hover {
+              color: white;
+              cursor: pointer;
+              background-color: rgba(255, 176, 98, 0.7);
+              transition-duration: 0.3s;
+              box-shadow: 0 -1px 8px white, 1px 0 8px white, 0 1px 8px white, -1px 0 8px white; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos .ui-dialog {
+            box-shadow: 0 -1px 50px rgba(0, 0, 0, 0.8), 1px 0 50px rgba(0, 0, 0, 0.8), 0 1px 50px rgba(0, 0, 0, 0.8), -1px 0 50px rgba(0, 0, 0, 0.8); }
+            body #capaSuperior #seccionCentral #contenidos #articulos .ui-dialog .ui-dialog-titlebar-close {
+              /*Quita el icono de cerrar ventana por defecto*/
+              display: none; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario {
+            padding: 20px;
+            font-size: 12px;
+            max-width: 550px;
+            /*Reglas para ventanas modales*/ }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario a {
+              color: deepskyblue; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario.dialog-editar, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario.dialog-new, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario.dialog-login {
+              background-color: rgba(0, 0, 0, 0.9); }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario input:disabled, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario select:disabled {
+              background-color: peachpuff; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .tituloFormulario {
+              margin-top: 10px;
+              font-size: 15px;
+              font-weight: bolder;
+              color: white; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-bloqueDatos, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-bloqueDatos {
+              margin-top: 10px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-bloqueDatos > span, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-bloqueDatos > span {
+                vertical-align: middle; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-bloqueDatos #newArticulo-label-precio-oferta, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-bloqueDatos #newArticulo-label-precio-oferta {
+                padding: 0 10px 0 5px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario label {
+              color: white;
+              min-width: 110px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-label-check, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-label-radio {
+              vertical-align: middle; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-input, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-input, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-select {
+              min-width: 190px;
+              padding-left: 5px;
+              border: none; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-input:focus, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-input:focus, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-select:focus {
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
+                transition-duration: .3s; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-input-corto {
+              padding-left: 5px;
+              border: none; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-input-corto:focus {
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white;
+                transition-duration: .3s; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .registro-label-error, body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .login-label-error {
+              color: red;
+              font-size: 11px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .formulario-botonera {
+              margin-top: 5px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .formulario-botonera .formulario-boton {
+              display: inline-block;
+              width: 115px;
+              text-align: center;
+              font-size: 12px;
+              margin: 7px 5px;
+              padding: 3px 10px;
+              border-radius: 4px;
+              border-left: 1px solid grey;
+              border-top: 1px solid grey;
+              border-right: 1px solid black;
+              border-bottom: 1px solid black;
+              color: white;
+              background-color: rgba(255, 255, 255, 0.2);
+              box-shadow: 1px 1px 2px transparent;
+              float: left; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .formulario-botonera .formulario-boton a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-formulario .formulario-botonera .formulario-boton:hover {
+                transition-duration: .4s;
+                border-radius: 4px;
+                border-left: 1px solid silver;
+                border-top: 1px solid silver;
+                border-right: 1px solid transparent;
+                border-bottom: 1px solid transparent;
+                cursor: pointer;
+                color: #e6e6e6;
+                background-color: rgba(0, 0, 0, 0.05);
+                box-shadow: none;
+                opacity: .9;
+                box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles {
+            width: 80%;
+            height: 50%;
+            text-align: center;
+            margin: 50px;
+            padding: 30px 30px 75px;
+            text-align: center;
+            color: silver;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 1;
+            border-left: 1px solid rgba(0, 0, 0, 0.15);
+            border-top: 1px solid rgba(0, 0, 0, 0.15);
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            box-shadow: 8px 8px 40px black;
+            background: url("../img/fondos/fondo-panel.png"); }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles .titulo-caja-paneles {
+              font-size: 1.8em;
+              color: rgba(255, 255, 255, 0.75);
+              opacity: .9;
+              text-shadow: 0 -5px 15px black, 5px 0 15px black, 0 5px 15px black, -5px 0 15px black; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles .panel-admin {
+              cursor: pointer;
+              text-align: center;
+              color: silver;
+              width: 200px;
+              height: auto;
+              display: inline-block;
+              margin: 10px;
+              border-radius: 5%;
+              background-color: rgba(0, 0, 0, 0.25);
+              opacity: .8;
+              border-left: 1px solid black;
+              border-top: 1px solid black;
+              border-right: 1px solid rgba(0, 0, 0, 0.15);
+              border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+              box-shadow: 2px 2px 20px black inset;
+              box-shadow: 6px 6px 20px black inset;
+              background-color: rgba(0, 0, 0, 0.3); }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles .panel-admin a {
+                display: inline;
+                text-decoration: none;
+                color: white;
+                width: 60px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles .panel-admin:hover {
+                transform: translate(-3px, -5px);
+                transition-timing-function: ease-in-out;
+                transition-duration: .4s;
+                border-left: 1px solid rgba(0, 0, 0, 0.15);
+                border-top: 1px solid rgba(0, 0, 0, 0.15);
+                border-right: 1px solid black;
+                border-bottom: 1px solid black;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.7);
+                opacity: 1;
+                box-shadow: 2px 2px 20px black; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles .panel-admin .img-iconoGestion {
+                margin-top: 20px;
+                padding: 10px;
+                max-height: 180px;
+                opacity: .8; }
+                body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles .panel-admin .img-iconoGestion:hover {
+                  opacity: 1; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles .panel-admin .texto-iconoGestion {
+                font-size: 1.5em;
+                margin-top: 5px; }
+              body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles .panel-admin:hover {
+                box-shadow: 0 -5px 30px white, 5px 0 30px white, 0 5px 30px white, -5px 0 30px white; }
+                body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles .panel-admin:hover .texto-iconoGestion {
+                  color: rgba(255, 255, 255, 0.7);
+                  text-shadow: 0 -8px 15px white, 8px 0 15px white, 0 8px 15px white, -8px 0 15px white;
+                  transition-duration: .4s; }
+          @media all and (max-width: 1280px) {
+            body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles {
+              width: 95%;
+              height: 50%;
+              margin: 25px;
+              padding: 30px 25px 75px; } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: Farcry;
+    src: url("../fonts/Farcry.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: TimesNewYorker;
+    src: url("../fonts/TimesNewYorker.ttf"); } }
+@font-face {
+  body #capaSuperior #seccionCentral #contenidos #articulos {
+    font-family: PlaneCrash;
+    src: url("../fonts/PlaneCrash.ttf"); } }
+          body #capaSuperior #seccionCentral #contenidos #articulos #label-check-multiselect {
+            margin: 30px 0 0 50px;
+            color: silver; }
+          body #capaSuperior #seccionCentral #contenidos #articulos #gbox_lista-usuarios, body #capaSuperior #seccionCentral #contenidos #articulos #gbox_lista-articulos, body #capaSuperior #seccionCentral #contenidos #articulos #gbox_lista-pedidos, body #capaSuperior #seccionCentral #contenidos #articulos #gbox_lista-detallepedido {
+            margin: 30px;
+            border-bottom-color: black;
+            box-shadow: 10px 10px 25px black; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .ui-jqgrid-titlebar {
+            padding: 5px 10px 0; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .ui-search-input {
+            color: silver; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .ui-search-input input {
+              padding-left: 4px;
+              border: none;
+              background-color: rgba(255, 255, 255, 0.25); }
+          body #capaSuperior #seccionCentral #contenidos #articulos .opersearchclass, body #capaSuperior #seccionCentral #contenidos #articulos .clearsearchclass {
+            color: #faaa1f; }
+          body #capaSuperior #seccionCentral #contenidos #articulos td.jqgrid-rownum {
+            /*N├║mero de fila*/
+            border: none; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .ui-widget-content, body #capaSuperior #seccionCentral #contenidos #articulos .jqgrow, body #capaSuperior #seccionCentral #contenidos #articulos .ui-row-ltr {
+            cursor: pointer; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .ui-jqgrid tr.jqgrow td {
+            padding: 0 5px; }
+          body #capaSuperior #seccionCentral #contenidos #articulos table {
+            border-collapse: initial; }
+          body #capaSuperior #seccionCentral #contenidos #articulos tbody a {
+            font-style: italic;
+            font-weight: bolder;
+            color: white; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .ui-widget-content, body #capaSuperior #seccionCentral #contenidos #articulos #pager-usuarios, body #capaSuperior #seccionCentral #contenidos #articulos #pager-articulos, body #capaSuperior #seccionCentral #contenidos #articulos #pager-pedidos {
+            background: rgba(0, 0, 0, 0.2);
+            color: silver;
+            border-top-color: transparent;
+            border-right-color: transparent;
+            border-bottom-color: rgba(255, 255, 255, 0.25);
+            border-left-color: transparent; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .ui-widget-content .ui-state-hover {
+            border-color: transparent; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .ui-widget-content .ui-state-hover:hover {
+              color: white;
+              cursor: pointer;
+              background-color: #ffb062;
+              transition-duration: 0.5s;
+              color: black;
+              font-weight: bolder; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .ui-widget-content .ui-state-default {
+            background: rgba(0, 0, 0, 0.3);
+            border-color: transparent;
+            color: #faaa1f;
+            border-top-color: silver;
+            border-right-color: transparent;
+            border-bottom-color: silver;
+            border-left-color: transparent; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .ui-widget-content .ui-state-default:hover {
+              color: white; }
+          body #capaSuperior #seccionCentral #contenidos #articulos #pager-usuarios, body #capaSuperior #seccionCentral #contenidos #articulos #pager-articulos, body #capaSuperior #seccionCentral #contenidos #articulos #pager-pedidos, body #capaSuperior #seccionCentral #contenidos #articulos #pager-detallepedido {
+            color: #faaa1f;
+            border-top-color: silver;
+            border-bottom-color: black; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #pager-usuarios .ui-pg-input, body #capaSuperior #seccionCentral #contenidos #articulos #pager-usuarios .ui-pg-selbox, body #capaSuperior #seccionCentral #contenidos #articulos #pager-articulos .ui-pg-input, body #capaSuperior #seccionCentral #contenidos #articulos #pager-articulos .ui-pg-selbox, body #capaSuperior #seccionCentral #contenidos #articulos #pager-pedidos .ui-pg-input, body #capaSuperior #seccionCentral #contenidos #articulos #pager-pedidos .ui-pg-selbox, body #capaSuperior #seccionCentral #contenidos #articulos #pager-detallepedido .ui-pg-input, body #capaSuperior #seccionCentral #contenidos #articulos #pager-detallepedido .ui-pg-selbox {
+              color: black; }
+            body #capaSuperior #seccionCentral #contenidos #articulos #pager-usuarios .ui-pg-input, body #capaSuperior #seccionCentral #contenidos #articulos #pager-articulos .ui-pg-input, body #capaSuperior #seccionCentral #contenidos #articulos #pager-pedidos .ui-pg-input, body #capaSuperior #seccionCentral #contenidos #articulos #pager-detallepedido .ui-pg-input {
+              height: 15px;
+              font-size: 0.9em; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .ui-state-highlight, body #capaSuperior #seccionCentral #contenidos #articulos .ui-widget-content .ui-state-highlight {
+            border-color: transparent;
+            background: #fdf5ce url("images/ui-bg_glass_100_fdf5ce_1x400.png") 50% 50% repeat-x;
+            font-weight: bold;
+            color: #c77405; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .ui-state-highlight a {
+            color: cornflowerblue; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .formulario-new-boton {
+            display: inline-block;
+            width: 115px;
+            text-align: center;
+            font-size: 12px;
+            margin: 7px 5px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            border-left: 1px solid grey;
+            border-top: 1px solid grey;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 1px 1px 2px transparent;
+            float: left; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .formulario-new-boton a {
+              display: inline;
+              text-decoration: none;
+              color: white;
+              width: 60px; }
+            body #capaSuperior #seccionCentral #contenidos #articulos .formulario-new-boton:hover {
+              transition-duration: .4s;
+              border-radius: 4px;
+              border-left: 1px solid silver;
+              border-top: 1px solid silver;
+              border-right: 1px solid transparent;
+              border-bottom: 1px solid transparent;
+              cursor: pointer;
+              color: #e6e6e6;
+              background-color: rgba(0, 0, 0, 0.05);
+              box-shadow: none;
+              opacity: .9;
+              box-shadow: 0 -1px 12px white, 1px 0 12px white, 0 1px 12px white, -1px 0 12px white; }
+    body #capaSuperior #pie {
+      height: 12%;
+      margin-top: 5px; }
+      body #capaSuperior #pie #pieContenidos {
+        height: 90%;
+        background-color: rgba(170, 170, 170, 0.8);
+        border-radius: 0px 0px 10px 10px; }
+        body #capaSuperior #pie #pieContenidos #enlaces {
+          width: 80%;
+          height: 70%;
+          float: left; }
+        body #capaSuperior #pie #pieContenidos #otros {
+          padding-top: 5px;
+          width: 20%;
+          height: 70%;
+          float: left; }
+          body #capaSuperior #pie #pieContenidos #otros #redesSociales {
+            height: 50%;
+            text-align: center; }
+            body #capaSuperior #pie #pieContenidos #otros #redesSociales img {
+              margin: 1px;
+              border-radius: 3px;
+              box-shadow: 1px 1px 3px grey;
+              height: 90%;
+              margin-top: 2%;
+              cursor: pointer; }
+          body #capaSuperior #pie #pieContenidos #otros #otraInfo {
+            margin-top: 5px;
+            height: 50%;
+            text-align: center; }
+            body #capaSuperior #pie #pieContenidos #otros #otraInfo img {
+              margin: 1px;
+              height: 90%;
+              margin-top: 2%; }
+        body #capaSuperior #pie #pieContenidos #infoContacto {
+          height: 30%;
+          clear: both;
+          font-size: 0.73em;
+          text-align: center; }
+        body #capaSuperior #pie #pieContenidos #infoContactoReducido {
+          display: none; }
+      body #capaSuperior #pie #limitInf {
+        height: 20%; }
+  body #capaFondo {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+    body #capaFondo #franjaSuperior {
+      width: 100%;
+      height: 14%;
+      background-color: rgba(0, 0, 0, 0.6); }
+    body #capaFondo #franjaBajoMenuH {
+      width: 100%;
+      height: 3.5%;
+      background-color: rgba(0, 0, 0, 0.85);
+      box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.4); }
+
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+@media all and (max-width: 992px) {
+  body {
+    min-height: 750px; }
+    body #capaSuperior {
+      width: 100%; }
+      body #capaSuperior #header {
+        height: 112.5px; }
+        body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
+          margin-left: 3%; }
+        body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
+          width: 50%; }
+        body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+          width: 25%; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
+            width: 70%;
+            float: right; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton {
+              width: 115px;
+              float: right; }
+      body #capaSuperior #menuH {
+        min-height: 30px; }
+        body #capaSuperior #menuH #plataformas {
+          width: 75%; }
+          body #capaSuperior #menuH #plataformas .menuH_plataforma {
+            font-size: 0.9em; }
+          body #capaSuperior #menuH #plataformas #icono_menu_desplegable {
+            display: inline-block; }
+        body #capaSuperior #menuH #buscar {
+          width: 18%;
+          height: 100%; }
+        body #capaSuperior #menuH #carrito {
+          width: 7%; }
+      body #capaSuperior .menu_desplegable {
+        background-color: rgba(170, 170, 170, 0.85); }
+        body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
+          background-color: rgba(170, 170, 170, 0.75);
+          color: white;
+          font-family: calibri; }
+        body #capaSuperior .menu_desplegable .menu_desplegable_seccion:hover {
+          background-color: #ffb062;
+          transition-duration: 0.5s; }
+      body #capaSuperior #seccionCentral {
+        height: 517.5px; }
+        body #capaSuperior #seccionCentral #contenidos {
+          width: 100%; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .articulos_noticia {
+            width: 95%;
+            float: left; }
+          body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles {
+            /*                        width: 90%;
+                                    height: 50%;
+                                    text-align: center;
+                                    margin: 50px;
+                                    padding: 30px 30px 75px;
+                                    @include estiloPlataforma();
+                                    background: url("../img/fondos/chapa.png");
+                                    background-repeat: no-repeat;
+                                    background-size: 100% 100%;*/ }
+        body #capaSuperior #seccionCentral #menuV {
+          display: none; }
+      body #capaSuperior #pie {
+        height: 90px; }
+    body #capaFondo #franjaSuperior {
+      height: 112.5px; }
+    body #capaFondo #franjaBajoMenuH {
+      min-height: 30px; } }
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+@media all and (max-width: 768px) {
+  body {
+    min-height: 750px;
+    min-width: 320px; }
+    body #capaSuperior {
+      width: 100%; }
+      body #capaSuperior #header {
+        height: 105.0px; }
+        body #capaSuperior #header #limitSup {
+          height: 40%; }
+        body #capaSuperior #header #cabeceraContenidos {
+          height: 60%; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogo {
+            width: 55%; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogo #logoImg {
+              margin-left: 3%; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraCentro {
+            display: none; }
+          body #capaSuperior #header #cabeceraContenidos #cabeceraLogin {
+            width: 45%; }
+            body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin {
+              width: 60%;
+              float: right;
+              margin-right: 15px; }
+              body #capaSuperior #header #cabeceraContenidos #cabeceraLogin #botoneraLogin .boton {
+                width: 105px; }
+      body #capaSuperior #menuH {
+        min-height: 26.25px; }
+        body #capaSuperior #menuH #plataformas {
+          width: 87%; }
+          body #capaSuperior #menuH #plataformas .menuH_plataforma {
+            display: none; }
+          body #capaSuperior #menuH #plataformas #menuH_desplegable {
+            display: inline-block;
+            width: 75%;
+            padding: 10px 4px;
+            font-size: 1em; }
+            body #capaSuperior #menuH #plataformas #menuH_desplegable #opciones_menu_desplegable2 {
+              left: 26%; }
+          body #capaSuperior #menuH #plataformas span {
+            padding: 0px 4px; }
+          body #capaSuperior #menuH #plataformas span:hover {
+            cursor: pointer;
+            background-color: #ffb062;
+            transition-duration: 0.5s; }
+        body #capaSuperior #menuH #carrito {
+          width: 13%; }
+      body #capaSuperior .menu_desplegable .menu_desplegable_seccion {
+        font-size: 1.5em; }
+      body #capaSuperior #buscar {
+        display: none; }
+      body #capaSuperior #seccionCentral {
+        max-height: 510.0px; }
+        body #capaSuperior #seccionCentral #tablaRanking {
+          border: none; }
+        body #capaSuperior #seccionCentral #contenidos #articulos .caja-paneles {
+          min-width: 240px; }
+      body #capaSuperior #pie {
+        height: 90px; }
+        body #capaSuperior #pie #pieContenidos {
+          height: 80%; }
+          body #capaSuperior #pie #pieContenidos #infoContacto {
+            display: none; }
+          body #capaSuperior #pie #pieContenidos #infoContactoReducido {
+            display: block;
+            height: 30%;
+            clear: both;
+            font-size: 0.8em;
+            text-align: center; }
+        body #capaSuperior #pie #limitInf {
+          height: 20%; }
+    body #capaFondo #franjaSuperior {
+      height: 105.0px; }
+    body #capaFondo #franjaBajoMenuH {
+      min-height: 26.25px; } }
+@font-face {
+  font-family: Farcry;
+  src: url("../fonts/Farcry.ttf"); }
+@font-face {
+  font-family: TimesNewYorker;
+  src: url("../fonts/TimesNewYorker.ttf"); }
+@font-face {
+  font-family: PlaneCrash;
+  src: url("../fonts/PlaneCrash.ttf"); }
+@media all and (min-width: 993px) and (max-width: 1280px) {
+  body #capaSuperior #seccionCentral .menuV {
+    width: 15%; }
+  body #capaSuperior #seccionCentral #contenidos {
+    width: 85%; } }
+@media all and (min-width: 1281px) {
+  body #capaSuperior #seccionCentral .menuV {
+    width: 13%; }
+  body #capaSuperior #seccionCentral #contenidos {
+    width: 87%; } }
+
+/*# sourceMappingURL=style.css.map */
